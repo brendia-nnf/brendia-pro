@@ -434,9 +434,10 @@ export default function OnboardingPage() {
                     <FormInput
                       label="Website"
                       name="website"
-                      type="url"
+                      type="text"
                       value={formData.website}
                       onChange={handleInputChange}
+                      placeholder="www.example.com"
                       optional
                     />
                   </div>
