@@ -294,7 +294,7 @@ export default function OnboardingPage() {
             i dostavu welcome boxa.
           </p>
           <p className="text-primary/70 leading-relaxed mt-4 text-lg">
-            Hvala ti što si dio prve generacije Brendia Pro® Artists.{" "}
+            Hvala ti što si dio prve generacije Brendia Pro® Edukacije.{" "}
             <span className="text-secondary">♥</span>
           </p>
         </div>
@@ -310,8 +310,8 @@ export default function OnboardingPage() {
               {/* Main side image */}
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/images/nikolina-about.jpg"
-                  alt="Nikolina Kljaić"
+                  src="/images/courses/onboarding.JPG"
+                  alt="Brendia Pro® Education"
                   fill
                   className="object-cover"
                 />
@@ -532,7 +532,7 @@ export default function OnboardingPage() {
                       <EducationLevelOption
                         name="educationLevel"
                         value="brendia-pro-artist"
-                        title="Brendia Pro Artist"
+                        title="Brendia Pro® Artist"
                         description="Bazna edukacija"
                         price="3.000€ + PDV"
                         checked={formData.educationLevel === "brendia-pro-artist"}
@@ -541,7 +541,7 @@ export default function OnboardingPage() {
                       <EducationLevelOption
                         name="educationLevel"
                         value="advanced-brendia-pro-artist"
-                        title="Advanced Brendia Pro Artist"
+                        title="Advanced Brendia Pro® Artist"
                         description="Napredna edukacija"
                         price="4.000€ + PDV"
                         checked={
@@ -552,7 +552,7 @@ export default function OnboardingPage() {
                       <EducationLevelOption
                         name="educationLevel"
                         value="brendia-pro-master"
-                        title="Brendia Pro Master"
+                        title="Brendia Pro® Master"
                         description="Komplet 2u1 + 1:1 mentorstvo"
                         price="5.000€ + PDV"
                         checked={formData.educationLevel === "brendia-pro-master"}
@@ -624,8 +624,8 @@ export default function OnboardingPage() {
                 {/* Decorative Image Break - Mobile Only */}
                 <div className="lg:hidden relative h-48 -mx-4 overflow-hidden">
                   <Image
-                    src="/images/nikolina-about.jpg"
-                    alt="Nikolina"
+                    src="/images/courses/onboarding.JPG"
+                    alt="Brendia Pro® Education"
                     fill
                     className="object-cover object-top"
                   />
