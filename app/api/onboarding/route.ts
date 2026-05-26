@@ -309,17 +309,17 @@ export async function POST(request: Request) {
       { name: string; price: number; priceWithVat: number }
     > = {
       "brendia-pro-artist": {
-        name: "Brendia Pro Artist",
+        name: "Brendia Pro® Artist",
         price: 3000,
         priceWithVat: 3750,
       },
       "advanced-brendia-pro-artist": {
-        name: "Advanced Brendia Pro Artist",
+        name: "Advanced Brendia Pro® Artist",
         price: 4000,
         priceWithVat: 5000,
       },
       "brendia-pro-master": {
-        name: "Brendia Pro Master",
+        name: "Brendia Pro® Master",
         price: 5000,
         priceWithVat: 6250,
       },
