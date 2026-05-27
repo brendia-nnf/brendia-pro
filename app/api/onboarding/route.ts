@@ -333,8 +333,7 @@ export async function POST(request: Request) {
 
     // Map masterclass date to readable format
     const masterclassDateMap: Record<string, string> = {
-      "16-06": "16. lipnja 2025. - Zagreb",
-      "23-06": "23. lipnja 2025. - Zagreb",
+      "27-06": "27. lipnja 2025. - Zagreb",
       "ne-mogu-doci": "Ne mogu doći",
     };
     const masterclassDateDisplay =

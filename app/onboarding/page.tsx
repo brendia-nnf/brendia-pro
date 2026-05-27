@@ -662,25 +662,61 @@ export default function OnboardingPage() {
                 {/* Section 8: Masterclass */}
                 <FormSection number={8} title="MASTERCLASS" icon={<IconCalendar />}>
                   <div>
-                    <p className="text-sm font-medium text-primary mb-1">
-                      Masterclass će biti održan u Zagrebu.
+                    <p className="text-sm font-medium text-primary mb-2">
+                      Masterclass će biti održan 27.6. u Zagrebu.
                     </p>
+                    <p className="text-sm text-primary/70 mb-4">
+                      <span className="font-semibold text-secondary">Besplatno za prvu generaciju Brendia Pro® polaznica!</span>{" "}
+                      Ekskluzivni cjelodnevni event samo za Brendia Pro® polaznice.
+                      Uključuje live demo, hands-on praksu i networking.
+                    </p>
+
+                    {/* Schedule */}
+                    <div className="bg-cream/50 border border-secondary/20 rounded-lg p-4 mb-6">
+                      <p className="text-xs font-semibold text-secondary uppercase tracking-wider mb-3">
+                        Raspored dana
+                      </p>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex gap-3">
+                          <span className="text-primary/60 w-24 flex-shrink-0">09:00 – 10:00</span>
+                          <span className="text-primary">Dolazak / dobrodošlica / kava</span>
+                        </div>
+                        <div className="flex gap-3">
+                          <span className="text-primary/60 w-24 flex-shrink-0">10:00 – 11:00</span>
+                          <span className="text-primary">Intro + teorija + konzultacije + color matching</span>
+                        </div>
+                        <div className="flex gap-3">
+                          <span className="text-primary/60 w-24 flex-shrink-0">11:00 – 13:00</span>
+                          <span className="text-primary">Live demo</span>
+                        </div>
+                        <div className="flex gap-3">
+                          <span className="text-primary/60 w-24 flex-shrink-0">13:00 – 14:00</span>
+                          <span className="text-primary">Pauza</span>
+                        </div>
+                        <div className="flex gap-3">
+                          <span className="text-primary/60 w-24 flex-shrink-0">14:00 – 16:30</span>
+                          <span className="text-primary">Hands-on praksa</span>
+                        </div>
+                        <div className="flex gap-3">
+                          <span className="text-primary/60 w-24 flex-shrink-0">16:30 – 17:00</span>
+                          <span className="text-primary">Pitanja + korekcije</span>
+                        </div>
+                        <div className="flex gap-3">
+                          <span className="text-primary/60 w-24 flex-shrink-0">17:00 – 18:00</span>
+                          <span className="text-primary">Fotografiranje / networking / content / zatvaranje</span>
+                        </div>
+                      </div>
+                    </div>
+
                     <p className="text-sm text-primary/60 mb-4">
-                      Koji datum ti odgovara?
+                      Možeš li doći?
                     </p>
                     <div className="flex flex-wrap gap-4">
                       <RadioOption
                         name="masterclassDate"
-                        value="16-06"
-                        label="16.6."
-                        checked={formData.masterclassDate === "16-06"}
-                        onChange={handleInputChange}
-                      />
-                      <RadioOption
-                        name="masterclassDate"
-                        value="23-06"
-                        label="23.6."
-                        checked={formData.masterclassDate === "23-06"}
+                        value="27-06"
+                        label="Da, dolazim 27.6."
+                        checked={formData.masterclassDate === "27-06"}
                         onChange={handleInputChange}
                       />
                       <RadioOption
