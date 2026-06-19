@@ -1,0 +1,1141 @@
+{
+  "metadata": {
+    "title": "Brendia Pro® | Premium edukacija za weft ekstenzije",
+    "titleTemplate": "%s | Brendia Pro®",
+    "description": "Ovladajte umijećem weft ekstenzija s premium certifikacijskim tečajevima Brendia Pro®. Učite od stručne edukatorice Nikoline Kljaić i transformirajte svoju karijeru."
+  },
+  "navigation": {
+    "home": "Početna",
+    "courses": "Tečajevi",
+    "about": "O nama",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "enrollNow": "Upišite se",
+    "toggleMenu": "Otvori izbornik"
+  },
+  "hero": {
+    "tagline": "Premium edukacija za ekstenzije kose",
+    "title": "Ovladajte umijećem",
+    "titleHighlight": "Weft ekstenzija",
+    "description": "Transformirajte svoju karijeru s tečajevima pod vodstvom stručnjaka. Naučite tehnike koje će vas izdvojiti i izgraditi uspješan posao s ekstenzijama.",
+    "exploreCourses": "Istražite tečajeve",
+    "meetEducator": "Upoznajte edukatoricu",
+    "studentsCertified": "Certificiranih polaznika",
+    "yearsExperience": "Godina iskustva",
+    "successRate": "Stopa uspješnosti",
+    "scroll": "Skrolaj"
+  },
+  "valueProposition": {
+    "tagline": "Zašto odabrati Brendia Pro®",
+    "title": "Podignite svoje umijeće na novu razinu",
+    "description": "Naš sveobuhvatni certifikacijski program nadilazi osnovnu edukaciju i pretvara vas u traženog stručnjaka za ekstenzije.",
+    "values": {
+      "expertLed": {
+        "title": "Edukacija pod vodstvom stručnjaka",
+        "description": "Učite direktno od Nikoline Kljaić, vrhunske edukatorice s više od desetljeća iskustva u usavršavanju tehnika weft ekstenzija."
+      },
+      "certification": {
+        "title": "Priznata certifikacija",
+        "description": "Steknite prestižnu certifikaciju koja učvršćuje vaš kredibilitet i otvara vrata premium klijenteli diljem svijeta."
+      },
+      "community": {
+        "title": "Ekskluzivna zajednica",
+        "description": "Pridružite se mreži certificiranih profesionalaca. Pristupite kontinuiranoj podršci, ažuriranjima i ekskluzivnim industrijskim uvidima."
+      }
+    }
+  },
+  "stats": {
+    "studentsCertified": "Certificiranih polaznika",
+    "yearsExperience": "Godina iskustva",
+    "countriesReached": "Zemalja dosega",
+    "successRate": "Stopa uspješnosti"
+  },
+  "cta": {
+    "tagline": "Započnite svoje putovanje",
+    "title": "Spremni ste transformirati svoju karijeru?",
+    "description": "Pridružite se stotinama uspješnih frizera koji su podigli svoje umijeće s Brendia Pro® certifikacijom. Vaše putovanje do traženog stručnjaka za ekstenzije počinje ovdje.",
+    "viewCourses": "Pogledajte tečajeve",
+    "contactUs": "Kontaktirajte nas",
+    "lifetimeAccess": "Doživotni pristup",
+    "officialCertification": "Službena certifikacija",
+    "paymentPlans": "Dostupne rate"
+  },
+  "footer": {
+    "description": "Premium edukacija za weft ekstenzije od Nikoline Kljaić. Transformirajte svoju karijeru s našim certifikacijskim tečajevima.",
+    "company": "Tvrtka",
+    "support": "Podrška",
+    "legal": "Pravno",
+    "about": "O nama",
+    "courses": "Tečajevi",
+    "contact": "Kontakt",
+    "faq": "FAQ",
+    "privacyPolicy": "Politika privatnosti",
+    "termsOfService": "Uvjeti korištenja",
+    "allRightsReserved": "Sva prava pridržana."
+  },
+  "courses": {
+    "tagline": "Naši programi",
+    "title": "Odaberite svoj put do majstorstva",
+    "learnMore": "Saznajte više",
+    "foundation": {
+      "title": "Brendia Pro® Artist",
+      "description": "Savršeno za frizere koji žele svladati osnove weft ekstenzija i izgraditi čvrste temelje."
+    },
+    "master": {
+      "title": "Advanced Brendia Pro® Artist",
+      "description": "Za iskusne frizere koji žele postići vrhunsko majstorstvo i proširiti svoju ponudu usluga."
+    }
+  },
+  "contact": {
+    "title": "Povežimo se",
+    "description": "Imate pitanje o našim tečajevima? Tu smo da pomognemo.",
+    "form": {
+      "name": "Ime",
+      "email": "Email",
+      "subject": "Predmet",
+      "message": "Poruka",
+      "send": "Pošaljite poruku",
+      "sending": "Slanje...",
+      "success": "Poruka je poslana!",
+      "successMessage": "Hvala na poruci. Javit ćemo vam se uskoro."
+    },
+    "info": {
+      "email": "Email",
+      "responseTime": "Vrijeme odgovora",
+      "responseTimeValue": "Unutar 24 sata",
+      "followUs": "Pratite nas"
+    }
+  },
+  "about": {
+    "tagline": "Upoznajte osnivačicu",
+    "title": "Nikolina Kljaić",
+    "description": "S više od desetljeća iskustva u industriji ekstenzija kose, Nikolina je posvetila svoju karijeru podizanju standarda edukacije za ekstenzije."
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "description": "Pronađite odgovore na najčešća pitanja o našim tečajevima i certifikaciji."
+  },
+  "common": {
+    "loading": "Učitavanje...",
+    "error": "Došlo je do greške",
+    "tryAgain": "Pokušajte ponovno"
+  },
+  "languageSwitcher": {
+    "hr": "HR",
+    "en": "EN"
+  },
+  "videoIntro": {
+    "tagline": "Poruka od Nikoline",
+    "title": "Dobrodošli u Brendia Pro®",
+    "caption": "Nikolina dijeli svoju strast za weft ekstenzijama i što možete očekivati od Brendia Pro®",
+    "playVideo": "Pokreni video",
+    "pauseVideo": "Pauziraj video",
+    "browserNotSupported": "Vaš preglednik ne podržava video oznaku."
+  },
+  "coursePreview": {
+    "tagline": "Naši programi",
+    "title": "Odaberite svoj put do majstorstva",
+    "description": "Dva sveobuhvatna certifikacijska programa osmišljena da vas transformiraju od vještog frizera u traženog stručnjaka za ekstenzije.",
+    "mostPopular": "Najpopularnije",
+    "learnMore": "Saznajte više",
+    "additionalInfo": "Svi tečajevi uključuju doživotni pristup i besplatna ažuriranja. Dostupno plaćanje na rate.",
+    "foundation": {
+      "title": "Brendia Pro® Artist",
+      "subtitle": "Online edukacija",
+      "price": "€3.000",
+      "description": "Izgradite čvrste temelje u tehnikama weft ekstenzija. Savršeno za frizere spremne proširiti svoju ponudu usluga.",
+      "features": [
+        "30+ sveobuhvatnih video lekcija",
+        "Detaljni vodiči za instalaciju korak po korak",
+        "Tehnike konzultacija s klijentima",
+        "Službena Brendia Pro® certifikacija",
+        "Pristup privatnoj zajednici",
+        "Doživotni pristup tečaju"
+      ]
+    },
+    "master": {
+      "title": "Advanced Brendia Pro® Artist",
+      "subtitle": "Napredna online edukacija",
+      "price": "€4.000",
+      "description": "Podignite svoju stručnost s naprednim tehnikama i poslovnim strategijama. Za frizere posvećene postajanju liderima u industriji.",
+      "features": [
+        "Sve iz Artist tečaja",
+        "Napredne tehnike miješanja",
+        "Složeno usklađivanje boja",
+        "Strategije rasta poslovanja",
+        "Marketing predlošci i vodiči",
+        "1-na-1 mentorska sesija",
+        "Prioritetna podrška zajednice"
+      ]
+    },
+    "artist1v1": {
+      "title": "Brendia Pro® Artist 1v1",
+      "subtitle": "Live edukacija u salonu",
+      "price": "€2.000",
+      "description": "Personalizirana live edukacija s mentorom u salonu. Idealno za brzo učenje praktičnih tehnika kroz hands-on praksu.",
+      "features": [
+        "Live edukacija s mentorom",
+        "4 sata hands-on prakse",
+        "Personalizirani pristup",
+        "Brendia Pro® certifikacija",
+        "Pristup platformi",
+        "Welcome box s materijalima"
+      ]
+    },
+    "master1v1": {
+      "title": "Brendia Pro® Master 1v1",
+      "subtitle": "Live edukacija u studiju",
+      "price": "€5.000",
+      "description": "Kompletna Foundation i Master edukacija uživo u studiju. Dva dana intenzivne prakse i osobnog mentorstva.",
+      "features": [
+        "2 dana live edukacije",
+        "12 sati hands-on prakse",
+        "Foundation + Master sadržaj",
+        "Personalizirani pristup",
+        "Brendia Pro® certifikacija",
+        "Pristup platformi",
+        "Welcome box s materijalima"
+      ]
+    }
+  },
+  "aboutFounder": {
+    "tagline": "Upoznajte svoju edukatoricu",
+    "name": "Nikolina Kljaić",
+    "bio1": "S više od desetljeća iskustva u industriji ekstenzija kose, Nikolina je transformirala karijere stotina frizera diljem svijeta. Njezina strast za edukacijom i predanost izvrsnosti učinili su Brendia Pro® zlatnim standardom u obuci za weft ekstenzije.",
+    "quote": "Moja misija je osnažiti frizere znanjem i tehnikama koje su im potrebne za izgradnju uspješnog poslovanja i stvaranje zadivljujućih transformacija za svoje klijente. Svaki polaznik koji se pridruži Brendia Pro postaje dio zajednice posvećene izvrsnosti.",
+    "yearsInIndustry": "Godina u industriji",
+    "studentsTrained": "Obučenih polaznika",
+    "readFullStory": "Pročitajte cijelu priču",
+    "imageAlt": "Nikolina Kljaić - Osnivačica Brendia Pro®"
+  },
+  "testimonials": {
+    "tagline": "Priče o uspjehu",
+    "title": "Čujte naše polaznike",
+    "prevTestimonial": "Prethodna izjava",
+    "nextTestimonial": "Sljedeća izjava",
+    "goToTestimonial": "Idi na izjavu {number}",
+    "items": [
+      {
+        "quote": "Brendia Pro® certifikacija je potpuno transformirala moju karijeru. Unutar tri mjeseca od završetka tečaja, udvostručila sam broj rezervacija i podigla cijene za 40%.",
+        "author": "Sarah Mitchell",
+        "role": "Certificirana frizerka, Los Angeles"
+      },
+      {
+        "quote": "Nikolinin stil podučavanja je nevjerojatno temeljit, a opet lako razumljiv. Tehnike koje sam naučila postale su temelj cijelog mog poslovanja s ekstenzijama.",
+        "author": "Emma Rodriguez",
+        "role": "Vlasnica salona, Miami"
+      },
+      {
+        "quote": "Aspekt zajednice u Brendia Pro® je neprocjenjiv. Pristup drugim certificiranim frizerima i kontinuirana podrška pomogli su mi prevladati svaki izazov.",
+        "author": "Jessica Chen",
+        "role": "Samostalna frizerka, New York"
+      }
+    ]
+  },
+  "contactPage": {
+    "hero": {
+      "tagline": "Kontaktirajte nas",
+      "title": "Stupite u kontakt",
+      "description": "Imate pitanja o našim tečajevima ili želite saznati više o Brendia Pro®? Voljeli bismo čuti od vas."
+    },
+    "connect": {
+      "title": "Povežimo se",
+      "description": "Bilo da imate pitanja o upisu, trebate pomoć pri odabiru pravog tečaja ili želite razgovarati o mogućnostima suradnje, tu smo da pomognemo."
+    },
+    "info": {
+      "email": "Email",
+      "responseTime": "Vrijeme odgovora",
+      "responseTimeValue": "Obično odgovaramo unutar 24-48 sati",
+      "followUs": "Pratite nas"
+    },
+    "form": {
+      "name": "Ime",
+      "namePlaceholder": "Vaše ime",
+      "email": "Email",
+      "emailPlaceholder": "vas@email.com",
+      "subject": "Predmet",
+      "subjectPlaceholder": "O čemu se radi?",
+      "message": "Poruka",
+      "messagePlaceholder": "Recite nam više...",
+      "send": "Pošaljite poruku",
+      "sending": "Slanje...",
+      "error": "Nešto je pošlo po krivu. Molimo pokušajte ponovno ili nam pišite direktno na email."
+    },
+    "success": {
+      "title": "Poruka je poslana!",
+      "message": "Hvala što ste nam se javili. Odgovorit ćemo vam unutar 24-48 sati.",
+      "sendAnother": "Pošaljite drugu poruku"
+    }
+  },
+  "coursesPage": {
+    "hero": {
+      "tagline": "Profesionalna certifikacija",
+      "title": "Transformirajte svoju karijeru",
+      "description": "Pridružite se 500+ frizera koji su podigli svoje umijeće s Brendia Pro® certifikacijom. Odaberite program koji odgovara vašim ciljevima i započnite svoje putovanje danas.",
+      "selfPaced": "Učenje vlastitim tempom",
+      "lifetimeAccess": "Doživotni pristup",
+      "officialCertification": "Službena certifikacija"
+    },
+    "video": {
+      "title": "Čujte od svoje edukatorice",
+      "description": "Nikolina objašnjava što ćete naučiti i kako ovi tečajevi mogu transformirati vašu karijeru",
+      "play": "Pokreni video",
+      "pause": "Pauziraj video"
+    },
+    "skills": {
+      "title": "Što ćete svladati",
+      "description": "Naš kurikulum pokriva sve što vam je potrebno da postanete samouvjeren, tražen stručnjak za weft ekstenzije",
+      "items": {
+        "installation": {
+          "title": "Tehnike instalacije",
+          "description": "Svladajte sigurno, besprijekorno postavljanje wefta"
+        },
+        "colorMatching": {
+          "title": "Usklađivanje boja",
+          "description": "Savršeno miješanje za prirodan rezultat"
+        },
+        "consultation": {
+          "title": "Konzultacije s klijentima",
+          "description": "Postavite očekivanja i izgradite povjerenje"
+        },
+        "maintenance": {
+          "title": "Održavanje i njega",
+          "description": "Osigurajte povratak klijenata"
+        },
+        "business": {
+          "title": "Poslovna strategija",
+          "description": "Određivanje cijena, marketing i rast usluga"
+        },
+        "certification": {
+          "title": "Certifikacija",
+          "description": "Priznata kvalifikacija za vaš portfolio"
+        }
+      }
+    },
+    "courses": {
+      "title": "Odaberite svoj put",
+      "description": "Dva sveobuhvatna programa osmišljena za različite faze vašeg putovanja",
+      "mostPopular": "Najpopularnije",
+      "viewCurriculum": "Pogledajte cijeli kurikulum",
+      "foundation": {
+        "title": "Brendia Pro® Artist",
+        "subtitle": "Online edukacija",
+        "price": "€3.000",
+        "duration": "Vlastiti tempo (prosječno 6-8 tjedana)",
+        "description": "Izgradite čvrste temelje u tehnikama weft ekstenzija. Savršeno za frizere spremne proširiti svoju ponudu usluga.",
+        "features": [
+          "30+ sveobuhvatnih video lekcija",
+          "Detaljni vodiči za instalaciju korak po korak",
+          "Tehnike konzultacija s klijentima",
+          "Službena Brendia Pro® certifikacija",
+          "Pristup privatnoj zajednici",
+          "Doživotni pristup tečaju"
+        ]
+      },
+      "master": {
+        "title": "Advanced Brendia Pro® Artist",
+        "subtitle": "Napredna online edukacija",
+        "price": "€4.000",
+        "duration": "Vlastiti tempo (prosječno 8-12 tjedana)",
+        "description": "Podignite svoju stručnost s naprednim tehnikama i poslovnim strategijama. Za frizere posvećene postajanju liderima u industriji.",
+        "features": [
+          "Sve iz Artist tečaja",
+          "Napredne tehnike miješanja",
+          "Složeno usklađivanje boja",
+          "Strategije rasta poslovanja",
+          "1-na-1 mentorska sesija",
+          "Prioritetna podrška zajednice"
+        ]
+      },
+      "artist1v1": {
+        "title": "Brendia Pro® Artist 1v1",
+        "subtitle": "Live Edukacija u Salonu",
+        "price": "€2.000",
+        "duration": "1 dan (4 sata)",
+        "description": "Personalizirana live edukacija s mentorom u salonu. Idealno za brzo učenje praktičnih tehnika kroz hands-on praksu.",
+        "features": [
+          "Live edukacija s mentorom",
+          "4 sata hands-on prakse",
+          "Personalizirani pristup",
+          "Službena Brendia Pro® certifikacija",
+          "Pristup platformi (shop, zajednica)",
+          "Welcome box s materijalima"
+        ]
+      },
+      "master1v1": {
+        "title": "Brendia Pro® Master 1v1",
+        "subtitle": "Live Edukacija u Studiju",
+        "price": "€5.000",
+        "duration": "2 dana (6 sati/dan)",
+        "description": "Kompletna Foundation i Master edukacija uživo u studiju. Dva dana intenzivne prakse i osobnog mentorstva.",
+        "features": [
+          "2 dana live edukacije s mentorom",
+          "12 sati hands-on prakse (6h/dan)",
+          "Foundation + Master sadržaj",
+          "Personalizirani pristup",
+          "Službena Brendia Pro® certifikacija",
+          "Pristup platformi (shop, zajednica)",
+          "Welcome box s materijalima"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Usporedite programe",
+      "description": "Pogledajte što je uključeno u svaku razinu certifikacije",
+      "feature": "Značajka",
+      "foundation": "Foundation",
+      "master": "Master",
+      "recommended": "Preporučeno",
+      "select": "Odaberi",
+      "rows": {
+        "videoLessons": {
+          "feature": "Video lekcije",
+          "foundation": "30+",
+          "master": "50+"
+        },
+        "installation": {
+          "feature": "Tehnike instalacije",
+          "foundation": "Osnovne metode",
+          "master": "Napredne + korektivne"
+        },
+        "colorMatching": {
+          "feature": "Usklađivanje boja",
+          "foundation": "Osnovno",
+          "master": "Složeno višetonsko"
+        },
+        "business": {
+          "feature": "Poslovna obuka",
+          "foundation": "Osnove",
+          "master": "Napredne strategije rasta"
+        },
+        "community": {
+          "feature": "Pristup zajednici",
+          "foundation": "✓",
+          "master": "Prioritetna podrška"
+        },
+        "mentorship": {
+          "feature": "Mentorstvo",
+          "foundation": "—",
+          "master": "1-na-1 sesija"
+        },
+        "certification": {
+          "feature": "Certifikacija",
+          "foundation": "Foundation razina",
+          "master": "Master razina"
+        },
+        "updates": {
+          "feature": "Ažuriranja",
+          "foundation": "Doživotno",
+          "master": "Doživotno + rani pristup"
+        }
+      }
+    },
+    "instructor": {
+      "tagline": "Vaša edukatorica",
+      "title": "Učite od najboljih",
+      "description": "Nikolina Kljaić provela je više od desetljeća usavršavajući svoje tehnike weft ekstenzija i obučila je 500+ frizera diljem svijeta. Njezin pristup podučavanju kombinira detaljne tehničke upute s praktičnim poslovnim uvidima.",
+      "yearsExperience": "Godina iskustva",
+      "studentsTrained": "Obučenih polaznika",
+      "countries": "Zemalja",
+      "learnMore": "Saznajte više o Nikolini",
+      "imageAlt": "Nikolina Kljaić - Vaša edukatorica"
+    },
+    "trust": {
+      "title": "Uložite u svoju budućnost s povjerenjem",
+      "description": "Stojimo iza naših tečajeva s jamstvima koja stavljaju vaš uspjeh na prvo mjesto",
+      "guarantee": {
+        "title": "14-dnevno jamstvo",
+        "description": "Niste zadovoljni? Dobijte puni povrat novca unutar 14 dana, bez pitanja."
+      },
+      "lifetime": {
+        "title": "Doživotni pristup",
+        "description": "Učite vlastitim tempom. Pristupite svom tečaju zauvijek, uključujući sva buduća ažuriranja."
+      },
+      "payment": {
+        "title": "Planovi plaćanja",
+        "description": "Dostupne fleksibilne opcije plaćanja. Kontaktirajte nas da dogovorimo što vam odgovara."
+      },
+      "cta": "Imate pitanja? Razgovarajmo"
+    },
+    "faqPreview": {
+      "title": "Još uvijek imate pitanja?",
+      "description": "Pronađite odgovore na česta pitanja o upisu, kurikulumu i certifikaciji.",
+      "cta": "Pogledajte sva pitanja"
+    }
+  },
+  "courseDetail": {
+    "backToCourses": "Povratak na tečajeve",
+    "mostPopular": "Najpopularnije",
+    "enrollNow": "Upišite se sada",
+    "exclVat": "bez PDV-a",
+    "vatNote": "+ 25% PDV. Konačna cijena prikazana pri naplati.",
+    "whatsIncluded": "Što je uključeno",
+    "curriculum": {
+      "title": "Kurikulum tečaja",
+      "description": "Sveobuhvatni moduli osmišljeni da vas vode od osnova do majstorstva"
+    },
+    "cta": {
+      "title": "Spremni započeti svoje putovanje?",
+      "description": "Pridružite se stotinama uspješnih frizera koji su transformirali svoje karijere s Brendia Pro® certifikacijom.",
+      "enrollIn": "Upišite se u {course}",
+      "haveQuestions": "Imate pitanja?",
+      "paymentPlans": "Dostupni planovi plaćanja. Kontaktirajte nas za detalje."
+    },
+    "foundation": {
+      "title": "Brendia Pro® Artist",
+      "subtitle": "Online edukacija",
+      "price": "€3.000",
+      "duration": "Vlastiti tempo (prosječno 6-8 tjedana)",
+      "description": "Izgradite čvrste temelje u tehnikama weft ekstenzija. Ovaj sveobuhvatni program pokriva sve od konzultacija s klijentima do besprijekorne instalacije i dugoročnog održavanja.",
+      "longDescription": "Brendia Pro® Artist je vaš ulaz u svijet profesionalnih stručnjaka za weft ekstenzije. Osmišljen za frizere na bilo kojoj razini iskustva, ovaj program pruža temeljitu edukaciju o umijeću i znanosti weft ekstenzija. Učit ćete direktno od Nikoline Kljaić kroz detaljne video upute, stječući samopouzdanje i vještine za postizanje zadivljujućih rezultata za svoje klijente.",
+      "features": [
+        "30+ sveobuhvatnih video lekcija",
+        "Detaljni vodiči za instalaciju korak po korak",
+        "Tehnike konzultacija s klijentima",
+        "Protokoli održavanja i njege",
+        "Službena Brendia Pro® certifikacija",
+        "Pristup privatnoj zajednici",
+        "Doživotni pristup tečaju",
+        "Besplatna buduća ažuriranja"
+      ],
+      "curriculum": [
+        {
+          "module": "Modul 1: Uvod i osnove",
+          "lessons": [
+            "Dobrodošli u Brendia Pro®",
+            "Razumijevanje weft ekstenzija",
+            "Kvaliteta i vrste kose",
+            "Pregled alata i opreme",
+            "Postavljanje radnog prostora"
+          ]
+        },
+        {
+          "module": "Modul 2: Konzultacije s klijentima",
+          "lessons": [
+            "Početna procjena",
+            "Procjena zdravlja kose",
+            "Razmatranje životnog stila",
+            "Postavljanje očekivanja",
+            "Određivanje cijena vaših usluga"
+          ]
+        },
+        {
+          "module": "Modul 3: Tehnike pripreme",
+          "lessons": [
+            "Metode sekcija",
+            "Osnove usklađivanja boja",
+            "Odabir i priprema wefta",
+            "Priprema kose prije instalacije"
+          ]
+        },
+        {
+          "module": "Modul 4: Majstorstvo instalacije",
+          "lessons": [
+            "Strategija postavljanja",
+            "Sigurne metode pričvršćivanja",
+            "Tehnike miješanja",
+            "Stvaranje prirodnog pokreta",
+            "Završna obrada i styling"
+          ]
+        },
+        {
+          "module": "Modul 5: Njega i održavanje",
+          "lessons": [
+            "Edukacija klijenata",
+            "Termini održavanja",
+            "Rješavanje uobičajenih problema",
+            "Savjeti za dugovječnost ekstenzija"
+          ]
+        },
+        {
+          "module": "Modul 6: Poslovne osnove",
+          "lessons": [
+            "Izgradnja baze klijenata",
+            "Osnove društvenih mreža",
+            "Kreiranje portfolia",
+            "Sljedeći koraci na vašem putovanju"
+          ]
+        }
+      ]
+    },
+    "master": {
+      "title": "Advanced Brendia Pro® Artist",
+      "subtitle": "Napredna online edukacija",
+      "price": "€4.000",
+      "duration": "Vlastiti tempo (prosječno 8-12 tjedana)",
+      "description": "Podignite svoju stručnost s naprednim tehnikama, složenom teorijom boja i dokazanim poslovnim strategijama. Za frizere posvećene postajanju liderima u industriji.",
+      "longDescription": "Advanced Brendia Pro® Artist predstavlja vrhunac edukacije za weft ekstenzije. Nadograđujući se na Artist program, ovaj napredni tečaj duboko ulazi u složene tehnike, sofisticirani rad s bojama i poslovne strategije potrebne za skaliranje vaših usluga ekstenzija. Uključuje osobnu mentorsku sesiju s Nikolinom za ubrzanje vašeg rasta.",
+      "features": [
+        "Sve iz Brendia Pro® Artist tečaja",
+        "Napredne tehnike miješanja",
+        "Majstorstvo složenog usklađivanja boja",
+        "Postupci korektivnog rada",
+        "Strategije rasta poslovanja",
+        "Marketing predlošci i vodiči",
+        "1-na-1 mentorska sesija s Nikolinom",
+        "Prioritetna podrška zajednice",
+        "Masterclassovi gostujućih edukatora"
+      ],
+      "curriculum": [
+        {
+          "module": "Artist moduli",
+          "lessons": [
+            "Svih 30+ lekcija iz Brendia Pro® Artist tečaja uključeno"
+          ]
+        },
+        {
+          "module": "Napredni modul 1: Složeni rad s bojama",
+          "lessons": [
+            "Napredna teorija boja",
+            "Višedimenzionalno miješanje",
+            "Prilagođeno miješanje boja",
+            "Rad s teškim kombinacijama boja",
+            "Rooted i balayage izgledi"
+          ]
+        },
+        {
+          "module": "Napredni modul 2: Napredne tehnike",
+          "lessons": [
+            "Izazovni tipovi kose",
+            "Rješenja za tanku i rijetku kosu",
+            "Strategije za volumen",
+            "Napredno slojevanje",
+            "Besprijekorni prijelazi"
+          ]
+        },
+        {
+          "module": "Napredni modul 3: Korektivni rad",
+          "lessons": [
+            "Prepoznavanje problema prethodnog rada",
+            "Sigurne tehnike uklanjanja",
+            "Popravak oštećene kose",
+            "Komunikacija s klijentima za korekcije",
+            "Upravljanje očekivanjima"
+          ]
+        },
+        {
+          "module": "Napredni modul 4: Poslovno majstorstvo",
+          "lessons": [
+            "Skaliranje vaših usluga",
+            "Premium strategije cijena",
+            "Osnove obuke tima",
+            "Dubinska analiza marketinga",
+            "Izgradnja autoriteta na vašem tržištu"
+          ]
+        },
+        {
+          "module": "Bonus: Masterclassovi gostujućih edukatora",
+          "lessons": [
+            "Sesije industrijskih stručnjaka (ažurirano kvartalno)",
+            "Prognoziranje trendova",
+            "Napredna poslovna pitanja i odgovori"
+          ]
+        }
+      ]
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "tagline": "O Brendia Pro®",
+      "title": "Priča iza brenda",
+      "description": "Brendia Pro® rođen je iz strasti za izvrsnošću i želje za dijeljenjem umijeća weft ekstenzija s frizerima diljem svijeta. Ono što je započelo kao putovanje jedne žene postalo je globalni pokret osnaženih profesionalaca.",
+      "imageAlt": "Priča Brendia Pro®"
+    },
+    "founder": {
+      "tagline": "Upoznajte osnivačicu",
+      "name": "Nikolina Kljaić",
+      "bio": [
+        "S više od desetljeća iskustva u industriji ekstenzija kose, Nikolina je posvetila svoju karijeru usavršavanju umijeća weft ekstenzija i dijeljenju svoje stručnosti s drugima.",
+        "Njezino putovanje započelo je u malom salonu, gdje su je njezin prirodni talent i neumoran stremljenje savršenstvu brzo izdvojili. Klijenti su putovali iz cijele zemlje kako bi iskusili njezin transformativni rad, a kolege frizerke počele su tražiti da nauče njezine tehnike.",
+        "\"Shvatila sam da moj utjecaj može ići daleko izvan moje vlastite stolice,\" dijeli Nikolina. \"Podučavajući druge, mogla sam pomoći stotinama frizera da izgrade uspješne karijere dok tisuće žena dobivaju samopouzdanje koje dolazi s prekrasnom kosom.\"",
+        "Danas Nikolina vodi Brendia Pro® s istom strašću i pažnjom za detalje koji su definirali njezin rad od prvog dana. Svaki tečaj, svaka lekcija, svaka interakcija odražava njezinu predanost izvrsnosti i iskrenu brigu za uspjeh svojih polaznika."
+      ],
+      "imageAlt": "Nikolina Kljaić - Osnivačica Brendia Pro®"
+    },
+    "journey": {
+      "title": "Naše putovanje",
+      "description": "Od skromnih početaka do globalne zajednice profesionalaca",
+      "milestones": [
+        {
+          "year": "2013",
+          "title": "Putovanje počinje",
+          "description": "Započela kao strastvena frizerka s vizijom izvrsnosti u ekstenzijama kose."
+        },
+        {
+          "year": "2016",
+          "title": "Majstorstvo tehnika",
+          "description": "Razvila jedinstvene metode weft ekstenzija nakon godina istraživanja i usavršavanja."
+        },
+        {
+          "year": "2019",
+          "title": "Prvi polaznici",
+          "description": "Počela dijeliti znanje s kolegama frizerima, pokrenuvši prve Brendia Pro® radionice."
+        },
+        {
+          "year": "2021",
+          "title": "Online edukacija",
+          "description": "Pokrenula sveobuhvatne online certifikacijske programe za doseg frizera diljem svijeta."
+        },
+        {
+          "year": "2024",
+          "title": "Globalna zajednica",
+          "description": "Izgradila uspješnu zajednicu od 500+ certificiranih profesionalaca u više od 30 zemalja."
+        }
+      ]
+    },
+    "values": {
+      "title": "Naše vrijednosti",
+      "description": "Principi koji vode sve što radimo u Brendia Pro®",
+      "items": [
+        {
+          "title": "Izvrsnost",
+          "description": "Vjerujemo u kontinuirano poboljšanje i nikad se ne zadovoljavamo s 'dovoljno dobro'. Svaka tehnika, svaka lekcija izrađena je prema najvišim standardima."
+        },
+        {
+          "title": "Integritet",
+          "description": "Poštena edukacija i iskrena podrška. Posvećeni smo vašem uspjehu, a ne samo prodaji tečajeva."
+        },
+        {
+          "title": "Zajednica",
+          "description": "Uspjeh je bolji kad se dijeli. Naši certificirani profesionalci podržavaju i inspiriraju jedni druge svaki dan."
+        },
+        {
+          "title": "Inovacija",
+          "description": "Industrija ljepote neprestano se razvija. Ostajemo u koraku s najnovijim tehnikama i trendovima."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Spremni pridružiti se našoj zajednici?",
+      "description": "Otkrijte kako Brendia Pro® certifikacija može transformirati vašu karijeru i otvoriti nove mogućnosti.",
+      "exploreCourses": "Istražite tečajeve",
+      "getInTouch": "Stupite u kontakt"
+    }
+  },
+  "faqPage": {
+    "hero": {
+      "tagline": "Podrška",
+      "title": "Često postavljana pitanja",
+      "description": "Pronađite odgovore na česta pitanja o našim tečajevima, procesu certifikacije i što možete očekivati na svom putovanju s Brendia Pro®."
+    },
+    "categories": {
+      "aboutCourses": {
+        "title": "O tečajevima",
+        "faqs": [
+          {
+            "question": "Koju razinu iskustva trebam za upis?",
+            "answer": "Brendia Pro® Artist osmišljen je za frizere na bilo kojoj razini, uključujući one koji su novi u svijetu ekstenzija. Preporučujemo osnovne frizerske vještine, ali nije potrebno prethodno iskustvo s ekstenzijama. Advanced Brendia Pro® Artist idealan je za one koji su završili Artist tečaj ili imaju ekvivalentno iskustvo."
+          },
+          {
+            "question": "Koliko vremena treba za završetak tečaja?",
+            "answer": "Oba tečaja su samovođena, tako da možete učiti prema vlastitom rasporedu. U prosjeku, polaznici završavaju Foundation Certifikaciju za 6-8 tjedana, a Master Certifikaciju za 8-12 tjedana. Međutim, imate doživotni pristup, tako da možete uzeti koliko god vremena vam treba."
+          },
+          {
+            "question": "Koja je razlika između Artist i Advanced Artist?",
+            "answer": "Brendia Pro® Artist pokriva sve bitne tehnike za profesionalne usluge weft ekstenzija. Advanced Brendia Pro® Artist uključuje sve iz Artist programa plus napredne tehnike, složeni rad s bojama, korektivne postupke, poslovne strategije i osobnu mentorsku sesiju s Nikolinom."
+          },
+          {
+            "question": "Trebam li kupiti dodatne materijale?",
+            "answer": "Tečajevi uključuju sve digitalne materijale potrebne za učenje. Za praktičnu vježbu, trebat ćete nabaviti vlastite ekstenzije kose, alate i glavu za vježbanje. Popis preporučene opreme s predloženim dobavljačima nalazit se u tečaju."
+          }
+        ]
+      },
+      "certification": {
+        "title": "Certifikacija i kvalifikacije",
+        "faqs": [
+          {
+            "question": "Koju certifikaciju dobivam?",
+            "answer": "Po uspješnom završetku dobivate službenu Brendia Pro® certifikaciju koju možete izložiti u svom salonu i koristiti u svojim marketinškim materijalima. Ova certifikacija demonstrira vašu predanost izvrsnosti i profesionalnoj obuci."
+          },
+          {
+            "question": "Je li certifikacija međunarodno priznata?",
+            "answer": "Brendia Pro® certifikacije priznate su globalno unutar profesionalne zajednice ekstenzija kose. Naši polaznici uspješno rade u više od 30 zemalja. Iako licenciranje za ljepotu varira ovisno o lokaciji, naša certifikacija značajno dodaje kredibilitet vašim kvalifikacijama."
+          },
+          {
+            "question": "Kako postajem certificiran/a?",
+            "answer": "Certifikacija se stječe završetkom svih modula tečaja i predajom praktičnih procjena vašeg rada. Naš tim pregledava vaše radove i pruža personalizirane povratne informacije. Većina polaznika postiže certifikaciju pri prvom pokušaju."
+          }
+        ]
+      },
+      "enrollment": {
+        "title": "Upis i plaćanje",
+        "faqs": [
+          {
+            "question": "Koje opcije plaćanja su dostupne?",
+            "answer": "Prihvaćamo sve glavne kreditne kartice i nudimo planove plaćanja kako bi edukacija bila dostupna. Kontaktirajte nas da razgovaramo o opcijama plaćanja koje odgovaraju vašem budžetu."
+          },
+          {
+            "question": "Postoji li politika povrata?",
+            "answer": "Nudimo 14-dnevno jamstvo zadovoljstva. Ako niste potpuno zadovoljni svojim tečajem unutar prvih 14 dana, kontaktirajte nas za puni povrat novca. Nakon 14 dana, sva prodaja je konačna, ali posvećeni smo vašem uspjehu i radit ćemo s vama na rješavanju bilo kakvih nedoumica."
+          },
+          {
+            "question": "Mogu li kasnije nadograditi s Foundation na Master?",
+            "answer": "Apsolutno! Mnogi polaznici prvo završe Foundation Certifikaciju i kasnije nadograde na Master. Nudimo posebnu cijenu nadogradnje za postojeće Foundation polaznike. Kontaktirajte nas za trenutne cijene nadogradnje."
+          }
+        ]
+      },
+      "access": {
+        "title": "Pristup tečaju i podrška",
+        "faqs": [
+          {
+            "question": "Koliko dugo imam pristup tečaju?",
+            "answer": "Imate doživotni pristup svim materijalima tečaja. To uključuje sva ažuriranja koja napravimo u kurikulumu tijekom vremena. Prijavite se bilo kada za pregled lekcija ili pristup novom sadržaju."
+          },
+          {
+            "question": "Što ako zapnem ili imam pitanja?",
+            "answer": "Imat ćete pristup našoj privatnoj zajednici gdje se možete povezati s drugim polaznicima i certificiranim profesionalcima. Za tehničke probleme, naš tim za podršku dostupan je putem emaila. Polaznici Master Certifikacije također dobivaju prioritetnu podršku."
+          },
+          {
+            "question": "Mogu li pristupiti tečaju na mobitelu?",
+            "answer": "Da! Naša platforma za tečaj je potpuno responzivna i radi na bilo kojem uređaju. Gledajte lekcije na računalu, tabletu ili pametnom telefonu kad god i gdje god vam odgovara."
+          }
+        ]
+      }
+    },
+    "stillHaveQuestions": {
+      "title": "Još uvijek imate pitanja?",
+      "description": "Ne možete pronaći odgovor koji tražite? Tu smo da pomognemo. Javite nam se i odgovorit ćemo vam što je prije moguće.",
+      "cta": "Kontaktirajte nas"
+    }
+  },
+  "checkout": {
+    "backToCourse": "Povratak na tečaj",
+    "pageTitle": "Dovršite svoj upis",
+    "pageSubtitle": "Samo ste jedan korak od transformacije svoje karijere",
+    "orderSummary": {
+      "title": "Sažetak narudžbe",
+      "whatsIncluded": "Što je uključeno",
+      "moreBenefits": "+{count} dodatnih pogodnosti",
+      "subtotal": "Međuzbroj (bez PDV-a)",
+      "vat": "PDV ({percentage}%)",
+      "total": "Ukupno"
+    },
+    "trustBadges": {
+      "securePayment": "Sigurno plaćanje putem Stripea",
+      "allCardsAccepted": "Prihvaćaju se sve glavne kartice"
+    },
+    "form": {
+      "personalInfo": {
+        "title": "Osobni podaci",
+        "firstName": "Ime",
+        "firstNamePlaceholder": "Ana",
+        "lastName": "Prezime",
+        "lastNamePlaceholder": "Horvat",
+        "email": "Email",
+        "emailPlaceholder": "ana@example.com",
+        "phone": "Telefon",
+        "phonePlaceholder": "+385 91 234 5678"
+      },
+      "billingAddress": {
+        "title": "Adresa za račun",
+        "street": "Ulica i kućni broj",
+        "streetPlaceholder": "Ilica 123",
+        "city": "Grad",
+        "cityPlaceholder": "Zagreb",
+        "postalCode": "Poštanski broj",
+        "postalCodePlaceholder": "10000",
+        "country": "Država",
+        "countryPlaceholder": "Odaberite državu"
+      },
+      "companyDetails": {
+        "title": "Podaci o tvrtki",
+        "optional": "(Opcionalno)",
+        "show": "Dodajte podatke o tvrtki",
+        "hide": "Sakrij",
+        "companyName": "Naziv tvrtke",
+        "companyNamePlaceholder": "Salon Ana d.o.o.",
+        "vatNumber": "OIB / PDV ID",
+        "vatNumberPlaceholder": "HR12345678901",
+        "vatHelperText": "Za EU tvrtke - može se primijeniti obrnuto oporezivanje"
+      },
+      "hearAboutUs": {
+        "title": "Kako ste čuli za nas?",
+        "optional": "(Opcionalno)",
+        "placeholder": "Odaberite opciju",
+        "options": {
+          "instagram": "Instagram",
+          "facebook": "Facebook",
+          "google": "Google pretraživanje",
+          "youtube": "YouTube",
+          "friend": "Prijatelj ili kolega",
+          "salon": "Preporuka salona",
+          "event": "Industrijski događaj",
+          "other": "Ostalo"
+        }
+      },
+      "terms": {
+        "accept": "Prihvaćam",
+        "termsOfService": "Uvjete korištenja",
+        "and": "i",
+        "privacyPolicy": "Politiku privatnosti",
+        "digitalProduct": ". Razumijem da je ovo digitalni proizvod i da ću dobiti pristup putem emaila nakon plaćanja.",
+        "marketing": "Želim primati novosti, savjete i ekskluzivne ponude od Brendia Pro putem emaila."
+      },
+      "validation": {
+        "firstName": "Molimo unesite svoje ime",
+        "lastName": "Molimo unesite svoje prezime",
+        "email": "Molimo unesite valjanu email adresu",
+        "phone": "Molimo unesite svoj broj telefona",
+        "street": "Molimo unesite svoju adresu",
+        "city": "Molimo unesite svoj grad",
+        "postalCode": "Molimo unesite svoj poštanski broj",
+        "country": "Molimo odaberite svoju državu",
+        "acceptTerms": "Morate prihvatiti uvjete korištenja"
+      },
+      "submit": {
+        "button": "Platite {price} i upišite se",
+        "redirectNote": "Bit ćete preusmjereni na Stripe za sigurnu obradu plaćanja.",
+        "securityNote": "Podaci vaše kartice nikad se ne pohranjuju na našim serverima."
+      }
+    },
+    "success": {
+      "title": "Dobrodošli u Brendia Pro!",
+      "description": "Vaš upis je potvrđen. Oduševljeni smo što nam se pridružujete u našoj zajednici profesionalnih frizera.",
+      "whatHappensNext": "Što slijedi?",
+      "steps": {
+        "checkEmail": {
+          "title": "Provjerite email",
+          "description": "Poslali smo vam potvrdu s računom i detaljima pristupa tečaju. Molimo provjerite svoju pristiglu poštu (i spam mapu)."
+        },
+        "accessCourse": {
+          "title": "Pristupite tečaju",
+          "description": "Prijavite se na portal za polaznike koristeći podatke iz emaila da započnete svoje certifikacijsko putovanje."
+        },
+        "joinCommunity": {
+          "title": "Pridružite se zajednici",
+          "description": "Povežite se s drugim polaznicima u našoj privatnoj zajednici. Dobijte podršku, podijelite svoj napredak i umrežite se s drugim profesionalcima."
+        }
+      },
+      "orderReference": "Referenca narudžbe",
+      "returnHome": "Povratak na početnu",
+      "needHelp": "Trebate pomoć?",
+      "supportNote": "Pitanja? Kontaktirajte nas na"
+    },
+    "cancel": {
+      "title": "Plaćanje otkazano",
+      "description": "Vaše plaćanje nije obrađeno. Nikakvi troškovi nisu naplaćeni na vaš račun.",
+      "helpText": "Ako ste imali problema ili ste se predomislili, tu smo da pomognemo. Slobodno nam se javite s bilo kakvim pitanjima.",
+      "tryAgain": "Pokušajte ponovno",
+      "viewCourses": "Pogledajte tečajeve",
+      "contactSupport": "Kontaktirajte podršku",
+      "faqLink": "Pitanja o upisu?",
+      "checkFaq": "Provjerite naša pitanja",
+      "paymentPlans": "Trebate plan plaćanja?",
+      "contactUs": "Kontaktirajte nas",
+      "toDiscuss": "za dogovor opcija."
+    }
+  },
+  "legal": {
+    "lastUpdated": "Zadnje ažurirano: siječanj 2024.",
+    "privacy": {
+      "title": "Politika privatnosti",
+      "introduction": {
+        "title": "Uvod",
+        "content": "Brendia Pro® (\"mi\", \"naše\" ili \"nas\") poštuje vašu privatnost i posvećen je zaštiti vaših osobnih podataka. Ova politika privatnosti objašnjava kako prikupljamo, koristimo i štitimo vaše podatke kada posjetite našu web stranicu ili koristite naše usluge."
+      },
+      "informationWeCollect": {
+        "title": "Podaci koje prikupljamo",
+        "personalInfo": {
+          "title": "Osobni podaci",
+          "intro": "Možemo prikupljati sljedeće vrste osobnih podataka:",
+          "items": [
+            "<strong>Kontaktni podaci:</strong> Ime, email adresa, telefonski broj",
+            "<strong>Podaci o računu:</strong> Korisničko ime, lozinka, detalji profila",
+            "<strong>Podaci o plaćanju:</strong> Adresa za račun, podaci o platnoj kartici (obrađuju se sigurno putem Stripea)",
+            "<strong>Napredak u tečaju:</strong> Završene lekcije, rezultati kvizova, stečeni certifikati"
+          ]
+        },
+        "automaticInfo": {
+          "title": "Automatski prikupljeni podaci",
+          "intro": "Kada posjetite našu web stranicu, automatski prikupljamo određene podatke:",
+          "items": [
+            "IP adresa i podaci o lokaciji",
+            "Vrsta i verzija preglednika",
+            "Podaci o uređaju",
+            "Posjećene stranice i provedeno vrijeme",
+            "Izvore preporuka"
+          ]
+        }
+      },
+      "howWeUse": {
+        "title": "Kako koristimo vaše podatke",
+        "intro": "Koristimo vaše osobne podatke za:",
+        "items": [
+          "Pružanje i održavanje naših usluga",
+          "Obradu plaćanja i upravljanje vašim računom",
+          "Slanje važnih obavijesti o vašim tečajevima",
+          "Odgovaranje na vaše upite i zahtjeve za podršku",
+          "Slanje marketinških komunikacija (uz vaš pristanak)",
+          "Poboljšanje naše web stranice i usluga",
+          "Ispunjavanje zakonskih obveza"
+        ]
+      },
+      "informationSharing": {
+        "title": "Dijeljenje podataka",
+        "intro": "Ne prodajemo vaše osobne podatke. Možemo dijeliti vaše podatke s:",
+        "items": [
+          "<strong>Davatelji usluga:</strong> Treće strane koje nam pomažu u poslovanju (procesori plaćanja, email usluge, hosting provideri)",
+          "<strong>Zakonski zahtjevi:</strong> Kada to zahtijeva zakon ili radi zaštite naših prava",
+          "<strong>Poslovni transferi:</strong> U vezi s spajanjem, preuzimanjem ili prodajom imovine"
+        ]
+      },
+      "dataSecurity": {
+        "title": "Sigurnost podataka",
+        "intro": "Primjenjujemo odgovarajuće tehničke i organizacijske mjere za zaštitu vaših osobnih podataka, uključujući:",
+        "items": [
+          "SSL/TLS enkripcija za prijenos podataka",
+          "Sigurno skladištenje s kontrolom pristupa",
+          "Redovite sigurnosne procjene",
+          "Obuka zaposlenika o zaštiti podataka"
+        ]
+      },
+      "yourRights": {
+        "title": "Vaša prava",
+        "intro": "Ovisno o vašoj lokaciji, možete imati sljedeća prava:",
+        "items": [
+          "Pristup vašim osobnim podacima",
+          "Ispravak netočnih podataka",
+          "Zahtjev za brisanje vaših podataka",
+          "Prigovor na obradu vaših podataka",
+          "Prenosivost podataka",
+          "Povlačenje pristanka"
+        ],
+        "contact": "Za ostvarivanje ovih prava, molimo kontaktirajte nas na privacy@brendiapro.com."
+      },
+      "cookies": {
+        "title": "Kolačići",
+        "content": "Koristimo kolačiće i slične tehnologije za poboljšanje vašeg iskustva. Možete kontrolirati kolačiće putem postavki preglednika. Bitni kolačići nužni su za funkcioniranje web stranice."
+      },
+      "thirdPartyLinks": {
+        "title": "Poveznice trećih strana",
+        "content": "Naša web stranica može sadržavati poveznice na web stranice trećih strana. Nismo odgovorni za prakse privatnosti tih vanjskih stranica."
+      },
+      "childrensPrivacy": {
+        "title": "Privatnost djece",
+        "content": "Naše usluge nisu namijenjene osobama mlađim od 18 godina. Svjesno ne prikupljamo osobne podatke djece."
+      },
+      "changes": {
+        "title": "Promjene ove politike",
+        "content": "Možemo s vremena na vrijeme ažurirati ovu politiku privatnosti. Obavijestit ćemo vas o svim značajnim promjenama objavljivanjem nove politike na ovoj stranici i ažuriranjem datuma \"Zadnje ažurirano\"."
+      },
+      "contactUs": {
+        "title": "Kontaktirajte nas",
+        "intro": "Ako imate pitanja o ovoj politici privatnosti ili našim praksama s podacima, molimo kontaktirajte nas na:",
+        "email": "Email: privacy@brendiapro.com"
+      }
+    },
+    "terms": {
+      "title": "Uvjeti korištenja",
+      "agreementToTerms": {
+        "title": "1. Prihvaćanje uvjeta",
+        "content": "Pristupanjem ili korištenjem web stranice i usluga Brendia Pro®, pristajete biti obvezani ovim Uvjetima korištenja. Ako se ne slažete s ovim uvjetima, molimo ne koristite naše usluge."
+      },
+      "descriptionOfServices": {
+        "title": "2. Opis usluga",
+        "intro": "Brendia Pro® pruža online edukacijske tečajeve i certifikacijske programe za tehnike ekstenzija kose. Naše usluge uključuju:",
+        "items": [
+          "Video-bazirane tečajeve obuke",
+          "Digitalne materijale za učenje",
+          "Certifikaciju po završetku",
+          "Pristup forumima zajednice",
+          "Korisničku podršku"
+        ]
+      },
+      "accountRegistration": {
+        "title": "3. Registracija računa",
+        "intro": "Za pristup našim tečajevima morate stvoriti račun. Pristajete:",
+        "items": [
+          "Pružiti točne i potpune informacije",
+          "Održavati sigurnost podataka vašeg računa",
+          "Odmah nas obavijestiti o bilo kakvom neovlaštenom pristupu",
+          "Prihvatiti odgovornost za sve aktivnosti pod vašim računom"
+        ]
+      },
+      "courseAccess": {
+        "title": "4. Pristup i korištenje tečaja",
+        "licenseGrant": {
+          "title": "Dodjela licence",
+          "content": "Nakon kupnje, dodjeljujemo vam ograničenu, neekskluzivnu, neprenosivu licencu za pristup i pregled sadržaja tečaja za osobne, nekomercijalne edukacijske svrhe."
+        },
+        "restrictions": {
+          "title": "Ograničenja",
+          "intro": "Ne smijete:",
+          "items": [
+            "Dijeliti podatke za prijavu s drugima",
+            "Preuzimati, kopirati ili redistribuirati sadržaj tečaja",
+            "Snimati, screenshotati ili snimati videozapise tečaja",
+            "Koristiti sadržaj u komercijalne svrhe bez dopuštenja",
+            "Preprodavati ili podlicencirati pristup tečajevima",
+            "Pokušavati obrnuti inženjering ili ekstrahirati izvorni kod s naše platforme"
+          ]
+        }
+      },
+      "paymentTerms": {
+        "title": "5. Uvjeti plaćanja",
+        "pricing": {
+          "title": "Cijene",
+          "content": "Sve cijene prikazane su u EUR i podložne su promjenama. Cijena u trenutku kupnje bit će poštovana."
+        },
+        "processing": {
+          "title": "Obrada plaćanja",
+          "content": "Plaćanja se sigurno obrađuju putem Stripea. Kupnjom nas ovlašćujete da naplatimo ukupan iznos na vašu metodu plaćanja."
+        },
+        "paymentPlans": {
+          "title": "Planovi plaćanja",
+          "content": "Ako se upišete u plan plaćanja, pristajete izvršiti sva zakazana plaćanja. Neuspjeh u dovršetku plaćanja može rezultirati ograničenim pristupom sadržaju tečaja."
+        }
+      },
+      "refundPolicy": {
+        "title": "6. Politika povrata",
+        "content1": "Nudimo 14-dnevno jamstvo zadovoljstva. Ako niste zadovoljni svojim tečajem unutar 14 dana od kupnje, možete zatražiti puni povrat novca kontaktiranjem nas na refunds@brendiapro.com.",
+        "content2": "Zahtjevi za povrat nakon 14 dana procjenjivat će se od slučaja do slučaja. Povrat novca neće se izdati za:",
+        "items": [
+          "Tečajeve završene više od 50%",
+          "Već izdanu certifikaciju",
+          "Zahtjeve podnesene nakon 30 dana od kupnje"
+        ]
+      },
+      "certification": {
+        "title": "7. Certifikacija",
+        "content1": "Brendia Pro® certifikacija dodjeljuje se po uspješnom završetku zahtjeva tečaja. Certifikacija označava završetak našeg programa obuke i ne jamči zaposlenje, prihode ili regulatornu usklađenost u vašoj jurisdikciji.",
+        "content2": "Možete prikazati svoju certifikaciju i koristiti oznaku \"Brendia Pro® Certificirano\" u svojim marketinškim materijalima dok održavate profesionalne standarde."
+      },
+      "intellectualProperty": {
+        "title": "8. Intelektualno vlasništvo",
+        "content1": "Sav sadržaj, uključujući videozapise, tekst, grafiku, logotipe i materijale, u vlasništvu su Brendia Pro® ili naših davatelja licenci i zaštićeni su zakonima o intelektualnom vlasništvu.",
+        "content2": "Ime Brendia Pro®, logotip i povezane oznake su zaštitni znakovi koji se ne smiju koristiti bez našeg prethodnog pisanog pristanka."
+      },
+      "userContent": {
+        "title": "9. Korisnički sadržaj",
+        "content": "Objavljivanjem sadržaja na forumima zajednice ili predajom radova za procjenu, dajete nam neekskluzivnu, besplatnu licencu za korištenje, prikazivanje i distribuciju tog sadržaja u edukacijske i promotivne svrhe."
+      },
+      "disclaimers": {
+        "title": "10. Odricanja od odgovornosti",
+        "content1": "Naše usluge pružaju se \"kakve jesu\" bez jamstava bilo koje vrste. Ne jamčimo da će naše usluge biti neprekidne, bez grešaka ili da će zadovoljiti vaše specifične zahtjeve.",
+        "content2": "Edukacijski sadržaj služi samo u informativne svrhe. Nismo odgovorni za bilo kakve ishode koji proizlaze iz primjene tehnika naučenih kroz naše tečajeve."
+      },
+      "limitationOfLiability": {
+        "title": "11. Ograničenje odgovornosti",
+        "content1": "U maksimalnoj mjeri dopuštenoj zakonom, Brendia Pro® neće biti odgovoran za bilo kakve neizravne, slučajne, posebne, posljedične ili kaznene štete koje proizlaze iz vašeg korištenja naših usluga.",
+        "content2": "Naša ukupna odgovornost neće premašiti iznos koji ste platili za relevantan tečaj."
+      },
+      "termination": {
+        "title": "12. Prekid",
+        "content": "Zadržavamo pravo obustaviti ili ukinuti vaš račun zbog kršenja ovih uvjeta, prijevarnih aktivnosti ili drugog ponašanja koje smatramo štetnim za naše poslovanje ili zajednicu."
+      },
+      "modifications": {
+        "title": "13. Izmjene",
+        "content": "Možemo izmijeniti ove uvjete u bilo koje vrijeme. Značajne promjene bit će priopćene putem emaila ili obavijesti na web stranici. Nastavak korištenja naših usluga nakon promjena predstavlja prihvaćanje izmijenjenih uvjeta."
+      },
+      "governingLaw": {
+        "title": "14. Mjerodavno pravo",
+        "content": "Ovi uvjeti bit će regulirani i tumačeni u skladu s primjenjivim zakonima. Svi sporovi rješavat će se obvezujućom arbitražom ili pred nadležnim sudovima."
+      },
+      "contactInfo": {
+        "title": "15. Kontakt informacije",
+        "intro": "Za pitanja o ovim Uvjetima korištenja, molimo kontaktirajte nas na:",
+        "email": "Email: legal@brendiapro.com"
+      }
+    }
+  }
+}

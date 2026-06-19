@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -82,6 +82,13 @@ const IconCamera = () => (
   </svg>
 );
 
+const IconClock = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <circle cx="12" cy="12" r="10" />
+    <polyline points="12 6 12 12 16 14" />
+  </svg>
+);
+
 interface FormData {
   // Basic Info
   fullName: string;
@@ -140,6 +147,30 @@ export default function OnboardingPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  // Countdown to 15.08.2026
+  useEffect(() => {
+    const targetDate = new Date("2026-08-15T23:59:59").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        setCountdown({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000),
+        });
+      }
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -300,6 +331,7 @@ export default function OnboardingPage() {
         </div>
       </div>
 
+
       {/* Main Content with Side Panel */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row gap-12">
@@ -344,11 +376,11 @@ export default function OnboardingPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary mt-0.5">✦</span>
-                    <span>Besplatni masterclass (prva generacija)</span>
+                    <span>Besplatni masterclass u vrijednosti 1.500€ (prva generacija)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary mt-0.5">✦</span>
-                    <span>Pristup sadržaju 24 mjeseca</span>
+                    <span>Pristup sadržaju 12 mjeseci</span>
                   </li>
                 </ul>
               </div>
@@ -368,6 +400,50 @@ export default function OnboardingPage() {
           {/* Form Column */}
           <div className="flex-1 min-w-0">
             <form onSubmit={handleSubmit}>
+              {/* Urgency Banner */}
+              <div className="mb-8 p-5 bg-gradient-to-r from-secondary/10 to-secondary/5 border border-secondary/30 rounded-lg">
+                <div className="flex items-start gap-4">
+                  <div className="text-secondary flex-shrink-0 mt-0.5">
+                    <IconClock />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-primary mb-2">
+                      Prijave otvorene do 15.08.2026.
+                    </p>
+                    <p className="text-sm text-primary/70 mb-4">
+                      Prijavi se do ovog datuma i dobij <span className="font-semibold text-secondary">besplatni masterclass u vrijednosti 1.500€</span> — ekskluzivno za prvu generaciju Brendia Pro® polaznica!
+                    </p>
+                    {/* Countdown */}
+                    <div className="flex gap-3">
+                      <div className="text-center">
+                        <div className="bg-primary text-white px-3 py-2 rounded font-semibold text-lg min-w-[50px]">
+                          {countdown.days}
+                        </div>
+                        <p className="text-xs text-primary/60 mt-1">dana</p>
+                      </div>
+                      <div className="text-center">
+                        <div className="bg-primary text-white px-3 py-2 rounded font-semibold text-lg min-w-[50px]">
+                          {countdown.hours}
+                        </div>
+                        <p className="text-xs text-primary/60 mt-1">sati</p>
+                      </div>
+                      <div className="text-center">
+                        <div className="bg-primary text-white px-3 py-2 rounded font-semibold text-lg min-w-[50px]">
+                          {countdown.minutes}
+                        </div>
+                        <p className="text-xs text-primary/60 mt-1">min</p>
+                      </div>
+                      <div className="text-center">
+                        <div className="bg-primary/80 text-white px-3 py-2 rounded font-semibold text-lg min-w-[50px]">
+                          {countdown.seconds}
+                        </div>
+                        <p className="text-xs text-primary/60 mt-1">sek</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {error && (
                 <div className="mb-8 p-4 bg-red-50 border border-red-200 text-red-700 text-center">
                   {error}
@@ -533,7 +609,7 @@ export default function OnboardingPage() {
                         name="educationLevel"
                         value="brendia-pro-artist"
                         title="Brendia Pro® Artist"
-                        description="Bazna edukacija"
+                        description="Online edukacija"
                         price="3.000€ + PDV"
                         checked={formData.educationLevel === "brendia-pro-artist"}
                         onChange={handleInputChange}
@@ -542,7 +618,7 @@ export default function OnboardingPage() {
                         name="educationLevel"
                         value="advanced-brendia-pro-artist"
                         title="Advanced Brendia Pro® Artist"
-                        description="Napredna edukacija"
+                        description="Napredna online edukacija"
                         price="4.000€ + PDV"
                         checked={
                           formData.educationLevel === "advanced-brendia-pro-artist"
@@ -551,13 +627,85 @@ export default function OnboardingPage() {
                       />
                       <EducationLevelOption
                         name="educationLevel"
-                        value="brendia-pro-master"
-                        title="Brendia Pro® Master"
-                        description="Komplet 2u1 + 1:1 mentorstvo"
-                        price="5.000€ + PDV"
-                        checked={formData.educationLevel === "brendia-pro-master"}
+                        value="brendia-pro-artist-1v1"
+                        title="Brendia Pro® Artist 1v1"
+                        description="Live edukacija u salonu (1 dan, 4 sata)"
+                        price="2.000€ + PDV"
+                        checked={formData.educationLevel === "brendia-pro-artist-1v1"}
                         onChange={handleInputChange}
                       />
+                      <EducationLevelOption
+                        name="educationLevel"
+                        value="brendia-pro-master-1v1"
+                        title="Brendia Pro® Master 1v1"
+                        description="Live edukacija u studiju (2 dana, 6 sati/dan)"
+                        price="5.000€ + PDV"
+                        checked={formData.educationLevel === "brendia-pro-master-1v1"}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+
+                    {/* Education Level Details */}
+                    <div className="mt-6 p-5 bg-cream/50 border border-secondary/20 rounded-lg">
+                      <p className="text-xs font-semibold text-secondary uppercase tracking-wider mb-4">
+                        Što uključuje svaki level?
+                      </p>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        {/* Online Courses */}
+                        <div>
+                          <p className="font-medium text-primary text-sm mb-3">Online edukacije:</p>
+                          <div className="space-y-3">
+                            <div className="text-sm">
+                              <p className="font-medium text-primary">Brendia Pro® Artist (3.000€)</p>
+                              <ul className="text-primary/60 mt-1 space-y-1">
+                                <li>• Pristup edukaciji online</li>
+                                <li>• Objašnjeno korak po korak</li>
+                                <li>• Mentor prati tvoj rad</li>
+                                <li>• Zadaće</li>
+                                <li>• Education starter kit</li>
+                              </ul>
+                            </div>
+                            <div className="text-sm">
+                              <p className="font-medium text-primary">Advanced Brendia Pro® Artist (4.000€)</p>
+                              <ul className="text-primary/60 mt-1 space-y-1">
+                                <li>• Sve iz Artist levela</li>
+                                <li>• Dodatne napredne lekcije</li>
+                                <li>• Education starter kit</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        {/* 1v1 Courses */}
+                        <div>
+                          <p className="font-medium text-primary text-sm mb-3">Live 1v1 edukacije:</p>
+                          <div className="space-y-3">
+                            <div className="text-sm">
+                              <p className="font-medium text-primary">Brendia Pro® Artist 1v1 (2.000€)</p>
+                              <ul className="text-primary/60 mt-1 space-y-1">
+                                <li>• 1 dan live edukacije u salonu</li>
+                                <li>• 4 sata hands-on prakse</li>
+                                <li>• Personalizirani pristup</li>
+                                <li>• Certifikat</li>
+                                <li>• Pristup platformi (shop + zajednica)</li>
+                                <li>• Education starter kit</li>
+                                <li className="text-primary/40 italic">• Bez pristupa video lekcijama</li>
+                              </ul>
+                            </div>
+                            <div className="text-sm">
+                              <p className="font-medium text-primary">Brendia Pro® Master 1v1 (5.000€)</p>
+                              <ul className="text-primary/60 mt-1 space-y-1">
+                                <li>• 2 dana live edukacije u studiju</li>
+                                <li>• 12 sati hands-on prakse</li>
+                                <li>• Foundation + Master sadržaj</li>
+                                <li>• Certifikat</li>
+                                <li>• Pristup platformi (shop + zajednica)</li>
+                                <li>• Education starter kit</li>
+                                <li className="text-primary/40 italic">• Bez pristupa video lekcijama</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </FormSection>
@@ -601,7 +749,7 @@ export default function OnboardingPage() {
                       <p className="text-sm font-medium text-primary mb-3">
                         Način plaćanja:
                       </p>
-                      <div className="flex gap-6">
+                      <div className="flex flex-wrap gap-4">
                         <RadioOption
                           name="paymentMethod"
                           value="jednokratno"
@@ -612,8 +760,15 @@ export default function OnboardingPage() {
                         <RadioOption
                           name="paymentMethod"
                           value="rate"
-                          label="Rate"
+                          label="Kartično na rate (do 12 rata)"
                           checked={formData.paymentMethod === "rate"}
+                          onChange={handleInputChange}
+                        />
+                        <RadioOption
+                          name="paymentMethod"
+                          value="virman"
+                          label="Virman"
+                          checked={formData.paymentMethod === "virman"}
                           onChange={handleInputChange}
                         />
                       </div>
@@ -663,12 +818,16 @@ export default function OnboardingPage() {
                 <FormSection number={8} title="MASTERCLASS" icon={<IconCalendar />}>
                   <div>
                     <p className="text-sm font-medium text-primary mb-2">
-                      Masterclass će biti održan 27.6. u Zagrebu.
+                      Masterclass će biti održan 26.09.2026. ili 03.10.2026. u Zagrebu.
                     </p>
-                    <p className="text-sm text-primary/70 mb-4">
+                    <p className="text-sm text-primary/70 mb-2">
                       <span className="font-semibold text-secondary">Besplatno za prvu generaciju Brendia Pro® polaznica!</span>{" "}
                       Ekskluzivni cjelodnevni event samo za Brendia Pro® polaznice.
                       Uključuje live demo, hands-on praksu i networking.
+                    </p>
+                    <p className="text-sm text-primary/50 mb-4">
+                      <span className="line-through">Redovna cijena: 1.500€</span>{" "}
+                      <span className="text-secondary font-semibold">→ Besplatno za prvu generaciju Brendia Pro® polaznica!</span>
                     </p>
 
                     {/* Schedule */}
@@ -709,14 +868,21 @@ export default function OnboardingPage() {
                     </div>
 
                     <p className="text-sm text-primary/60 mb-4">
-                      Možeš li doći?
+                      Koji datum ti odgovara?
                     </p>
                     <div className="flex flex-wrap gap-4">
                       <RadioOption
                         name="masterclassDate"
-                        value="27-06"
-                        label="Da, dolazim 27.6."
-                        checked={formData.masterclassDate === "27-06"}
+                        value="26-09"
+                        label="Da, dolazim 26.09."
+                        checked={formData.masterclassDate === "26-09"}
+                        onChange={handleInputChange}
+                      />
+                      <RadioOption
+                        name="masterclassDate"
+                        value="03-10"
+                        label="Da, dolazim 03.10."
+                        checked={formData.masterclassDate === "03-10"}
                         onChange={handleInputChange}
                       />
                       <RadioOption
@@ -879,6 +1045,100 @@ export default function OnboardingPage() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="bg-cream py-16">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <p className="text-secondary text-sm font-medium tracking-widest uppercase mb-3">
+              Česta pitanja
+            </p>
+            <h2 className="font-heading text-3xl md:text-4xl text-primary">
+              Imaš pitanja?
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {/* FAQ Item 1 */}
+            <details className="group bg-white border border-primary/10 rounded-lg">
+              <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                <span className="font-medium text-primary">Kada započinje edukacija?</span>
+                <span className="text-secondary transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div className="px-5 pb-5 text-sm text-primary/70">
+                Pristup online platformi dobivaš odmah nakon što zaprimimo uplatu i obradimo tvoju prijavu.
+                Welcome box šaljemo u roku od 7-14 radnih dana. Masterclass za prvu generaciju održat će se
+                26.09.2026. ili 03.10.2026. u Zagrebu.
+              </div>
+            </details>
+
+            {/* FAQ Item 2 */}
+            <details className="group bg-white border border-primary/10 rounded-lg">
+              <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                <span className="font-medium text-primary">Koliko dugo imam pristup sadržaju?</span>
+                <span className="text-secondary transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div className="px-5 pb-5 text-sm text-primary/70">
+                Pristup online platformi i svim materijalima imaš 12 mjeseci od aktivacije.
+                To ti daje dovoljno vremena da prođeš sve module vlastitim tempom i vratiš se
+                na lekcije kad god ti zatreba.
+              </div>
+            </details>
+
+            {/* FAQ Item 3 */}
+            <details className="group bg-white border border-primary/10 rounded-lg">
+              <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                <span className="font-medium text-primary">Koje su opcije plaćanja?</span>
+                <span className="text-secondary transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div className="px-5 pb-5 text-sm text-primary/70">
+                Prihvaćamo uplatu na račun (virman) te plaćanje karticom. Za R1 račun potrebni su
+                podaci tvrtke. Ako ti treba obročno plaćanje, kontaktiraj nas pa ćemo pronaći
+                rješenje koje ti odgovara.
+              </div>
+            </details>
+
+            {/* FAQ Item 4 */}
+            <details className="group bg-white border border-primary/10 rounded-lg">
+              <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                <span className="font-medium text-primary">Što je uključeno u welcome box?</span>
+                <span className="text-secondary transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div className="px-5 pb-5 text-sm text-primary/70">
+                Welcome box sadrži sve materijale potrebne za početak rada: starter kit s alatima,
+                edukativne materijale, te ekskluzivne Brendia Pro® poklone. Točan sadržaj ovisi
+                o razini edukacije koju odabereš.
+              </div>
+            </details>
+
+            {/* FAQ Item 5 */}
+            <details className="group bg-white border border-primary/10 rounded-lg">
+              <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                <span className="font-medium text-primary">Trebam li prethodno iskustvo s ekstenzijama?</span>
+                <span className="text-secondary transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div className="px-5 pb-5 text-sm text-primary/70">
+                Ne! Brendia Pro® Artist razina osmišljena je za početnike i one koji žele naučiti
+                od nule. Sve što trebaš su osnovne frizerske vještine. Naprednije razine preporučujemo
+                onima s određenim iskustvom, ali nisu obavezne.
+              </div>
+            </details>
+
+            {/* FAQ Item 6 */}
+            <details className="group bg-white border border-primary/10 rounded-lg">
+              <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                <span className="font-medium text-primary">Što ako imam dodatna pitanja?</span>
+                <span className="text-secondary transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div className="px-5 pb-5 text-sm text-primary/70">
+                Javi nam se na Instagram <a href="https://instagram.com/brendiapro" className="text-secondary hover:underline">@brendiapro</a> ili
+                pošalji email na <a href="mailto:info@brendiapro.hr" className="text-secondary hover:underline">info@brendiapro.hr</a>.
+                Rado ćemo odgovoriti na sva tvoja pitanja!
+              </div>
+            </details>
           </div>
         </div>
       </div>

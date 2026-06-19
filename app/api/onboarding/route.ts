@@ -318,8 +318,13 @@ export async function POST(request: Request) {
         price: 4000,
         priceWithVat: 5000,
       },
-      "brendia-pro-master": {
-        name: "Brendia Pro® Master",
+      "brendia-pro-artist-1v1": {
+        name: "Brendia Pro® Artist 1v1",
+        price: 2000,
+        priceWithVat: 2500,
+      },
+      "brendia-pro-master-1v1": {
+        name: "Brendia Pro® Master 1v1",
         price: 5000,
         priceWithVat: 6250,
       },

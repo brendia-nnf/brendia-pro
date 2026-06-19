@@ -1,0 +1,1141 @@
+{
+  "metadata": {
+    "title": "Brendia Pro® | Premium Weft Extensions Education",
+    "titleTemplate": "%s | Brendia Pro®",
+    "description": "Master the art of weft extensions with Brendia Pro®'s premium certification courses. Learn from expert educator Nikolina Kljaić and transform your career."
+  },
+  "navigation": {
+    "home": "Home",
+    "courses": "Courses",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "enrollNow": "Enroll Now",
+    "toggleMenu": "Toggle menu"
+  },
+  "hero": {
+    "tagline": "Premium Hair Extension Education",
+    "title": "Master the Art of",
+    "titleHighlight": "Weft Extensions",
+    "description": "Transform your career with expert-led certification courses. Learn the techniques that will set you apart and build a thriving extension business.",
+    "exploreCourses": "Explore Courses",
+    "meetEducator": "Meet Your Educator",
+    "studentsCertified": "Students Certified",
+    "yearsExperience": "Years Experience",
+    "successRate": "Success Rate",
+    "scroll": "Scroll"
+  },
+  "valueProposition": {
+    "tagline": "Why Choose Brendia Pro®",
+    "title": "Elevate Your Craft to New Heights",
+    "description": "Our comprehensive certification program goes beyond basic training to transform you into a sought-after extension specialist.",
+    "values": {
+      "expertLed": {
+        "title": "Expert-Led Training",
+        "description": "Learn directly from Nikolina Kljaić, a master educator with over a decade of experience perfecting weft extension techniques."
+      },
+      "certification": {
+        "title": "Recognized Certification",
+        "description": "Earn a prestigious certification that establishes your credibility and opens doors to premium clientele worldwide."
+      },
+      "community": {
+        "title": "Exclusive Community",
+        "description": "Join a supportive network of certified professionals. Access ongoing support, updates, and exclusive industry insights."
+      }
+    }
+  },
+  "stats": {
+    "studentsCertified": "Students Certified",
+    "yearsExperience": "Years of Experience",
+    "countriesReached": "Countries Reached",
+    "successRate": "Success Rate"
+  },
+  "cta": {
+    "tagline": "Start Your Journey",
+    "title": "Ready to Transform Your Career?",
+    "description": "Join hundreds of successful stylists who have elevated their craft with Brendia Pro® certification. Your journey to becoming a sought-after extension specialist starts here.",
+    "viewCourses": "View Courses",
+    "contactUs": "Contact Us",
+    "lifetimeAccess": "Lifetime Access",
+    "officialCertification": "Official Certification",
+    "paymentPlans": "Payment Plans Available"
+  },
+  "footer": {
+    "description": "Premium weft extensions education by Nikolina Kljaić. Transform your career with our certification courses.",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "about": "About",
+    "courses": "Courses",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "allRightsReserved": "All rights reserved."
+  },
+  "courses": {
+    "tagline": "Our Programs",
+    "title": "Choose Your Path to Mastery",
+    "learnMore": "Learn More",
+    "foundation": {
+      "title": "Brendia Pro® Artist",
+      "description": "Perfect for stylists looking to master the fundamentals of weft extensions and build a solid foundation."
+    },
+    "master": {
+      "title": "Advanced Brendia Pro® Artist",
+      "description": "For experienced stylists seeking to achieve mastery and expand their service offerings."
+    }
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "description": "Have a question about our courses? We're here to help.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message Sent!",
+      "successMessage": "Thank you for your message. We'll get back to you soon."
+    },
+    "info": {
+      "email": "Email",
+      "responseTime": "Response Time",
+      "responseTimeValue": "Within 24 hours",
+      "followUs": "Follow Us"
+    }
+  },
+  "about": {
+    "tagline": "Meet the Founder",
+    "title": "Nikolina Kljaić",
+    "description": "With over a decade of experience in the hair extension industry, Nikolina has dedicated her career to elevating the standards of extension education."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our courses and certification."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try again"
+  },
+  "languageSwitcher": {
+    "hr": "HR",
+    "en": "EN"
+  },
+  "videoIntro": {
+    "tagline": "A Message From Nikolina",
+    "title": "Welcome to Brendia Pro®",
+    "caption": "Nikolina shares her passion for weft extensions and what you can expect from Brendia Pro®",
+    "playVideo": "Play video",
+    "pauseVideo": "Pause video",
+    "browserNotSupported": "Your browser does not support the video tag."
+  },
+  "coursePreview": {
+    "tagline": "Our Programs",
+    "title": "Choose Your Path to Mastery",
+    "description": "Two comprehensive certification programs designed to take you from skilled stylist to sought-after extension specialist.",
+    "mostPopular": "Most Popular",
+    "learnMore": "Learn More",
+    "additionalInfo": "All courses include lifetime access and free updates. Payment plans available.",
+    "foundation": {
+      "title": "Brendia Pro® Artist",
+      "subtitle": "Online education",
+      "price": "€3,000",
+      "description": "Build a solid foundation in weft extension techniques. Perfect for stylists ready to expand their service offerings.",
+      "features": [
+        "30+ comprehensive video lessons",
+        "Step-by-step installation guides",
+        "Client consultation techniques",
+        "Official Brendia Pro® certification",
+        "Private community access",
+        "Lifetime course access"
+      ]
+    },
+    "master": {
+      "title": "Advanced Brendia Pro® Artist",
+      "subtitle": "Advanced online education",
+      "price": "€4,000",
+      "description": "Elevate your expertise with advanced techniques and business strategies. For stylists committed to becoming industry leaders.",
+      "features": [
+        "Everything in Artist course",
+        "Advanced blending techniques",
+        "Complex color matching",
+        "Business growth strategies",
+        "Marketing templates & guides",
+        "1-on-1 mentorship session",
+        "Priority community support"
+      ]
+    },
+    "artist1v1": {
+      "title": "Brendia Pro® Artist 1v1",
+      "subtitle": "Live in-salon education",
+      "price": "€2,000",
+      "description": "Personalized live education with a mentor in-salon. Ideal for fast learning of practical techniques through hands-on practice.",
+      "features": [
+        "Live education with mentor",
+        "4 hours hands-on practice",
+        "Personalized approach",
+        "Brendia Pro® certification",
+        "Platform access",
+        "Welcome box with materials"
+      ]
+    },
+    "master1v1": {
+      "title": "Brendia Pro® Master 1v1",
+      "subtitle": "Live in-studio education",
+      "price": "€5,000",
+      "description": "Complete Foundation and Master education live in studio. Two days of intensive practice and personal mentorship.",
+      "features": [
+        "2 days of live education",
+        "12 hours hands-on practice",
+        "Foundation + Master content",
+        "Personalized approach",
+        "Brendia Pro® certification",
+        "Platform access",
+        "Welcome box with materials"
+      ]
+    }
+  },
+  "aboutFounder": {
+    "tagline": "Meet Your Educator",
+    "name": "Nikolina Kljaić",
+    "bio1": "With over a decade of experience in the hair extension industry, Nikolina has transformed the careers of hundreds of stylists worldwide. Her passion for education and commitment to excellence has made Brendia Pro® the gold standard in weft extension training.",
+    "quote": "My mission is to empower stylists with the knowledge and techniques they need to build thriving businesses and create stunning transformations for their clients. Every student who joins Brendia Pro becomes part of a community dedicated to excellence.",
+    "yearsInIndustry": "Years in Industry",
+    "studentsTrained": "Students Trained",
+    "readFullStory": "Read Full Story",
+    "imageAlt": "Nikolina Kljaić - Founder of Brendia Pro®"
+  },
+  "testimonials": {
+    "tagline": "Success Stories",
+    "title": "Hear from Our Graduates",
+    "prevTestimonial": "Previous testimonial",
+    "nextTestimonial": "Next testimonial",
+    "goToTestimonial": "Go to testimonial {number}",
+    "items": [
+      {
+        "quote": "The Brendia Pro® certification completely transformed my career. Within three months of completing the course, I had doubled my booking rate and increased my prices by 40%.",
+        "author": "Sarah Mitchell",
+        "role": "Certified Stylist, Los Angeles"
+      },
+      {
+        "quote": "Nikolina's teaching style is incredibly thorough yet easy to follow. The techniques I learned have become the foundation of my entire extension business.",
+        "author": "Emma Rodriguez",
+        "role": "Salon Owner, Miami"
+      },
+      {
+        "quote": "The community aspect of Brendia Pro® is invaluable. Having access to other certified stylists and ongoing support has helped me navigate every challenge.",
+        "author": "Jessica Chen",
+        "role": "Independent Stylist, New York"
+      }
+    ]
+  },
+  "contactPage": {
+    "hero": {
+      "tagline": "Get in Touch",
+      "title": "Contact Us",
+      "description": "Have questions about our courses or want to learn more about Brendia Pro®? We'd love to hear from you."
+    },
+    "connect": {
+      "title": "Let's Connect",
+      "description": "Whether you have questions about enrollment, need help choosing the right course, or want to discuss partnership opportunities, we're here to help."
+    },
+    "info": {
+      "email": "Email",
+      "responseTime": "Response Time",
+      "responseTimeValue": "We typically respond within 24-48 hours",
+      "followUs": "Follow Us"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What's this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "error": "Something went wrong. Please try again or email us directly."
+    },
+    "success": {
+      "title": "Message Sent!",
+      "message": "Thank you for reaching out. We'll get back to you within 24-48 hours.",
+      "sendAnother": "Send Another Message"
+    }
+  },
+  "coursesPage": {
+    "hero": {
+      "tagline": "Professional Certification",
+      "title": "Transform Your Career",
+      "description": "Join 500+ stylists who have elevated their craft with Brendia Pro® certification. Choose the program that matches your goals and start your journey today.",
+      "selfPaced": "Self-paced learning",
+      "lifetimeAccess": "Lifetime access",
+      "officialCertification": "Official certification"
+    },
+    "video": {
+      "title": "Hear From Your Educator",
+      "description": "Nikolina explains what you'll learn and how these courses can transform your career",
+      "play": "Play video",
+      "pause": "Pause video"
+    },
+    "skills": {
+      "title": "What You'll Master",
+      "description": "Our curriculum covers everything you need to become a confident, sought-after weft extension specialist",
+      "items": {
+        "installation": {
+          "title": "Installation Techniques",
+          "description": "Master secure, seamless weft placement"
+        },
+        "colorMatching": {
+          "title": "Color Matching",
+          "description": "Perfect blending for natural results"
+        },
+        "consultation": {
+          "title": "Client Consultation",
+          "description": "Set expectations and build trust"
+        },
+        "maintenance": {
+          "title": "Maintenance & Care",
+          "description": "Keep clients coming back"
+        },
+        "business": {
+          "title": "Business Strategy",
+          "description": "Price, market, and grow your services"
+        },
+        "certification": {
+          "title": "Certification",
+          "description": "Recognized credential for your portfolio"
+        }
+      }
+    },
+    "courses": {
+      "title": "Choose Your Path",
+      "description": "Two comprehensive programs designed for different stages of your journey",
+      "mostPopular": "Most Popular",
+      "viewCurriculum": "View Full Curriculum",
+      "foundation": {
+        "title": "Brendia Pro® Artist",
+        "subtitle": "Online education",
+        "price": "€3,000",
+        "duration": "Self-paced (avg. 6-8 weeks)",
+        "description": "Build a solid foundation in weft extension techniques. Perfect for stylists ready to expand their service offerings.",
+        "features": [
+          "30+ comprehensive video lessons",
+          "Step-by-step installation guides",
+          "Client consultation techniques",
+          "Official Brendia Pro® certification",
+          "Private community access",
+          "Lifetime course access"
+        ]
+      },
+      "master": {
+        "title": "Advanced Brendia Pro® Artist",
+        "subtitle": "Advanced online education",
+        "price": "€4,000",
+        "duration": "Self-paced (avg. 8-12 weeks)",
+        "description": "Elevate your expertise with advanced techniques and business strategies. For stylists committed to becoming industry leaders.",
+        "features": [
+          "Everything in Artist course",
+          "Advanced blending techniques",
+          "Complex color matching",
+          "Business growth strategies",
+          "1-on-1 mentorship session",
+          "Priority community support"
+        ]
+      },
+      "artist1v1": {
+        "title": "Brendia Pro® Artist 1v1",
+        "subtitle": "Live In-Salon Education",
+        "price": "€2,000",
+        "duration": "1 day (4 hours)",
+        "description": "Personalized live education with a mentor in-salon. Ideal for fast learning of practical techniques through hands-on practice.",
+        "features": [
+          "Live education with mentor",
+          "4 hours of hands-on practice",
+          "Personalized approach",
+          "Official Brendia Pro® certification",
+          "Platform access (shop, community)",
+          "Welcome box with materials"
+        ]
+      },
+      "master1v1": {
+        "title": "Brendia Pro® Master 1v1",
+        "subtitle": "Live In-Studio Education",
+        "price": "€5,000",
+        "duration": "2 days (6 hours/day)",
+        "description": "Complete Foundation and Master education live in studio. Two days of intensive practice and personal mentorship.",
+        "features": [
+          "2 days of live education with mentor",
+          "12 hours of hands-on practice (6h/day)",
+          "Foundation + Master content",
+          "Personalized approach",
+          "Official Brendia Pro® certification",
+          "Platform access (shop, community)",
+          "Welcome box with materials"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Compare Programs",
+      "description": "See what's included in each certification level",
+      "feature": "Feature",
+      "foundation": "Foundation",
+      "master": "Master",
+      "recommended": "Recommended",
+      "select": "Select",
+      "rows": {
+        "videoLessons": {
+          "feature": "Video Lessons",
+          "foundation": "30+",
+          "master": "50+"
+        },
+        "installation": {
+          "feature": "Installation Techniques",
+          "foundation": "Core methods",
+          "master": "Advanced + Corrective"
+        },
+        "colorMatching": {
+          "feature": "Color Matching",
+          "foundation": "Basic",
+          "master": "Complex multi-tonal"
+        },
+        "business": {
+          "feature": "Business Training",
+          "foundation": "Fundamentals",
+          "master": "Advanced growth strategies"
+        },
+        "community": {
+          "feature": "Community Access",
+          "foundation": "✓",
+          "master": "Priority support"
+        },
+        "mentorship": {
+          "feature": "Mentorship",
+          "foundation": "—",
+          "master": "1-on-1 session"
+        },
+        "certification": {
+          "feature": "Certification",
+          "foundation": "Foundation level",
+          "master": "Master level"
+        },
+        "updates": {
+          "feature": "Updates",
+          "foundation": "Lifetime",
+          "master": "Lifetime + Early access"
+        }
+      }
+    },
+    "instructor": {
+      "tagline": "Your Instructor",
+      "title": "Learn From the Best",
+      "description": "Nikolina Kljaić has spent over a decade perfecting her weft extension techniques and has trained 500+ stylists worldwide. Her teaching approach combines detailed technical instruction with real-world business insights.",
+      "yearsExperience": "Years Experience",
+      "studentsTrained": "Students Trained",
+      "countries": "Countries",
+      "learnMore": "Learn More About Nikolina",
+      "imageAlt": "Nikolina Kljaić - Your Instructor"
+    },
+    "trust": {
+      "title": "Invest in Your Future With Confidence",
+      "description": "We stand behind our courses with guarantees that put your success first",
+      "guarantee": {
+        "title": "14-Day Guarantee",
+        "description": "Not satisfied? Get a full refund within 14 days, no questions asked."
+      },
+      "lifetime": {
+        "title": "Lifetime Access",
+        "description": "Learn at your own pace. Access your course forever, including all future updates."
+      },
+      "payment": {
+        "title": "Payment Plans",
+        "description": "Flexible payment options available. Contact us to discuss what works for you."
+      },
+      "cta": "Questions? Let's Talk"
+    },
+    "faqPreview": {
+      "title": "Still Have Questions?",
+      "description": "Find answers to common questions about enrollment, curriculum, and certification.",
+      "cta": "View All FAQs"
+    }
+  },
+  "courseDetail": {
+    "backToCourses": "Back to Courses",
+    "mostPopular": "Most Popular",
+    "enrollNow": "Enroll Now",
+    "exclVat": "excl. VAT",
+    "vatNote": "+ 25% VAT. Final price shown at checkout.",
+    "whatsIncluded": "What's Included",
+    "curriculum": {
+      "title": "Course Curriculum",
+      "description": "Comprehensive modules designed to take you from foundation to mastery"
+    },
+    "cta": {
+      "title": "Ready to Start Your Journey?",
+      "description": "Join hundreds of successful stylists who have transformed their careers with Brendia Pro® certification.",
+      "enrollIn": "Enroll in {course}",
+      "haveQuestions": "Have Questions?",
+      "paymentPlans": "Payment plans available. Contact us for details."
+    },
+    "foundation": {
+      "title": "Brendia Pro® Artist",
+      "subtitle": "Online education",
+      "price": "€3,000",
+      "duration": "Self-paced (avg. 6-8 weeks)",
+      "description": "Build a solid foundation in weft extension techniques. This comprehensive program covers everything from client consultation to flawless installation and long-term maintenance.",
+      "longDescription": "Brendia Pro® Artist is your gateway to becoming a professional weft extension specialist. Designed for stylists at any experience level, this program provides a thorough education in the art and science of weft extensions. You'll learn directly from Nikolina Kljaić through detailed video instruction, gaining the confidence and skills to deliver stunning results for your clients.",
+      "features": [
+        "30+ comprehensive video lessons",
+        "Step-by-step installation guides",
+        "Client consultation techniques",
+        "Maintenance and aftercare protocols",
+        "Official Brendia Pro® certification",
+        "Private community access",
+        "Lifetime course access",
+        "Free future updates"
+      ],
+      "curriculum": [
+        {
+          "module": "Module 1: Introduction & Foundations",
+          "lessons": [
+            "Welcome to Brendia Pro®",
+            "Understanding Weft Extensions",
+            "Hair Quality & Types",
+            "Tools & Equipment Overview",
+            "Workspace Setup"
+          ]
+        },
+        {
+          "module": "Module 2: Client Consultation",
+          "lessons": [
+            "Initial Assessment",
+            "Hair Health Evaluation",
+            "Lifestyle Considerations",
+            "Setting Expectations",
+            "Pricing Your Services"
+          ]
+        },
+        {
+          "module": "Module 3: Preparation Techniques",
+          "lessons": [
+            "Sectioning Methods",
+            "Color Matching Basics",
+            "Weft Selection & Preparation",
+            "Pre-Installation Hair Prep"
+          ]
+        },
+        {
+          "module": "Module 4: Installation Mastery",
+          "lessons": [
+            "Placement Strategy",
+            "Secure Attachment Methods",
+            "Blending Techniques",
+            "Creating Natural Movement",
+            "Finishing & Styling"
+          ]
+        },
+        {
+          "module": "Module 5: Aftercare & Maintenance",
+          "lessons": [
+            "Client Education",
+            "Maintenance Appointments",
+            "Troubleshooting Common Issues",
+            "Extension Longevity Tips"
+          ]
+        },
+        {
+          "module": "Module 6: Business Foundations",
+          "lessons": [
+            "Building Your Client Base",
+            "Social Media Basics",
+            "Creating a Portfolio",
+            "Next Steps in Your Journey"
+          ]
+        }
+      ]
+    },
+    "master": {
+      "title": "Advanced Brendia Pro® Artist",
+      "subtitle": "Advanced online education",
+      "price": "€4,000",
+      "duration": "Self-paced (avg. 8-12 weeks)",
+      "description": "Elevate your expertise with advanced techniques, complex color theory, and proven business strategies. For stylists committed to becoming industry leaders.",
+      "longDescription": "Advanced Brendia Pro® Artist represents the pinnacle of weft extension education. Building on the Artist program, this advanced course dives deep into complex techniques, sophisticated color work, and the business strategies you need to scale your extension services. Includes a personal mentorship session with Nikolina to accelerate your growth.",
+      "features": [
+        "Everything in Brendia Pro® Artist",
+        "Advanced blending techniques",
+        "Complex color matching mastery",
+        "Corrective work procedures",
+        "Business growth strategies",
+        "Marketing templates & guides",
+        "1-on-1 mentorship session with Nikolina",
+        "Priority community support",
+        "Guest educator masterclasses"
+      ],
+      "curriculum": [
+        {
+          "module": "Artist Modules",
+          "lessons": [
+            "All 30+ lessons from Brendia Pro® Artist included"
+          ]
+        },
+        {
+          "module": "Advanced Module 1: Complex Color Work",
+          "lessons": [
+            "Advanced Color Theory",
+            "Multi-Dimensional Blending",
+            "Custom Color Mixing",
+            "Working with Difficult Color Combinations",
+            "Rooted & Balayage Looks"
+          ]
+        },
+        {
+          "module": "Advanced Module 2: Advanced Techniques",
+          "lessons": [
+            "Challenging Hair Types",
+            "Fine & Thin Hair Solutions",
+            "Volume Building Strategies",
+            "Advanced Layering",
+            "Seamless Transitions"
+          ]
+        },
+        {
+          "module": "Advanced Module 3: Corrective Work",
+          "lessons": [
+            "Identifying Previous Work Issues",
+            "Safe Removal Techniques",
+            "Repairing Damaged Hair",
+            "Client Communication for Corrections",
+            "Managing Expectations"
+          ]
+        },
+        {
+          "module": "Advanced Module 4: Business Mastery",
+          "lessons": [
+            "Scaling Your Services",
+            "Premium Pricing Strategies",
+            "Team Training Basics",
+            "Marketing Deep Dive",
+            "Building Authority in Your Market"
+          ]
+        },
+        {
+          "module": "Bonus: Guest Masterclasses",
+          "lessons": [
+            "Industry Expert Sessions (Updated Quarterly)",
+            "Trend Forecasting",
+            "Advanced Business Q&A"
+          ]
+        }
+      ]
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "tagline": "About Brendia Pro®",
+      "title": "The Story Behind the Brand",
+      "description": "Brendia Pro® was born from a passion for excellence and a desire to share the art of weft extensions with stylists worldwide. What started as one woman's journey has become a global movement of empowered professionals.",
+      "imageAlt": "Brendia Pro® Story"
+    },
+    "founder": {
+      "tagline": "Meet the Founder",
+      "name": "Nikolina Kljaić",
+      "bio": [
+        "With over a decade of experience in the hair extension industry, Nikolina has dedicated her career to perfecting the art of weft extensions and sharing her expertise with others.",
+        "Her journey began in a small salon, where her natural talent and relentless pursuit of perfection quickly set her apart. Clients traveled from across the country to experience her transformative work, and fellow stylists began asking to learn her techniques.",
+        "\"I realized that my impact could go far beyond my own chair,\" Nikolina shares. \"By teaching others, I could help hundreds of stylists build successful careers while giving thousands of women the confidence that comes with beautiful hair.\"",
+        "Today, Nikolina leads Brendia Pro® with the same passion and attention to detail that defined her work from day one. Every course, every lesson, every interaction reflects her commitment to excellence and genuine care for her students' success."
+      ],
+      "imageAlt": "Nikolina Kljaić - Founder of Brendia Pro®"
+    },
+    "journey": {
+      "title": "Our Journey",
+      "description": "From humble beginnings to a global community of professionals",
+      "milestones": [
+        {
+          "year": "2013",
+          "title": "Journey Begins",
+          "description": "Started as a passionate stylist with a vision for excellence in hair extensions."
+        },
+        {
+          "year": "2016",
+          "title": "Technique Mastery",
+          "description": "Developed signature weft extension methods after years of research and refinement."
+        },
+        {
+          "year": "2019",
+          "title": "First Students",
+          "description": "Began sharing knowledge with fellow stylists, launching the first Brendia Pro® workshops."
+        },
+        {
+          "year": "2021",
+          "title": "Online Education",
+          "description": "Launched comprehensive online certification programs to reach stylists worldwide."
+        },
+        {
+          "year": "2024",
+          "title": "Global Community",
+          "description": "Built a thriving community of 500+ certified professionals across 30+ countries."
+        }
+      ]
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "The principles that guide everything we do at Brendia Pro®",
+      "items": [
+        {
+          "title": "Excellence",
+          "description": "We believe in continuous improvement and never settling for 'good enough.' Every technique, every lesson is crafted to the highest standard."
+        },
+        {
+          "title": "Integrity",
+          "description": "Honest education and genuine support. We're committed to your success, not just selling courses."
+        },
+        {
+          "title": "Community",
+          "description": "Success is better shared. Our certified professionals support and inspire each other every day."
+        },
+        {
+          "title": "Innovation",
+          "description": "The beauty industry evolves constantly. We stay ahead with the latest techniques and trends."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Join Our Community?",
+      "description": "Discover how Brendia Pro® certification can transform your career and open new opportunities.",
+      "exploreCourses": "Explore Courses",
+      "getInTouch": "Get in Touch"
+    }
+  },
+  "faqPage": {
+    "hero": {
+      "tagline": "Support",
+      "title": "Frequently Asked Questions",
+      "description": "Find answers to common questions about our courses, certification process, and what to expect on your journey with Brendia Pro®."
+    },
+    "categories": {
+      "aboutCourses": {
+        "title": "About the Courses",
+        "faqs": [
+          {
+            "question": "What experience level do I need to enroll?",
+            "answer": "Brendia Pro® Artist is designed for stylists at any level, including those new to extensions. We recommend having basic hairstyling skills, but no prior extension experience is required. Advanced Brendia Pro® Artist is ideal for those who have completed the Artist course or have equivalent experience."
+          },
+          {
+            "question": "How long does it take to complete a course?",
+            "answer": "Both courses are self-paced, so you can learn on your own schedule. On average, students complete Brendia Pro® Artist in 6-8 weeks and Advanced Brendia Pro® Artist in 8-12 weeks. However, you have lifetime access, so you can take as long as you need."
+          },
+          {
+            "question": "What's the difference between Artist and Advanced Artist?",
+            "answer": "Brendia Pro® Artist covers all essential techniques for professional weft extension services. Advanced Brendia Pro® Artist includes everything in Artist plus advanced techniques, complex color work, corrective procedures, business strategies, and a personal mentorship session with Nikolina."
+          },
+          {
+            "question": "Do I need to purchase any additional materials?",
+            "answer": "The courses include all digital materials needed to learn. For hands-on practice, you'll need to source your own hair extensions, tools, and a mannequin head. We provide a recommended supplies list with suggested vendors in the course."
+          }
+        ]
+      },
+      "certification": {
+        "title": "Certification & Credentials",
+        "faqs": [
+          {
+            "question": "What certification do I receive?",
+            "answer": "Upon successful completion, you receive an official Brendia Pro® certification that you can display in your salon and use in your marketing materials. This certification demonstrates your commitment to excellence and professional training."
+          },
+          {
+            "question": "Is the certification recognized internationally?",
+            "answer": "Brendia Pro® certifications are recognized globally within the professional hair extension community. Our graduates work successfully across 30+ countries. While beauty licensing varies by location, our certification adds significant credibility to your qualifications."
+          },
+          {
+            "question": "How do I become certified?",
+            "answer": "Certification is earned by completing all course modules and submitting practical assessments of your work. Our team reviews your submissions and provides personalized feedback. Most students achieve certification within their first attempt."
+          }
+        ]
+      },
+      "enrollment": {
+        "title": "Enrollment & Payment",
+        "faqs": [
+          {
+            "question": "What payment options are available?",
+            "answer": "We accept all major credit cards and offer payment plans to make education accessible. Contact us to discuss payment plan options that work for your budget."
+          },
+          {
+            "question": "Is there a refund policy?",
+            "answer": "We offer a 14-day satisfaction guarantee. If you're not completely satisfied with your course within the first 14 days, contact us for a full refund. After 14 days, all sales are final, but we're committed to your success and will work with you to address any concerns."
+          },
+          {
+            "question": "Can I upgrade from Artist to Advanced Artist later?",
+            "answer": "Absolutely! Many students complete Brendia Pro® Artist first and upgrade to Advanced Artist later. We offer a special upgrade price for existing Artist graduates. Contact us for current upgrade pricing."
+          }
+        ]
+      },
+      "access": {
+        "title": "Course Access & Support",
+        "faqs": [
+          {
+            "question": "How long do I have access to the course?",
+            "answer": "You have lifetime access to all course materials. This includes any updates we make to the curriculum over time. Log in anytime to review lessons or access new content."
+          },
+          {
+            "question": "What if I get stuck or have questions?",
+            "answer": "You'll have access to our private community where you can connect with other students and certified professionals. For technical issues, our support team is available via email. Advanced Brendia Pro® Artist students also receive priority support."
+          },
+          {
+            "question": "Can I access the course on mobile?",
+            "answer": "Yes! Our course platform is fully responsive and works on any device. Watch lessons on your computer, tablet, or smartphone whenever and wherever it's convenient for you."
+          }
+        ]
+      }
+    },
+    "stillHaveQuestions": {
+      "title": "Still Have Questions?",
+      "description": "Can't find the answer you're looking for? We're here to help. Reach out and we'll get back to you as soon as possible.",
+      "cta": "Contact Us"
+    }
+  },
+  "checkout": {
+    "backToCourse": "Back to Course",
+    "pageTitle": "Complete Your Enrollment",
+    "pageSubtitle": "You're one step away from transforming your career",
+    "orderSummary": {
+      "title": "Order Summary",
+      "whatsIncluded": "What's Included",
+      "moreBenefits": "+{count} more benefits",
+      "subtotal": "Subtotal (excl. VAT)",
+      "vat": "VAT ({percentage}%)",
+      "total": "Total"
+    },
+    "trustBadges": {
+      "securePayment": "Secure payment via Stripe",
+      "allCardsAccepted": "All major cards accepted"
+    },
+    "form": {
+      "personalInfo": {
+        "title": "Personal Information",
+        "firstName": "First Name",
+        "firstNamePlaceholder": "Ana",
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Horvat",
+        "email": "Email",
+        "emailPlaceholder": "ana@example.com",
+        "phone": "Phone",
+        "phonePlaceholder": "+385 91 234 5678"
+      },
+      "billingAddress": {
+        "title": "Billing Address",
+        "street": "Street Address",
+        "streetPlaceholder": "Ilica 123",
+        "city": "City",
+        "cityPlaceholder": "Zagreb",
+        "postalCode": "Postal Code",
+        "postalCodePlaceholder": "10000",
+        "country": "Country",
+        "countryPlaceholder": "Select country"
+      },
+      "companyDetails": {
+        "title": "Company Details",
+        "optional": "(Optional)",
+        "show": "Add company details",
+        "hide": "Hide",
+        "companyName": "Company Name",
+        "companyNamePlaceholder": "Salon Ana d.o.o.",
+        "vatNumber": "VAT Number",
+        "vatNumberPlaceholder": "HR12345678901",
+        "vatHelperText": "For EU businesses - reverse charge may apply"
+      },
+      "hearAboutUs": {
+        "title": "How Did You Hear About Us?",
+        "optional": "(Optional)",
+        "placeholder": "Select an option",
+        "options": {
+          "instagram": "Instagram",
+          "facebook": "Facebook",
+          "google": "Google Search",
+          "youtube": "YouTube",
+          "friend": "Friend or Colleague",
+          "salon": "Salon Recommendation",
+          "event": "Industry Event",
+          "other": "Other"
+        }
+      },
+      "terms": {
+        "accept": "I agree to the",
+        "termsOfService": "Terms of Service",
+        "and": "and",
+        "privacyPolicy": "Privacy Policy",
+        "digitalProduct": ". I understand that this is a digital product and that I will receive access via email after payment.",
+        "marketing": "I would like to receive updates, tips, and exclusive offers from Brendia Pro via email."
+      },
+      "validation": {
+        "firstName": "Please enter your first name",
+        "lastName": "Please enter your last name",
+        "email": "Please enter a valid email address",
+        "phone": "Please enter your phone number",
+        "street": "Please enter your street address",
+        "city": "Please enter your city",
+        "postalCode": "Please enter your postal code",
+        "country": "Please select your country",
+        "acceptTerms": "You must accept the terms and conditions"
+      },
+      "submit": {
+        "button": "Pay {price} and Enroll",
+        "redirectNote": "You will be redirected to Stripe for secure payment processing.",
+        "securityNote": "Your card details are never stored on our servers."
+      }
+    },
+    "success": {
+      "title": "Welcome to Brendia Pro!",
+      "description": "Your enrollment has been confirmed. We're thrilled to have you join our community of professional stylists.",
+      "whatHappensNext": "What Happens Next?",
+      "steps": {
+        "checkEmail": {
+          "title": "Check Your Email",
+          "description": "We've sent a confirmation email with your receipt and course access details. Please check your inbox (and spam folder)."
+        },
+        "accessCourse": {
+          "title": "Access Your Course",
+          "description": "Login to the student portal using the credentials in your email to begin your certification journey."
+        },
+        "joinCommunity": {
+          "title": "Join the Community",
+          "description": "Connect with fellow students in our private community. Get support, share your progress, and network with other professionals."
+        }
+      },
+      "orderReference": "Order Reference",
+      "returnHome": "Return Home",
+      "needHelp": "Need Help?",
+      "supportNote": "Questions? Contact us at"
+    },
+    "cancel": {
+      "title": "Checkout Cancelled",
+      "description": "Your payment was not processed. No charges have been made to your account.",
+      "helpText": "If you experienced any issues or changed your mind, we're here to help. Feel free to reach out with any questions.",
+      "tryAgain": "Try Again",
+      "viewCourses": "View Courses",
+      "contactSupport": "Contact Support",
+      "faqLink": "Questions about enrollment?",
+      "checkFaq": "Check our FAQ",
+      "paymentPlans": "Need payment plans?",
+      "contactUs": "Contact us",
+      "toDiscuss": "to discuss options."
+    }
+  },
+  "legal": {
+    "lastUpdated": "Last updated: January 2024",
+    "privacy": {
+      "title": "Privacy Policy",
+      "introduction": {
+        "title": "Introduction",
+        "content": "Brendia Pro® (\"we,\" \"our,\" or \"us\") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website or use our services."
+      },
+      "informationWeCollect": {
+        "title": "Information We Collect",
+        "personalInfo": {
+          "title": "Personal Information",
+          "intro": "We may collect the following types of personal information:",
+          "items": [
+            "<strong>Contact Information:</strong> Name, email address, phone number",
+            "<strong>Account Information:</strong> Username, password, profile details",
+            "<strong>Payment Information:</strong> Billing address, payment card details (processed securely through Stripe)",
+            "<strong>Course Progress:</strong> Lesson completion, quiz results, certificates earned"
+          ]
+        },
+        "automaticInfo": {
+          "title": "Automatically Collected Information",
+          "intro": "When you visit our website, we automatically collect certain information:",
+          "items": [
+            "IP address and location data",
+            "Browser type and version",
+            "Device information",
+            "Pages visited and time spent",
+            "Referral sources"
+          ]
+        }
+      },
+      "howWeUse": {
+        "title": "How We Use Your Information",
+        "intro": "We use your personal information to:",
+        "items": [
+          "Provide and maintain our services",
+          "Process payments and manage your account",
+          "Send important updates about your courses",
+          "Respond to your inquiries and support requests",
+          "Send marketing communications (with your consent)",
+          "Improve our website and services",
+          "Comply with legal obligations"
+        ]
+      },
+      "informationSharing": {
+        "title": "Information Sharing",
+        "intro": "We do not sell your personal information. We may share your information with:",
+        "items": [
+          "<strong>Service Providers:</strong> Third parties that help us operate our business (payment processors, email services, hosting providers)",
+          "<strong>Legal Requirements:</strong> When required by law or to protect our rights",
+          "<strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets"
+        ]
+      },
+      "dataSecurity": {
+        "title": "Data Security",
+        "intro": "We implement appropriate technical and organizational measures to protect your personal information, including:",
+        "items": [
+          "SSL/TLS encryption for data transmission",
+          "Secure storage with access controls",
+          "Regular security assessments",
+          "Employee training on data protection"
+        ]
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "intro": "Depending on your location, you may have the following rights:",
+        "items": [
+          "Access your personal data",
+          "Correct inaccurate data",
+          "Request deletion of your data",
+          "Object to processing of your data",
+          "Data portability",
+          "Withdraw consent"
+        ],
+        "contact": "To exercise these rights, please contact us at privacy@brendiapro.com."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "We use cookies and similar technologies to enhance your experience. You can control cookies through your browser settings. Essential cookies are necessary for the website to function."
+      },
+      "thirdPartyLinks": {
+        "title": "Third-Party Links",
+        "content": "Our website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites."
+      },
+      "childrensPrivacy": {
+        "title": "Children's Privacy",
+        "content": "Our services are not intended for individuals under 18 years of age. We do not knowingly collect personal information from children."
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "content": "We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the \"Last updated\" date."
+      },
+      "contactUs": {
+        "title": "Contact Us",
+        "intro": "If you have questions about this privacy policy or our data practices, please contact us at:",
+        "email": "Email: privacy@brendiapro.com"
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "agreementToTerms": {
+        "title": "1. Agreement to Terms",
+        "content": "By accessing or using the Brendia Pro® website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services."
+      },
+      "descriptionOfServices": {
+        "title": "2. Description of Services",
+        "intro": "Brendia Pro® provides online education courses and certification programs for hair extension techniques. Our services include:",
+        "items": [
+          "Video-based training courses",
+          "Digital learning materials",
+          "Certification upon completion",
+          "Access to community forums",
+          "Customer support"
+        ]
+      },
+      "accountRegistration": {
+        "title": "3. Account Registration",
+        "intro": "To access our courses, you must create an account. You agree to:",
+        "items": [
+          "Provide accurate and complete information",
+          "Maintain the security of your account credentials",
+          "Notify us immediately of any unauthorized access",
+          "Accept responsibility for all activities under your account"
+        ]
+      },
+      "courseAccess": {
+        "title": "4. Course Access and Usage",
+        "licenseGrant": {
+          "title": "License Grant",
+          "content": "Upon purchase, we grant you a limited, non-exclusive, non-transferable license to access and view the course content for personal, non-commercial educational purposes."
+        },
+        "restrictions": {
+          "title": "Restrictions",
+          "intro": "You may not:",
+          "items": [
+            "Share your account credentials with others",
+            "Download, copy, or redistribute course content",
+            "Record, screenshot, or capture course videos",
+            "Use content for commercial purposes without permission",
+            "Resell or sublicense access to courses",
+            "Attempt to reverse engineer or extract source code from our platform"
+          ]
+        }
+      },
+      "paymentTerms": {
+        "title": "5. Payment Terms",
+        "pricing": {
+          "title": "Pricing",
+          "content": "All prices are displayed in EUR and are subject to change. The price at the time of purchase will be honored."
+        },
+        "processing": {
+          "title": "Payment Processing",
+          "content": "Payments are processed securely through Stripe. By making a purchase, you authorize us to charge your payment method for the total amount."
+        },
+        "paymentPlans": {
+          "title": "Payment Plans",
+          "content": "If you enroll in a payment plan, you agree to make all scheduled payments. Failure to complete payments may result in restricted access to course content."
+        }
+      },
+      "refundPolicy": {
+        "title": "6. Refund Policy",
+        "content1": "We offer a 14-day satisfaction guarantee. If you are not satisfied with your course within 14 days of purchase, you may request a full refund by contacting us at refunds@brendiapro.com.",
+        "content2": "Refund requests after 14 days will be evaluated on a case-by-case basis. No refunds will be issued for:",
+        "items": [
+          "Courses completed beyond 50%",
+          "Certification already issued",
+          "Requests made after 30 days from purchase"
+        ]
+      },
+      "certification": {
+        "title": "7. Certification",
+        "content1": "Brendia Pro® certification is awarded upon successful completion of course requirements. Certification indicates completion of our training program and does not guarantee employment, income, or regulatory compliance in your jurisdiction.",
+        "content2": "You may display your certification and use \"Brendia Pro® Certified\" designation in your marketing materials while maintaining professional standards."
+      },
+      "intellectualProperty": {
+        "title": "8. Intellectual Property",
+        "content1": "All content, including videos, text, graphics, logos, and materials, are owned by Brendia Pro® or our licensors and are protected by intellectual property laws.",
+        "content2": "The Brendia Pro® name, logo, and related marks are trademarks that may not be used without our prior written consent."
+      },
+      "userContent": {
+        "title": "9. User Content",
+        "content": "By posting content in community forums or submitting work for assessment, you grant us a non-exclusive, royalty-free license to use, display, and distribute that content for educational and promotional purposes."
+      },
+      "disclaimers": {
+        "title": "10. Disclaimers",
+        "content1": "Our services are provided \"as is\" without warranties of any kind. We do not guarantee that our services will be uninterrupted, error-free, or meet your specific requirements.",
+        "content2": "Educational content is for informational purposes only. We are not responsible for any outcomes resulting from the application of techniques learned through our courses."
+      },
+      "limitationOfLiability": {
+        "title": "11. Limitation of Liability",
+        "content1": "To the maximum extent permitted by law, Brendia Pro® shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.",
+        "content2": "Our total liability shall not exceed the amount paid by you for the relevant course."
+      },
+      "termination": {
+        "title": "12. Termination",
+        "content": "We reserve the right to suspend or terminate your account for violation of these terms, fraudulent activity, or other conduct that we determine harmful to our business or community."
+      },
+      "modifications": {
+        "title": "13. Modifications",
+        "content": "We may modify these terms at any time. Material changes will be communicated via email or website notice. Continued use of our services after changes constitutes acceptance of the modified terms."
+      },
+      "governingLaw": {
+        "title": "14. Governing Law",
+        "content": "These terms shall be governed by and construed in accordance with applicable laws. Any disputes shall be resolved through binding arbitration or in courts of competent jurisdiction."
+      },
+      "contactInfo": {
+        "title": "15. Contact Information",
+        "intro": "For questions about these Terms of Service, please contact us at:",
+        "email": "Email: legal@brendiapro.com"
+      }
+    }
+  }
+}
