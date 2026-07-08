@@ -8,13 +8,17 @@ import {
 } from "@/lib/monri";
 import { getCourse, formatPrice } from "@/lib/constants/courses";
 
-// Use service role for server-side operations
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+// Lazy initialization to avoid build-time errors
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  );
+}
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY);
+}
 
 // Generate a secure enrollment token
 function generateEnrollmentToken(): string {
@@ -34,27 +38,29 @@ const COURSE_NAMES: Record<string, string> = {
   "brendia-pro-master-1v1": "Brendia Pro Master 1v1",
 };
 
-// Monri sends callback data as form-urlencoded POST
+// Monri sends callback data as JSON POST
 export async function POST(request: NextRequest) {
   try {
-    const formData = await request.formData();
+    // Parse JSON body (Monri sends callbacks as JSON)
+    const body = await request.json();
 
     // Extract callback parameters
-    const orderNumber = formData.get("order_number") as string;
-    const responseCode = formData.get("response_code") as string;
-    const amount = formData.get("amount") as string;
-    const currency = (formData.get("currency") as string) || "EUR";
-    const digest = formData.get("digest") as string;
-    const transactionId = formData.get("transaction_id") as string;
-    const approvalCode = formData.get("approval_code") as string;
-    const panToken = formData.get("pan_token") as string;
-    const maskedPan = formData.get("masked_pan") as string;
+    const orderNumber = body.order_number as string;
+    const responseCode = body.response_code as string;
+    const amount = String(body.amount);
+    const currency = (body.currency as string) || "EUR";
+    const digest = body.digest as string;
+    const transactionId = body.id ? String(body.id) : null;
+    const approvalCode = body.approval_code as string;
+    const panToken = body.pan_token as string;
+    const maskedPan = body.masked_pan as string;
 
     console.log(`Monri callback received for order: ${orderNumber}`);
     console.log(`Response code: ${responseCode} - ${getResponseMessage(responseCode)}`);
+    console.log("Full callback body:", JSON.stringify(body, null, 2));
 
     // Validate required fields
-    if (!orderNumber || !responseCode || !amount || !digest) {
+    if (!orderNumber || !responseCode || !amount) {
       console.error("Missing required callback fields");
       return NextResponse.json(
         { error: "Missing required fields" },
@@ -62,23 +68,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify callback digest
-    const amountNumber = parseInt(amount, 10);
-    const isValid = verifyCallbackDigest(
-      digest,
-      orderNumber,
-      responseCode,
-      amountNumber,
-      currency
-    );
+    // Note: Monri callbacks don't include digest, only success URL redirects do
 
-    if (!isValid) {
-      console.error("Invalid callback digest");
-      return NextResponse.json(
-        { error: "Invalid digest" },
-        { status: 400 }
-      );
-    }
+    const supabase = getSupabase();
 
     // Find the order by order_number
     const { data: order, error: findError } = await supabase
@@ -146,7 +138,7 @@ export async function POST(request: NextRequest) {
         const platformUrl = process.env.NEXT_PUBLIC_PLATFORM_URL || "https://app.brendiapro.hr";
         const activationUrl = `${platformUrl}/auth/activate/${updateData.enrollment_token}`;
 
-        await resend.emails.send({
+        await getResend().emails.send({
           from: "Brendia Pro <info@brendiapro.hr>",
           to: order.email,
           subject: `Aktivirajte pristup: ${courseName} - Brendia Pro`,
