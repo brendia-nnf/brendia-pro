@@ -811,7 +811,7 @@
       "total": "Total"
     },
     "trustBadges": {
-      "securePayment": "Secure payment via Stripe",
+      "securePayment": "Secure payment via Monri",
       "allCardsAccepted": "All major cards accepted"
     },
     "form": {
@@ -884,8 +884,9 @@
       },
       "submit": {
         "button": "Pay {price} and Enroll",
-        "redirectNote": "You will be redirected to Stripe for secure payment processing.",
-        "securityNote": "Your card details are never stored on our servers."
+        "redirectNote": "You will be redirected to Monri for secure payment processing.",
+        "securityNote": "Your card details are never stored on our servers.",
+        "emailNote": "After successful payment, check your email for the activation link to access the platform."
       }
     },
     "success": {
@@ -941,7 +942,7 @@
           "items": [
             "<strong>Contact Information:</strong> Name, email address, phone number",
             "<strong>Account Information:</strong> Username, password, profile details",
-            "<strong>Payment Information:</strong> Billing address, payment card details (processed securely through Stripe)",
+            "<strong>Payment Information:</strong> Billing address, payment card details (processed securely through Monri)",
             "<strong>Course Progress:</strong> Lesson completion, quiz results, certificates earned"
           ]
         },
@@ -1000,7 +1001,7 @@
           "Data portability",
           "Withdraw consent"
         ],
-        "contact": "To exercise these rights, please contact us at privacy@brendiapro.com."
+        "contact": "To exercise these rights, please contact us at privacy@brendiapro.hr."
       },
       "cookies": {
         "title": "Cookies",
@@ -1021,7 +1022,7 @@
       "contactUs": {
         "title": "Contact Us",
         "intro": "If you have questions about this privacy policy or our data practices, please contact us at:",
-        "email": "Email: privacy@brendiapro.com"
+        "email": "Email: privacy@brendiapro.hr"
       }
     },
     "terms": {
@@ -1078,7 +1079,7 @@
         },
         "processing": {
           "title": "Payment Processing",
-          "content": "Payments are processed securely through Stripe. By making a purchase, you authorize us to charge your payment method for the total amount."
+          "content": "Payments are processed securely through Monri. By making a purchase, you authorize us to charge your payment method for the total amount."
         },
         "paymentPlans": {
           "title": "Payment Plans",
@@ -1087,7 +1088,7 @@
       },
       "refundPolicy": {
         "title": "6. Refund Policy",
-        "content1": "We offer a 14-day satisfaction guarantee. If you are not satisfied with your course within 14 days of purchase, you may request a full refund by contacting us at refunds@brendiapro.com.",
+        "content1": "We offer a 14-day satisfaction guarantee. If you are not satisfied with your course within 14 days of purchase, you may request a full refund by contacting us at refunds@brendiapro.hr.",
         "content2": "Refund requests after 14 days will be evaluated on a case-by-case basis. No refunds will be issued for:",
         "items": [
           "Courses completed beyond 50%",
@@ -1134,7 +1135,7 @@
       "contactInfo": {
         "title": "15. Contact Information",
         "intro": "For questions about these Terms of Service, please contact us at:",
-        "email": "Email: legal@brendiapro.com"
+        "email": "Email: legal@brendiapro.hr"
       }
     }
   }

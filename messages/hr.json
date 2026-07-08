@@ -811,7 +811,7 @@
       "total": "Ukupno"
     },
     "trustBadges": {
-      "securePayment": "Sigurno plaćanje putem Stripea",
+      "securePayment": "Sigurno plaćanje putem Monrija",
       "allCardsAccepted": "Prihvaćaju se sve glavne kartice"
     },
     "form": {
@@ -884,8 +884,9 @@
       },
       "submit": {
         "button": "Platite {price} i upišite se",
-        "redirectNote": "Bit ćete preusmjereni na Stripe za sigurnu obradu plaćanja.",
-        "securityNote": "Podaci vaše kartice nikad se ne pohranjuju na našim serverima."
+        "redirectNote": "Bit ćete preusmjereni na Monri za sigurnu obradu plaćanja.",
+        "securityNote": "Podaci vaše kartice nikad se ne pohranjuju na našim serverima.",
+        "emailNote": "Nakon uspješne uplate, provjerite svoj email za link za aktivaciju pristupa platformi."
       }
     },
     "success": {
@@ -941,7 +942,7 @@
           "items": [
             "<strong>Kontaktni podaci:</strong> Ime, email adresa, telefonski broj",
             "<strong>Podaci o računu:</strong> Korisničko ime, lozinka, detalji profila",
-            "<strong>Podaci o plaćanju:</strong> Adresa za račun, podaci o platnoj kartici (obrađuju se sigurno putem Stripea)",
+            "<strong>Podaci o plaćanju:</strong> Adresa za račun, podaci o platnoj kartici (obrađuju se sigurno putem Monrija)",
             "<strong>Napredak u tečaju:</strong> Završene lekcije, rezultati kvizova, stečeni certifikati"
           ]
         },
@@ -1000,7 +1001,7 @@
           "Prenosivost podataka",
           "Povlačenje pristanka"
         ],
-        "contact": "Za ostvarivanje ovih prava, molimo kontaktirajte nas na privacy@brendiapro.com."
+        "contact": "Za ostvarivanje ovih prava, molimo kontaktirajte nas na privacy@brendiapro.hr."
       },
       "cookies": {
         "title": "Kolačići",
@@ -1021,7 +1022,7 @@
       "contactUs": {
         "title": "Kontaktirajte nas",
         "intro": "Ako imate pitanja o ovoj politici privatnosti ili našim praksama s podacima, molimo kontaktirajte nas na:",
-        "email": "Email: privacy@brendiapro.com"
+        "email": "Email: privacy@brendiapro.hr"
       }
     },
     "terms": {
@@ -1078,7 +1079,7 @@
         },
         "processing": {
           "title": "Obrada plaćanja",
-          "content": "Plaćanja se sigurno obrađuju putem Stripea. Kupnjom nas ovlašćujete da naplatimo ukupan iznos na vašu metodu plaćanja."
+          "content": "Plaćanja se sigurno obrađuju putem Monrija. Kupnjom nas ovlašćujete da naplatimo ukupan iznos na vašu metodu plaćanja."
         },
         "paymentPlans": {
           "title": "Planovi plaćanja",
@@ -1087,7 +1088,7 @@
       },
       "refundPolicy": {
         "title": "6. Politika povrata",
-        "content1": "Nudimo 14-dnevno jamstvo zadovoljstva. Ako niste zadovoljni svojim tečajem unutar 14 dana od kupnje, možete zatražiti puni povrat novca kontaktiranjem nas na refunds@brendiapro.com.",
+        "content1": "Nudimo 14-dnevno jamstvo zadovoljstva. Ako niste zadovoljni svojim tečajem unutar 14 dana od kupnje, možete zatražiti puni povrat novca kontaktiranjem nas na refunds@brendiapro.hr.",
         "content2": "Zahtjevi za povrat nakon 14 dana procjenjivat će se od slučaja do slučaja. Povrat novca neće se izdati za:",
         "items": [
           "Tečajeve završene više od 50%",
@@ -1134,7 +1135,7 @@
       "contactInfo": {
         "title": "15. Kontakt informacije",
         "intro": "Za pitanja o ovim Uvjetima korištenja, molimo kontaktirajte nas na:",
-        "email": "Email: legal@brendiapro.com"
+        "email": "Email: legal@brendiapro.hr"
       }
     }
   }
