@@ -138,8 +138,11 @@ export async function POST(request: NextRequest) {
         const platformUrl = process.env.NEXT_PUBLIC_PLATFORM_URL || "https://app.brendiapro.hr";
         const activationUrl = `${platformUrl}/auth/activate/${updateData.enrollment_token}`;
 
+        // Use verified domain or Resend's test domain
+        const fromEmail = process.env.RESEND_FROM_EMAIL || "Brendia Pro <onboarding@resend.dev>";
+
         await getResend().emails.send({
-          from: "Brendia Pro <info@brendiapro.hr>",
+          from: fromEmail,
           to: order.email,
           subject: `Aktivirajte pristup: ${courseName} - Brendia Pro`,
           html: generateActivationEmailHtml(
