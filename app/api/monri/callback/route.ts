@@ -138,8 +138,9 @@ export async function POST(request: NextRequest) {
         const platformUrl = process.env.NEXT_PUBLIC_PLATFORM_URL || "https://app.brendiapro.hr";
         const activationUrl = `${platformUrl}/auth/activate/${updateData.enrollment_token}`;
 
-        // Use verified domain or Resend's test domain
-        const fromEmail = process.env.RESEND_FROM_EMAIL || "Brendia Pro <onboarding@resend.dev>";
+        // Use verified domain (falls back to verified sender, NOT Resend's test domain
+        // which can only deliver to the account owner's own email)
+        const fromEmail = process.env.RESEND_FROM_EMAIL || "Brendia Pro <info@brendiapro.hr>";
 
         await getResend().emails.send({
           from: fromEmail,
