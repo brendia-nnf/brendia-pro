@@ -107,9 +107,11 @@ export interface MonriFormData {
   digest: string;
   transaction_type: "purchase" | "authorize";
 
-  // URLs
-  success_url: string;
-  cancel_url: string;
+  // URLs (Monri only honors the *_override params per transaction;
+  // plain success_url/cancel_url are ignored in favor of the merchant
+  // dashboard configuration)
+  success_url_override: string;
+  cancel_url_override: string;
   callback_url: string;
 
   // Customer info
@@ -174,8 +176,8 @@ export function buildMonriFormData(params: MonriFormParams): MonriFormData {
     digest,
     transaction_type: "purchase",
 
-    success_url: `${baseUrl}/checkout/success?order_number=${orderNumber}`,
-    cancel_url: `${baseUrl}/checkout/cancel?order_number=${orderNumber}`,
+    success_url_override: `${baseUrl}/checkout/success?order_number=${orderNumber}`,
+    cancel_url_override: `${baseUrl}/checkout/cancel?order_number=${orderNumber}`,
     callback_url: `${baseUrl}/api/monri/callback`,
 
     ch_full_name: customerName,

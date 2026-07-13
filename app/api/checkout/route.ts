@@ -87,6 +87,38 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Course not found" }, { status: 404 });
     }
 
+    // The Advanced course can only be bought by students whose
+    // Brendia Pro Artist certification has been APPROVED. The buyer
+    // must use the email of their existing platform account.
+    if (course.id === "master-certification") {
+      const { data: usersList } = await supabase.auth.admin.listUsers({
+        perPage: 1000,
+      });
+      const existingUser = usersList?.users?.find(
+        (u) => u.email?.toLowerCase() === email.toLowerCase()
+      );
+
+      let certApproved = false;
+      if (existingUser) {
+        const { data: certification } = await supabase
+          .from("certifications")
+          .select("status")
+          .eq("user_id", existingUser.id)
+          .maybeSingle() as { data: { status: string } | null };
+        certApproved = certification?.status === "approved";
+      }
+
+      if (!certApproved) {
+        return NextResponse.json(
+          {
+            error:
+              "Advanced Brendia Pro® Artist tečaj dostupan je nakon uspješno završene certifikacije Brendia Pro® Artist tečaja. Molimo koristite email adresu s kojom ste registrirani na platformi.",
+          },
+          { status: 403 }
+        );
+      }
+    }
+
     const pricing = calculatePricing(course.price);
     const customerName = `${firstName} ${lastName}`;
 

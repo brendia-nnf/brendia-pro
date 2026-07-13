@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
+import crypto from "crypto";
 import {
   verifyCallbackDigest,
   isSuccessfulPayment,
@@ -32,10 +33,10 @@ function generateEnrollmentToken(): string {
 
 // Course ID mapping for display names
 const COURSE_NAMES: Record<string, string> = {
-  "foundation-certification": "Foundation Certification",
-  "master-certification": "Master Certification",
-  "brendia-pro-artist-1v1": "Brendia Pro Artist 1v1",
-  "brendia-pro-master-1v1": "Brendia Pro Master 1v1",
+  "foundation-certification": "Brendia Pro® Artist",
+  "master-certification": "Advanced Brendia Pro® Artist",
+  "brendia-pro-artist-1v1": "Brendia Pro® Artist 1v1",
+  "brendia-pro-master-1v1": "Brendia Pro® Master 1v1",
 };
 
 // Monri sends callback data as JSON POST
@@ -75,16 +76,49 @@ export async function POST(request: NextRequest) {
     // Find the order by order_number
     const { data: order, error: findError } = await supabase
       .from("orders")
-      .select("id, status, email, first_name, last_name, course_id, course_name, amount")
+      .select("id, status, email, first_name, last_name, course_id, course_name, amount, currency")
       .eq("order_number", orderNumber)
       .single();
 
     if (findError || !order) {
-      console.error("Order not found:", orderNumber, findError);
-      return NextResponse.json(
-        { error: "Order not found" },
-        { status: 404 }
-      );
+      // Not a course order - Monri's dashboard only allows ONE callback URL
+      // (this one), so platform webshop callbacks (BW-...) land here too.
+      // Forward them to the platform, signed with the shared merchant key.
+      console.log(`Order ${orderNumber} not found in orders - forwarding to platform callback`);
+
+      const platformUrl =
+        process.env.NEXT_PUBLIC_PLATFORM_URL || "https://app.brendiapro.hr";
+      const rawBody = JSON.stringify(body);
+      const forwardDigest = crypto
+        .createHash("sha512")
+        .update((process.env.MONRI_MERCHANT_KEY || "") + rawBody)
+        .digest("hex");
+
+      try {
+        const forwardResponse = await fetch(`${platformUrl}/api/monri/callback`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-forward-digest": forwardDigest,
+          },
+          body: rawBody,
+        });
+
+        const forwardResult = await forwardResponse.json().catch(() => ({}));
+        console.log(
+          `Platform callback responded ${forwardResponse.status} for ${orderNumber}`
+        );
+
+        return NextResponse.json(forwardResult, {
+          status: forwardResponse.status,
+        });
+      } catch (forwardError) {
+        console.error("Failed to forward callback to platform:", forwardError);
+        return NextResponse.json(
+          { error: "Order not found" },
+          { status: 404 }
+        );
+      }
     }
 
     // Determine new status based on response code
@@ -130,8 +164,90 @@ export async function POST(request: NextRequest) {
 
     console.log(`Order ${orderNumber} updated to status: ${newStatus}`);
 
+    // For the Advanced course the buyer is by definition an existing,
+    // certified student (enforced at checkout) - unlock their account
+    // directly instead of sending an activation link.
+    let upgradedExistingUser = false;
+
+    if (isSuccess && order.course_id === "master-certification") {
+      try {
+        const { data: usersList } = await supabase.auth.admin.listUsers({
+          perPage: 1000,
+        });
+        const existingUser = usersList?.users?.find(
+          (u) => u.email?.toLowerCase() === order.email.toLowerCase()
+        );
+
+        if (existingUser) {
+          const { error: enrollmentError } = await supabase
+            .from("enrollments")
+            .insert({
+              user_id: existingUser.id,
+              order_id: order.id,
+              course_id: order.course_id,
+              package: "advanced",
+              status: "active",
+              amount_paid: order.amount,
+              currency: order.currency || "eur",
+              order_number: orderNumber,
+              monri_transaction_id: transactionId,
+              monri_approval_code: approvalCode || null,
+              monri_response_code: responseCode,
+              purchased_at: new Date().toISOString(),
+              expires_at: null, // Lifetime access
+            });
+
+          if (!enrollmentError) {
+            upgradedExistingUser = true;
+            await supabase
+              .from("orders")
+              .update({
+                enrollment_completed_at: new Date().toISOString(),
+                updated_at: new Date().toISOString(),
+              })
+              .eq("id", order.id);
+
+            if (process.env.RESEND_API_KEY) {
+              const fromEmail =
+                process.env.RESEND_FROM_EMAIL || "Brendia Pro <info@brendiapro.hr>";
+              const platformUrl =
+                process.env.NEXT_PUBLIC_PLATFORM_URL || "https://app.brendiapro.hr";
+
+              await getResend().emails.send({
+                from: fromEmail,
+                to: order.email,
+                subject:
+                  "Advanced Brendia Pro® Artist je otkljucan - Brendia Pro",
+                html: generateUpgradeEmailHtml(
+                  `${order.first_name} ${order.last_name}`,
+                  orderNumber,
+                  formatPrice(order.amount),
+                  `${platformUrl}/dashboard`
+                ),
+              });
+            }
+
+            console.log(
+              `Advanced access unlocked for existing user ${order.email}`
+            );
+          } else {
+            console.error(
+              "Failed to create advanced enrollment:",
+              enrollmentError
+            );
+          }
+        } else {
+          console.error(
+            `Advanced purchase by unknown email ${order.email} - falling back to activation flow`
+          );
+        }
+      } catch (upgradeError) {
+        console.error("Advanced upgrade error:", upgradeError);
+      }
+    }
+
     // Send magic link email if payment was successful
-    if (isSuccess && process.env.RESEND_API_KEY) {
+    if (isSuccess && !upgradedExistingUser && process.env.RESEND_API_KEY) {
       try {
         const customerName = `${order.first_name} ${order.last_name}`;
         const courseName = COURSE_NAMES[order.course_id] || order.course_name;
@@ -175,6 +291,51 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+// Upgrade email for existing users buying the Advanced course
+function generateUpgradeEmailHtml(
+  name: string,
+  orderNumber: string,
+  price: string,
+  dashboardUrl: string
+): string {
+  return `
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brendia Pro</title>
+</head>
+<body style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.6;color:#1A1A1A;background-color:#f5f5f5;">
+  <div style="max-width:600px;margin:0 auto;background-color:#ffffff;">
+    <div style="background-color:#1A1A1A;padding:30px 40px;text-align:center;">
+      <img src="https://brendiapro.hr/images/logo-white.png" alt="Brendia Pro" style="height:40px;" />
+    </div>
+    <div style="padding:40px;">
+      <h1 style="color:#1A1A1A;font-size:24px;font-weight:600;margin:0 0 20px;">Cestitamo na nadogradnji!</h1>
+      <p style="margin:0 0 16px;color:#333333;">Draga ${name},</p>
+      <p style="margin:0 0 16px;color:#333333;">Vasa uplata za <strong>Advanced Brendia Pro&reg; Artist</strong> je uspjesno zaprimljena i pristup je vec otkljucan na vasem postojecem racunu.</p>
+      <div style="background-color:#FDF8F3;padding:20px;border-radius:8px;margin:20px 0;">
+        <p style="margin:0 0 8px;color:#333333;"><strong>Detalji narudzbe:</strong></p>
+        <p style="margin:0 0 8px;color:#333333;">Broj narudzbe: ${orderNumber}</p>
+        <p style="margin:0;color:#333333;">Iznos: ${price}</p>
+      </div>
+      <p style="margin:0 0 16px;color:#333333;">Nije potrebna nikakva aktivacija - prijavite se svojim postojecim podacima i napredni sadrzaj ce vas cekati cim bude objavljen.</p>
+      <p style="text-align:center;">
+        <a href="${dashboardUrl}" style="display:inline-block;background-color:#B8956A;color:#ffffff;padding:14px 28px;text-decoration:none;border-radius:6px;font-weight:600;margin:20px 0;">Otvori platformu</a>
+      </p>
+      <p style="margin:0 0 16px;color:#333333;">Srdacan pozdrav,<br>Nikolina i Brendia Pro tim</p>
+    </div>
+    <div style="background-color:#FDF8F3;padding:30px 40px;text-align:center;font-size:14px;color:#666666;">
+      <p style="margin:0 0 8px;"><strong>Brendia Pro</strong></p>
+      <p style="margin:0;">Premium Hair Extension Education</p>
+    </div>
+  </div>
+</body>
+</html>
+`;
 }
 
 // Generate activation email HTML

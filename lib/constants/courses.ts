@@ -14,7 +14,7 @@ export const VAT_RATE = 0.25; // 25% Croatian VAT
 export const courses: Record<string, Course> = {
   "foundation-certification": {
     id: "foundation-certification",
-    name: "Foundation Certification",
+    name: "Brendia Pro® Artist",
     subtitle: "Master the Fundamentals",
     price: 300000, // €3,000 in cents (without VAT)
     displayPrice: "€3,000",
@@ -33,7 +33,7 @@ export const courses: Record<string, Course> = {
   },
   "master-certification": {
     id: "master-certification",
-    name: "Master Certification",
+    name: "Advanced Brendia Pro® Artist",
     subtitle: "Achieve Excellence",
     price: 400000, // €4,000 in cents (without VAT)
     displayPrice: "€4,000",
