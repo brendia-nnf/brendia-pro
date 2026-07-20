@@ -28,6 +28,7 @@ export default function CoursesPage() {
       description: t("courses.foundation.description"),
       features: t.raw("courses.foundation.features") as string[],
       popular: false,
+      requiresCertification: false,
     },
     {
       slug: "master-certification",
@@ -39,6 +40,7 @@ export default function CoursesPage() {
       description: t("courses.master.description"),
       features: t.raw("courses.master.features") as string[],
       popular: true,
+      requiresCertification: true,
     },
     {
       slug: "brendia-pro-artist-1v1",
@@ -50,6 +52,7 @@ export default function CoursesPage() {
       description: t("courses.artist1v1.description"),
       features: t.raw("courses.artist1v1.features") as string[],
       popular: false,
+      requiresCertification: false,
     },
     {
       slug: "brendia-pro-master-1v1",
@@ -61,6 +64,7 @@ export default function CoursesPage() {
       description: t("courses.master1v1.description"),
       features: t.raw("courses.master1v1.features") as string[],
       popular: false,
+      requiresCertification: false,
     },
   ];
 
@@ -312,6 +316,14 @@ export default function CoursesPage() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                  {course.requiresCertification && (
+                    <div className="absolute top-0 left-0 bg-primary/90 text-white px-3 py-1 text-xs font-medium tracking-wider uppercase z-10 flex items-center gap-1.5">
+                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 00-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                      {t("courses.prerequisiteBadge")}
+                    </div>
+                  )}
                   <div className="absolute bottom-4 left-6">
                     <p className="text-white/80 text-sm">{course.subtitle}</p>
                     <h3 className="text-2xl font-heading text-white">{course.title}</h3>
@@ -338,6 +350,15 @@ export default function CoursesPage() {
                       </li>
                     ))}
                   </ul>
+
+                  {course.requiresCertification && (
+                    <div className="flex items-start gap-2.5 mb-5 p-3.5 bg-secondary/5 border border-secondary/20">
+                      <svg className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 00-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                      <p className="text-xs text-primary/70 leading-relaxed">{t("courses.prerequisiteNote")}</p>
+                    </div>
+                  )}
 
                   <Link href={`/courses/${course.slug}`} className="block">
                     <Button

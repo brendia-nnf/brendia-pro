@@ -36,6 +36,7 @@ export default function CoursePage({ params }: PageProps) {
 
   const courseKey = slug === "foundation-certification" ? "foundation" : "master";
   const isPopular = courseKey === "master";
+  const requiresCertification = courseKey === "master";
 
   const course = {
     title: t(`${courseKey}.title`),
@@ -92,11 +93,21 @@ export default function CoursePage({ params }: PageProps) {
                 {t("backToCourses")}
               </Link>
 
-              {isPopular && (
-                <span className="inline-block bg-secondary text-white px-4 py-1 text-xs font-medium tracking-wider uppercase mb-4">
-                  {t("mostPopular")}
-                </span>
-              )}
+              <div className="flex flex-wrap items-center gap-2 mb-4">
+                {isPopular && (
+                  <span className="inline-block bg-secondary text-white px-4 py-1 text-xs font-medium tracking-wider uppercase">
+                    {t("mostPopular")}
+                  </span>
+                )}
+                {requiresCertification && (
+                  <span className="inline-flex items-center gap-1.5 bg-primary/90 text-white px-4 py-1 text-xs font-medium tracking-wider uppercase">
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 00-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+                    {t("prerequisiteBadge")}
+                  </span>
+                )}
+              </div>
 
               <p className="text-secondary text-sm font-medium mb-2">
                 {course.subtitle}
@@ -116,6 +127,17 @@ export default function CoursePage({ params }: PageProps) {
               <p className="text-sm text-primary/40 mb-8">
                 {t("vatNote")}
               </p>
+
+              {requiresCertification && (
+                <div className="flex items-start gap-3 mb-6 p-4 bg-secondary/5 border border-secondary/20 max-w-xl">
+                  <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 00-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                  </svg>
+                  <p className="text-sm text-primary/70 leading-relaxed">
+                    {t("prerequisiteNote")}
+                  </p>
+                </div>
+              )}
 
               <Link href={`/checkout/${slug}`}>
                 <Button size="lg" className="min-w-[200px]">

@@ -377,7 +377,9 @@
           "Platform access (shop, community)",
           "Welcome box with materials"
         ]
-      }
+      },
+      "prerequisiteBadge": "Certification required",
+      "prerequisiteNote": "You can enrol in the Advanced Brendia Pro® Artist course only after you've completed and passed your Brendia Pro® Artist certification. Use the email you're registered with on the platform when purchasing."
     },
     "comparison": {
       "title": "Compare Programs",
@@ -632,7 +634,9 @@
           ]
         }
       ]
-    }
+    },
+    "prerequisiteBadge": "Certification required",
+    "prerequisiteNote": "This course is available only to students who have completed and passed the Brendia Pro® Artist certification. Use the email you're registered with on the platform when purchasing — access is verified automatically."
   },
   "aboutPage": {
     "hero": {

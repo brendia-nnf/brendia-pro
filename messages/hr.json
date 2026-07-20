@@ -377,7 +377,9 @@
           "Pristup platformi (shop, zajednica)",
           "Welcome box s materijalima"
         ]
-      }
+      },
+      "prerequisiteBadge": "Potrebna certifikacija",
+      "prerequisiteNote": "Advanced Brendia Pro® Artist možete upisati tek nakon što uspješno završite i položite certifikaciju Brendia Pro® Artist tečaja. Prilikom kupnje koristite email adresu s kojom ste registrirani na platformi."
     },
     "comparison": {
       "title": "Usporedite programe",
@@ -632,7 +634,9 @@
           ]
         }
       ]
-    }
+    },
+    "prerequisiteBadge": "Potrebna certifikacija",
+    "prerequisiteNote": "Ovaj tečaj dostupan je isključivo studenticama koje su uspješno završile i položile certifikaciju Brendia Pro® Artist tečaja. Prilikom kupnje koristite email adresu s kojom ste registrirani na platformi — pristup se automatski provjerava."
   },
   "aboutPage": {
     "hero": {
