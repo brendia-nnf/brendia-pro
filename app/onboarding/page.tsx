@@ -149,9 +149,9 @@ export default function OnboardingPage() {
   const [error, setError] = useState<string | null>(null);
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-  // Countdown to 15.08.2026
+  // Countdown to 01.09.2026
   useEffect(() => {
-    const targetDate = new Date("2026-08-15T23:59:59").getTime();
+    const targetDate = new Date("2026-09-01T23:59:59").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -382,6 +382,10 @@ export default function OnboardingPage() {
                     <span className="text-secondary mt-0.5">✦</span>
                     <span>Pristup sadržaju 12 mjeseci</span>
                   </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary mt-0.5">✦</span>
+                    <span>Mobilna aplikacija za pristup bilo kada</span>
+                  </li>
                 </ul>
               </div>
 
@@ -408,7 +412,7 @@ export default function OnboardingPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-primary mb-2">
-                      Prijave otvorene do 15.08.2026.
+                      Prijave otvorene do 01.09.2026.
                     </p>
                     <p className="text-sm text-primary/70 mb-4">
                       Prijavi se do ovog datuma i dobij <span className="font-semibold text-secondary">besplatni masterclass u vrijednosti 1.500€</span> — ekskluzivno za prvu generaciju Brendia Pro® polaznica!
@@ -818,7 +822,7 @@ export default function OnboardingPage() {
                 <FormSection number={8} title="MASTERCLASS" icon={<IconCalendar />}>
                   <div>
                     <p className="text-sm font-medium text-primary mb-2">
-                      Masterclass će biti održan 26.09.2026. ili 03.10.2026. u Zagrebu.
+                      Masterclass će biti održan 26.09.2026. u Zagrebu.
                     </p>
                     <p className="text-sm text-primary/70 mb-2">
                       <span className="font-semibold text-secondary">Besplatno za prvu generaciju Brendia Pro® polaznica!</span>{" "}
@@ -876,13 +880,6 @@ export default function OnboardingPage() {
                         value="26-09"
                         label="Da, dolazim 26.09."
                         checked={formData.masterclassDate === "26-09"}
-                        onChange={handleInputChange}
-                      />
-                      <RadioOption
-                        name="masterclassDate"
-                        value="03-10"
-                        label="Da, dolazim 03.10."
-                        checked={formData.masterclassDate === "03-10"}
                         onChange={handleInputChange}
                       />
                       <RadioOption
