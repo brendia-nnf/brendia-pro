@@ -19,7 +19,7 @@ import * as fs from "fs";
 import * as path from "path";
 
 // Configuration
-const RESEND_API_KEY = process.env.RESEND_API_KEY || "re_Gk6ZT8Yi_8E7AWUG83NMBzqjCYeDuZhiN";
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://thvbamsmxolxndyspnia.supabase.co";
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
@@ -50,6 +50,12 @@ async function main() {
   if (!SUPABASE_SERVICE_KEY && !isDryRun) {
     console.error("❌ Error: SUPABASE_SERVICE_ROLE_KEY environment variable is required");
     console.log("\nRun with: SUPABASE_SERVICE_ROLE_KEY=your_key npx tsx scripts/send-onboarding-emails.ts");
+    process.exit(1);
+  }
+
+  if (!RESEND_API_KEY && !isDryRun) {
+    console.error("❌ Error: RESEND_API_KEY environment variable is required");
+    console.log("\nSet it in .env.local or run with: RESEND_API_KEY=re_... npx tsx scripts/send-onboarding-emails.ts");
     process.exit(1);
   }
 
