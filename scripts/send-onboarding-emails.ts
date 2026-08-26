@@ -60,7 +60,7 @@ async function main() {
   }
 
   // Initialize clients
-  const resend = new Resend(RESEND_API_KEY);
+  const resend = new Resend(RESEND_API_KEY || "re_dummy_key_for_dry_run");
   const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY || "dummy-key-for-dry-run");
 
   // Load email template
