@@ -1068,7 +1068,7 @@ export default function OnboardingPage() {
               <div className="px-5 pb-5 text-sm text-primary/70">
                 Pristup online platformi dobivaš odmah nakon što zaprimimo uplatu i obradimo tvoju prijavu.
                 Welcome box šaljemo u roku od 7-14 radnih dana. Masterclass za prvu generaciju održat će se
-                26.09.2026. ili 03.10.2026. u Zagrebu.
+                26.09.2026. u Zagrebu.
               </div>
             </details>
 
