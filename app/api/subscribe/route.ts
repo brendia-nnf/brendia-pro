@@ -1,8 +1,33 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { Resend } from "resend";
+import * as fs from "fs";
+import * as path from "path";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+function getWelcomeEmailHtml(email: string): string {
+  const templatePath = path.join(
+    process.cwd(),
+    "emails",
+    "welcome-onboarding.html"
+  );
+  const template = fs.readFileSync(templatePath, "utf-8");
+
+  // Derive a display name from the email local part, e.g. "ana.horvat" -> "Ana"
+  const firstToken = email.split("@")[0].split(/[._\-+]/)[0];
+  const displayName = firstToken
+    ? firstToken.charAt(0).toUpperCase() + firstToken.slice(1)
+    : "";
+
+  return template.replace(
+    /<span style="color: #B8956A;">___<\/span>/g,
+    `<span style="color: #B8956A;">${displayName}</span>`
+  );
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -58,6 +83,23 @@ export async function POST(request: NextRequest) {
         { error: "Prijava nije uspjela. Pokusaj ponovo." },
         { status: 500 }
       );
+    }
+
+    // Send welcome email (non-fatal: signup already succeeded)
+    try {
+      const { error: sendError } = await resend.emails.send({
+        from: "Brendia Pro® <info@brendiapro.hr>",
+        to: email.toLowerCase(),
+        subject: "Dobrodošla u Brendia Pro® Education ✨",
+        html: getWelcomeEmailHtml(email.toLowerCase()),
+      });
+      if (sendError) {
+        console.error("Failed to send welcome email:", sendError);
+      } else {
+        console.log(`Welcome email sent to ${email.toLowerCase()}`);
+      }
+    } catch (emailError) {
+      console.error("Failed to send welcome email:", emailError);
     }
 
     return NextResponse.json(
