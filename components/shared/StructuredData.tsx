@@ -17,7 +17,7 @@ export function OrganizationSchema({ url = "https://brendiapro.hr" }: Organizati
       jobTitle: "Founder & Lead Educator",
     },
     sameAs: [
-      "https://instagram.com/brendiapro",
+      "https://www.instagram.com/brendia.pro/",
       "https://facebook.com/brendiapro",
     ],
     contactPoint: {

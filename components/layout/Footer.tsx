@@ -174,7 +174,7 @@ export function Footer() {
               {/* Social Links */}
               <div className="flex items-center gap-6">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/brendia.pro/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/40 hover:text-white transition-colors"

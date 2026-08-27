@@ -1131,7 +1131,7 @@ export default function OnboardingPage() {
                 <span className="text-secondary transition-transform group-open:rotate-45">+</span>
               </summary>
               <div className="px-5 pb-5 text-sm text-primary/70">
-                Javi nam se na Instagram <a href="https://instagram.com/brendiapro" className="text-secondary hover:underline">@brendiapro</a> ili
+                Javi nam se na Instagram <a href="https://www.instagram.com/brendia.pro/" className="text-secondary hover:underline">@brendia.pro</a> ili
                 pošalji email na <a href="mailto:info@brendiapro.hr" className="text-secondary hover:underline">info@brendiapro.hr</a>.
                 Rado ćemo odgovoriti na sva tvoja pitanja!
               </div>

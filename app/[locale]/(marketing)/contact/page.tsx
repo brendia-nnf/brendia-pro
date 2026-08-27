@@ -150,12 +150,12 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium text-primary mb-1">{t("info.followUs")}</h3>
                     <a
-                      href="https://instagram.com/brendiapro"
+                      href="https://www.instagram.com/brendia.pro/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary/60 hover:text-secondary transition-colors"
                     >
-                      @brendiapro
+                      @brendia.pro
                     </a>
                   </div>
                 </div>
