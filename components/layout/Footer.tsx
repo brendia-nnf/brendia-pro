@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { COMPANY } from "@/lib/constants/company";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -22,6 +23,8 @@ export function Footer() {
     legal: [
       { name: t("privacyPolicy"), href: "/legal/privacy" },
       { name: t("termsOfService"), href: "/legal/terms" },
+      { name: t("paymentSecurity"), href: "/legal/payment-security" },
+      { name: t("complaints"), href: "/legal/complaints" },
     ],
   };
 
@@ -45,10 +48,37 @@ export function Footer() {
                 {t("description")}
               </p>
               <div className="mt-4 text-white/40 text-xs leading-relaxed">
-                <p className="font-medium text-white/50">OMEGA-NI d.o.o.</p>
-                <p>Ulica Ladislava Šabana 24</p>
-                <p>10360 Sesvete, Hrvatska</p>
-                <p>OIB: 24477900978</p>
+                <p className="font-medium text-white/50">{COMPANY.name}</p>
+                <p>{COMPANY.street}</p>
+                <p>
+                  {COMPANY.city}, {COMPANY.country}
+                </p>
+                <p>OIB: {COMPANY.oib}</p>
+                <p>PDV ID: {COMPANY.vatId}</p>
+                <p>
+                  MBS: {COMPANY.mbs} — upisan u sudski registar,{" "}
+                  {COMPANY.registryCourt}
+                </p>
+                <p>Temeljni kapital: {COMPANY.shareCapital}</p>
+                <p>Direktorica: {COMPANY.director}</p>
+                <p className="mt-2">
+                  Tel:{" "}
+                  <a
+                    href={COMPANY.phoneHref}
+                    className="hover:text-white/70 transition-colors"
+                  >
+                    {COMPANY.phone}
+                  </a>
+                </p>
+                <p>
+                  E-mail:{" "}
+                  <a
+                    href={`mailto:${COMPANY.email}`}
+                    className="hover:text-white/70 transition-colors"
+                  >
+                    {COMPANY.email}
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -112,56 +142,100 @@ export function Footer() {
 
           {/* Payment Methods */}
           <div className="border-t border-white/10 mt-12 pt-8">
-            <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
-              <Image
-                src="/images/payments/visa.jpg"
-                alt="Visa"
-                width={50}
-                height={32}
-                className="h-6 w-auto object-contain opacity-70"
-              />
-              <Image
-                src="/images/payments/mastercard.png"
-                alt="Mastercard"
-                width={40}
-                height={32}
-                className="h-6 w-auto object-contain opacity-70"
-              />
-              <Image
-                src="/images/payments/maestro.png"
-                alt="Maestro"
-                width={40}
-                height={32}
-                className="h-6 w-auto object-contain opacity-70"
-              />
-              <Image
-                src="/images/payments/visa-secure.jpg"
-                alt="Visa Secure"
-                width={40}
-                height={24}
-                className="h-5 w-auto object-contain opacity-70"
-              />
-              <Image
-                src="/images/payments/mc-identity-check.png"
-                alt="Mastercard Identity Check"
-                width={40}
-                height={24}
-                className="h-5 w-auto object-contain opacity-70"
-              />
-              <a
-                href="https://www.monri.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/images/payments/monri.png"
-                  alt="Powered by Monri"
-                  width={80}
-                  height={28}
-                  className="h-6 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </a>
+            <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
+              {[
+                {
+                  name: "Mastercard",
+                  href: "https://www.mastercard.com",
+                  src: "/images/payments/mastercard.png",
+                  width: 40,
+                  height: 32,
+                },
+                {
+                  name: "Maestro",
+                  href: "https://brand.mastercard.com/brandcenter/more-about-our-brands.html",
+                  src: "/images/payments/maestro.png",
+                  width: 40,
+                  height: 32,
+                },
+                {
+                  name: "Visa",
+                  href: "https://www.visaeurope.com",
+                  src: "/images/payments/visa.jpg",
+                  width: 50,
+                  height: 32,
+                },
+                {
+                  name: "Diners",
+                  href: "https://www.dinersclub.com",
+                  src: "/images/payments/diners.gif",
+                  width: 92,
+                  height: 24,
+                },
+                {
+                  name: "Discover",
+                  href: "https://www.discover.com/",
+                  src: "/images/payments/discover.png",
+                  width: 50,
+                  height: 32,
+                },
+                {
+                  name: "American Express",
+                  href: "https://www.americanexpress.com/",
+                  src: "/images/payments/amex.jpg",
+                  width: 40,
+                  height: 32,
+                },
+                {
+                  name: "Monri",
+                  href: "https://monri.com",
+                  src: "/images/payments/monri.png",
+                  width: 80,
+                  height: 28,
+                },
+              ].map((logo) => (
+                <a
+                  key={logo.name}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={logo.name}
+                  className="bg-white rounded-md px-2.5 py-1.5 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    width={logo.width}
+                    height={logo.height}
+                    className="h-6 w-auto object-contain"
+                  />
+                </a>
+              ))}
             </div>
+            <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
+              <span className="bg-white rounded-md px-2.5 py-1.5 shadow-sm">
+                <Image
+                  src="/images/payments/visa-secure.jpg"
+                  alt="Visa Secure"
+                  width={40}
+                  height={24}
+                  className="h-5 w-auto object-contain"
+                />
+              </span>
+              <span className="bg-white rounded-md px-2.5 py-1.5 shadow-sm">
+                <Image
+                  src="/images/payments/mc-identity-check.png"
+                  alt="Mastercard Identity Check"
+                  width={40}
+                  height={24}
+                  className="h-5 w-auto object-contain"
+                />
+              </span>
+            </div>
+            <p className="text-white/50 text-xs text-center mb-8">
+              Plaćanje se vrši kreditnim i debitnim karticama Mastercard,
+              Maestro, Visa, Diners, Discover i American Express.
+            </p>
           </div>
 
           {/* Divider */}

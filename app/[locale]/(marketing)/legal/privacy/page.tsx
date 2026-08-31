@@ -19,6 +19,23 @@ export default function PrivacyPolicyPage() {
       <section className="py-20 md:py-32 bg-white">
         <Container>
           <div className="max-w-3xl mx-auto prose prose-lg prose-primary">
+            <h2>Izjava o privatnosti</h2>
+            <p>
+              Obavezujemo se pružati zaštitu osobnim podacima kupaca, na način
+              da prikupljamo samo nužne, osnovne podatke o kupcima /
+              korisnicima koji su nužni za ispunjenje naših obveza; informiramo
+              kupce o načinu korištenja prikupljenih podataka, redovito dajemo
+              kupcima mogućnost izbora o upotrebi njihovih podataka,
+              uključujući mogućnost odluke žele li ili ne da se njihovo ime
+              ukloni s lista koje se koriste za marketinške kampanje.
+            </p>
+            <p>
+              Svi se podaci o korisnicima strogo čuvaju i dostupni su samo
+              djelatnicima kojima su ti podaci nužni za obavljanje posla. Svi
+              naši djelatnici i poslovni partneri odgovorni su za poštivanje
+              načela zaštite privatnosti.
+            </p>
+
             <h2>1. Voditelj obrade</h2>
             <p>Voditelj obrade osobnih podataka je:</p>
             <p>

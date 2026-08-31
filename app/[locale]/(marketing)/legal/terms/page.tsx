@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "@/components/ui";
+import { Link } from "@/i18n/routing";
 
 export default function TermsPage() {
   return (
@@ -70,6 +71,12 @@ export default function TermsPage() {
             <p>
               Naknada se plaća jednokratno, na temelju ponude ili računa Organizatora,
               najkasnije do datuma dospijeća navedenog na ponudi ili računu.
+            </p>
+            <p>
+              Plaćanje se vrši kreditnim i debitnim karticama Mastercard, Maestro,
+              Visa, Diners, Discover i American Express, putem Monri sustava za
+              online naplatu. Više o sigurnosti plaćanja pročitajte na stranici{" "}
+              <Link href="/legal/payment-security">Sigurnost plaćanja</Link>.
             </p>
             <p>
               Organizator nije dužan omogućiti pristup Edukaciji prije evidentiranja plaćanja cjelokupne naknade.
