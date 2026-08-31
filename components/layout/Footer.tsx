@@ -242,7 +242,18 @@ export function Footer() {
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-white/40 text-sm">
-                &copy; {currentYear} Brendia Pro®. {t("allRightsReserved")}
+                &copy; {currentYear} Brendia Pro®. {t("allRightsReserved")}{" "}
+                <span className="text-white/30">
+                  · Izrada:{" "}
+                  <a
+                    href="https://www.ninefold.eu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white/70 transition-colors"
+                  >
+                    Ninefold
+                  </a>
+                </span>
               </p>
 
               {/* Social Links */}
