@@ -73,6 +73,7 @@
     "termsOfService": "Uvjeti korištenja",
     "paymentSecurity": "Sigurnost plaćanja",
     "complaints": "Reklamacije i prigovori",
+    "cookiePolicy": "Politika kolačića",
     "allRightsReserved": "Sva prava pridržana."
   },
   "courses": {
@@ -1235,5 +1236,12 @@
         "email": "Email: legal@brendiapro.hr"
       }
     }
+  },
+  "cookieBanner": {
+    "title": "Kolačići na ovoj stranici",
+    "description": "Koristimo samo nužne kolačiće potrebne za rad stranice (npr. odabir jezika). Analitičke i marketinške kolačiće ne koristimo bez vaše privole. Više u našoj",
+    "policyLink": "Politici kolačića",
+    "acceptAll": "Prihvati sve",
+    "necessaryOnly": "Samo nužni"
   }
 }

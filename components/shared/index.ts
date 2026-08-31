@@ -5,3 +5,4 @@ export {
   BreadcrumbSchema,
   WebsiteSchema,
 } from "./StructuredData";
+export { CookieBanner } from "./CookieBanner";

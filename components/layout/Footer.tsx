@@ -25,6 +25,7 @@ export function Footer() {
       { name: t("termsOfService"), href: "/legal/terms" },
       { name: t("paymentSecurity"), href: "/legal/payment-security" },
       { name: t("complaints"), href: "/legal/complaints" },
+      { name: t("cookiePolicy"), href: "/legal/cookies" },
     ],
   };
 

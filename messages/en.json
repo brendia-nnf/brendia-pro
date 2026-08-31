@@ -73,6 +73,7 @@
     "termsOfService": "Terms of Service",
     "paymentSecurity": "Payment Security",
     "complaints": "Complaints",
+    "cookiePolicy": "Cookie Policy",
     "allRightsReserved": "All rights reserved."
   },
   "courses": {
@@ -1235,5 +1236,12 @@
         "email": "Email: legal@brendiapro.hr"
       }
     }
+  },
+  "cookieBanner": {
+    "title": "Cookies on this site",
+    "description": "We only use strictly necessary cookies required for the site to work (e.g. language preference). We do not use analytics or marketing cookies without your consent. Learn more in our",
+    "policyLink": "Cookie Policy",
+    "acceptAll": "Accept all",
+    "necessaryOnly": "Necessary only"
   }
 }
