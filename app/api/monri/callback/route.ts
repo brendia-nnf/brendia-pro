@@ -8,6 +8,7 @@ import {
   getResponseMessage,
 } from "@/lib/monri";
 import { getCourse, formatPrice } from "@/lib/constants/courses";
+import { createFakturkoInvoice, isFakturkoConfigured } from "@/lib/fakturko";
 
 // Lazy initialization to avoid build-time errors
 function getSupabase() {
@@ -76,7 +77,9 @@ export async function POST(request: NextRequest) {
     // Find the order by order_number
     const { data: order, error: findError } = await supabase
       .from("orders")
-      .select("id, status, email, first_name, last_name, course_id, course_name, amount, currency")
+      .select(
+        "id, status, email, first_name, last_name, phone, course_id, course_name, amount, currency, subtotal, vat_amount, vat_rate, street, city, postal_code, country, company_name, vat_number"
+      )
       .eq("order_number", orderNumber)
       .single();
 
@@ -164,6 +167,93 @@ export async function POST(request: NextRequest) {
 
     console.log(`Order ${orderNumber} updated to status: ${newStatus}`);
 
+    // Create a fiscalized invoice via Fakturko (privatna → fiskalizacija,
+    // pravna/company → eRačun). Failures are stored on the order and never
+    // block the payment flow.
+    let invoicePdfLink: string | null = null;
+
+    if (isSuccess && isFakturkoConfigured()) {
+      try {
+        const isCompany = !!(order.company_name || order.vat_number);
+        // client_oib expects the bare OIB — strip an "HR" VAT-ID prefix
+        const companyOib = (order.vat_number || "")
+          .replace(/^HR/i, "")
+          .trim();
+
+        const netTotal = order.subtotal / 100;
+        const grossTotal = order.amount / 100;
+        const vatPercentage = Math.round(Number(order.vat_rate) * 100) || 25;
+
+        const invoiceResult = await createFakturkoInvoice({
+          client: isCompany
+            ? {
+                type: "pravna",
+                name: order.company_name || `${order.first_name} ${order.last_name}`,
+                oib: companyOib || undefined,
+                country: order.country || "Hrvatska",
+                city: order.city || undefined,
+                address: order.street || undefined,
+                zip: order.postal_code || undefined,
+                email: order.email,
+                phone: order.phone || undefined,
+              }
+            : {
+                type: "privatna",
+                name: order.first_name,
+                surname: order.last_name,
+                country: order.country || "Hrvatska",
+                city: order.city || undefined,
+                address: order.street || undefined,
+                zip: order.postal_code || undefined,
+                email: order.email,
+                phone: order.phone || undefined,
+              },
+          lines: [
+            {
+              name: order.course_name,
+              kpdCode: process.env.FAKTURKO_KPD_CODE || "85.59.19",
+              quantity: 1,
+              unitPriceWithoutVat: netTotal,
+              priceWithoutVat: netTotal,
+              vatPercentage,
+              priceWithVat: grossTotal,
+            },
+          ],
+          totalWithoutVat: netTotal,
+          totalWithVat: grossTotal,
+          extRef: orderNumber,
+          note: `Narudžba ${orderNumber} — plaćeno karticom putem Monri`,
+        });
+
+        if (invoiceResult.ok) {
+          invoicePdfLink = invoiceResult.pdfLink || null;
+          await supabase
+            .from("orders")
+            .update({
+              fakturko_invoice_id: invoiceResult.invoiceId || null,
+              fakturko_pdf_url: invoiceResult.pdfLink || null,
+              invoiced_at: new Date().toISOString(),
+              fakturko_error: null,
+            })
+            .eq("id", order.id);
+          console.log(
+            `Fakturko invoice ${invoiceResult.invoiceId} created for ${orderNumber}`
+          );
+        } else {
+          await supabase
+            .from("orders")
+            .update({ fakturko_error: invoiceResult.error || "unknown" })
+            .eq("id", order.id);
+          console.error(
+            `Fakturko invoice failed for ${orderNumber}:`,
+            invoiceResult.error
+          );
+        }
+      } catch (invoiceError) {
+        console.error("Fakturko invoicing error:", invoiceError);
+      }
+    }
+
     // For the Advanced course the buyer is by definition an existing,
     // certified student (enforced at checkout) - unlock their account
     // directly instead of sending an activation link.
@@ -222,7 +312,8 @@ export async function POST(request: NextRequest) {
                   `${order.first_name} ${order.last_name}`,
                   orderNumber,
                   formatPrice(order.amount),
-                  `${platformUrl}/dashboard`
+                  `${platformUrl}/dashboard`,
+                  invoicePdfLink
                 ),
               });
             }
@@ -267,7 +358,8 @@ export async function POST(request: NextRequest) {
             courseName,
             activationUrl,
             orderNumber,
-            formatPrice(order.amount)
+            formatPrice(order.amount),
+            invoicePdfLink
           ),
         });
 
@@ -294,11 +386,17 @@ export async function POST(request: NextRequest) {
 }
 
 // Upgrade email for existing users buying the Advanced course
+function invoiceLinkHtml(invoicePdfLink: string | null): string {
+  if (!invoicePdfLink) return "";
+  return `<p style="margin:0;color:#333333;">Racun (PDF): <a href="${invoicePdfLink}" style="color:#B8956A;">preuzmite ovdje</a></p>`;
+}
+
 function generateUpgradeEmailHtml(
   name: string,
   orderNumber: string,
   price: string,
-  dashboardUrl: string
+  dashboardUrl: string,
+  invoicePdfLink: string | null = null
 ): string {
   return `
 <!DOCTYPE html>
@@ -320,7 +418,8 @@ function generateUpgradeEmailHtml(
       <div style="background-color:#FDF8F3;padding:20px;border-radius:8px;margin:20px 0;">
         <p style="margin:0 0 8px;color:#333333;"><strong>Detalji narudzbe:</strong></p>
         <p style="margin:0 0 8px;color:#333333;">Broj narudzbe: ${orderNumber}</p>
-        <p style="margin:0;color:#333333;">Iznos: ${price}</p>
+        <p style="margin:0 0 8px;color:#333333;">Iznos: ${price}</p>
+        ${invoiceLinkHtml(invoicePdfLink)}
       </div>
       <p style="margin:0 0 16px;color:#333333;">Nije potrebna nikakva aktivacija - prijavite se svojim postojecim podacima i napredni sadrzaj ce vas cekati cim bude objavljen.</p>
       <p style="text-align:center;">
@@ -344,7 +443,8 @@ function generateActivationEmailHtml(
   courseName: string,
   activationUrl: string,
   orderNumber: string,
-  price: string
+  price: string,
+  invoicePdfLink: string | null = null
 ): string {
   return `
 <!DOCTYPE html>
@@ -432,6 +532,7 @@ function generateActivationEmailHtml(
         <p>Broj narudzbe: ${orderNumber}</p>
         <p>Program: ${courseName}</p>
         <p>Iznos: ${price}</p>
+        ${invoiceLinkHtml(invoicePdfLink)}
       </div>
       <p>Da biste pristupili svom tecaju, potrebno je aktivirati svoj racun. Kliknite na gumb ispod kako biste postavili lozinku i zapoceli s ucenjem.</p>
       <p style="text-align: center;">
