@@ -25,45 +25,29 @@ export default function CheckoutPage({ params }: PageProps) {
   const pricing = calculatePricing(course.price);
 
   return (
-    <section className="min-h-screen bg-cream">
-      {/* Header */}
-      <div className="bg-white border-b border-primary/10">
-        <Container>
-          <div className="py-6 flex items-center justify-between">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo.png"
-                alt="Brendia Pro"
-                width={120}
-                height={40}
-                className="h-8 w-auto"
-              />
-            </Link>
-            <Link
-              href={`/courses/${slug}`}
-              className="text-sm text-primary/60 hover:text-primary transition-colors flex items-center gap-2"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              {t("backToCourse")}
-            </Link>
-          </div>
-        </Container>
-      </div>
-
+    <section className="min-h-screen bg-cream pt-24 md:pt-28">
       <Container>
         <div className="py-12 lg:py-16">
+          <Link
+            href={`/courses/${slug}`}
+            className="inline-flex items-center gap-2 text-sm text-primary/60 hover:text-primary transition-colors mb-8"
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            {t("backToCourse")}
+          </Link>
+
           {/* Page Title */}
           <div className="text-center mb-12">
             <h1 className="text-3xl sm:text-4xl font-heading text-primary mb-2">

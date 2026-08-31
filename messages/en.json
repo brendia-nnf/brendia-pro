@@ -637,6 +637,97 @@
         }
       ]
     },
+    "artist1v1": {
+      "title": "Brendia Pro® Artist 1v1",
+      "subtitle": "Live In-Salon Education",
+      "price": "€2,000",
+      "duration": "1 day (4 hours)",
+      "description": "Personalized live education with a mentor in-salon. Ideal for fast learning of practical techniques through hands-on practice.",
+      "longDescription": "Brendia Pro® Artist 1v1 is a personalized one-on-one live education with a mentor in-salon. Through four hours of intensive hands-on practice you will master the weft extension installation technique with an individual approach tailored to your pace and experience level. After the education you receive official Brendia Pro® certification, platform access and a welcome box with materials.",
+      "features": [
+        "Live education with mentor",
+        "4 hours of hands-on practice",
+        "Personalized approach",
+        "Official Brendia Pro® certification",
+        "Platform access (shop, community)",
+        "Welcome box with materials"
+      ],
+      "curriculum": [
+        {
+          "module": "Preparation & Theory",
+          "lessons": [
+            "Introduction and program overview",
+            "Client consultation and assessment",
+            "Hair quality and selection",
+            "Tools and workstation setup"
+          ]
+        },
+        {
+          "module": "Hands-on In-Salon Practice",
+          "lessons": [
+            "Installation technique demonstration",
+            "Supervised installation practice",
+            "Corrections and finishing",
+            "Maintenance and aftercare"
+          ]
+        },
+        {
+          "module": "Completion & Certification",
+          "lessons": [
+            "Working with clients and pricing",
+            "Q&A session",
+            "Certificate ceremony and welcome box",
+            "Platform access activation"
+          ]
+        }
+      ]
+    },
+    "master1v1": {
+      "title": "Brendia Pro® Master 1v1",
+      "subtitle": "Live In-Studio Education",
+      "price": "€5,000",
+      "duration": "2 days (6 hours/day)",
+      "description": "Complete Foundation and Master education live in studio. Two days of intensive practice and personal mentorship.",
+      "longDescription": "Brendia Pro® Master 1v1 combines the complete Foundation and Master content into two days of intensive one-on-one live education in-studio. With twelve hours of hands-on practice and personal mentorship you will master weft extension installation from the fundamentals to advanced techniques. After the education you receive official Brendia Pro® certification, platform access and a welcome box with materials.",
+      "features": [
+        "2 days of live education with mentor",
+        "12 hours of hands-on practice (6h/day)",
+        "Foundation + Master content",
+        "Personalized approach",
+        "Official Brendia Pro® certification",
+        "Platform access (shop, community)",
+        "Welcome box with materials"
+      ],
+      "curriculum": [
+        {
+          "module": "Day 1: Foundations & Installation Technique",
+          "lessons": [
+            "Client consultation and assessment",
+            "Hair quality and selection",
+            "Installation technique demonstration",
+            "Supervised installation practice",
+            "Maintenance and aftercare"
+          ]
+        },
+        {
+          "module": "Day 2: Advanced Techniques",
+          "lessons": [
+            "Advanced installation techniques",
+            "Working with challenging hair types",
+            "Corrective work and finishing",
+            "Business strategies and pricing",
+            "Q&A session"
+          ]
+        },
+        {
+          "module": "Completion & Certification",
+          "lessons": [
+            "Certificate ceremony and welcome box",
+            "Platform access activation"
+          ]
+        }
+      ]
+    },
     "prerequisiteBadge": "Certification required",
     "prerequisiteNote": "This course is available only to students who have completed and passed the Brendia Pro® Artist certification. Use the email you're registered with on the platform when purchasing — access is verified automatically."
   },

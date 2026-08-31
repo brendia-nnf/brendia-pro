@@ -637,6 +637,97 @@
         }
       ]
     },
+    "artist1v1": {
+      "title": "Brendia Pro® Artist 1v1",
+      "subtitle": "Live Edukacija u Salonu",
+      "price": "€2.000",
+      "duration": "1 dan (4 sata)",
+      "description": "Personalizirana live edukacija s mentorom u salonu. Idealno za brzo učenje praktičnih tehnika kroz hands-on praksu.",
+      "longDescription": "Brendia Pro® Artist 1v1 je personalizirana live edukacija jedan-na-jedan s mentorom u salonu. Kroz četiri sata intenzivne hands-on prakse svladat ćete tehniku ugradnje weft ekstenzija uz individualan pristup prilagođen vašem tempu i razini iskustva. Nakon edukacije dobivate službenu Brendia Pro® certifikaciju, pristup platformi i welcome box s materijalima.",
+      "features": [
+        "Live edukacija s mentorom",
+        "4 sata hands-on prakse",
+        "Personalizirani pristup",
+        "Službena Brendia Pro® certifikacija",
+        "Pristup platformi (shop, zajednica)",
+        "Welcome box s materijalima"
+      ],
+      "curriculum": [
+        {
+          "module": "Priprema i teorija",
+          "lessons": [
+            "Upoznavanje i pregled programa",
+            "Konzultacije i procjena klijenta",
+            "Kvaliteta i odabir kose",
+            "Priprema alata i radnog mjesta"
+          ]
+        },
+        {
+          "module": "Hands-on praksa u salonu",
+          "lessons": [
+            "Demonstracija tehnike ugradnje",
+            "Samostalna ugradnja uz vodstvo mentora",
+            "Korekcije i finiširanje",
+            "Njega i održavanje"
+          ]
+        },
+        {
+          "module": "Završetak i certifikacija",
+          "lessons": [
+            "Rad s klijentima i određivanje cijena",
+            "Pitanja i odgovori",
+            "Dodjela certifikata i welcome box",
+            "Aktivacija pristupa platformi"
+          ]
+        }
+      ]
+    },
+    "master1v1": {
+      "title": "Brendia Pro® Master 1v1",
+      "subtitle": "Live Edukacija u Studiju",
+      "price": "€5.000",
+      "duration": "2 dana (6 sati/dan)",
+      "description": "Kompletna Foundation i Master edukacija uživo u studiju. Dva dana intenzivne prakse i osobnog mentorstva.",
+      "longDescription": "Brendia Pro® Master 1v1 objedinjuje kompletan Foundation i Master sadržaj u dva dana intenzivne live edukacije jedan-na-jedan u studiju. Uz dvanaest sati hands-on prakse i osobno mentorstvo svladat ćete tehniku ugradnje weft ekstenzija od temelja do naprednih tehnika. Nakon edukacije dobivate službenu Brendia Pro® certifikaciju, pristup platformi i welcome box s materijalima.",
+      "features": [
+        "2 dana live edukacije s mentorom",
+        "12 sati hands-on prakse (6h/dan)",
+        "Foundation + Master sadržaj",
+        "Personalizirani pristup",
+        "Službena Brendia Pro® certifikacija",
+        "Pristup platformi (shop, zajednica)",
+        "Welcome box s materijalima"
+      ],
+      "curriculum": [
+        {
+          "module": "Dan 1: Temelji i tehnika ugradnje",
+          "lessons": [
+            "Konzultacije i procjena klijenta",
+            "Kvaliteta i odabir kose",
+            "Demonstracija tehnike ugradnje",
+            "Samostalna ugradnja uz vodstvo mentora",
+            "Njega i održavanje"
+          ]
+        },
+        {
+          "module": "Dan 2: Napredne tehnike",
+          "lessons": [
+            "Napredne tehnike ugradnje",
+            "Rad sa zahtjevnim tipovima kose",
+            "Korektivni rad i finiširanje",
+            "Poslovne strategije i cijene usluga",
+            "Pitanja i odgovori"
+          ]
+        },
+        {
+          "module": "Završetak i certifikacija",
+          "lessons": [
+            "Dodjela certifikata i welcome box",
+            "Aktivacija pristupa platformi"
+          ]
+        }
+      ]
+    },
     "prerequisiteBadge": "Potrebna certifikacija",
     "prerequisiteNote": "Ovaj tečaj dostupan je isključivo studenticama koje su uspješno završile i položile certifikaciju Brendia Pro® Artist tečaja. Prilikom kupnje koristite email adresu s kojom ste registrirani na platformi — pristup se automatski provjerava."
   },

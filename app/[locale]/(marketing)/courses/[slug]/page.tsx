@@ -29,12 +29,17 @@ export default function CoursePage({ params }: PageProps) {
   const t = useTranslations("courseDetail");
   const tNav = useTranslations("navigation");
 
-  const validSlugs = ["foundation-certification", "master-certification"];
-  if (!validSlugs.includes(slug)) {
+  const slugToKey: Record<string, string> = {
+    "foundation-certification": "foundation",
+    "master-certification": "master",
+    "brendia-pro-artist-1v1": "artist1v1",
+    "brendia-pro-master-1v1": "master1v1",
+  };
+  const courseKey = slugToKey[slug];
+  if (!courseKey) {
     notFound();
   }
 
-  const courseKey = slug === "foundation-certification" ? "foundation" : "master";
   const isPopular = courseKey === "master";
   const requiresCertification = courseKey === "master";
 
@@ -45,7 +50,11 @@ export default function CoursePage({ params }: PageProps) {
     duration: t(`${courseKey}.duration`),
     description: t(`${courseKey}.description`),
     longDescription: t(`${courseKey}.longDescription`),
-    image: `/images/courses/${courseKey === "foundation" ? "foundation" : "master"}.jpg`,
+    image: `/images/courses/${
+      courseKey === "foundation" || courseKey === "artist1v1"
+        ? "foundation"
+        : "master"
+    }.jpg`,
     features: t.raw(`${courseKey}.features`) as string[],
     curriculum: t.raw(`${courseKey}.curriculum`) as CurriculumModule[],
   };
