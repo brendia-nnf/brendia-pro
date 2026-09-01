@@ -78,6 +78,11 @@ interface MonriFormData {
   custom_data?: string;
 }
 
+// While Monri production approval is pending, checkout runs in predračun
+// (bank-transfer) mode. Flip NEXT_PUBLIC_PAYMENT_MODE back to "card" (or
+// remove it) + redeploy to restore the Monri card flow.
+const IS_PREDRACUN = process.env.NEXT_PUBLIC_PAYMENT_MODE === "predracun";
+
 export function CheckoutFormFull({
   courseId,
   courseName,
@@ -221,6 +226,13 @@ export function CheckoutFormFull({
 
       if (!response.ok) {
         throw new Error(data.error || "Failed to create checkout session");
+      }
+
+      // Predračun mode: no card redirect — the customer got payment
+      // instructions by email, show the confirmation page.
+      if (data.predracun) {
+        window.location.href = `/checkout/success?order_number=${data.orderNumber}&predracun=1`;
+        return;
       }
 
       // Set Monri form data and submit form
@@ -463,21 +475,35 @@ export function CheckoutFormFull({
             className="w-full h-16 text-base"
             isLoading={isSubmitting}
           >
-            {t("submit.button", { price: formatPrice(pricing.total) })}
+            {IS_PREDRACUN
+              ? t("submit.predracunButton", { price: formatPrice(pricing.total) })
+              : t("submit.button", { price: formatPrice(pricing.total) })}
           </Button>
           <p className="text-xs text-center text-primary/50 mt-4">
-            {t("submit.redirectNote")}
-            <br />
-            {t("submit.securityNote")}
+            {IS_PREDRACUN ? (
+              t("submit.predracunNote")
+            ) : (
+              <>
+                {t("submit.redirectNote")}
+                <br />
+                {t("submit.securityNote")}
+              </>
+            )}
           </p>
           <div className="mt-4 p-3 bg-secondary/10 border border-secondary/20 text-sm text-primary/70 text-center">
-            {t("submit.emailNote")}
+            {IS_PREDRACUN ? t("submit.predracunEmailNote") : t("submit.emailNote")}
           </div>
         </div>
 
         {/* Payment Logos */}
         <div className="pt-6 border-t border-primary/10">
-          <PaymentLogos variant="light" showSecurityLogos={true} />
+          {IS_PREDRACUN ? (
+            <p className="text-sm text-center text-primary/60">
+              {t("submit.cardsComingSoon")}
+            </p>
+          ) : (
+            <PaymentLogos variant="light" showSecurityLogos={true} />
+          )}
         </div>
       </form>
 

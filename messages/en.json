@@ -984,7 +984,11 @@
         "button": "Pay {price} and Enroll",
         "redirectNote": "You will be redirected to Monri for secure payment processing.",
         "securityNote": "Your card details are never stored on our servers.",
-        "emailNote": "After successful payment, check your email for the activation link to access the platform."
+        "emailNote": "After successful payment, check your email for the activation link to access the platform.",
+        "predracunButton": "Order — {price} (pay by bank transfer)",
+        "predracunNote": "After ordering you will receive a proforma invoice with payment details (IBAN) by email. Your card will not be charged.",
+        "predracunEmailNote": "Course access is activated once your payment is received — you will then get the invoice and activation link by email.",
+        "cardsComingSoon": "💳 Card payments coming soon"
       }
     },
     "success": {
@@ -1008,7 +1012,21 @@
       "orderReference": "Order Reference",
       "returnHome": "Return Home",
       "needHelp": "Need Help?",
-      "supportNote": "Questions? Contact us at"
+      "supportNote": "Questions? Contact us at",
+      "predracun": {
+        "title": "Your order has been received!",
+        "description": "We have emailed you a proforma invoice with payment details. Course access is activated as soon as your payment is received.",
+        "steps": {
+          "payInvoice": {
+            "title": "Pay the proforma invoice",
+            "description": "The email contains the IBAN and your order number — please include the order number in the payment description."
+          },
+          "activation": {
+            "title": "Activate your access",
+            "description": "Once the payment is received (usually within one business day) we send the invoice and your account activation link."
+          }
+        }
+      }
     },
     "cancel": {
       "title": "Checkout Cancelled",

@@ -18,6 +18,9 @@ function CheckoutSuccessContent() {
 
   // Display reference - prefer order_number, fallback to session_id
   const displayReference = orderNumber || (sessionId ? sessionId.slice(0, 20) + "..." : null);
+  // Predračun (bank-transfer) orders get different copy: the customer has
+  // NOT paid yet — they received payment instructions by email.
+  const isPredracun = searchParams.get("predracun") === "1";
 
   return (
     <section className="min-h-screen bg-cream">
@@ -61,11 +64,11 @@ function CheckoutSuccessContent() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl font-heading text-primary mb-4">
-                {t("title")}
+                {isPredracun ? t("predracun.title") : t("title")}
               </h1>
 
               <p className="text-lg text-primary/70 leading-relaxed mb-8">
-                {t("description")}
+                {isPredracun ? t("predracun.description") : t("description")}
               </p>
 
               {/* Divider */}
@@ -83,10 +86,14 @@ function CheckoutSuccessContent() {
                     </span>
                     <div>
                       <p className="font-medium text-primary mb-1">
-                        {t("steps.checkEmail.title")}
+                        {isPredracun
+                          ? t("predracun.steps.payInvoice.title")
+                          : t("steps.checkEmail.title")}
                       </p>
                       <p className="text-sm text-primary/60">
-                        {t("steps.checkEmail.description")}
+                        {isPredracun
+                          ? t("predracun.steps.payInvoice.description")
+                          : t("steps.checkEmail.description")}
                       </p>
                     </div>
                   </div>
@@ -96,10 +103,14 @@ function CheckoutSuccessContent() {
                     </span>
                     <div>
                       <p className="font-medium text-primary mb-1">
-                        {t("steps.accessCourse.title")}
+                        {isPredracun
+                          ? t("predracun.steps.activation.title")
+                          : t("steps.accessCourse.title")}
                       </p>
                       <p className="text-sm text-primary/60">
-                        {t("steps.accessCourse.description")}
+                        {isPredracun
+                          ? t("predracun.steps.activation.description")
+                          : t("steps.accessCourse.description")}
                       </p>
                     </div>
                   </div>

@@ -984,7 +984,11 @@
         "button": "Platite {price} i upišite se",
         "redirectNote": "Bit ćete preusmjereni na Monri za sigurnu obradu plaćanja.",
         "securityNote": "Podaci vaše kartice nikad se ne pohranjuju na našim serverima.",
-        "emailNote": "Nakon uspješne uplate, provjerite svoj email za link za aktivaciju pristupa platformi."
+        "emailNote": "Nakon uspješne uplate, provjerite svoj email za link za aktivaciju pristupa platformi.",
+        "predracunButton": "Naruči — {price} (plaćanje predračunom)",
+        "predracunNote": "Nakon narudžbe na email vam stiže predračun s podacima za uplatu (IBAN). Bez naplate kartice.",
+        "predracunEmailNote": "Pristup tečaju aktivira se nakon evidentirane uplate — na email tada stižu račun i link za aktivaciju.",
+        "cardsComingSoon": "💳 Plaćanje karticama uskoro dostupno"
       }
     },
     "success": {
@@ -1008,7 +1012,21 @@
       "orderReference": "Referenca narudžbe",
       "returnHome": "Povratak na početnu",
       "needHelp": "Trebate pomoć?",
-      "supportNote": "Pitanja? Kontaktirajte nas na"
+      "supportNote": "Pitanja? Kontaktirajte nas na",
+      "predracun": {
+        "title": "Narudžba je zaprimljena!",
+        "description": "Na vašu email adresu poslali smo predračun s podacima za uplatu. Pristup tečaju aktivira se čim uplata bude evidentirana.",
+        "steps": {
+          "payInvoice": {
+            "title": "Izvršite uplatu po predračunu",
+            "description": "U emailu su IBAN i broj narudžbe — molimo navedite broj narudžbe u opisu plaćanja."
+          },
+          "activation": {
+            "title": "Aktivirajte pristup",
+            "description": "Po evidentiranoj uplati (obično unutar jednog radnog dana) šaljemo račun i link za aktivaciju računa."
+          }
+        }
+      }
     },
     "cancel": {
       "title": "Plaćanje otkazano",

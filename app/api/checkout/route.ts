@@ -1,11 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { Resend } from "resend";
 import { getCourse, calculatePricing } from "@/lib/constants/courses";
 import {
   MONRI_CONFIG,
   generateOrderNumber,
   buildMonriFormData,
 } from "@/lib/monri";
+import {
+  isPredracunMode,
+  getOrderNotificationsEmail,
+  generatePredracunEmailHtml,
+  generateOrderNotificationEmailHtml,
+} from "@/lib/predracun";
 
 // Use service role for server-side operations
 const supabase = createClient(
@@ -182,6 +189,64 @@ export async function POST(request: NextRequest) {
         { error: "Failed to create order" },
         { status: 500 }
       );
+    }
+
+    // Predračun mode: card payments are paused (Monri production pending) —
+    // email the customer a predračun with bank-transfer details and notify
+    // the admin. The order stays "pending" until the payment is confirmed
+    // via /api/admin/confirm-payment.
+    if (isPredracunMode()) {
+      const predracunOrder = {
+        orderNumber,
+        customerName,
+        email,
+        phone,
+        street,
+        city,
+        postalCode,
+        country,
+        companyName: companyName || null,
+        vatNumber: vatNumber || null,
+        courseName: course.name,
+        subtotal: pricing.subtotal,
+        vat: pricing.vat,
+        total: pricing.total,
+      };
+
+      if (process.env.RESEND_API_KEY) {
+        const resend = new Resend(process.env.RESEND_API_KEY);
+        const fromEmail =
+          process.env.RESEND_FROM_EMAIL || "Brendia Pro <info@brendiapro.hr>";
+
+        try {
+          await resend.emails.send({
+            from: fromEmail,
+            to: email,
+            subject: `Predračun za narudžbu ${orderNumber} - Brendia Pro`,
+            html: generatePredracunEmailHtml(predracunOrder),
+          });
+        } catch (emailError) {
+          console.error("Failed to send predračun email:", emailError);
+          return NextResponse.json(
+            { error: "Failed to send predračun email" },
+            { status: 500 }
+          );
+        }
+
+        try {
+          await resend.emails.send({
+            from: fromEmail,
+            to: getOrderNotificationsEmail(),
+            subject: `Nova narudžba ${orderNumber} — ${course.name} (predračun)`,
+            html: generateOrderNotificationEmailHtml(predracunOrder),
+          });
+        } catch (emailError) {
+          // Customer already got their predračun — log and continue
+          console.error("Failed to send order notification:", emailError);
+        }
+      }
+
+      return NextResponse.json({ predracun: true, orderNumber });
     }
 
     // Build Monri form data
