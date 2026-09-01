@@ -49,3 +49,7 @@ export const countryOptions = countries.map((country) => ({
   value: country.code,
   label: country.name,
 }));
+
+export function getCountryName(code: string): string {
+  return countries.find((c) => c.code === code)?.name || code;
+}

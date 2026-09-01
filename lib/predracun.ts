@@ -69,6 +69,7 @@ export function generatePredracunEmailHtml(o: PredracunOrder): string {
         <p style="margin:0 0 4px;color:#333333;">Iznos: ${formatPrice(o.total)}</p>
       </div>
       <p style="margin:0 0 16px;color:#333333;">Molimo da u opisu placanja obavezno navedete broj narudzbe <strong>${o.orderNumber}</strong> kako bismo uplatu mogli povezati s Vasom narudzbom.</p>
+      <p style="margin:0 0 16px;color:#333333;">U privitku ovog emaila nalazi se Vas primjerak elektronicki sklopljenog Ugovora o edukaciji (s Prilogom 1).</p>
       <p style="margin:0 0 16px;color:#333333;">Uplate se obicno evidentiraju unutar jednog radnog dana. Ako imate bilo kakvih pitanja, javite nam se na <a href="mailto:${COMPANY.email}" style="color:#B8956A;">${COMPANY.email}</a> ili ${COMPANY.phone}.</p>
       <p style="margin:0 0 16px;color:#333333;">Srdacan pozdrav,<br>Nikolina i Brendia Pro tim</p>
     </div>
@@ -110,6 +111,7 @@ export function generateOrderNotificationEmailHtml(o: PredracunOrder): string {
     <p style="margin:0 0 4px;"><strong>Adresa:</strong> ${o.street}, ${o.postalCode} ${o.city}, ${o.country}</p>
     ${companyBlock}
   </div>
+  <p style="margin:16px 0 0;font-size:13px;color:#666;">U privitku: potpisani ugovor o edukaciji (PDF). Kopija je arhivirana i u Supabase Storage (bucket "contracts").</p>
 </body>
 </html>
 `;

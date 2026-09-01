@@ -933,7 +933,10 @@
         "postalCode": "Postal Code",
         "postalCodePlaceholder": "10000",
         "country": "Country",
-        "countryPlaceholder": "Select country"
+        "countryPlaceholder": "Select country",
+        "oib": "OIB / Tax ID",
+        "oibPlaceholder": "12345678901",
+        "oibHelperText": "Required for the education contract and invoice. Buyers outside Croatia: national tax/ID number (optional)."
       },
       "companyDetails": {
         "title": "Company Details",
@@ -978,7 +981,10 @@
         "city": "Please enter your city",
         "postalCode": "Please enter your postal code",
         "country": "Please select your country",
-        "acceptTerms": "You must accept the terms and conditions"
+        "acceptTerms": "You must accept the terms and conditions",
+        "oib": "Enter a valid OIB (11 digits)",
+        "acceptContract": "You must accept the contract to continue",
+        "signature": "Please sign in the signature field"
       },
       "submit": {
         "button": "Pay {price} and Enroll",
@@ -989,6 +995,15 @@
         "predracunNote": "After ordering you will receive a proforma invoice with payment details (IBAN) by email. Your card will not be charged.",
         "predracunEmailNote": "Course access is activated once your payment is received — you will then get the invoice and activation link by email.",
         "cardsComingSoon": "💳 Card payments coming soon"
+      },
+      "contract": {
+        "title": "Education contract",
+        "intro": "Before ordering, please read the contract with OMEGA-NI d.o.o. (includes Annex 1 — Education programme). The contract is pre-filled with your details and is concluded electronically by acceptance via the platform. The contract is governed by Croatian law and its text is in Croatian.",
+        "scrollNote": "Scroll for the full contract text and Annex 1.",
+        "acceptLabel": "I have read the Education Contract and Annex 1 and accept them in full. I agree that the contract is concluded electronically.",
+        "signatureLabel": "Handwritten signature (finger or mouse)",
+        "signaturePlaceholder": "Sign here",
+        "clearSignature": "Clear signature"
       }
     },
     "success": {

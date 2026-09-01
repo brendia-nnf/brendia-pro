@@ -13,6 +13,8 @@ import {
   generatePredracunEmailHtml,
   generateOrderNotificationEmailHtml,
 } from "@/lib/predracun";
+import { generateContractPdf } from "@/lib/contract/pdf";
+import { getCountryName } from "@/lib/countries";
 
 // Use service role for server-side operations
 const supabase = createClient(
@@ -32,6 +34,8 @@ interface CheckoutRequest {
   city: string;
   postalCode: string;
   country: string;
+  // OIB (required for HR buyers — goes into the contract)
+  oib?: string;
   // Company details (optional)
   companyName?: string;
   vatNumber?: string;
@@ -40,6 +44,9 @@ interface CheckoutRequest {
   // Terms
   acceptTerms: boolean;
   acceptMarketing: boolean;
+  // Contract acceptance (required for all course purchases)
+  contractAccepted: boolean;
+  signatureDataUrl?: string;
 }
 
 export async function POST(request: NextRequest) {
@@ -56,11 +63,14 @@ export async function POST(request: NextRequest) {
       city,
       postalCode,
       country,
+      oib,
       companyName,
       vatNumber,
       hearAboutUs,
       acceptTerms,
       acceptMarketing,
+      contractAccepted,
+      signatureDataUrl,
     } = body;
 
     // Validate required fields
@@ -84,6 +94,21 @@ export async function POST(request: NextRequest) {
     if (!acceptTerms) {
       return NextResponse.json(
         { error: "You must accept the terms and conditions" },
+        { status: 400 }
+      );
+    }
+
+    // The education contract must be accepted and signed for every course
+    if (!contractAccepted || !signatureDataUrl?.startsWith("data:image/png;base64,")) {
+      return NextResponse.json(
+        { error: "Ugovor mora biti prihvaćen i potpisan" },
+        { status: 400 }
+      );
+    }
+
+    if (country === "HR" && !/^\d{11}$/.test(oib || "")) {
+      return NextResponse.json(
+        { error: "OIB je obavezan za kupce iz Hrvatske (11 znamenki)" },
         { status: 400 }
       );
     }
@@ -191,6 +216,50 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Generate the signed contract PDF and archive it in the private
+    // "contracts" bucket. The contract is part of the legal record — if this
+    // fails we abort the order rather than proceed unsigned.
+    const signedAtIso = new Date().toISOString();
+    const ipAddress =
+      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      request.headers.get("x-real-ip") ||
+      "unknown";
+
+    let contractPdf: Uint8Array;
+    try {
+      contractPdf = await generateContractPdf({
+        fullName: customerName,
+        street,
+        city,
+        postalCode,
+        country: getCountryName(country),
+        oib: oib || "",
+        email,
+        orderNumber,
+        courseName: course.name,
+        ipAddress,
+        signedAtIso,
+        signatureDataUrl: signatureDataUrl!,
+      });
+
+      const { error: uploadError } = await supabase.storage
+        .from("contracts")
+        .upload(`${orderNumber}.pdf`, Buffer.from(contractPdf), {
+          contentType: "application/pdf",
+          upsert: true,
+        });
+      if (uploadError) {
+        console.error("Contract upload failed:", uploadError);
+      }
+    } catch (contractError) {
+      console.error("Contract PDF generation failed:", contractError);
+      await supabase.from("orders").delete().eq("order_number", orderNumber);
+      return NextResponse.json(
+        { error: "Failed to generate contract" },
+        { status: 500 }
+      );
+    }
+
     // Predračun mode: card payments are paused (Monri production pending) —
     // email the customer a predračun with bank-transfer details and notify
     // the admin. The order stays "pending" until the payment is confirmed
@@ -218,12 +287,18 @@ export async function POST(request: NextRequest) {
         const fromEmail =
           process.env.RESEND_FROM_EMAIL || "Brendia Pro <info@brendiapro.hr>";
 
+        const contractAttachment = {
+          filename: `Ugovor-${orderNumber}.pdf`,
+          content: Buffer.from(contractPdf).toString("base64"),
+        };
+
         try {
           await resend.emails.send({
             from: fromEmail,
             to: email,
             subject: `Predračun za narudžbu ${orderNumber} - Brendia Pro`,
             html: generatePredracunEmailHtml(predracunOrder),
+            attachments: [contractAttachment],
           });
         } catch (emailError) {
           console.error("Failed to send predračun email:", emailError);
@@ -239,6 +314,7 @@ export async function POST(request: NextRequest) {
             to: getOrderNotificationsEmail(),
             subject: `Nova narudžba ${orderNumber} — ${course.name} (predračun)`,
             html: generateOrderNotificationEmailHtml(predracunOrder),
+            attachments: [contractAttachment],
           });
         } catch (emailError) {
           // Customer already got their predračun — log and continue

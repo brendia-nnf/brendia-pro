@@ -933,7 +933,10 @@
         "postalCode": "Poštanski broj",
         "postalCodePlaceholder": "10000",
         "country": "Država",
-        "countryPlaceholder": "Odaberite državu"
+        "countryPlaceholder": "Odaberite državu",
+        "oib": "OIB",
+        "oibPlaceholder": "12345678901",
+        "oibHelperText": "Potreban za ugovor o edukaciji i račun. Za kupce izvan Hrvatske: nacionalni porezni/identifikacijski broj (neobavezno)."
       },
       "companyDetails": {
         "title": "Podaci o tvrtki",
@@ -978,7 +981,10 @@
         "city": "Molimo unesite svoj grad",
         "postalCode": "Molimo unesite svoj poštanski broj",
         "country": "Molimo odaberite svoju državu",
-        "acceptTerms": "Morate prihvatiti uvjete korištenja"
+        "acceptTerms": "Morate prihvatiti uvjete korištenja",
+        "oib": "Unesite ispravan OIB (11 znamenki)",
+        "acceptContract": "Za nastavak morate prihvatiti ugovor",
+        "signature": "Molimo potpišite se u polje za potpis"
       },
       "submit": {
         "button": "Platite {price} i upišite se",
@@ -989,6 +995,15 @@
         "predracunNote": "Nakon narudžbe na email vam stiže predračun s podacima za uplatu (IBAN). Bez naplate kartice.",
         "predracunEmailNote": "Pristup tečaju aktivira se nakon evidentirane uplate — na email tada stižu račun i link za aktivaciju.",
         "cardsComingSoon": "💳 Plaćanje karticama uskoro dostupno"
+      },
+      "contract": {
+        "title": "Ugovor o edukaciji",
+        "intro": "Prije narudžbe pročitajte ugovor s OMEGA-NI d.o.o. (uključuje Prilog 1 — Program edukacije). Ugovor je automatski popunjen vašim podacima iz forme i sklapa se elektronički, prihvatom putem platforme.",
+        "scrollNote": "Skrolajte za cijeli tekst ugovora i Prilog 1.",
+        "acceptLabel": "Pročitao/la sam Ugovor o edukaciji i Prilog 1 te ih u cijelosti prihvaćam. Suglasan/na sam da se ugovor sklapa elektroničkim putem.",
+        "signatureLabel": "Vlastoručni potpis (prstom ili mišem)",
+        "signaturePlaceholder": "Potpišite se ovdje",
+        "clearSignature": "Obriši potpis"
       }
     },
     "success": {

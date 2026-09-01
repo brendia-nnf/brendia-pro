@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button, Input, Select, Checkbox } from "@/components/ui";
 import { PaymentLogos } from "@/components/ui/PaymentLogos";
-import { countryOptions } from "@/lib/countries";
+import { ContractSection } from "@/components/checkout/ContractSection";
+import { countryOptions, getCountryName } from "@/lib/countries";
 import { formatPrice } from "@/lib/constants/courses";
 
 interface Pricing {
@@ -33,6 +34,8 @@ interface FormData {
   city: string;
   postalCode: string;
   country: string;
+  // OIB (required for the contract; personal identification number)
+  oib: string;
   // Company Details (optional)
   companyName: string;
   vatNumber: string;
@@ -52,7 +55,10 @@ interface FormErrors {
   city?: string;
   postalCode?: string;
   country?: string;
+  oib?: string;
   acceptTerms?: string;
+  acceptContract?: string;
+  signature?: string;
   submit?: string;
 }
 
@@ -111,6 +117,7 @@ export function CheckoutFormFull({
     city: "",
     postalCode: "",
     country: "",
+    oib: "",
     companyName: "",
     vatNumber: "",
     hearAboutUs: "",
@@ -124,6 +131,8 @@ export function CheckoutFormFull({
     formUrl: string;
     formData: MonriFormData;
   } | null>(null);
+  const [contractAccepted, setContractAccepted] = useState(false);
+  const [signatureDataUrl, setSignatureDataUrl] = useState<string | null>(null);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -161,8 +170,25 @@ export function CheckoutFormFull({
       newErrors.country = t("validation.country");
     }
 
+    // OIB: required for Croatian buyers (11 digits), optional otherwise
+    if (formData.country === "HR") {
+      if (!/^\d{11}$/.test(formData.oib)) {
+        newErrors.oib = t("validation.oib");
+      }
+    } else if (formData.oib && !/^[0-9A-Za-z-]{4,20}$/.test(formData.oib)) {
+      newErrors.oib = t("validation.oib");
+    }
+
     if (!formData.acceptTerms) {
       newErrors.acceptTerms = t("validation.acceptTerms");
+    }
+
+    if (!contractAccepted) {
+      newErrors.acceptContract = t("validation.acceptContract");
+    }
+
+    if (!signatureDataUrl) {
+      newErrors.signature = t("validation.signature");
     }
 
     setErrors(newErrors);
@@ -214,11 +240,14 @@ export function CheckoutFormFull({
           city: formData.city,
           postalCode: formData.postalCode,
           country: formData.country,
+          oib: formData.oib || undefined,
           companyName: formData.companyName || undefined,
           vatNumber: formData.vatNumber || undefined,
           hearAboutUs: formData.hearAboutUs || undefined,
           acceptTerms: formData.acceptTerms,
           acceptMarketing: formData.acceptMarketing,
+          contractAccepted,
+          signatureDataUrl,
         }),
       });
 
@@ -360,6 +389,16 @@ export function CheckoutFormFull({
                 required
               />
             </div>
+            <Input
+              label={t("billingAddress.oib")}
+              name="oib"
+              value={formData.oib}
+              onChange={handleChange}
+              placeholder={t("billingAddress.oibPlaceholder")}
+              helperText={t("billingAddress.oibHelperText")}
+              error={errors.oib}
+              required={formData.country === "HR"}
+            />
           </div>
         </div>
 
@@ -418,6 +457,35 @@ export function CheckoutFormFull({
             onChange={handleChange}
             options={hearAboutUsOptions}
             placeholder={t("hearAboutUs.placeholder")}
+          />
+        </div>
+
+        {/* Contract (ugovor) — read, accept, sign */}
+        <div className="pt-4 border-t border-primary/10">
+          <ContractSection
+            party={{
+              fullName: `${formData.firstName} ${formData.lastName}`.trim(),
+              street: formData.street,
+              city: formData.city,
+              postalCode: formData.postalCode,
+              country: getCountryName(formData.country),
+              oib: formData.oib,
+            }}
+            accepted={contractAccepted}
+            onAcceptedChange={(accepted) => {
+              setContractAccepted(accepted);
+              if (errors.acceptContract) {
+                setErrors((prev) => ({ ...prev, acceptContract: undefined }));
+              }
+            }}
+            onSignatureChange={(dataUrl) => {
+              setSignatureDataUrl(dataUrl);
+              if (errors.signature) {
+                setErrors((prev) => ({ ...prev, signature: undefined }));
+              }
+            }}
+            acceptError={errors.acceptContract}
+            signatureError={errors.signature}
           />
         </div>
 
