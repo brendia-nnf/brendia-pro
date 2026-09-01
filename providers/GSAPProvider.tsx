@@ -22,9 +22,14 @@ export function GSAPProvider({ children }: GSAPProviderProps) {
       markers: process.env.NODE_ENV === "development" ? false : false,
     });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+    // Positions can be stale after a locale-switch remount — recompute them.
+    ScrollTrigger.refresh();
+
+    // No kill-all cleanup here: on locale change this layout remounts, and
+    // React runs this (passive) cleanup AFTER the new sections' layout
+    // effects have already created their ScrollTriggers — a kill-all would
+    // destroy the fresh triggers and leave every [data-animate] element
+    // stuck at opacity 0. Each section reverts its own gsap.context.
   }, []);
 
   return <>{children}</>;
