@@ -27,7 +27,7 @@ export const courses: Record<string, Course> = {
       "Maintenance and aftercare protocols",
       "Official Brendia Pro® certification",
       "Private community access",
-      "Lifetime course access",
+      "12-month course access",
       "Free future updates",
     ],
   },

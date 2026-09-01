@@ -56,7 +56,7 @@
     "description": "Pridružite se stotinama uspješnih frizera koji su podigli svoje umijeće s Brendia Pro® certifikacijom. Vaše putovanje do traženog stručnjaka za ekstenzije počinje ovdje.",
     "viewCourses": "Pogledajte tečajeve",
     "contactUs": "Kontaktirajte nas",
-    "lifetimeAccess": "Doživotni pristup",
+    "lifetimeAccess": "Pristup 12 mjeseci",
     "officialCertification": "Službena certifikacija",
     "paymentPlans": "Dostupne rate"
   },
@@ -141,7 +141,7 @@
     "description": "Dva sveobuhvatna certifikacijska programa osmišljena da vas transformiraju od vještog frizera u traženog stručnjaka za ekstenzije.",
     "mostPopular": "Najpopularnije",
     "learnMore": "Saznajte više",
-    "additionalInfo": "Svi tečajevi uključuju doživotni pristup i besplatna ažuriranja. Dostupno plaćanje na rate.",
+    "additionalInfo": "Svi tečajevi uključuju pristup od 12 mjeseci i besplatna ažuriranja. Dostupno plaćanje na rate.",
     "foundation": {
       "title": "Brendia Pro® Artist",
       "subtitle": "Online edukacija",
@@ -153,7 +153,7 @@
         "Tehnike konzultacija s klijentima",
         "Službena Brendia Pro® certifikacija",
         "Pristup privatnoj zajednici",
-        "Doživotni pristup tečaju"
+        "Pristup tečaju 12 mjeseci"
       ]
     },
     "master": {
@@ -276,7 +276,7 @@
       "title": "Transformirajte svoju karijeru",
       "description": "Pridružite se 500+ frizera koji su podigli svoje umijeće s Brendia Pro® certifikacijom. Odaberite program koji odgovara vašim ciljevima i započnite svoje putovanje danas.",
       "selfPaced": "Učenje vlastitim tempom",
-      "lifetimeAccess": "Doživotni pristup",
+      "lifetimeAccess": "Pristup 12 mjeseci",
       "officialCertification": "Službena certifikacija"
     },
     "video": {
@@ -332,7 +332,7 @@
           "Tehnike konzultacija s klijentima",
           "Službena Brendia Pro® certifikacija",
           "Pristup privatnoj zajednici",
-          "Doživotni pristup tečaju"
+          "Pristup tečaju 12 mjeseci"
         ]
       },
       "master": {
@@ -430,8 +430,8 @@
         },
         "updates": {
           "feature": "Ažuriranja",
-          "foundation": "Doživotno",
-          "master": "Doživotno + rani pristup"
+          "foundation": "12 mjeseci",
+          "master": "12 mjeseci + rani pristup"
         }
       }
     },
@@ -453,8 +453,8 @@
         "description": "Niste zadovoljni? Dobijte puni povrat novca unutar 14 dana, bez pitanja."
       },
       "lifetime": {
-        "title": "Doživotni pristup",
-        "description": "Učite vlastitim tempom. Pristupite svom tečaju zauvijek, uključujući sva buduća ažuriranja."
+        "title": "Pristup 12 mjeseci",
+        "description": "Učite vlastitim tempom. Pristup tečaju vrijedi 12 mjeseci, uključujući sva ažuriranja u tom razdoblju."
       },
       "payment": {
         "title": "Planovi plaćanja",
@@ -500,7 +500,7 @@
         "Protokoli održavanja i njege",
         "Službena Brendia Pro® certifikacija",
         "Pristup privatnoj zajednici",
-        "Doživotni pristup tečaju",
+        "Pristup tečaju 12 mjeseci",
         "Besplatna buduća ažuriranja"
       ],
       "curriculum": [
@@ -826,7 +826,7 @@
           },
           {
             "question": "Koliko vremena treba za završetak tečaja?",
-            "answer": "Oba tečaja su samovođena, tako da možete učiti prema vlastitom rasporedu. U prosjeku, polaznici završavaju Foundation Certifikaciju za 6-8 tjedana, a Master Certifikaciju za 8-12 tjedana. Međutim, imate doživotni pristup, tako da možete uzeti koliko god vremena vam treba."
+            "answer": "Oba tečaja su samovođena, tako da možete učiti prema vlastitom rasporedu. U prosjeku, polaznici završavaju Foundation Certifikaciju za 6-8 tjedana, a Master Certifikaciju za 8-12 tjedana. Međutim, imate pristup od 12 mjeseci, tako da imate dovoljno vremena učiti vlastitim tempom."
           },
           {
             "question": "Koja je razlika između Artist i Advanced Artist?",
@@ -877,7 +877,7 @@
         "faqs": [
           {
             "question": "Koliko dugo imam pristup tečaju?",
-            "answer": "Imate doživotni pristup svim materijalima tečaja. To uključuje sva ažuriranja koja napravimo u kurikulumu tijekom vremena. Prijavite se bilo kada za pregled lekcija ili pristup novom sadržaju."
+            "answer": "Imate pristup svim materijalima tečaja 12 mjeseci od kupnje. To uključuje sva ažuriranja koja napravimo u kurikulumu u tom razdoblju. Prijavite se bilo kada za pregled lekcija ili pristup novom sadržaju."
           },
           {
             "question": "Što ako zapnem ili imam pitanja?",

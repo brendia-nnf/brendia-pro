@@ -56,7 +56,7 @@
     "description": "Join hundreds of successful stylists who have elevated their craft with Brendia Pro® certification. Your journey to becoming a sought-after extension specialist starts here.",
     "viewCourses": "View Courses",
     "contactUs": "Contact Us",
-    "lifetimeAccess": "Lifetime Access",
+    "lifetimeAccess": "12-Month Access",
     "officialCertification": "Official Certification",
     "paymentPlans": "Payment Plans Available"
   },
@@ -141,7 +141,7 @@
     "description": "Two comprehensive certification programs designed to take you from skilled stylist to sought-after extension specialist.",
     "mostPopular": "Most Popular",
     "learnMore": "Learn More",
-    "additionalInfo": "All courses include lifetime access and free updates. Payment plans available.",
+    "additionalInfo": "All courses include 12 months of access and free updates. Payment plans available.",
     "foundation": {
       "title": "Brendia Pro® Artist",
       "subtitle": "Online education",
@@ -153,7 +153,7 @@
         "Client consultation techniques",
         "Official Brendia Pro® certification",
         "Private community access",
-        "Lifetime course access"
+        "12-month course access"
       ]
     },
     "master": {
@@ -276,7 +276,7 @@
       "title": "Transform Your Career",
       "description": "Join 500+ stylists who have elevated their craft with Brendia Pro® certification. Choose the program that matches your goals and start your journey today.",
       "selfPaced": "Self-paced learning",
-      "lifetimeAccess": "Lifetime access",
+      "lifetimeAccess": "12-month access",
       "officialCertification": "Official certification"
     },
     "video": {
@@ -332,7 +332,7 @@
           "Client consultation techniques",
           "Official Brendia Pro® certification",
           "Private community access",
-          "Lifetime course access"
+          "12-month course access"
         ]
       },
       "master": {
@@ -430,8 +430,8 @@
         },
         "updates": {
           "feature": "Updates",
-          "foundation": "Lifetime",
-          "master": "Lifetime + Early access"
+          "foundation": "12 months",
+          "master": "12 months + Early access"
         }
       }
     },
@@ -453,8 +453,8 @@
         "description": "Not satisfied? Get a full refund within 14 days, no questions asked."
       },
       "lifetime": {
-        "title": "Lifetime Access",
-        "description": "Learn at your own pace. Access your course forever, including all future updates."
+        "title": "12-Month Access",
+        "description": "Learn at your own pace. Your course access lasts 12 months, including all updates during that period."
       },
       "payment": {
         "title": "Payment Plans",
@@ -500,7 +500,7 @@
         "Maintenance and aftercare protocols",
         "Official Brendia Pro® certification",
         "Private community access",
-        "Lifetime course access",
+        "12-month course access",
         "Free future updates"
       ],
       "curriculum": [
@@ -826,7 +826,7 @@
           },
           {
             "question": "How long does it take to complete a course?",
-            "answer": "Both courses are self-paced, so you can learn on your own schedule. On average, students complete Brendia Pro® Artist in 6-8 weeks and Advanced Brendia Pro® Artist in 8-12 weeks. However, you have lifetime access, so you can take as long as you need."
+            "answer": "Both courses are self-paced, so you can learn on your own schedule. On average, students complete Brendia Pro® Artist in 6-8 weeks and Advanced Brendia Pro® Artist in 8-12 weeks. However, you have 12 months of access, giving you plenty of time to learn at your own pace."
           },
           {
             "question": "What's the difference between Artist and Advanced Artist?",
@@ -877,7 +877,7 @@
         "faqs": [
           {
             "question": "How long do I have access to the course?",
-            "answer": "You have lifetime access to all course materials. This includes any updates we make to the curriculum over time. Log in anytime to review lessons or access new content."
+            "answer": "You have access to all course materials for 12 months from purchase. This includes any updates we make to the curriculum during that period. Log in anytime to review lessons or access new content."
           },
           {
             "question": "What if I get stuck or have questions?",
