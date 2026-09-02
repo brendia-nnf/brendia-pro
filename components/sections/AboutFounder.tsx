@@ -93,12 +93,12 @@ export function AboutFounder() {
             {/* Credentials */}
             <div className="grid grid-cols-2 gap-6 mb-8 py-6 border-y border-primary/10">
               <div>
-                <p className="text-2xl font-heading text-secondary">10+</p>
-                <p className="text-sm text-primary/60">{t("yearsInIndustry")}</p>
+                <p className="text-xl font-heading text-secondary">{t("credExperienceTitle")}</p>
+                <p className="text-sm text-primary/60">{t("credExperienceLabel")}</p>
               </div>
               <div>
-                <p className="text-2xl font-heading text-secondary">500+</p>
-                <p className="text-sm text-primary/60">{t("studentsTrained")}</p>
+                <p className="text-xl font-heading text-secondary">{t("credEducationTitle")}</p>
+                <p className="text-sm text-primary/60">{t("credEducationLabel")}</p>
               </div>
             </div>
 

@@ -23,7 +23,13 @@
     "studentsCertified": "Students Certified",
     "yearsExperience": "Years Experience",
     "successRate": "Success Rate",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "trustCertificationTitle": "Certification",
+    "trustCertificationLabel": "Upon successful course completion",
+    "trustLessonsTitle": "Step by step",
+    "trustLessonsLabel": "Detailed video lessons",
+    "trustFeedbackTitle": "Personal feedback",
+    "trustFeedbackLabel": "Nikolina reviews your work"
   },
   "valueProposition": {
     "tagline": "Why Choose Brendia Pro®",
@@ -53,7 +59,7 @@
   "cta": {
     "tagline": "Start Your Journey",
     "title": "Ready to Transform Your Career?",
-    "description": "Join hundreds of successful stylists who have elevated their craft with Brendia Pro® certification. Your journey to becoming a sought-after extension specialist starts here.",
+    "description": "Elevate your craft with Brendia Pro® certification. Your journey to becoming a sought-after extension specialist starts here.",
     "viewCourses": "View Courses",
     "contactUs": "Contact Us",
     "lifetimeAccess": "12-Month Access",
@@ -148,7 +154,7 @@
       "price": "€3,000",
       "description": "Build a solid foundation in weft extension techniques. Perfect for stylists ready to expand their service offerings.",
       "features": [
-        "30+ comprehensive video lessons",
+        "8 in-depth video lessons",
         "Step-by-step installation guides",
         "Client consultation techniques",
         "Official Brendia Pro® certification",
@@ -204,12 +210,16 @@
   "aboutFounder": {
     "tagline": "Meet Your Educator",
     "name": "Nikolina Kljaić",
-    "bio1": "With over a decade of experience in the hair extension industry, Nikolina has transformed the careers of hundreds of stylists worldwide. Her passion for education and commitment to excellence has made Brendia Pro® the gold standard in weft extension training.",
+    "bio1": "With over a decade of experience in the hair extension industry, Nikolina has dedicated her career to educating stylists. Her passion for education and commitment to excellence are built into every Brendia Pro® weft extension course.",
     "quote": "My mission is to empower stylists with the knowledge and techniques they need to build thriving businesses and create stunning transformations for their clients. Every student who joins Brendia Pro becomes part of a community dedicated to excellence.",
     "yearsInIndustry": "Years in Industry",
     "studentsTrained": "Students Trained",
     "readFullStory": "Read Full Story",
-    "imageAlt": "Nikolina Kljaić - Founder of Brendia Pro®"
+    "imageAlt": "Nikolina Kljaić - Founder of Brendia Pro®",
+    "credExperienceTitle": "Years of experience",
+    "credExperienceLabel": "in the hair extension industry",
+    "credEducationTitle": "Practical education",
+    "credEducationLabel": "with personal feedback"
   },
   "testimonials": {
     "tagline": "Success Stories",
@@ -274,7 +284,7 @@
     "hero": {
       "tagline": "Professional Certification",
       "title": "Transform Your Career",
-      "description": "Join 500+ stylists who have elevated their craft with Brendia Pro® certification. Choose the program that matches your goals and start your journey today.",
+      "description": "Elevate your craft with Brendia Pro® certification. Choose the program that matches your goals and start your journey today.",
       "selfPaced": "Self-paced learning",
       "lifetimeAccess": "12-month access",
       "officialCertification": "Official certification"
@@ -327,7 +337,7 @@
         "duration": "Self-paced (avg. 6-8 weeks)",
         "description": "Build a solid foundation in weft extension techniques. Perfect for stylists ready to expand their service offerings.",
         "features": [
-          "30+ comprehensive video lessons",
+          "8 in-depth video lessons",
           "Step-by-step installation guides",
           "Client consultation techniques",
           "Official Brendia Pro® certification",
@@ -395,8 +405,8 @@
       "rows": {
         "videoLessons": {
           "feature": "Video Lessons",
-          "foundation": "30+",
-          "master": "50+"
+          "foundation": "8",
+          "master": "8 + advanced lessons"
         },
         "installation": {
           "feature": "Installation Techniques",
@@ -438,12 +448,18 @@
     "instructor": {
       "tagline": "Your Instructor",
       "title": "Learn From the Best",
-      "description": "Nikolina Kljaić has spent over a decade perfecting her weft extension techniques and has trained 500+ stylists worldwide. Her teaching approach combines detailed technical instruction with real-world business insights.",
+      "description": "Nikolina Kljaić has spent over a decade perfecting her weft extension techniques. Her teaching approach combines detailed technical instruction with real-world business insights.",
       "yearsExperience": "Years Experience",
       "studentsTrained": "Students Trained",
       "countries": "Countries",
       "learnMore": "Learn More About Nikolina",
-      "imageAlt": "Nikolina Kljaić - Your Instructor"
+      "imageAlt": "Nikolina Kljaić - Your Instructor",
+      "credExperienceTitle": "Years of experience",
+      "credExperienceLabel": "in weft extensions",
+      "credFeedbackTitle": "Personal approach",
+      "credFeedbackLabel": "Review and feedback on your work",
+      "credCertificationTitle": "Certification",
+      "credCertificationLabel": "Upon successful program completion"
     },
     "trust": {
       "title": "Invest in Your Future With Confidence",
@@ -481,7 +497,7 @@
     },
     "cta": {
       "title": "Ready to Start Your Journey?",
-      "description": "Join hundreds of successful stylists who have transformed their careers with Brendia Pro® certification.",
+      "description": "Transform your career with Brendia Pro® certification.",
       "enrollIn": "Enroll in {course}",
       "haveQuestions": "Have Questions?",
       "paymentPlans": "Payment plans available. Contact us for details."
@@ -494,7 +510,7 @@
       "description": "Build a solid foundation in weft extension techniques. This comprehensive program covers everything from client consultation to flawless installation and long-term maintenance.",
       "longDescription": "Brendia Pro® Artist is your gateway to becoming a professional weft extension specialist. Designed for stylists at any experience level, this program provides a thorough education in the art and science of weft extensions. You'll learn directly from Nikolina Kljaić through detailed video instruction, gaining the confidence and skills to deliver stunning results for your clients.",
       "features": [
-        "30+ comprehensive video lessons",
+        "8 in-depth video lessons",
         "Step-by-step installation guides",
         "Client consultation techniques",
         "Maintenance and aftercare protocols",
@@ -585,7 +601,7 @@
         {
           "module": "Artist Modules",
           "lessons": [
-            "All 30+ lessons from Brendia Pro® Artist included"
+            "All 8 lessons from Brendia Pro® Artist included"
           ]
         },
         {
@@ -736,7 +752,7 @@
     "hero": {
       "tagline": "About Brendia Pro®",
       "title": "The Story Behind the Brand",
-      "description": "Brendia Pro® was born from a passion for excellence and a desire to share the art of weft extensions with stylists worldwide. What started as one woman's journey has become a global movement of empowered professionals.",
+      "description": "Brendia Pro® was born from a passion for excellence and a desire to share the art of weft extensions with stylists worldwide. What started as one woman's journey is growing into a community of empowered professionals.",
       "imageAlt": "Brendia Pro® Story"
     },
     "founder": {
@@ -745,7 +761,7 @@
       "bio": [
         "With over a decade of experience in the hair extension industry, Nikolina has dedicated her career to perfecting the art of weft extensions and sharing her expertise with others.",
         "Her journey began in a small salon, where her natural talent and relentless pursuit of perfection quickly set her apart. Clients traveled from across the country to experience her transformative work, and fellow stylists began asking to learn her techniques.",
-        "\"I realized that my impact could go far beyond my own chair,\" Nikolina shares. \"By teaching others, I could help hundreds of stylists build successful careers while giving thousands of women the confidence that comes with beautiful hair.\"",
+        "\"I realized that my impact could go far beyond my own chair,\" Nikolina shares. \"By teaching others, I could help other stylists build successful careers while giving their clients the confidence that comes with beautiful hair.\"",
         "Today, Nikolina leads Brendia Pro® with the same passion and attention to detail that defined her work from day one. Every course, every lesson, every interaction reflects her commitment to excellence and genuine care for her students' success."
       ],
       "imageAlt": "Nikolina Kljaić - Founder of Brendia Pro®"
@@ -776,8 +792,8 @@
         },
         {
           "year": "2024",
-          "title": "Global Community",
-          "description": "Built a thriving community of 500+ certified professionals across 30+ countries."
+          "title": "Growing Community",
+          "description": "The community of certified Brendia Pro® stylists continues to grow year after year."
         }
       ]
     },
@@ -847,7 +863,7 @@
           },
           {
             "question": "Is the certification recognized internationally?",
-            "answer": "Brendia Pro® certifications are recognized globally within the professional hair extension community. Our graduates work successfully across 30+ countries. While beauty licensing varies by location, our certification adds significant credibility to your qualifications."
+            "answer": "Brendia Pro® certification validates your knowledge and skills in weft extensions within the professional community. While beauty licensing varies by location, our certification adds credibility to your qualifications."
           },
           {
             "question": "How do I become certified?",

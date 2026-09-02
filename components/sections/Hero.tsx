@@ -102,16 +102,16 @@ export function Hero() {
             {/* Trust indicators */}
             <div data-animate className="flex items-center gap-8 mt-12 pt-8 border-t border-primary/10">
               <div>
-                <p className="text-3xl font-heading text-primary">500+</p>
-                <p className="text-sm text-primary/60">{t("studentsCertified")}</p>
+                <p className="text-xl font-heading text-primary">{t("trustCertificationTitle")}</p>
+                <p className="text-sm text-primary/60">{t("trustCertificationLabel")}</p>
               </div>
               <div>
-                <p className="text-3xl font-heading text-primary">10+</p>
-                <p className="text-sm text-primary/60">{t("yearsExperience")}</p>
+                <p className="text-xl font-heading text-primary">{t("trustLessonsTitle")}</p>
+                <p className="text-sm text-primary/60">{t("trustLessonsLabel")}</p>
               </div>
               <div>
-                <p className="text-3xl font-heading text-primary">98%</p>
-                <p className="text-sm text-primary/60">{t("successRate")}</p>
+                <p className="text-xl font-heading text-primary">{t("trustFeedbackTitle")}</p>
+                <p className="text-sm text-primary/60">{t("trustFeedbackLabel")}</p>
               </div>
             </div>
           </div>

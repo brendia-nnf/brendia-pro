@@ -224,7 +224,7 @@ export default function CoursesPage() {
                 onPause={() => setIsVideoPlaying(false)}
                 onEnded={() => setIsVideoPlaying(false)}
               >
-                <source src="/videos/courses-intro.mp4" type="video/mp4" />
+                <source src="/videos/video-web-brendia.mp4" type="video/mp4" />
               </video>
 
               <button
@@ -453,16 +453,16 @@ export default function CoursesPage() {
               </p>
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div>
-                  <p className="text-3xl font-heading text-secondary">10+</p>
-                  <p className="text-sm text-primary/50">{t("instructor.yearsExperience")}</p>
+                  <p className="text-xl font-heading text-secondary">{t("instructor.credExperienceTitle")}</p>
+                  <p className="text-sm text-primary/50">{t("instructor.credExperienceLabel")}</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-heading text-secondary">500+</p>
-                  <p className="text-sm text-primary/50">{t("instructor.studentsTrained")}</p>
+                  <p className="text-xl font-heading text-secondary">{t("instructor.credFeedbackTitle")}</p>
+                  <p className="text-sm text-primary/50">{t("instructor.credFeedbackLabel")}</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-heading text-secondary">30+</p>
-                  <p className="text-sm text-primary/50">{t("instructor.countries")}</p>
+                  <p className="text-xl font-heading text-secondary">{t("instructor.credCertificationTitle")}</p>
+                  <p className="text-sm text-primary/50">{t("instructor.credCertificationLabel")}</p>
                 </div>
               </div>
               <Link href="/about">

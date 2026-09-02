@@ -23,7 +23,13 @@
     "studentsCertified": "Certificiranih polaznika",
     "yearsExperience": "Godina iskustva",
     "successRate": "Stopa uspješnosti",
-    "scroll": "Skrolaj"
+    "scroll": "Skrolaj",
+    "trustCertificationTitle": "Certifikat",
+    "trustCertificationLabel": "Po uspješnom završetku tečaja",
+    "trustLessonsTitle": "Korak po korak",
+    "trustLessonsLabel": "Detaljne video lekcije",
+    "trustFeedbackTitle": "Osobni feedback",
+    "trustFeedbackLabel": "Nikolina pregledava vaš rad"
   },
   "valueProposition": {
     "tagline": "Zašto odabrati Brendia Pro®",
@@ -53,7 +59,7 @@
   "cta": {
     "tagline": "Započnite svoje putovanje",
     "title": "Spremni ste transformirati svoju karijeru?",
-    "description": "Pridružite se stotinama uspješnih frizera koji su podigli svoje umijeće s Brendia Pro® certifikacijom. Vaše putovanje do traženog stručnjaka za ekstenzije počinje ovdje.",
+    "description": "Podignite svoje umijeće s Brendia Pro® certifikacijom. Vaše putovanje do traženog stručnjaka za ekstenzije počinje ovdje.",
     "viewCourses": "Pogledajte tečajeve",
     "contactUs": "Kontaktirajte nas",
     "lifetimeAccess": "Pristup 12 mjeseci",
@@ -148,7 +154,7 @@
       "price": "€3.000",
       "description": "Izgradite čvrste temelje u tehnikama weft ekstenzija. Savršeno za frizere spremne proširiti svoju ponudu usluga.",
       "features": [
-        "30+ sveobuhvatnih video lekcija",
+        "8 detaljnih video lekcija",
         "Detaljni vodiči za instalaciju korak po korak",
         "Tehnike konzultacija s klijentima",
         "Službena Brendia Pro® certifikacija",
@@ -204,12 +210,16 @@
   "aboutFounder": {
     "tagline": "Upoznajte svoju edukatoricu",
     "name": "Nikolina Kljaić",
-    "bio1": "S više od desetljeća iskustva u industriji ekstenzija kose, Nikolina je transformirala karijere stotina frizera diljem svijeta. Njezina strast za edukacijom i predanost izvrsnosti učinili su Brendia Pro® zlatnim standardom u obuci za weft ekstenzije.",
+    "bio1": "S više od desetljeća iskustva u industriji ekstenzija kose, Nikolina je svoju karijeru posvetila edukaciji frizera. Njezina strast za edukacijom i predanost izvrsnosti ugrađene su u svaki Brendia Pro® tečaj za weft ekstenzije.",
     "quote": "Moja misija je osnažiti frizere znanjem i tehnikama koje su im potrebne za izgradnju uspješnog poslovanja i stvaranje zadivljujućih transformacija za svoje klijente. Svaki polaznik koji se pridruži Brendia Pro postaje dio zajednice posvećene izvrsnosti.",
     "yearsInIndustry": "Godina u industriji",
     "studentsTrained": "Obučenih polaznika",
     "readFullStory": "Pročitajte cijelu priču",
-    "imageAlt": "Nikolina Kljaić - Osnivačica Brendia Pro®"
+    "imageAlt": "Nikolina Kljaić - Osnivačica Brendia Pro®",
+    "credExperienceTitle": "Dugogodišnje iskustvo",
+    "credExperienceLabel": "u industriji ekstenzija kose",
+    "credEducationTitle": "Praktična edukacija",
+    "credEducationLabel": "uz osobne povratne informacije"
   },
   "testimonials": {
     "tagline": "Priče o uspjehu",
@@ -274,7 +284,7 @@
     "hero": {
       "tagline": "Profesionalna certifikacija",
       "title": "Transformirajte svoju karijeru",
-      "description": "Pridružite se 500+ frizera koji su podigli svoje umijeće s Brendia Pro® certifikacijom. Odaberite program koji odgovara vašim ciljevima i započnite svoje putovanje danas.",
+      "description": "Podignite svoje umijeće s Brendia Pro® certifikacijom. Odaberite program koji odgovara vašim ciljevima i započnite svoje putovanje danas.",
       "selfPaced": "Učenje vlastitim tempom",
       "lifetimeAccess": "Pristup 12 mjeseci",
       "officialCertification": "Službena certifikacija"
@@ -327,7 +337,7 @@
         "duration": "Vlastiti tempo (prosječno 6-8 tjedana)",
         "description": "Izgradite čvrste temelje u tehnikama weft ekstenzija. Savršeno za frizere spremne proširiti svoju ponudu usluga.",
         "features": [
-          "30+ sveobuhvatnih video lekcija",
+          "8 detaljnih video lekcija",
           "Detaljni vodiči za instalaciju korak po korak",
           "Tehnike konzultacija s klijentima",
           "Službena Brendia Pro® certifikacija",
@@ -395,8 +405,8 @@
       "rows": {
         "videoLessons": {
           "feature": "Video lekcije",
-          "foundation": "30+",
-          "master": "50+"
+          "foundation": "8",
+          "master": "8 + napredne lekcije"
         },
         "installation": {
           "feature": "Tehnike instalacije",
@@ -438,12 +448,18 @@
     "instructor": {
       "tagline": "Vaša edukatorica",
       "title": "Učite od najboljih",
-      "description": "Nikolina Kljaić provela je više od desetljeća usavršavajući svoje tehnike weft ekstenzija i obučila je 500+ frizera diljem svijeta. Njezin pristup podučavanju kombinira detaljne tehničke upute s praktičnim poslovnim uvidima.",
+      "description": "Nikolina Kljaić provela je više od desetljeća usavršavajući svoje tehnike weft ekstenzija. Njezin pristup podučavanju kombinira detaljne tehničke upute s praktičnim poslovnim uvidima.",
       "yearsExperience": "Godina iskustva",
       "studentsTrained": "Obučenih polaznika",
       "countries": "Zemalja",
       "learnMore": "Saznajte više o Nikolini",
-      "imageAlt": "Nikolina Kljaić - Vaša edukatorica"
+      "imageAlt": "Nikolina Kljaić - Vaša edukatorica",
+      "credExperienceTitle": "Dugogodišnje iskustvo",
+      "credExperienceLabel": "u weft ekstenzijama",
+      "credFeedbackTitle": "Osobni pristup",
+      "credFeedbackLabel": "Pregled i povratne informacije na vaš rad",
+      "credCertificationTitle": "Certifikat",
+      "credCertificationLabel": "Po uspješnom završetku programa"
     },
     "trust": {
       "title": "Uložite u svoju budućnost s povjerenjem",
@@ -481,7 +497,7 @@
     },
     "cta": {
       "title": "Spremni započeti svoje putovanje?",
-      "description": "Pridružite se stotinama uspješnih frizera koji su transformirali svoje karijere s Brendia Pro® certifikacijom.",
+      "description": "Transformirajte svoju karijeru s Brendia Pro® certifikacijom.",
       "enrollIn": "Upišite se u {course}",
       "haveQuestions": "Imate pitanja?",
       "paymentPlans": "Dostupni planovi plaćanja. Kontaktirajte nas za detalje."
@@ -494,7 +510,7 @@
       "description": "Izgradite čvrste temelje u tehnikama weft ekstenzija. Ovaj sveobuhvatni program pokriva sve od konzultacija s klijentima do besprijekorne instalacije i dugoročnog održavanja.",
       "longDescription": "Brendia Pro® Artist je vaš ulaz u svijet profesionalnih stručnjaka za weft ekstenzije. Osmišljen za frizere na bilo kojoj razini iskustva, ovaj program pruža temeljitu edukaciju o umijeću i znanosti weft ekstenzija. Učit ćete direktno od Nikoline Kljaić kroz detaljne video upute, stječući samopouzdanje i vještine za postizanje zadivljujućih rezultata za svoje klijente.",
       "features": [
-        "30+ sveobuhvatnih video lekcija",
+        "8 detaljnih video lekcija",
         "Detaljni vodiči za instalaciju korak po korak",
         "Tehnike konzultacija s klijentima",
         "Protokoli održavanja i njege",
@@ -585,7 +601,7 @@
         {
           "module": "Artist moduli",
           "lessons": [
-            "Svih 30+ lekcija iz Brendia Pro® Artist tečaja uključeno"
+            "Svih 8 lekcija iz Brendia Pro® Artist tečaja uključeno"
           ]
         },
         {
@@ -736,7 +752,7 @@
     "hero": {
       "tagline": "O Brendia Pro®",
       "title": "Priča iza brenda",
-      "description": "Brendia Pro® rođen je iz strasti za izvrsnošću i želje za dijeljenjem umijeća weft ekstenzija s frizerima diljem svijeta. Ono što je započelo kao putovanje jedne žene postalo je globalni pokret osnaženih profesionalaca.",
+      "description": "Brendia Pro® rođen je iz strasti za izvrsnošću i želje za dijeljenjem umijeća weft ekstenzija s frizerima diljem svijeta. Ono što je započelo kao putovanje jedne žene raste u zajednicu osnaženih profesionalaca.",
       "imageAlt": "Priča Brendia Pro®"
     },
     "founder": {
@@ -745,7 +761,7 @@
       "bio": [
         "S više od desetljeća iskustva u industriji ekstenzija kose, Nikolina je posvetila svoju karijeru usavršavanju umijeća weft ekstenzija i dijeljenju svoje stručnosti s drugima.",
         "Njezino putovanje započelo je u malom salonu, gdje su je njezin prirodni talent i neumoran stremljenje savršenstvu brzo izdvojili. Klijenti su putovali iz cijele zemlje kako bi iskusili njezin transformativni rad, a kolege frizerke počele su tražiti da nauče njezine tehnike.",
-        "\"Shvatila sam da moj utjecaj može ići daleko izvan moje vlastite stolice,\" dijeli Nikolina. \"Podučavajući druge, mogla sam pomoći stotinama frizera da izgrade uspješne karijere dok tisuće žena dobivaju samopouzdanje koje dolazi s prekrasnom kosom.\"",
+        "\"Shvatila sam da moj utjecaj može ići daleko izvan moje vlastite stolice,\" dijeli Nikolina. \"Podučavajući druge, mogla sam pomoći drugim frizerima da izgrade uspješne karijere dok njihove klijentice dobivaju samopouzdanje koje dolazi s prekrasnom kosom.\"",
         "Danas Nikolina vodi Brendia Pro® s istom strašću i pažnjom za detalje koji su definirali njezin rad od prvog dana. Svaki tečaj, svaka lekcija, svaka interakcija odražava njezinu predanost izvrsnosti i iskrenu brigu za uspjeh svojih polaznika."
       ],
       "imageAlt": "Nikolina Kljaić - Osnivačica Brendia Pro®"
@@ -776,8 +792,8 @@
         },
         {
           "year": "2024",
-          "title": "Globalna zajednica",
-          "description": "Izgradila uspješnu zajednicu od 500+ certificiranih profesionalaca u više od 30 zemalja."
+          "title": "Rastuća zajednica",
+          "description": "Zajednica certificiranih Brendia Pro® frizera nastavlja rasti iz godine u godinu."
         }
       ]
     },
@@ -847,7 +863,7 @@
           },
           {
             "question": "Je li certifikacija međunarodno priznata?",
-            "answer": "Brendia Pro® certifikacije priznate su globalno unutar profesionalne zajednice ekstenzija kose. Naši polaznici uspješno rade u više od 30 zemalja. Iako licenciranje za ljepotu varira ovisno o lokaciji, naša certifikacija značajno dodaje kredibilitet vašim kvalifikacijama."
+            "answer": "Brendia Pro® certifikacija potvrđuje vaše znanje i vještine u radu s weft ekstenzijama unutar profesionalne zajednice. Iako se licenciranje u beauty industriji razlikuje ovisno o lokaciji, naša certifikacija dodaje kredibilitet vašim kvalifikacijama."
           },
           {
             "question": "Kako postajem certificiran/a?",
