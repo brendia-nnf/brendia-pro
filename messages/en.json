@@ -982,7 +982,7 @@
         "predracunNote": "After ordering you will receive a proforma invoice with payment details (IBAN) by email. Your card will not be charged.",
         "predracunEmailNote": "Course access is activated once your payment is received — you will then get the invoice and activation link by email.",
         "cardsComingSoon": "💳 Card payments available in a few days",
-        "installmentsComingSoon": "Installment payments available in a few days"
+        "installmentsComingSoon": "📅 Coming soon: installment payments — available in just a few days"
       },
       "contract": {
         "title": "Education contract",

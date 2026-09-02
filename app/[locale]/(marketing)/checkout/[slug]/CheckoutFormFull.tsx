@@ -566,11 +566,16 @@ export function CheckoutFormFull({
         {/* Payment Logos */}
         <div className="pt-6 border-t border-primary/10">
           {IS_PREDRACUN ? (
-            <p className="text-sm text-center text-primary/60">
-              {t("submit.cardsComingSoon")}
-              <br />
-              {t("submit.installmentsComingSoon")}
-            </p>
+            <div className="space-y-3">
+              <div className="p-4 bg-secondary/15 border border-secondary/30 text-center">
+                <p className="font-medium text-primary">
+                  {t("submit.installmentsComingSoon")}
+                </p>
+              </div>
+              <p className="text-sm text-center text-primary/60">
+                {t("submit.cardsComingSoon")}
+              </p>
+            </div>
           ) : (
             <PaymentLogos variant="light" showSecurityLogos={true} />
           )}
