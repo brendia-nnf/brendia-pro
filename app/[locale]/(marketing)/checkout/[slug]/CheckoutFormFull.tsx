@@ -568,6 +568,8 @@ export function CheckoutFormFull({
           {IS_PREDRACUN ? (
             <p className="text-sm text-center text-primary/60">
               {t("submit.cardsComingSoon")}
+              <br />
+              {t("submit.installmentsComingSoon")}
             </p>
           ) : (
             <PaymentLogos variant="light" showSecurityLogos={true} />

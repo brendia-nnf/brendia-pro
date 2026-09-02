@@ -981,7 +981,8 @@
         "predracunButton": "Naruči — {price} (plaćanje predračunom)",
         "predracunNote": "Nakon narudžbe na email vam stiže predračun s podacima za uplatu (IBAN). Bez naplate kartice.",
         "predracunEmailNote": "Pristup tečaju aktivira se nakon evidentirane uplate — na email tada stižu račun i link za aktivaciju.",
-        "cardsComingSoon": "💳 Plaćanje karticama uskoro dostupno"
+        "cardsComingSoon": "💳 Plaćanje karticama dostupno za par dana",
+        "installmentsComingSoon": "Plaćanje na rate dostupno za par dana"
       },
       "contract": {
         "title": "Ugovor o edukaciji",
