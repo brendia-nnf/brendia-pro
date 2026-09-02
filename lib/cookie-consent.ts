@@ -29,6 +29,7 @@ export function setCookieConsent(level: ConsentLevel): void {
     COOKIE_CONSENT_KEY,
     JSON.stringify({ level, timestamp: new Date().toISOString() })
   );
+  window.dispatchEvent(new CustomEvent("brendia:cookie-consent", { detail: level }));
 }
 
 export function clearCookieConsent(): void {
