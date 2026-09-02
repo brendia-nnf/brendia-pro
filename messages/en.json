@@ -424,7 +424,7 @@
     "instructor": {
       "tagline": "Your Instructor",
       "title": "Learn From the Best",
-      "description": "Nikolina Kljaić has spent over a decade perfecting her weft extension techniques. Her teaching approach combines detailed technical instruction with real-world business insights.",
+      "description": "Nikolina Kljaić has spent years perfecting her weft extension techniques. Her teaching approach combines detailed technical instruction with real-world business insights.",
       "yearsExperience": "Years Experience",
       "studentsTrained": "Students Trained",
       "countries": "Countries",
@@ -728,7 +728,7 @@
     "hero": {
       "tagline": "About Brendia Pro®",
       "title": "The Story Behind the Brand",
-      "description": "Brendia Pro® was born from a passion for excellence and a desire to share the art of weft extensions with stylists worldwide. What started as one woman's journey is growing into a community of empowered professionals.",
+      "description": "Brendia Pro® was born from a passion for excellence and a desire to share the art of weft extensions with stylists who want more. What began as a personal professional journey is now becoming a platform for education, growth and a new generation of extension specialists.",
       "imageAlt": "Brendia Pro® Story"
     },
     "founder": {
@@ -744,32 +744,27 @@
     },
     "journey": {
       "title": "Our Journey",
-      "description": "From humble beginnings to a global community of professionals",
+      "description": "From humble beginnings to a vision that is changing the standards",
       "milestones": [
         {
-          "year": "2013",
+          "year": "2014",
           "title": "Journey Begins",
-          "description": "Started as a passionate stylist with a vision for excellence in hair extensions."
+          "description": "Started as a passionate hairstylist driven by the desire to create something that is more than the craft itself."
         },
         {
           "year": "2016",
-          "title": "Technique Mastery",
-          "description": "Developed signature weft extension methods after years of research and refinement."
+          "title": "A Step Towards Perfection",
+          "description": "Began researching the best techniques, aiming to find a method that delivers a natural look, safety and outstanding results."
         },
         {
-          "year": "2019",
-          "title": "First Students",
-          "description": "Began sharing knowledge with fellow stylists, launching the first Brendia Pro® workshops."
+          "year": "2023",
+          "title": "Signature Technique",
+          "description": "Started perfecting her own weft extension technique."
         },
         {
-          "year": "2021",
-          "title": "Online Education",
-          "description": "Launched comprehensive online certification programs to reach stylists worldwide."
-        },
-        {
-          "year": "2024",
-          "title": "Growing Community",
-          "description": "The community of certified Brendia Pro® stylists continues to grow year after year."
+          "year": "2026",
+          "title": "A New Beginning",
+          "description": "Patents her technique and launches online education."
         }
       ]
     },
@@ -787,7 +782,7 @@
         },
         {
           "title": "Community",
-          "description": "Success is better shared. Our certified professionals support and inspire each other every day."
+          "description": "We are building a community of professionals connected by knowledge, growth and a shared passion for excellence."
         },
         {
           "title": "Innovation",

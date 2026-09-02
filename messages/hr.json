@@ -424,7 +424,7 @@
     "instructor": {
       "tagline": "Vaša edukatorica",
       "title": "Učite od najboljih",
-      "description": "Nikolina Kljaić provela je više od desetljeća usavršavajući svoje tehnike weft ekstenzija. Njezin pristup podučavanju kombinira detaljne tehničke upute s praktičnim poslovnim uvidima.",
+      "description": "Nikolina Kljaić provela je godine usavršavajući svoje tehnike weft ekstenzija. Njezin pristup podučavanju kombinira detaljne tehničke upute s praktičnim poslovnim uvidima.",
       "yearsExperience": "Godina iskustva",
       "studentsTrained": "Obučenih polaznika",
       "countries": "Zemalja",
@@ -728,7 +728,7 @@
     "hero": {
       "tagline": "O Brendia Pro®",
       "title": "Priča iza brenda",
-      "description": "Brendia Pro® rođen je iz strasti za izvrsnošću i želje za dijeljenjem umijeća weft ekstenzija s frizerima diljem svijeta. Ono što je započelo kao putovanje jedne žene raste u zajednicu osnaženih profesionalaca.",
+      "description": "Brendia Pro® rođen je iz strasti prema izvrsnosti i želje za dijeljenjem umijeća weft ekstenzija s frizerima koji žele više. Ono što je započelo kao osobno profesionalno putovanje danas postaje platforma za edukaciju, razvoj i novu generaciju stručnjaka u svijetu ekstenzija.",
       "imageAlt": "Priča Brendia Pro®"
     },
     "founder": {
@@ -744,32 +744,27 @@
     },
     "journey": {
       "title": "Naše putovanje",
-      "description": "Od skromnih početaka do globalne zajednice profesionalaca",
+      "description": "Od skromnih početaka do vizije koja mijenja standarde",
       "milestones": [
         {
-          "year": "2013",
+          "year": "2014",
           "title": "Putovanje počinje",
-          "description": "Započela kao strastvena frizerka s vizijom izvrsnosti u ekstenzijama kose."
+          "description": "Započela kao strastvena frizerka vođena željom za stvaranjem nečega što je više od samog zanata."
         },
         {
           "year": "2016",
-          "title": "Majstorstvo tehnika",
-          "description": "Razvila jedinstvene metode weft ekstenzija nakon godina istraživanja i usavršavanja."
+          "title": "Korak prema savršenstvu",
+          "description": "Početak istraživanja najboljih tehnika, s ciljem pronalaska metode koja pruža prirodan izgled, sigurnost i vrhunski rezultat."
         },
         {
-          "year": "2019",
-          "title": "Prvi polaznici",
-          "description": "Počela dijeliti znanje s kolegama frizerima, pokrenuvši prve Brendia Pro® radionice."
+          "year": "2023",
+          "title": "Osobna tehnika",
+          "description": "Kreće s usavršavanjem osobne tehnike weft ekstenzija."
         },
         {
-          "year": "2021",
-          "title": "Online edukacija",
-          "description": "Pokrenula sveobuhvatne online certifikacijske programe za doseg frizera diljem svijeta."
-        },
-        {
-          "year": "2024",
-          "title": "Rastuća zajednica",
-          "description": "Zajednica certificiranih Brendia Pro® frizera nastavlja rasti iz godine u godinu."
+          "year": "2026",
+          "title": "Novi početak",
+          "description": "Patentira svoju tehniku i pokreće online edukacije."
         }
       ]
     },
@@ -787,7 +782,7 @@
         },
         {
           "title": "Zajednica",
-          "description": "Uspjeh je bolji kad se dijeli. Naši certificirani profesionalci podržavaju i inspiriraju jedni druge svaki dan."
+          "description": "Gradimo zajednicu profesionalaca koju povezuje znanje, razvoj i zajednička strast prema izvrsnosti."
         },
         {
           "title": "Inovacija",

@@ -55,10 +55,7 @@ export function Stats() {
   const t = useTranslations("stats");
 
   const stats = [
-    { value: 500, suffix: "+", label: t("studentsCertified") },
     { value: 10, suffix: "+", label: t("yearsExperience") },
-    { value: 30, suffix: "+", label: t("countriesReached") },
-    { value: 98, suffix: "%", label: t("successRate") },
   ];
 
   useEffect(() => {
