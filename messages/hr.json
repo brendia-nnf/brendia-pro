@@ -221,30 +221,6 @@
     "credEducationTitle": "Praktična edukacija",
     "credEducationLabel": "uz osobne povratne informacije"
   },
-  "testimonials": {
-    "tagline": "Priče o uspjehu",
-    "title": "Čujte naše polaznike",
-    "prevTestimonial": "Prethodna izjava",
-    "nextTestimonial": "Sljedeća izjava",
-    "goToTestimonial": "Idi na izjavu {number}",
-    "items": [
-      {
-        "quote": "Brendia Pro® certifikacija je potpuno transformirala moju karijeru. Unutar tri mjeseca od završetka tečaja, udvostručila sam broj rezervacija i podigla cijene za 40%.",
-        "author": "Sarah Mitchell",
-        "role": "Certificirana frizerka, Los Angeles"
-      },
-      {
-        "quote": "Nikolinin stil podučavanja je nevjerojatno temeljit, a opet lako razumljiv. Tehnike koje sam naučila postale su temelj cijelog mog poslovanja s ekstenzijama.",
-        "author": "Emma Rodriguez",
-        "role": "Vlasnica salona, Miami"
-      },
-      {
-        "quote": "Aspekt zajednice u Brendia Pro® je neprocjenjiv. Pristup drugim certificiranim frizerima i kontinuirana podrška pomogli su mi prevladati svaki izazov.",
-        "author": "Jessica Chen",
-        "role": "Samostalna frizerka, New York"
-      }
-    ]
-  },
   "contactPage": {
     "hero": {
       "tagline": "Kontaktirajte nas",

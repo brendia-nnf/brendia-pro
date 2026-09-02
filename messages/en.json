@@ -221,30 +221,6 @@
     "credEducationTitle": "Practical education",
     "credEducationLabel": "with personal feedback"
   },
-  "testimonials": {
-    "tagline": "Success Stories",
-    "title": "Hear from Our Graduates",
-    "prevTestimonial": "Previous testimonial",
-    "nextTestimonial": "Next testimonial",
-    "goToTestimonial": "Go to testimonial {number}",
-    "items": [
-      {
-        "quote": "The Brendia Pro® certification completely transformed my career. Within three months of completing the course, I had doubled my booking rate and increased my prices by 40%.",
-        "author": "Sarah Mitchell",
-        "role": "Certified Stylist, Los Angeles"
-      },
-      {
-        "quote": "Nikolina's teaching style is incredibly thorough yet easy to follow. The techniques I learned have become the foundation of my entire extension business.",
-        "author": "Emma Rodriguez",
-        "role": "Salon Owner, Miami"
-      },
-      {
-        "quote": "The community aspect of Brendia Pro® is invaluable. Having access to other certified stylists and ongoing support has helped me navigate every challenge.",
-        "author": "Jessica Chen",
-        "role": "Independent Stylist, New York"
-      }
-    ]
-  },
   "contactPage": {
     "hero": {
       "tagline": "Get in Touch",
