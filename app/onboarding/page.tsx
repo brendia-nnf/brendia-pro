@@ -641,7 +641,7 @@ export default function OnboardingPage() {
                       <EducationLevelOption
                         name="educationLevel"
                         value="brendia-pro-master-1v1"
-                        title="Brendia Pro® Master 1v1"
+                        title="Advanced Brendia Pro® Artist 1v1"
                         description="Live edukacija u studiju (2 dana, 6 sati/dan)"
                         price="5.000€ + PDV"
                         checked={formData.educationLevel === "brendia-pro-master-1v1"}
@@ -696,11 +696,11 @@ export default function OnboardingPage() {
                               </ul>
                             </div>
                             <div className="text-sm">
-                              <p className="font-medium text-primary">Brendia Pro® Master 1v1 (5.000€)</p>
+                              <p className="font-medium text-primary">Advanced Brendia Pro® Artist 1v1 (5.000€)</p>
                               <ul className="text-primary/60 mt-1 space-y-1">
                                 <li>• 2 dana live edukacije u studiju</li>
                                 <li>• 12 sati hands-on prakse</li>
-                                <li>• Foundation + Master sadržaj</li>
+                                <li>• Artist + Advanced Artist sadržaj</li>
                                 <li>• Certifikat</li>
                                 <li>• Pristup platformi (shop + zajednica)</li>
                                 <li>• Education starter kit</li>

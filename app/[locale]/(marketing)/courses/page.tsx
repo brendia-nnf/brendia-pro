@@ -125,8 +125,6 @@ export default function CoursesPage() {
     "colorMatching",
     "business",
     "community",
-    "mentorship",
-    "certification",
     "updates",
   ] as const;
 

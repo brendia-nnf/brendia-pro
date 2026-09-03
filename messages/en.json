@@ -173,7 +173,6 @@
         "Complex color matching",
         "Business growth strategies",
         "Marketing templates & guides",
-        "1-on-1 mentorship session",
         "Priority community support"
       ]
     },
@@ -192,14 +191,14 @@
       ]
     },
     "master1v1": {
-      "title": "Brendia Pro® Master 1v1",
+      "title": "Advanced Brendia Pro® Artist 1v1",
       "subtitle": "Live in-studio education",
       "price": "€5,000",
-      "description": "Complete Foundation and Master education live in studio. Two days of intensive practice and personal mentorship.",
+      "description": "Complete Artist and Advanced Artist education live in studio. Two days of intensive practice and personal mentorship.",
       "features": [
         "2 days of live education",
         "12 hours hands-on practice",
-        "Foundation + Master content",
+        "Artist + Advanced Artist content",
         "Personalized approach",
         "Brendia Pro® certification",
         "Platform access",
@@ -332,7 +331,6 @@
           "Advanced blending techniques",
           "Complex color matching",
           "Business growth strategies",
-          "1-on-1 mentorship session",
           "Priority community support"
         ]
       },
@@ -352,15 +350,15 @@
         ]
       },
       "master1v1": {
-        "title": "Brendia Pro® Master 1v1",
+        "title": "Advanced Brendia Pro® Artist 1v1",
         "subtitle": "Live In-Studio Education",
         "price": "€5,000",
         "duration": "2 days (6 hours/day)",
-        "description": "Complete Foundation and Master education live in studio. Two days of intensive practice and personal mentorship.",
+        "description": "Complete Artist and Advanced Artist education live in studio. Two days of intensive practice and personal mentorship.",
         "features": [
           "2 days of live education with mentor",
           "12 hours of hands-on practice (6h/day)",
-          "Foundation + Master content",
+          "Artist + Advanced Artist content",
           "Personalized approach",
           "Official Brendia Pro® certification",
           "Platform access (shop, community)",
@@ -374,8 +372,8 @@
       "title": "Compare Programs",
       "description": "See what's included in each certification level",
       "feature": "Feature",
-      "foundation": "Foundation",
-      "master": "Master",
+      "foundation": "Artist",
+      "master": "Advanced Artist",
       "recommended": "Recommended",
       "select": "Select",
       "rows": {
@@ -404,20 +402,10 @@
           "foundation": "✓",
           "master": "Priority support"
         },
-        "mentorship": {
-          "feature": "Mentorship",
-          "foundation": "—",
-          "master": "1-on-1 session"
-        },
-        "certification": {
-          "feature": "Certification",
-          "foundation": "Foundation level",
-          "master": "Master level"
-        },
         "updates": {
           "feature": "Updates",
           "foundation": "12 months",
-          "master": "12 months + Early access"
+          "master": "12 months"
         }
       }
     },
@@ -561,7 +549,7 @@
       "price": "€4,000",
       "duration": "Self-paced (avg. 8-12 weeks)",
       "description": "Elevate your expertise with advanced techniques, complex color theory, and proven business strategies. For stylists committed to becoming industry leaders.",
-      "longDescription": "Advanced Brendia Pro® Artist represents the pinnacle of weft extension education. Building on the Artist program, this advanced course dives deep into complex techniques, sophisticated color work, and the business strategies you need to scale your extension services. Includes a personal mentorship session with Nikolina to accelerate your growth.",
+      "longDescription": "Advanced Brendia Pro® Artist represents the pinnacle of weft extension education. Building on the Artist program, this advanced course dives deep into complex techniques, sophisticated color work, and the business strategies you need to scale your extension services.",
       "features": [
         "Everything in Brendia Pro® Artist",
         "Advanced blending techniques",
@@ -569,7 +557,6 @@
         "Corrective work procedures",
         "Business growth strategies",
         "Marketing templates & guides",
-        "1-on-1 mentorship session with Nikolina",
         "Priority community support",
         "Guest educator masterclasses"
       ],
@@ -676,16 +663,16 @@
       ]
     },
     "master1v1": {
-      "title": "Brendia Pro® Master 1v1",
+      "title": "Advanced Brendia Pro® Artist 1v1",
       "subtitle": "Live In-Studio Education",
       "price": "€5,000",
       "duration": "2 days (6 hours/day)",
-      "description": "Complete Foundation and Master education live in studio. Two days of intensive practice and personal mentorship.",
-      "longDescription": "Brendia Pro® Master 1v1 combines the complete Foundation and Master content into two days of intensive one-on-one live education in-studio. With twelve hours of hands-on practice and personal mentorship you will master weft extension installation from the fundamentals to advanced techniques. After the education you receive official Brendia Pro® certification, platform access and a welcome box with materials.",
+      "description": "Complete Artist and Advanced Artist education live in studio. Two days of intensive practice and personal mentorship.",
+      "longDescription": "Advanced Brendia Pro® Artist 1v1 combines the complete Artist and Advanced Artist content into two days of intensive one-on-one live education in-studio. With twelve hours of hands-on practice and personal mentorship you will master weft extension installation from the fundamentals to advanced techniques. After the education you receive official Brendia Pro® certification, platform access and a welcome box with materials.",
       "features": [
         "2 days of live education with mentor",
         "12 hours of hands-on practice (6h/day)",
-        "Foundation + Master content",
+        "Artist + Advanced Artist content",
         "Personalized approach",
         "Official Brendia Pro® certification",
         "Platform access (shop, community)",
@@ -805,40 +792,40 @@
     },
     "categories": {
       "aboutCourses": {
-        "title": "About the Courses",
+        "title": "About the Education",
         "faqs": [
           {
-            "question": "What experience level do I need to enroll?",
-            "answer": "Brendia Pro® Artist is designed for stylists at any level, including those new to extensions. We recommend having basic hairstyling skills, but no prior extension experience is required. Advanced Brendia Pro® Artist is ideal for those who have completed the Artist course or have equivalent experience."
+            "question": "Who is the Brendia Pro® education intended for?",
+            "answer": "The Brendia Pro® education is intended for hairdressers who want to expand their knowledge, refine their technique of working with extensions, and elevate the quality of their services to the next level."
           },
           {
-            "question": "How long does it take to complete a course?",
-            "answer": "Both courses are self-paced, so you can learn on your own schedule. On average, students complete Brendia Pro® Artist in 6-8 weeks and Advanced Brendia Pro® Artist in 8-12 weeks. However, you have 12 months of access, giving you plenty of time to learn at your own pace."
+            "question": "What is the difference between Artist and Advanced Artist?",
+            "answer": "The Artist education represents the foundation of the Brendia Pro® technique and focuses on acquiring the key knowledge and skills needed for proper work.\n\nThe Advanced Artist education is intended for those who want to take a step further, perfect their technique, and master more advanced working methods."
           },
           {
-            "question": "What's the difference between Artist and Advanced Artist?",
-            "answer": "Brendia Pro® Artist covers all essential techniques for professional weft extension services. Advanced Brendia Pro® Artist includes everything in Artist plus advanced techniques, complex color work, corrective procedures, business strategies, and a personal mentorship session with Nikolina."
+            "question": "Do I need prior experience working with extensions?",
+            "answer": "No. All you need is to be a licensed hairdresser."
           },
           {
-            "question": "Do I need to purchase any additional materials?",
-            "answer": "The courses include all digital materials needed to learn. For hands-on practice, you'll need to source your own hair extensions, tools, and a mannequin head. We provide a recommended supplies list with suggested vendors in the course."
+            "question": "How long does it take to complete the online course?",
+            "answer": "Since you have access to the modules for one year, you should complete the course within that period."
+          },
+          {
+            "question": "Do I need to purchase additional materials?",
+            "answer": "No. For the practical part of the Brendia Pro® education, you will receive all the materials needed for practice, except the mannequin head."
+          },
+          {
+            "question": "Is in-person education available?",
+            "answer": "Yes. Brendia Pro® offers in-person education, with details and dates arranged individually."
           }
         ]
       },
       "certification": {
-        "title": "Certification & Credentials",
+        "title": "Certification",
         "faqs": [
           {
-            "question": "What certification do I receive?",
-            "answer": "Upon successful completion, you receive an official Brendia Pro® certification that you can display in your salon and use in your marketing materials. This certification demonstrates your commitment to excellence and professional training."
-          },
-          {
-            "question": "Is the certification recognized internationally?",
-            "answer": "Brendia Pro® certification validates your knowledge and skills in weft extensions within the professional community. While beauty licensing varies by location, our certification adds credibility to your qualifications."
-          },
-          {
             "question": "How do I become certified?",
-            "answer": "Certification is earned by completing all course modules and submitting practical assessments of your work. Our team reviews your submissions and provides personalized feedback. Most students achieve certification within their first attempt."
+            "answer": "Once you complete all the education modules, contact the educator, who will guide you through the next steps required to earn your certificate."
           }
         ]
       },
@@ -846,33 +833,37 @@
         "title": "Enrollment & Payment",
         "faqs": [
           {
+            "question": "What do I get when I enroll?",
+            "answer": "By enrolling, you get access to the online education modules, a starter kit, support throughout the learning process, a mobile app so you can connect at any time, and the opportunity to earn a certificate after successfully completing the education."
+          },
+          {
             "question": "What payment options are available?",
-            "answer": "We accept all major credit cards and offer payment plans to make education accessible. Contact us to discuss payment plan options that work for your budget."
+            "answer": "You can pay for the Brendia Pro® education in a single payment or choose an installment plan, whichever suits you best."
           },
           {
             "question": "Is there a refund policy?",
-            "answer": "We offer a 14-day satisfaction guarantee. If you're not completely satisfied with your course within the first 14 days, contact us for a full refund. After 14 days, all sales are final, but we're committed to your success and will work with you to address any concerns."
+            "answer": "Once access to the education has been activated, payments are non-refundable."
           },
           {
-            "question": "Can I upgrade from Artist to Advanced Artist later?",
-            "answer": "Absolutely! Many students complete Brendia Pro® Artist first and upgrade to Advanced Artist later. We offer a special upgrade price for existing Artist graduates. Contact us for current upgrade pricing."
+            "question": "When do I get access to the education?",
+            "answer": "After successful enrollment and confirmed payment, you will receive access to the education platform via email and can start learning."
           }
         ]
       },
       "access": {
-        "title": "Course Access & Support",
+        "title": "Access & Support",
         "faqs": [
           {
-            "question": "How long do I have access to the course?",
-            "answer": "You have access to all course materials for 12 months from purchase. This includes any updates we make to the curriculum during that period. Log in anytime to review lessons or access new content."
+            "question": "How long do I have access to the education?",
+            "answer": "Access to the Brendia Pro® education is available for one year, giving you plenty of time to learn, practice, and revisit the content.\n\nYou can access the community and the website for as long as you need."
           },
           {
-            "question": "What if I get stuck or have questions?",
-            "answer": "You'll have access to our private community where you can connect with other students and certified professionals. For technical issues, our support team is available via email. Advanced Brendia Pro® Artist students also receive priority support."
+            "question": "Can I rewatch modules I have already completed?",
+            "answer": "Yes. For the duration of your access to the education, you can return to previously completed modules and review the content whenever you need."
           },
           {
-            "question": "Can I access the course on mobile?",
-            "answer": "Yes! Our course platform is fully responsive and works on any device. Watch lessons on your computer, tablet, or smartphone whenever and wherever it's convenient for you."
+            "question": "Can I contact the educator if I have questions?",
+            "answer": "Yes. Throughout the education, you can communicate with the educator, who can help you with questions and concerns about the technique and your progress."
           }
         ]
       }

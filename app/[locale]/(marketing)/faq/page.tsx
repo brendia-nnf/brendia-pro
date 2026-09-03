@@ -73,7 +73,10 @@ export default function FAQPage() {
                       <AccordionTrigger value={`${categoryIndex}-${faqIndex}`}>
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent value={`${categoryIndex}-${faqIndex}`}>
+                      <AccordionContent
+                        value={`${categoryIndex}-${faqIndex}`}
+                        className="whitespace-pre-line"
+                      >
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>

@@ -173,7 +173,6 @@
         "Složeno usklađivanje boja",
         "Strategije rasta poslovanja",
         "Marketing predlošci i vodiči",
-        "1-na-1 mentorska sesija",
         "Prioritetna podrška zajednice"
       ]
     },
@@ -192,14 +191,14 @@
       ]
     },
     "master1v1": {
-      "title": "Brendia Pro® Master 1v1",
+      "title": "Advanced Brendia Pro® Artist 1v1",
       "subtitle": "Live edukacija u studiju",
       "price": "€5.000",
-      "description": "Kompletna Foundation i Master edukacija uživo u studiju. Dva dana intenzivne prakse i osobnog mentorstva.",
+      "description": "Kompletna Artist i Advanced Artist edukacija uživo u studiju. Dva dana intenzivne prakse i osobnog mentorstva.",
       "features": [
         "2 dana live edukacije",
         "12 sati hands-on prakse",
-        "Foundation + Master sadržaj",
+        "Artist + Advanced Artist sadržaj",
         "Personalizirani pristup",
         "Brendia Pro® certifikacija",
         "Pristup platformi",
@@ -332,7 +331,6 @@
           "Napredne tehnike miješanja",
           "Složeno usklađivanje boja",
           "Strategije rasta poslovanja",
-          "1-na-1 mentorska sesija",
           "Prioritetna podrška zajednice"
         ]
       },
@@ -352,15 +350,15 @@
         ]
       },
       "master1v1": {
-        "title": "Brendia Pro® Master 1v1",
+        "title": "Advanced Brendia Pro® Artist 1v1",
         "subtitle": "Live Edukacija u Studiju",
         "price": "€5.000",
         "duration": "2 dana (6 sati/dan)",
-        "description": "Kompletna Foundation i Master edukacija uživo u studiju. Dva dana intenzivne prakse i osobnog mentorstva.",
+        "description": "Kompletna Artist i Advanced Artist edukacija uživo u studiju. Dva dana intenzivne prakse i osobnog mentorstva.",
         "features": [
           "2 dana live edukacije s mentorom",
           "12 sati hands-on prakse (6h/dan)",
-          "Foundation + Master sadržaj",
+          "Artist + Advanced Artist sadržaj",
           "Personalizirani pristup",
           "Službena Brendia Pro® certifikacija",
           "Pristup platformi (shop, zajednica)",
@@ -374,8 +372,8 @@
       "title": "Usporedite programe",
       "description": "Pogledajte što je uključeno u svaku razinu certifikacije",
       "feature": "Značajka",
-      "foundation": "Foundation",
-      "master": "Master",
+      "foundation": "Artist",
+      "master": "Advanced Artist",
       "recommended": "Preporučeno",
       "select": "Odaberi",
       "rows": {
@@ -404,20 +402,10 @@
           "foundation": "✓",
           "master": "Prioritetna podrška"
         },
-        "mentorship": {
-          "feature": "Mentorstvo",
-          "foundation": "—",
-          "master": "1-na-1 sesija"
-        },
-        "certification": {
-          "feature": "Certifikacija",
-          "foundation": "Foundation razina",
-          "master": "Master razina"
-        },
         "updates": {
           "feature": "Ažuriranja",
           "foundation": "12 mjeseci",
-          "master": "12 mjeseci + rani pristup"
+          "master": "12 mjeseci"
         }
       }
     },
@@ -561,7 +549,7 @@
       "price": "€4.000",
       "duration": "Vlastiti tempo (prosječno 8-12 tjedana)",
       "description": "Podignite svoju stručnost s naprednim tehnikama, složenom teorijom boja i dokazanim poslovnim strategijama. Za frizere posvećene postajanju liderima u industriji.",
-      "longDescription": "Advanced Brendia Pro® Artist predstavlja vrhunac edukacije za weft ekstenzije. Nadograđujući se na Artist program, ovaj napredni tečaj duboko ulazi u složene tehnike, sofisticirani rad s bojama i poslovne strategije potrebne za skaliranje vaših usluga ekstenzija. Uključuje osobnu mentorsku sesiju s Nikolinom za ubrzanje vašeg rasta.",
+      "longDescription": "Advanced Brendia Pro® Artist predstavlja vrhunac edukacije za weft ekstenzije. Nadograđujući se na Artist program, ovaj napredni tečaj duboko ulazi u složene tehnike, sofisticirani rad s bojama i poslovne strategije potrebne za skaliranje vaših usluga ekstenzija.",
       "features": [
         "Sve iz Brendia Pro® Artist tečaja",
         "Napredne tehnike miješanja",
@@ -569,7 +557,6 @@
         "Postupci korektivnog rada",
         "Strategije rasta poslovanja",
         "Marketing predlošci i vodiči",
-        "1-na-1 mentorska sesija s Nikolinom",
         "Prioritetna podrška zajednice",
         "Masterclassovi gostujućih edukatora"
       ],
@@ -676,16 +663,16 @@
       ]
     },
     "master1v1": {
-      "title": "Brendia Pro® Master 1v1",
+      "title": "Advanced Brendia Pro® Artist 1v1",
       "subtitle": "Live Edukacija u Studiju",
       "price": "€5.000",
       "duration": "2 dana (6 sati/dan)",
-      "description": "Kompletna Foundation i Master edukacija uživo u studiju. Dva dana intenzivne prakse i osobnog mentorstva.",
-      "longDescription": "Brendia Pro® Master 1v1 objedinjuje kompletan Foundation i Master sadržaj u dva dana intenzivne live edukacije jedan-na-jedan u studiju. Uz dvanaest sati hands-on prakse i osobno mentorstvo svladat ćete tehniku ugradnje weft ekstenzija od temelja do naprednih tehnika. Nakon edukacije dobivate službenu Brendia Pro® certifikaciju, pristup platformi i welcome box s materijalima.",
+      "description": "Kompletna Artist i Advanced Artist edukacija uživo u studiju. Dva dana intenzivne prakse i osobnog mentorstva.",
+      "longDescription": "Advanced Brendia Pro® Artist 1v1 objedinjuje kompletan Artist i Advanced Artist sadržaj u dva dana intenzivne live edukacije jedan-na-jedan u studiju. Uz dvanaest sati hands-on prakse i osobno mentorstvo svladat ćete tehniku ugradnje weft ekstenzija od temelja do naprednih tehnika. Nakon edukacije dobivate službenu Brendia Pro® certifikaciju, pristup platformi i welcome box s materijalima.",
       "features": [
         "2 dana live edukacije s mentorom",
         "12 sati hands-on prakse (6h/dan)",
-        "Foundation + Master sadržaj",
+        "Artist + Advanced Artist sadržaj",
         "Personalizirani pristup",
         "Službena Brendia Pro® certifikacija",
         "Pristup platformi (shop, zajednica)",
@@ -805,40 +792,40 @@
     },
     "categories": {
       "aboutCourses": {
-        "title": "O tečajevima",
+        "title": "O edukaciji",
         "faqs": [
           {
-            "question": "Koju razinu iskustva trebam za upis?",
-            "answer": "Brendia Pro® Artist osmišljen je za frizere na bilo kojoj razini, uključujući one koji su novi u svijetu ekstenzija. Preporučujemo osnovne frizerske vještine, ali nije potrebno prethodno iskustvo s ekstenzijama. Advanced Brendia Pro® Artist idealan je za one koji su završili Artist tečaj ili imaju ekvivalentno iskustvo."
-          },
-          {
-            "question": "Koliko vremena treba za završetak tečaja?",
-            "answer": "Oba tečaja su samovođena, tako da možete učiti prema vlastitom rasporedu. U prosjeku, polaznici završavaju Foundation Certifikaciju za 6-8 tjedana, a Master Certifikaciju za 8-12 tjedana. Međutim, imate pristup od 12 mjeseci, tako da imate dovoljno vremena učiti vlastitim tempom."
+            "question": "Kome je Brendia Pro® edukacija namijenjena?",
+            "answer": "Brendia Pro® edukacija namijenjena je frizerima koji žele proširiti svoje znanje, usavršiti tehniku rada s ekstenzijama i podići kvalitetu svoje usluge na viši nivo."
           },
           {
             "question": "Koja je razlika između Artist i Advanced Artist?",
-            "answer": "Brendia Pro® Artist pokriva sve bitne tehnike za profesionalne usluge weft ekstenzija. Advanced Brendia Pro® Artist uključuje sve iz Artist programa plus napredne tehnike, složeni rad s bojama, korektivne postupke, poslovne strategije i osobnu mentorsku sesiju s Nikolinom."
+            "answer": "Artist edukacija predstavlja temelj Brendia Pro® tehnike i usmjerena je na usvajanje ključnih znanja i vještina potrebnih za pravilan rad.\n\nAdvanced Artist edukacija namijenjena je onima koji žele napraviti korak dalje, usavršiti tehniku i ovladati naprednijim metodama rada."
+          },
+          {
+            "question": "Je li potrebno prethodno iskustvo u radu s ekstenzijama?",
+            "answer": "Ne. Dovoljno je samo da ste ovlašteni frizer."
+          },
+          {
+            "question": "Koliko vremena treba za završetak online tečaja?",
+            "answer": "Obzirom da pristup modulima imate godinu dana, tečaj biste trebali završiti u tom periodu."
           },
           {
             "question": "Trebam li kupiti dodatne materijale?",
-            "answer": "Tečajevi uključuju sve digitalne materijale potrebne za učenje. Za praktičnu vježbu, trebat ćete nabaviti vlastite ekstenzije kose, alate i glavu za vježbanje. Popis preporučene opreme s predloženim dobavljačima nalazit se u tečaju."
+            "answer": "Ne. Za praktični dio Brendia Pro® edukacije dobit ćete sve potrebne materijale za vježbu, osim lutke."
+          },
+          {
+            "question": "Postoji li mogućnost edukacije uživo?",
+            "answer": "Da. Brendia Pro® pruža mogućnost edukacije uživo, a detalji i termin dogovaraju se individualno."
           }
         ]
       },
       "certification": {
-        "title": "Certifikacija i kvalifikacije",
+        "title": "Certifikacija",
         "faqs": [
           {
-            "question": "Koju certifikaciju dobivam?",
-            "answer": "Po uspješnom završetku dobivate službenu Brendia Pro® certifikaciju koju možete izložiti u svom salonu i koristiti u svojim marketinškim materijalima. Ova certifikacija demonstrira vašu predanost izvrsnosti i profesionalnoj obuci."
-          },
-          {
-            "question": "Je li certifikacija međunarodno priznata?",
-            "answer": "Brendia Pro® certifikacija potvrđuje vaše znanje i vještine u radu s weft ekstenzijama unutar profesionalne zajednice. Iako se licenciranje u beauty industriji razlikuje ovisno o lokaciji, naša certifikacija dodaje kredibilitet vašim kvalifikacijama."
-          },
-          {
             "question": "Kako postajem certificiran/a?",
-            "answer": "Certifikacija se stječe završetkom svih modula tečaja i predajom praktičnih procjena vašeg rada. Naš tim pregledava vaše radove i pruža personalizirane povratne informacije. Većina polaznika postiže certifikaciju pri prvom pokušaju."
+            "answer": "Nakon što završite sve module edukacije, potrebno je javiti se edukatorici koja će vas uputiti u daljnje korake potrebne za stjecanje certifikata."
           }
         ]
       },
@@ -846,33 +833,37 @@
         "title": "Upis i plaćanje",
         "faqs": [
           {
-            "question": "Koje opcije plaćanja su dostupne?",
-            "answer": "Prihvaćamo sve glavne kreditne kartice i nudimo planove plaćanja kako bi edukacija bila dostupna. Kontaktirajte nas da razgovaramo o opcijama plaćanja koje odgovaraju vašem budžetu."
+            "question": "Što dobivam prijavom na edukaciju?",
+            "answer": "Prijavom dobivate pristup online edukacijskim modulima, početni kit za rad, podršku tijekom procesa učenja, mobilnu aplikaciju za mogućnost spajanja u bilo kojem trenutku te mogućnost stjecanja certifikata nakon uspješno završene edukacije."
+          },
+          {
+            "question": "Koje su opcije plaćanja dostupne?",
+            "answer": "Brendia Pro® edukaciju možete platiti jednokratno ili odabrati opciju obročnog plaćanja, ovisno o tome što vam više odgovara."
           },
           {
             "question": "Postoji li politika povrata?",
-            "answer": "Nudimo 14-dnevno jamstvo zadovoljstva. Ako niste potpuno zadovoljni svojim tečajem unutar prvih 14 dana, kontaktirajte nas za puni povrat novca. Nakon 14 dana, sva prodaja je konačna, ali posvećeni smo vašem uspjehu i radit ćemo s vama na rješavanju bilo kakvih nedoumica."
+            "answer": "Nakon aktivacije pristupa edukaciji, izvršene uplate nisu povratne."
           },
           {
-            "question": "Mogu li kasnije nadograditi s Foundation na Master?",
-            "answer": "Apsolutno! Mnogi polaznici prvo završe Foundation Certifikaciju i kasnije nadograde na Master. Nudimo posebnu cijenu nadogradnje za postojeće Foundation polaznike. Kontaktirajte nas za trenutne cijene nadogradnje."
+            "question": "Kada dobivam pristup edukaciji?",
+            "answer": "Nakon uspješne prijave i evidentirane uplate dobivate pristup edukacijskoj platformi putem maila i možete započeti s učenjem."
           }
         ]
       },
       "access": {
-        "title": "Pristup tečaju i podrška",
+        "title": "Pristup i podrška",
         "faqs": [
           {
-            "question": "Koliko dugo imam pristup tečaju?",
-            "answer": "Imate pristup svim materijalima tečaja 12 mjeseci od kupnje. To uključuje sva ažuriranja koja napravimo u kurikulumu u tom razdoblju. Prijavite se bilo kada za pregled lekcija ili pristup novom sadržaju."
+            "question": "Koliko dugo imam pristup edukaciji?",
+            "answer": "Pristup Brendia Pro® edukaciji dostupan vam je godinu dana, što vam omogućuje dovoljno vremena za učenje, vježbu i ponovno pregledavanje sadržaja.\n\nPristup zajednici i webu imate koliko god vam je potrebno."
           },
           {
-            "question": "Što ako zapnem ili imam pitanja?",
-            "answer": "Imat ćete pristup našoj privatnoj zajednici gdje se možete povezati s drugim polaznicima i certificiranim profesionalcima. Za tehničke probleme, naš tim za podršku dostupan je putem emaila. Polaznici Master Certifikacije također dobivaju prioritetnu podršku."
+            "question": "Mogu li ponovo pogledati module koje sam već završio/la?",
+            "answer": "Da. Tijekom trajanja vašeg pristupa edukaciji možete se vraćati na prethodno završene module i ponovo pregledavati sadržaj kada god vam je potrebno."
           },
           {
-            "question": "Mogu li pristupiti tečaju na mobitelu?",
-            "answer": "Da! Naša platforma za tečaj je potpuno responzivna i radi na bilo kojem uređaju. Gledajte lekcije na računalu, tabletu ili pametnom telefonu kad god i gdje god vam odgovara."
+            "question": "Mogu li se obratiti edukatorici ako imam pitanja?",
+            "answer": "Da. Tijekom edukacije imate mogućnost komunikacije s edukatoricom, koja vam može pomoći s pitanjima i nedoumicama vezanim uz tehniku i vaš napredak."
           }
         ]
       }

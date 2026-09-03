@@ -40,13 +40,12 @@ export const courses: Record<string, Course> = {
     currency: "eur",
     image: "/images/courses/master.jpg",
     features: [
-      "Everything in Foundation Certification",
+      "Everything in Brendia Pro® Artist",
       "50+ advanced video lessons",
       "Complex color matching mastery",
       "Corrective work procedures",
       "Business growth strategies",
       "Marketing templates & guides",
-      "1-on-1 mentorship session with Nikolina",
       "Priority community support",
       "Guest educator masterclasses",
     ],
@@ -70,7 +69,7 @@ export const courses: Record<string, Course> = {
   },
   "brendia-pro-master-1v1": {
     id: "brendia-pro-master-1v1",
-    name: "Brendia Pro® Master 1v1",
+    name: "Advanced Brendia Pro® Artist 1v1",
     subtitle: "Live Edukacija u Studiju",
     price: 500000, // €5,000 in cents (without VAT)
     displayPrice: "€5,000",
@@ -79,7 +78,7 @@ export const courses: Record<string, Course> = {
     features: [
       "2 dana live edukacije s mentorom",
       "12 sati hands-on prakse (6h/dan)",
-      "Foundation + Master sadržaj",
+      "Artist + Advanced Artist sadržaj",
       "Personalizirani pristup",
       "Službena Brendia Pro® certifikacija",
       "Pristup platformi (shop, zajednica)",
