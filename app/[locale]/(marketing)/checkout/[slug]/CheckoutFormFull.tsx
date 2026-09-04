@@ -291,6 +291,23 @@ export function CheckoutFormFull({
   return (
     <>
       <form onSubmit={handleSubmit} className="space-y-8">
+        {/* Payment Logos */}
+        <div className="pb-6 border-b border-primary/10">
+          {IS_PREDRACUN ? (
+            <div className="space-y-3">
+              <div className="p-4 bg-secondary/15 border border-secondary/30 text-center">
+                <p className="font-medium text-primary">
+                  {t("submit.installmentsComingSoon")}
+                </p>
+              </div>
+              <p className="text-sm text-center text-primary/60">
+                {t("submit.cardsComingSoon")}
+              </p>
+            </div>
+          ) : (
+            <PaymentLogos variant="light" showSecurityLogos={true} />
+          )}
+        </div>
         {/* Personal Information */}
         <div>
           <h3 className="text-lg font-heading text-primary mb-4 flex items-center gap-2">
@@ -561,24 +578,6 @@ export function CheckoutFormFull({
           <div className="mt-4 p-3 bg-secondary/10 border border-secondary/20 text-sm text-primary/70 text-center">
             {IS_PREDRACUN ? t("submit.predracunEmailNote") : t("submit.emailNote")}
           </div>
-        </div>
-
-        {/* Payment Logos */}
-        <div className="pt-6 border-t border-primary/10">
-          {IS_PREDRACUN ? (
-            <div className="space-y-3">
-              <div className="p-4 bg-secondary/15 border border-secondary/30 text-center">
-                <p className="font-medium text-primary">
-                  {t("submit.installmentsComingSoon")}
-                </p>
-              </div>
-              <p className="text-sm text-center text-primary/60">
-                {t("submit.cardsComingSoon")}
-              </p>
-            </div>
-          ) : (
-            <PaymentLogos variant="light" showSecurityLogos={true} />
-          )}
         </div>
       </form>
 
