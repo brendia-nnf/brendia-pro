@@ -8,6 +8,7 @@ import {
   generateUpgradeEmailHtml,
   generateActivationEmailHtml,
 } from "@/lib/enrollment";
+import { getOrderNotificationsEmail } from "@/lib/predracun";
 import type { PaymentPlan } from "@/lib/stripe";
 
 // Lazy initialization to avoid build-time errors
@@ -355,6 +356,26 @@ export async function fulfillCourseOrder(
     } catch (emailError) {
       console.error("Failed to send activation email:", emailError);
       // Don't fail the fulfillment if email fails
+    }
+  }
+
+  // Admin notification for every successful card purchase (predračun
+  // orders already notify the admin from the checkout route)
+  if (process.env.RESEND_API_KEY) {
+    try {
+      const fromEmail =
+        process.env.RESEND_FROM_EMAIL || "Brendia Pro <info@brendiapro.hr>";
+      const plan = isInstallments
+        ? `na rate (${refs.installmentsTotal ?? "?"}× ${formatPrice(refs.installmentAmount ?? 0)})`
+        : "jednokratno";
+      await getResend().emails.send({
+        from: fromEmail,
+        to: getOrderNotificationsEmail(),
+        subject: `Nova narudžba ${orderNumber} — ${order.course_name} (kartica)`,
+        html: `<p>Naplaćena je nova narudžba <strong>${orderNumber}</strong>.</p><ul><li>Kupac: ${order.first_name} ${order.last_name} (${order.email})</li><li>Tečaj: ${order.course_name}</li><li>Iznos: ${formatPrice(order.amount)} — ${plan}</li></ul><p>Detalji u Stripe dashboardu (Payments).</p>`,
+      });
+    } catch (adminEmailError) {
+      console.error("Failed to send admin order notification:", adminEmailError);
     }
   }
 
