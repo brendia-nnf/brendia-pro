@@ -263,7 +263,10 @@ export async function fulfillCourseOrder(
             payment_plan: refs.paymentPlan,
             fully_paid_at: isInstallments ? null : now,
             purchased_at: new Date().toISOString(),
-            expires_at: null, // Lifetime access
+            // Course access lasts 12 months from purchase
+            expires_at: new Date(
+              Date.now() + 365 * 24 * 60 * 60 * 1000
+            ).toISOString(),
           });
 
         if (!enrollmentError) {
