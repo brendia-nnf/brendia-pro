@@ -64,6 +64,7 @@ export const courses: Record<string, Course> = {
     price: 200000, // €2,000 in cents (without VAT)
     displayPrice: "€2,000",
     currency: "eur",
+    installments: { enabled: true, counts: [2, 3, 4] }, // gross: €1,250 / €833.33 / €625
     image: "/images/courses/foundation.jpg",
     features: [
       "Live edukacija s mentorom",
@@ -81,6 +82,7 @@ export const courses: Record<string, Course> = {
     price: 500000, // €5,000 in cents (without VAT)
     displayPrice: "€5,000",
     currency: "eur",
+    installments: { enabled: true, counts: [2, 3, 4] }, // gross: €3,125 / €2,083.33 / €1,562.50
     image: "/images/courses/master.jpg",
     features: [
       "2 dana live edukacije s mentorom",
