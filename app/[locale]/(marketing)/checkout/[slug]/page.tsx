@@ -13,15 +13,28 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+// Same slug → i18n key mapping the course detail pages use, so the order
+// summary shows the identical localized subtitle and feature list.
+const slugToKey: Record<string, string> = {
+  "foundation-certification": "foundation",
+  "master-certification": "master",
+  "brendia-pro-artist-1v1": "artist1v1",
+  "brendia-pro-master-1v1": "master1v1",
+};
+
 export default function CheckoutPage({ params }: PageProps) {
   const { slug } = use(params);
   const t = useTranslations("checkout");
+  const tCourse = useTranslations("courseDetail");
   const course = getCourse(slug);
+  const courseKey = slugToKey[slug];
 
-  if (!course) {
+  if (!course || !courseKey) {
     notFound();
   }
 
+  const subtitle = tCourse(`${courseKey}.subtitle`);
+  const features = tCourse.raw(`${courseKey}.features`) as string[];
   const pricing = calculatePricing(course.price);
 
   return (
@@ -78,7 +91,7 @@ export default function CheckoutPage({ params }: PageProps) {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs text-secondary font-medium uppercase tracking-wider mb-1">
-                      {course.subtitle}
+                      {subtitle}
                     </p>
                     <h3 className="font-heading text-primary text-lg leading-tight">
                       {course.name}
@@ -92,7 +105,7 @@ export default function CheckoutPage({ params }: PageProps) {
                     {t("orderSummary.whatsIncluded")}
                   </h3>
                   <ul className="space-y-2">
-                    {course.features.slice(0, 6).map((feature, index) => (
+                    {features.slice(0, 6).map((feature, index) => (
                       <li
                         key={index}
                         className="flex items-start gap-2 text-sm text-primary/70"
@@ -113,9 +126,9 @@ export default function CheckoutPage({ params }: PageProps) {
                         {feature}
                       </li>
                     ))}
-                    {course.features.length > 6 && (
+                    {features.length > 6 && (
                       <li className="text-sm text-secondary">
-                        {t("orderSummary.moreBenefits", { count: course.features.length - 6 })}
+                        {t("orderSummary.moreBenefits", { count: features.length - 6 })}
                       </li>
                     )}
                   </ul>
