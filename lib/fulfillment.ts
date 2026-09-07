@@ -9,6 +9,11 @@ import {
   generateActivationEmailHtml,
 } from "@/lib/enrollment";
 import { getOrderNotificationsEmail } from "@/lib/predracun";
+import {
+  isMerConfigured,
+  buildMerInvoiceXml,
+  sendMerInvoice,
+} from "@/lib/mer";
 import type { PaymentPlan } from "@/lib/stripe";
 
 // Lazy initialization to avoid build-time errors
@@ -145,35 +150,79 @@ export async function fulfillCourseOrder(
     console.error(`Contract download failed for ${orderNumber}:`, contractError);
   }
 
-  // Create a fiscalized invoice via Fakturko (privatna → fiskalizacija,
-  // pravna/company → eRačun). Failures are stored on the order and never
-  // block the payment flow.
+  // Invoicing splits by buyer type: companies (naziv tvrtke/OIB na
+  // checkoutu) get a B2B eRačun through MER, private customers get a
+  // fiscalized B2C invoice through Fakturko. Failures are stored on the
+  // order and never block the payment flow.
   let invoicePdfLink: string | null = null;
+  const isCompanyBuyer = !!(order.company_name || order.vat_number);
 
-  if (isFakturkoConfigured()) {
+  if (isCompanyBuyer && isMerConfigured()) {
     try {
-      const isCompany = !!(order.company_name || order.vat_number);
-      // client_oib expects the bare OIB — strip an "HR" VAT-ID prefix
-      const companyOib = (order.vat_number || "").replace(/^HR/i, "").trim();
+      // Fiskalna numeracija broj/prostor/uređaj — oznake potvrđuje
+      // knjigovođa; redni broj = broj dosad izdanih MER računa ove
+      // godine + 1 (B2B kupnje su rijetke, race je zanemariv)
+      const yearStart = `${new Date().getFullYear()}-01-01`;
+      const { count: merCount } = await supabase
+        .from("orders")
+        .select("id", { count: "exact", head: true })
+        .not("mer_invoice_number", "is", null)
+        .gte("mer_sent_at", yearStart);
+      const prostor = process.env.MER_POSLOVNI_PROSTOR || "WEB1";
+      const uredjaj = process.env.MER_NAPLATNI_UREDAJ || "2";
+      const invoiceNumber = `${(merCount || 0) + 1}/${prostor}/${uredjaj}`;
 
+      const xml = buildMerInvoiceXml({
+        invoiceNumber,
+        buyer: {
+          name: order.company_name || `${order.first_name} ${order.last_name}`,
+          oib: (order.vat_number || "").replace(/^HR/i, "").trim(),
+          street: order.street || undefined,
+          city: order.city || undefined,
+          zip: order.postal_code || undefined,
+          email: order.email,
+        },
+        line: {
+          name: order.course_name,
+          kpdCode: process.env.MER_KPD_CODE || process.env.FAKTURKO_KPD_CODE || "85.40.32",
+          netAmount: order.subtotal / 100,
+        },
+        vatPercentage: Math.round(Number(order.vat_rate) * 100) || 25,
+        orderNumber,
+      });
+
+      const merResult = await sendMerInvoice(xml);
+      if (merResult.ok) {
+        await supabase
+          .from("orders")
+          .update({
+            mer_invoice_number: invoiceNumber,
+            mer_electronic_id: merResult.electronicId || null,
+            mer_sent_at: new Date().toISOString(),
+            mer_error: null,
+          })
+          .eq("id", order.id);
+        console.log(`MER eRačun ${invoiceNumber} poslan za ${orderNumber}`);
+      } else {
+        await supabase
+          .from("orders")
+          .update({ mer_error: merResult.error || "unknown" })
+          .eq("id", order.id);
+        console.error(`MER eRačun failed for ${orderNumber}:`, merResult.error);
+      }
+    } catch (merError) {
+      console.error("MER eRačun error:", merError);
+    }
+  }
+
+  if (!isCompanyBuyer && isFakturkoConfigured()) {
+    try {
       const netTotal = order.subtotal / 100;
       const grossTotal = order.amount / 100;
       const vatPercentage = Math.round(Number(order.vat_rate) * 100) || 25;
 
       const invoiceResult = await createFakturkoInvoice({
-        client: isCompany
-          ? {
-              type: "pravna",
-              name: order.company_name || `${order.first_name} ${order.last_name}`,
-              oib: companyOib || undefined,
-              country: order.country || "Hrvatska",
-              city: order.city || undefined,
-              address: order.street || undefined,
-              zip: order.postal_code || undefined,
-              email: order.email,
-              phone: order.phone || undefined,
-            }
-          : {
+        client: {
               type: "privatna",
               name: order.first_name,
               surname: order.last_name,
