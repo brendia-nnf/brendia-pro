@@ -10,7 +10,7 @@ import {
 } from "@/lib/enrollment";
 
 // Marks a predračun (bank-transfer) order as paid once the payment shows up
-// on the bank account, then triggers the same enrollment flow the Monri
+// on the bank account, then triggers the same enrollment flow the Stripe
 // callback runs for card payments: activation email for new customers, or a
 // direct unlock for existing users buying the Advanced course.
 //

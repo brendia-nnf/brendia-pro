@@ -37,16 +37,12 @@ export default function PaymentSecurityPage() {
             <p>
               Time je omogućen siguran prijenos informacija te onemogućen
               nedozvoljen pristup podacima prilikom komunikacije između
-              korisnikovog računala i WebPay servisa, te obratno.
+              korisnikovog računala i platnog servisa, te obratno.
             </p>
             <p>
-              WebPay servis i financijske ustanove razmjenjuju podatke uporabom
-              virtualne privatne mreže (VPN), koja je zaštićena od
-              neautoriziranog pristupa.
-            </p>
-            <p>
-              Monri Payment Gateway je certificiran prema PCI DSS Level 1
-              sigurnosnom standardu propisanom Visa i Mastercard pravilima.
+              Stripe je certificiran prema PCI DSS Level 1 sigurnosnom
+              standardu, najvišoj razini certifikacije propisanoj Visa i
+              Mastercard pravilima.
             </p>
             <p>
               Trgovac ne pohranjuje brojeve kreditnih kartica i brojevi nisu
@@ -79,19 +75,19 @@ export default function PaymentSecurityPage() {
                 />
               </span>
               <a
-                href="https://monri.com"
+                href="https://stripe.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-md px-3 py-2 border border-primary/10 shadow-sm hover:shadow transition-shadow"
-                aria-label="Monri"
+                className="bg-white rounded-md px-3 py-2 border border-primary/10 shadow-sm hover:shadow transition-shadow inline-flex items-center gap-1.5"
+                aria-label="Stripe"
               >
-                <Image
-                  src="/images/payments/monri.png"
-                  alt="Monri"
-                  width={100}
-                  height={36}
-                  className="h-9 w-auto object-contain"
-                />
+                <span className="text-xs text-primary/50">Powered by</span>
+                <span
+                  className="font-bold text-lg leading-none tracking-tight"
+                  style={{ color: "#635BFF" }}
+                >
+                  stripe
+                </span>
               </a>
             </div>
           </div>

@@ -887,7 +887,7 @@
       "total": "Ukupno"
     },
     "trustBadges": {
-      "securePayment": "Sigurno plaćanje putem Monrija",
+      "securePayment": "Sigurno plaćanje putem Stripea",
       "allCardsAccepted": "Prihvaćaju se sve glavne kartice"
     },
     "form": {
@@ -964,9 +964,16 @@
         "acceptContract": "Za nastavak morate prihvatiti ugovor",
         "signature": "Molimo potpišite se u polje za potpis"
       },
+      "paymentPlan": {
+        "title": "Način plaćanja",
+        "full": "Jednokratno — {price}",
+        "installments": "{count} mjesečne rate po {price}",
+        "note": "Danas plaćate prvu ratu, a preostale se automatski naplaćuju s vaše kartice svakih mjesec dana ({count} rata ukupno)."
+      },
       "submit": {
         "button": "Platite {price} i upišite se",
-        "redirectNote": "Bit ćete preusmjereni na Monri za sigurnu obradu plaćanja.",
+        "installmentsButton": "Platite prvu ratu {price} i upišite se",
+        "redirectNote": "Bit ćete preusmjereni na Stripe za sigurnu obradu plaćanja.",
         "securityNote": "Podaci vaše kartice nikad se ne pohranjuju na našim serverima.",
         "emailNote": "Nakon uspješne uplate, provjerite svoj email za link za aktivaciju pristupa platformi.",
         "predracunButton": "Naruči — {price} (plaćanje predračunom)",
@@ -1052,7 +1059,7 @@
           "items": [
             "<strong>Kontaktni podaci:</strong> Ime, email adresa, telefonski broj",
             "<strong>Podaci o računu:</strong> Korisničko ime, lozinka, detalji profila",
-            "<strong>Podaci o plaćanju:</strong> Adresa za račun, podaci o platnoj kartici (obrađuju se sigurno putem Monrija)",
+            "<strong>Podaci o plaćanju:</strong> Adresa za račun, podaci o platnoj kartici (obrađuju se sigurno putem Stripea)",
             "<strong>Napredak u tečaju:</strong> Završene lekcije, rezultati kvizova, stečeni certifikati"
           ]
         },
@@ -1189,7 +1196,7 @@
         },
         "processing": {
           "title": "Obrada plaćanja",
-          "content": "Plaćanja se sigurno obrađuju putem Monrija. Kupnjom nas ovlašćujete da naplatimo ukupan iznos na vašu metodu plaćanja."
+          "content": "Plaćanja se sigurno obrađuju putem Stripea. Kupnjom nas ovlašćujete da naplatimo ukupan iznos na vašu metodu plaćanja."
         },
         "paymentPlans": {
           "title": "Planovi plaćanja",

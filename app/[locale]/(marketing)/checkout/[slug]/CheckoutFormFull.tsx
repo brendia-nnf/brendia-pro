@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button, Input, Select, Checkbox } from "@/components/ui";
 import { PaymentLogos } from "@/components/ui/PaymentLogos";
 import { ContractSection } from "@/components/checkout/ContractSection";
 import { countryOptions, getCountryName } from "@/lib/countries";
-import { formatPrice } from "@/lib/constants/courses";
+import { formatPrice, courses } from "@/lib/constants/courses";
 
 interface Pricing {
   subtotal: number;
@@ -62,32 +62,15 @@ interface FormErrors {
   submit?: string;
 }
 
-interface MonriFormData {
-  authenticity_token: string;
-  order_number: string;
-  amount: string;
-  currency: string;
-  digest: string;
-  transaction_type: string;
-  success_url_override: string;
-  cancel_url_override: string;
-  callback_url: string;
-  ch_full_name: string;
-  ch_email: string;
-  ch_phone: string;
-  ch_address: string;
-  ch_city: string;
-  ch_zip: string;
-  ch_country: string;
-  language?: string;
-  order_info?: string;
-  custom_data?: string;
-}
-
-// While Monri production approval is pending, checkout runs in predračun
+// While card payments are paused, checkout runs in predračun
 // (bank-transfer) mode. Flip NEXT_PUBLIC_PAYMENT_MODE back to "card" (or
-// remove it) + redeploy to restore the Monri card flow.
+// remove it) + redeploy to restore the Stripe card flow.
 const IS_PREDRACUN = process.env.NEXT_PUBLIC_PAYMENT_MODE === "predracun";
+
+// Installments stay hidden until the client approves the option — both this
+// flag and the per-course installments config must be on.
+const INSTALLMENTS_ENABLED =
+  process.env.NEXT_PUBLIC_INSTALLMENTS_ENABLED === "true";
 
 export function CheckoutFormFull({
   courseId,
@@ -95,7 +78,13 @@ export function CheckoutFormFull({
   pricing,
 }: CheckoutFormFullProps) {
   const t = useTranslations("checkout.form");
-  const monriFormRef = useRef<HTMLFormElement>(null);
+
+  const installmentConfig = courses[courseId]?.installments;
+  const offerInstallments =
+    !IS_PREDRACUN && INSTALLMENTS_ENABLED && installmentConfig?.enabled === true;
+  const installmentCount = installmentConfig?.count ?? 0;
+  const perInstallment =
+    installmentCount > 0 ? Math.round(pricing.total / installmentCount) : 0;
 
   const hearAboutUsOptions = [
     { value: "instagram", label: t("hearAboutUs.options.instagram") },
@@ -127,10 +116,9 @@ export function CheckoutFormFull({
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showCompanyFields, setShowCompanyFields] = useState(false);
-  const [monriData, setMonriData] = useState<{
-    formUrl: string;
-    formData: MonriFormData;
-  } | null>(null);
+  const [paymentPlan, setPaymentPlan] = useState<"full" | "installments">(
+    "full"
+  );
   const [contractAccepted, setContractAccepted] = useState(false);
   const [signatureDataUrl, setSignatureDataUrl] = useState<string | null>(null);
 
@@ -248,6 +236,7 @@ export function CheckoutFormFull({
           acceptMarketing: formData.acceptMarketing,
           contractAccepted,
           signatureDataUrl,
+          paymentPlan: offerInstallments ? paymentPlan : "full",
         }),
       });
 
@@ -264,17 +253,9 @@ export function CheckoutFormFull({
         return;
       }
 
-      // Set Monri form data and submit form
-      if (data.formUrl && data.formData) {
-        setMonriData({
-          formUrl: data.formUrl,
-          formData: data.formData,
-        });
-
-        // Wait for state update, then submit the hidden form
-        setTimeout(() => {
-          monriFormRef.current?.submit();
-        }, 100);
+      // Redirect to the hosted Stripe Checkout page
+      if (data.url) {
+        window.location.href = data.url;
       }
     } catch (error) {
       setIsSubmitting(false);
@@ -291,23 +272,19 @@ export function CheckoutFormFull({
   return (
     <>
       <form onSubmit={handleSubmit} className="space-y-8">
-        {/* Payment Logos */}
-        <div className="pb-6 border-b border-primary/10">
-          {IS_PREDRACUN ? (
-            <div className="space-y-3">
-              <div className="p-4 bg-secondary/15 border border-secondary/30 text-center">
-                <p className="font-medium text-primary">
-                  {t("submit.installmentsComingSoon")}
-                </p>
-              </div>
-              <p className="text-sm text-center text-primary/60">
-                {t("submit.cardsComingSoon")}
+        {/* Predračun notice (card payments paused) */}
+        {IS_PREDRACUN && (
+          <div className="pb-6 border-b border-primary/10 space-y-3">
+            <div className="p-4 bg-secondary/15 border border-secondary/30 text-center">
+              <p className="font-medium text-primary">
+                {t("submit.installmentsComingSoon")}
               </p>
             </div>
-          ) : (
-            <PaymentLogos variant="light" showSecurityLogos={true} />
-          )}
-        </div>
+            <p className="text-sm text-center text-primary/60">
+              {t("submit.cardsComingSoon")}
+            </p>
+          </div>
+        )}
         {/* Personal Information */}
         <div>
           <h3 className="text-lg font-heading text-primary mb-4 flex items-center gap-2">
@@ -545,6 +522,51 @@ export function CheckoutFormFull({
           </div>
         </div>
 
+        {/* Payment Plan (installments hidden until the client enables them) */}
+        {offerInstallments && (
+          <div>
+            <h3 className="text-lg font-heading text-primary mb-4">
+              {t("paymentPlan.title")}
+            </h3>
+            <div className="space-y-3">
+              <label className="flex items-center gap-3 p-4 border border-primary/15 cursor-pointer has-[:checked]:border-secondary has-[:checked]:bg-secondary/5">
+                <input
+                  type="radio"
+                  name="paymentPlan"
+                  value="full"
+                  checked={paymentPlan === "full"}
+                  onChange={() => setPaymentPlan("full")}
+                  className="accent-secondary"
+                />
+                <span className="text-primary">
+                  {t("paymentPlan.full", { price: formatPrice(pricing.total) })}
+                </span>
+              </label>
+              <label className="flex items-center gap-3 p-4 border border-primary/15 cursor-pointer has-[:checked]:border-secondary has-[:checked]:bg-secondary/5">
+                <input
+                  type="radio"
+                  name="paymentPlan"
+                  value="installments"
+                  checked={paymentPlan === "installments"}
+                  onChange={() => setPaymentPlan("installments")}
+                  className="accent-secondary"
+                />
+                <span className="text-primary">
+                  {t("paymentPlan.installments", {
+                    count: installmentCount,
+                    price: formatPrice(perInstallment),
+                  })}
+                </span>
+              </label>
+              {paymentPlan === "installments" && (
+                <p className="text-xs text-primary/60">
+                  {t("paymentPlan.note", { count: installmentCount })}
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* Error Message */}
         {errors.submit && (
           <div className="p-4 bg-red-50 border border-red-200 text-red-600 text-sm">
@@ -562,7 +584,11 @@ export function CheckoutFormFull({
           >
             {IS_PREDRACUN
               ? t("submit.predracunButton", { price: formatPrice(pricing.total) })
-              : t("submit.button", { price: formatPrice(pricing.total) })}
+              : paymentPlan === "installments" && offerInstallments
+                ? t("submit.installmentsButton", {
+                    price: formatPrice(perInstallment),
+                  })
+                : t("submit.button", { price: formatPrice(pricing.total) })}
           </Button>
           <p className="text-xs text-center text-primary/50 mt-4">
             {IS_PREDRACUN ? (
@@ -578,44 +604,15 @@ export function CheckoutFormFull({
           <div className="mt-4 p-3 bg-secondary/10 border border-secondary/20 text-sm text-primary/70 text-center">
             {IS_PREDRACUN ? t("submit.predracunEmailNote") : t("submit.emailNote")}
           </div>
+
+          {/* Trust signals uz akciju plaćanja — kartice, 3DS i Stripe badge */}
+          {!IS_PREDRACUN && (
+            <div className="mt-8 pt-6 border-t border-primary/10">
+              <PaymentLogos variant="light" showSecurityLogos={true} />
+            </div>
+          )}
         </div>
       </form>
-
-      {/* Hidden Monri Form - submits to Monri payment page */}
-      {monriData && (
-        <form
-          ref={monriFormRef}
-          method="POST"
-          action={monriData.formUrl}
-          style={{ display: "none" }}
-        >
-          <input type="hidden" name="authenticity_token" value={monriData.formData.authenticity_token} />
-          <input type="hidden" name="order_number" value={monriData.formData.order_number} />
-          <input type="hidden" name="amount" value={monriData.formData.amount} />
-          <input type="hidden" name="currency" value={monriData.formData.currency} />
-          <input type="hidden" name="digest" value={monriData.formData.digest} />
-          <input type="hidden" name="transaction_type" value={monriData.formData.transaction_type} />
-          <input type="hidden" name="success_url_override" value={monriData.formData.success_url_override} />
-          <input type="hidden" name="cancel_url_override" value={monriData.formData.cancel_url_override} />
-          <input type="hidden" name="callback_url" value={monriData.formData.callback_url} />
-          <input type="hidden" name="ch_full_name" value={monriData.formData.ch_full_name} />
-          <input type="hidden" name="ch_email" value={monriData.formData.ch_email} />
-          <input type="hidden" name="ch_phone" value={monriData.formData.ch_phone} />
-          <input type="hidden" name="ch_address" value={monriData.formData.ch_address} />
-          <input type="hidden" name="ch_city" value={monriData.formData.ch_city} />
-          <input type="hidden" name="ch_zip" value={monriData.formData.ch_zip} />
-          <input type="hidden" name="ch_country" value={monriData.formData.ch_country} />
-          {monriData.formData.language && (
-            <input type="hidden" name="language" value={monriData.formData.language} />
-          )}
-          {monriData.formData.order_info && (
-            <input type="hidden" name="order_info" value={monriData.formData.order_info} />
-          )}
-          {monriData.formData.custom_data && (
-            <input type="hidden" name="custom_data" value={monriData.formData.custom_data} />
-          )}
-        </form>
-      )}
     </>
   );
 }

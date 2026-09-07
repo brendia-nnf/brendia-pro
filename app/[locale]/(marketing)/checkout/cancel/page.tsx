@@ -11,7 +11,7 @@ function CheckoutCancelContent() {
   const t = useTranslations("checkout.cancel");
   const searchParams = useSearchParams();
 
-  // Support both Monri (order_number) and legacy Stripe (course) params
+  // Supports order_number and legacy (course) params
   const orderNumber = searchParams.get("order_number");
   const course = searchParams.get("course");
 

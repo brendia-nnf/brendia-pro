@@ -887,7 +887,7 @@
       "total": "Total"
     },
     "trustBadges": {
-      "securePayment": "Secure payment via Monri",
+      "securePayment": "Secure payment via Stripe",
       "allCardsAccepted": "All major cards accepted"
     },
     "form": {
@@ -964,9 +964,16 @@
         "acceptContract": "You must accept the contract to continue",
         "signature": "Please sign in the signature field"
       },
+      "paymentPlan": {
+        "title": "Payment method",
+        "full": "One-time payment — {price}",
+        "installments": "{count} monthly installments of {price}",
+        "note": "You pay the first installment today; the remaining ones are automatically charged to your card every month ({count} installments in total)."
+      },
       "submit": {
         "button": "Pay {price} and Enroll",
-        "redirectNote": "You will be redirected to Monri for secure payment processing.",
+        "installmentsButton": "Pay first installment {price} and Enroll",
+        "redirectNote": "You will be redirected to Stripe for secure payment processing.",
         "securityNote": "Your card details are never stored on our servers.",
         "emailNote": "After successful payment, check your email for the activation link to access the platform.",
         "predracunButton": "Order — {price} (pay by bank transfer)",
@@ -1052,7 +1059,7 @@
           "items": [
             "<strong>Contact Information:</strong> Name, email address, phone number",
             "<strong>Account Information:</strong> Username, password, profile details",
-            "<strong>Payment Information:</strong> Billing address, payment card details (processed securely through Monri)",
+            "<strong>Payment Information:</strong> Billing address, payment card details (processed securely through Stripe)",
             "<strong>Course Progress:</strong> Lesson completion, quiz results, certificates earned"
           ]
         },
@@ -1189,7 +1196,7 @@
         },
         "processing": {
           "title": "Payment Processing",
-          "content": "Payments are processed securely through Monri. By making a purchase, you authorize us to charge your payment method for the total amount."
+          "content": "Payments are processed securely through Stripe. By making a purchase, you authorize us to charge your payment method for the total amount."
         },
         "paymentPlans": {
           "title": "Payment Plans",

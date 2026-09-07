@@ -1,4 +1,4 @@
-// Shared enrollment helpers used by the Monri callback and the
+// Shared enrollment helpers used by the Stripe webhook and the
 // admin confirm-payment route (predračun flow).
 
 // Generate a secure enrollment token

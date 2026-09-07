@@ -73,8 +73,8 @@ export default function TermsPage() {
               najkasnije do datuma dospijeća navedenog na ponudi ili računu.
             </p>
             <p>
-              Plaćanje se vrši kreditnim i debitnim karticama Mastercard, Maestro,
-              Visa, Diners, Discover i American Express, putem Monri sustava za
+              Plaćanje se vrši kreditnim i debitnim karticama Visa, Mastercard,
+              American Express, Diners i Discover, putem Stripe sustava za
               online naplatu. Više o sigurnosti plaćanja pročitajte na stranici{" "}
               <Link href="/legal/payment-security">Sigurnost plaćanja</Link>.
             </p>

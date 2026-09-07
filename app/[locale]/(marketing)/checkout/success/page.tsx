@@ -11,7 +11,7 @@ function CheckoutSuccessContent() {
   const t = useTranslations("checkout.success");
   const searchParams = useSearchParams();
 
-  // Monri returns order_number instead of session_id
+  // Stripe redirect includes order_number and session_id params
   const orderNumber = searchParams.get("order_number");
   // Legacy support for Stripe session_id (can be removed after full migration)
   const sessionId = searchParams.get("session_id");

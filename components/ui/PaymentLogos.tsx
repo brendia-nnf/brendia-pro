@@ -10,19 +10,12 @@ interface PaymentLogosProps {
   className?: string;
 }
 
-// Poveznice na kartične sheme prema zahtjevu Monrija (samo prihvaćene kartice)
+// Poveznice na kartične sheme (samo kartice koje Stripe Checkout prihvaća)
 const CARD_LOGOS = [
   {
     name: "Mastercard",
     href: "https://www.mastercard.com",
     src: "/images/payments/mastercard.png",
-    width: 50,
-    height: 40,
-  },
-  {
-    name: "Maestro",
-    href: "https://brand.mastercard.com/brandcenter/more-about-our-brands.html",
-    src: "/images/payments/maestro.png",
     width: 50,
     height: 40,
   },
@@ -120,22 +113,22 @@ export function PaymentLogos({
         </div>
       )}
 
-      {/* Monri Badge */}
+      {/* Stripe Badge */}
       <div className="flex items-center justify-center">
         <a
-          href="https://monri.com"
+          href="https://stripe.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white rounded-md px-2.5 py-1.5 border border-primary/10 shadow-sm hover:shadow transition-shadow"
-          aria-label="Monri"
+          className="bg-white rounded-md px-3 py-1.5 border border-primary/10 shadow-sm hover:shadow transition-shadow inline-flex items-center gap-1.5"
+          aria-label="Stripe"
         >
-          <Image
-            src="/images/payments/monri.png"
-            alt="Monri"
-            width={120}
-            height={40}
-            className="h-7 w-auto object-contain"
-          />
+          <span className="text-xs text-primary/50">Powered by</span>
+          <span
+            className="font-bold text-base leading-none tracking-tight"
+            style={{ color: "#635BFF" }}
+          >
+            stripe
+          </span>
         </a>
       </div>
 
@@ -145,7 +138,7 @@ export function PaymentLogos({
           variant === "dark" ? "text-white/60" : "text-primary/50"
         }`}
       >
-        Sigurno plaćanje osigurava Monri. Vaši podaci su zaštićeni SSL
+        Sigurno plaćanje osigurava Stripe. Vaši podaci su zaštićeni SSL
         enkripcijom i 3D Secure protokolom.
       </p>
     </div>

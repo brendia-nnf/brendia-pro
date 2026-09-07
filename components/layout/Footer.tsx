@@ -153,13 +153,6 @@ export function Footer() {
                   height: 32,
                 },
                 {
-                  name: "Maestro",
-                  href: "https://brand.mastercard.com/brandcenter/more-about-our-brands.html",
-                  src: "/images/payments/maestro.png",
-                  width: 40,
-                  height: 32,
-                },
-                {
                   name: "Visa",
                   href: "https://www.visaeurope.com",
                   src: "/images/payments/visa.jpg",
@@ -186,13 +179,6 @@ export function Footer() {
                   src: "/images/payments/amex.jpg",
                   width: 40,
                   height: 32,
-                },
-                {
-                  name: "Monri",
-                  href: "https://monri.com",
-                  src: "/images/payments/monri.png",
-                  width: 80,
-                  height: 28,
                 },
               ].map((logo) => (
                 <a
@@ -232,10 +218,26 @@ export function Footer() {
                   className="h-5 w-auto object-contain"
                 />
               </span>
+              <a
+                href="https://stripe.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Stripe"
+                className="bg-white rounded-md px-2.5 py-1.5 shadow-sm hover:shadow-md transition-shadow inline-flex items-center gap-1"
+              >
+                <span className="text-[10px] text-black/50">Powered by</span>
+                <span
+                  className="font-bold text-sm leading-none tracking-tight"
+                  style={{ color: "#635BFF" }}
+                >
+                  stripe
+                </span>
+              </a>
             </div>
             <p className="text-white/50 text-xs text-center mb-8">
-              Plaćanje se vrši kreditnim i debitnim karticama Mastercard,
-              Maestro, Visa, Diners, Discover i American Express.
+              Plaćanje se vrši kreditnim i debitnim karticama Visa, Mastercard,
+              American Express, Diners i Discover. Sigurnu obradu plaćanja
+              osigurava Stripe.
             </p>
           </div>
 

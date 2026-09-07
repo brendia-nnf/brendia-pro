@@ -3,10 +3,12 @@ import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 import { getCourse, calculatePricing } from "@/lib/constants/courses";
 import {
-  MONRI_CONFIG,
   generateOrderNumber,
-  buildMonriFormData,
-} from "@/lib/monri";
+  createCourseCheckoutSession,
+  installmentsEnabled,
+  installmentAmount,
+  type PaymentPlan,
+} from "@/lib/stripe";
 import {
   isPredracunMode,
   getOrderNotificationsEmail,
@@ -47,6 +49,8 @@ interface CheckoutRequest {
   // Contract acceptance (required for all course purchases)
   contractAccepted: boolean;
   signatureDataUrl?: string;
+  // Payment plan (installments are feature-flagged; validated server-side)
+  paymentPlan?: PaymentPlan;
 }
 
 export async function POST(request: NextRequest) {
@@ -71,6 +75,7 @@ export async function POST(request: NextRequest) {
       acceptMarketing,
       contractAccepted,
       signatureDataUrl,
+      paymentPlan: requestedPlan,
     } = body;
 
     // Validate required fields
@@ -154,6 +159,13 @@ export async function POST(request: NextRequest) {
     const pricing = calculatePricing(course.price);
     const customerName = `${firstName} ${lastName}`;
 
+    // Installments must be enabled globally AND per-course — never trust
+    // the client-side flag alone.
+    const paymentPlan: PaymentPlan =
+      requestedPlan === "installments" && installmentsEnabled(course)
+        ? "installments"
+        : "full";
+
     // Generate unique order number
     let orderNumber = generateOrderNumber();
 
@@ -173,7 +185,7 @@ export async function POST(request: NextRequest) {
 
     // Save order to Supabase with pending status
     const { error: dbError } = await supabase.from("orders").insert({
-      // Order number for Monri
+      // Order number (BP-YYMMDD-XXXX)
       order_number: orderNumber,
       // Personal info
       customer_name: customerName,
@@ -202,6 +214,14 @@ export async function POST(request: NextRequest) {
       currency: course.currency,
       // Status
       status: "pending",
+      // Payment plan (installment details are finalized by the webhook)
+      payment_plan: paymentPlan,
+      installments_total:
+        paymentPlan === "installments" ? course.installments!.count : null,
+      installment_amount:
+        paymentPlan === "installments"
+          ? installmentAmount(pricing.total, course.installments!.count)
+          : null,
       // Terms
       terms_accepted: true,
       terms_accepted_at: new Date().toISOString(),
@@ -260,7 +280,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Predračun mode: card payments are paused (Monri production pending) —
+    // Predračun mode: card payments are paused —
     // email the customer a predračun with bank-transfer details and notify
     // the admin. The order stays "pending" until the payment is confirmed
     // via /api/admin/confirm-payment.
@@ -325,30 +345,23 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ predracun: true, orderNumber });
     }
 
-    // Build Monri form data
-    const monriFormData = buildMonriFormData({
+    // Create the hosted Stripe Checkout Session and send the customer there
+    const session = await createCourseCheckoutSession({
       orderNumber,
-      amount: pricing.total, // Total with VAT in cents
-      currency: course.currency.toUpperCase(),
+      course,
+      totalCents: pricing.total, // Total with VAT in cents
       customerName,
       email,
-      phone,
-      address: street,
-      city,
-      postalCode,
-      country,
-      orderInfo: `${course.name} - Brendia Pro`,
-      customData: JSON.stringify({
-        courseId: course.id,
-        companyName: companyName || null,
-        vatNumber: vatNumber || null,
-      }),
-      language: "hr", // Croatian as default
+      paymentPlan,
     });
 
+    await supabase
+      .from("orders")
+      .update({ stripe_session_id: session.id })
+      .eq("order_number", orderNumber);
+
     return NextResponse.json({
-      formUrl: MONRI_CONFIG.formUrl,
-      formData: monriFormData,
+      url: session.url,
       orderNumber,
     });
   } catch (error) {

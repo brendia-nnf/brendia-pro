@@ -1,5 +1,5 @@
 // Predračun (bank-transfer) payment flow — active while card payments
-// are pending Monri production approval. Toggled via NEXT_PUBLIC_PAYMENT_MODE.
+// are paused. Toggled via NEXT_PUBLIC_PAYMENT_MODE (predracun | card).
 import { COMPANY } from "@/lib/constants/company";
 import { formatPrice } from "@/lib/constants/courses";
 

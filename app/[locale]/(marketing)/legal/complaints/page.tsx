@@ -97,7 +97,7 @@ export default function ComplaintsPage() {
               sredstava izvršit ćemo najkasnije u roku od 14 dana od dana
               prihvaćanja reklamacije, odnosno zaprimanja obavijesti o raskidu.
               Povrat plaćenog izvršit ćemo na isti način na koji je plaćanje
-              izvršeno; u slučaju plaćanja karticom, povrat se vrši putem Monri
+              izvršeno; u slučaju plaćanja karticom, povrat se vrši putem Stripe
               platnog sustava na karticu kojom je plaćanje izvršeno.
             </p>
 

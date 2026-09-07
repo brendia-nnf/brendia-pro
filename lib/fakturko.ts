@@ -1,5 +1,5 @@
 // Fakturko API client — automatsko izdavanje fiskaliziranih računa
-// nakon uspješne Monri naplate. Docs: https://api.fakturko.hr/docs
+// nakon uspješne kartične naplate. Docs: https://api.fakturko.hr/docs
 //
 // Test okruženje (testni fiskalni certifikat, računi se NE fiskaliziraju
 // stvarno): FAKTURKO_API_URL=https://testapi.fakturko.hr
@@ -113,7 +113,7 @@ export async function createFakturkoInvoice(
     const { poslJedinicaId, naplUredajId } = config();
 
     const invoice: Record<string, unknown> = {
-      payment_type: "K", // kartica (Monri)
+      payment_type: "K", // kartica
       total_without_vat: round2(params.totalWithoutVat),
       total_with_vat: round2(params.totalWithVat),
       is_rabat: 0,

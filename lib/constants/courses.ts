@@ -7,6 +7,10 @@ export interface Course {
   currency: string;
   features: string[];
   image: string;
+  // Monthly installment option — only offered when BOTH this and the
+  // NEXT_PUBLIC_INSTALLMENTS_ENABLED env flag are on. Pick counts that
+  // divide the gross (VAT-incl.) total evenly.
+  installments?: { enabled: boolean; count: number };
 }
 
 export const VAT_RATE = 0.25; // 25% Croatian VAT
@@ -19,6 +23,7 @@ export const courses: Record<string, Course> = {
     price: 300000, // €3,000 in cents (without VAT)
     displayPrice: "€3,000",
     currency: "eur",
+    installments: { enabled: true, count: 3 }, // 3 × €1,250.00 gross
     image: "/images/courses/foundation.jpg",
     features: [
       "30+ comprehensive video lessons",
@@ -38,6 +43,7 @@ export const courses: Record<string, Course> = {
     price: 400000, // €4,000 in cents (without VAT)
     displayPrice: "€4,000",
     currency: "eur",
+    installments: { enabled: true, count: 4 }, // 4 × €1,250.00 gross
     image: "/images/courses/master.jpg",
     features: [
       "Everything in Brendia Pro® Artist",

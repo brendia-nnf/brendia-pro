@@ -76,7 +76,7 @@ export default function CookiePolicyPage() {
             <h2>3. Kolačići trećih strana</h2>
             <p>
               Prilikom plaćanja preusmjeravate se na sigurnu stranicu za naplatu
-              Monri platnog sustava, koja može koristiti vlastite nužne
+              Stripe platnog sustava, koja može koristiti vlastite nužne
               kolačiće potrebne za sigurnu obradu plaćanja (uključujući 3D
               Secure provjeru). Više o sigurnosti plaćanja pročitajte na
               stranici Sigurnost plaćanja.

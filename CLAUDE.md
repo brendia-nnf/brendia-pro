@@ -15,18 +15,18 @@ Brendia Pro is a premium hair extension education platform owned by Nikolina Klj
 - Optimized images from photoshoot
 - Contact form with API route
 - Responsive design
-- Monri payment gateway integration (Form Redirect method)
+- Stripe payment gateway integration (hosted Stripe Checkout; migrated from Monri 2026-09)
+- Installment payments via Stripe subscription schedules (feature-flagged, hidden by default)
 - Checkout page with full data collection (personal, billing, company, marketing)
 - Pricing breakdown with VAT (25% Croatian VAT)
 - Magic link enrollment system (email sent after purchase)
 - Supabase shared database schema
 
 ### Pending
-- Video files (filmed, awaiting edit): `public/videos/nikolina-welcome.mp4`, `public/videos/courses-intro.mp4`
-- Run master migration (`000_master_migration.sql`)
-- Configure Monri + Resend credentials in `.env.local`
-- Deploy to Vercel
-- Configure Monri callback URL in merchant portal
+- Run migration `006_migrate_to_stripe.sql` in Supabase SQL Editor
+- Configure Stripe credentials in `.env.local` / Vercel (client must open a Stripe account)
+- Register webhook endpoint in Stripe Dashboard: `https://brendiapro.hr/api/stripe/webhook`
+- Switch `NEXT_PUBLIC_PAYMENT_MODE` from `predracun` to `card` at go-live
 
 ## Tech Stack
 
@@ -36,7 +36,7 @@ Brendia Pro is a premium hair extension education platform owned by Nikolina Klj
 - **Animations:** GSAP + ScrollTrigger
 - **Smooth Scrolling:** Lenis
 - **Database/Auth:** Supabase (shared with platform)
-- **Payments:** Monri (Croatian payment gateway)
+- **Payments:** Stripe (hosted Checkout + subscription schedules for installments)
 - **Email:** Resend
 - **Hosting:** Vercel
 
@@ -47,12 +47,14 @@ Marketing Site                              Platform
 ─────────────────                           ────────
 
 1. User fills checkout form
-2. Pays via Monri
-3. Monri callback received:
+2. Pays via Stripe Checkout (hosted redirect)
+3. Stripe webhook (checkout.session.completed) received:
    - Order marked as "paid"
    - Enrollment token generated (64 chars)
    - Token expires in 7 days
    - Magic link email sent via Resend
+   - (installment plans: subscription converted to a
+      fixed-count schedule, access granted after 1st rata)
 
 4. User receives email:
    "Aktivirajte pristup: [Course Name]"
@@ -108,10 +110,16 @@ NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
 
-# Monri Payment Gateway
-MONRI_MERCHANT_KEY=your_merchant_key
-MONRI_AUTHENTICITY_TOKEN=your_40_char_authenticity_token
-MONRI_ENVIRONMENT=test  # "test" or "production"
+# Stripe Payment Gateway
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+
+# Payment mode: "predracun" (bank transfer) or "card" (Stripe)
+NEXT_PUBLIC_PAYMENT_MODE=card
+
+# Installments — hidden until the client approves
+NEXT_PUBLIC_INSTALLMENTS_ENABLED=false
 
 # Email (Resend) - for sending activation emails
 RESEND_API_KEY=re_...
@@ -121,39 +129,40 @@ NEXT_PUBLIC_SITE_URL=https://brendiapro.hr
 NEXT_PUBLIC_PLATFORM_URL=https://app.brendiapro.hr
 ```
 
-## Monri Integration Details
+## Stripe Integration Details
 
-### Form Redirect Method
-- Test URL: `https://ipgtest.monri.com/v2/form`
-- Production URL: `https://ipg.monri.com/v2/form`
+### Flow
+- `/api/checkout` creates the order (pending) + contract PDF, then a hosted
+  Checkout Session (`lib/stripe.ts`); the client redirects to `session.url`.
+- `/api/stripe/webhook` (signature-verified) handles fulfillment via
+  `lib/fulfillment.ts` — idempotent (`status = pending` guard), safe under
+  Stripe webhook retries.
+- Predračun mode (`NEXT_PUBLIC_PAYMENT_MODE=predracun`) bypasses Stripe
+  entirely; `/api/admin/confirm-payment` confirms bank transfers manually.
 
-### Digest Calculation
-```typescript
-// Form submission digest
-SHA512(merchant_key + order_number + amount + currency)
-
-// Callback verification digest
-SHA512(merchant_key + order_number + response_code + amount + currency)
-```
+### Installments (feature-flagged)
+- Config per course in `lib/constants/courses.ts` (`installments: { enabled, count }`),
+  globally gated by `NEXT_PUBLIC_INSTALLMENTS_ENABLED`.
+- Checkout runs in subscription mode; the webhook converts the subscription
+  into a schedule with `iterations: count`, `end_behavior: "cancel"`.
+- `invoice.paid` recomputes `installments_paid`; final rata sets `fully_paid_at`.
+- `customer.subscription.deleted` before full payment ⇒ order `defaulted`,
+  enrollment `suspended` (course routes only allow `status = 'active'`).
+- Certification apply is blocked until `fully_paid_at` is set (installment plans only).
 
 ### Order Number Format
 `BP-YYMMDD-XXXX` (e.g., `BP-260708-A1B2`)
 
-### Response Codes
-- `0000` = Approved
-- `0001` = Approved with identification
-- `4000` = Cancelled by user
-- Other = Declined/Failed
-
-### Test Cards
+### Test Cards (Stripe test mode)
 | Card | Type |
 |------|------|
-| 4341792000000044 | Visa 3DS |
-| 4058400000000005 | Visa |
-| 5464000000000008 | Mastercard |
-| 6769064219992611 | Maestro 3DS |
+| 4242 4242 4242 4242 | Success |
+| 4000 0025 0000 3155 | Requires 3DS |
+| 4000 0000 0000 9995 | Insufficient funds |
+| 4000 0000 0000 0002 | Declined |
 
 CVV: Any 3 digits, Expiry: Any future date
+Local webhook testing: `stripe listen --forward-to localhost:3000/api/stripe/webhook`
 
 ## Courses & Pricing
 
@@ -185,12 +194,13 @@ brendia-pro/
 │   │   │   └── cancel/page.tsx
 │   │   └── ...
 │   └── api/
-│       ├── checkout/route.ts        # Creates order, returns Monri form data
-│       ├── monri/callback/route.ts  # Handles payment callback, sends activation email
+│       ├── checkout/route.ts        # Creates order, returns Stripe Checkout URL
+│       ├── stripe/webhook/route.ts  # Handles Stripe events (fulfillment, installments)
 │       └── contact/route.ts
 ├── lib/
-│   ├── monri.ts                  # Monri SDK helpers
-│   ├── constants/courses.ts      # Course definitions
+│   ├── stripe.ts                 # Stripe client + Checkout Session helpers
+│   ├── fulfillment.ts            # Post-payment flow (invoice, enrollment, emails)
+│   ├── constants/courses.ts      # Course definitions (incl. installment config)
 │   └── ...
 └── supabase/
     └── migrations/
@@ -204,16 +214,15 @@ brendia-pro/
 - **USE** "weft extensions" as the technique terminology
 - The brand name is "Brendia Pro" (capital B, capital P)
 
-## Next Steps
+## Next Steps (Stripe go-live)
 
-1. Add edited video files to `public/videos/`
-2. **Run master migration in Supabase SQL Editor:**
-   - Copy contents of `supabase/migrations/000_master_migration.sql`
-   - Paste and run in Supabase Dashboard → SQL Editor
-3. Get Monri merchant credentials from Monri portal
-4. Get Resend API key from resend.com
-5. Add all credentials to `.env.local`
-6. Configure callback URL in Monri portal: `https://brendiapro.hr/api/monri/callback`
-7. Test payment flow with test cards
-8. Deploy to Vercel
-9. Switch `MONRI_ENVIRONMENT` to `production` for go-live
+1. Client opens a Stripe account; get test + live API keys
+2. **Run `006_migrate_to_stripe.sql` in Supabase SQL Editor** (+ `020` in the platform repo)
+3. Add Stripe credentials to `.env.local` / Vercel
+4. Register webhook in Stripe Dashboard: `https://brendiapro.hr/api/stripe/webhook`
+   (events: checkout.session.completed/expired, invoice.paid,
+   invoice.payment_failed, invoice.marked_uncollectible, customer.subscription.deleted)
+5. Enable Smart Retries + dunning emails (Billing → Revenue recovery)
+6. Test payment flow with Stripe test cards + `stripe listen`
+7. Set `NEXT_PUBLIC_PAYMENT_MODE=card`, deploy to BOTH remotes (brendia_ui = live)
+8. Optionally set `NEXT_PUBLIC_INSTALLMENTS_ENABLED=true` once the client approves rate
