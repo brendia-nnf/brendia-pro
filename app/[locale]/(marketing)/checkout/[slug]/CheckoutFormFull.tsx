@@ -80,11 +80,12 @@ export function CheckoutFormFull({
   const t = useTranslations("checkout.form");
 
   const installmentConfig = courses[courseId]?.installments;
-  const offerInstallments =
-    !IS_PREDRACUN && INSTALLMENTS_ENABLED && installmentConfig?.enabled === true;
-  const installmentCount = installmentConfig?.count ?? 0;
-  const perInstallment =
-    installmentCount > 0 ? Math.round(pricing.total / installmentCount) : 0;
+  const installmentCounts =
+    !IS_PREDRACUN && INSTALLMENTS_ENABLED && installmentConfig?.enabled
+      ? installmentConfig.counts
+      : [];
+  const offerInstallments = installmentCounts.length > 0;
+  const perInstallment = (count: number) => Math.round(pricing.total / count);
 
   const hearAboutUsOptions = [
     { value: "instagram", label: t("hearAboutUs.options.instagram") },
@@ -116,9 +117,8 @@ export function CheckoutFormFull({
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showCompanyFields, setShowCompanyFields] = useState(false);
-  const [paymentPlan, setPaymentPlan] = useState<"full" | "installments">(
-    "full"
-  );
+  // "full" or the chosen number of monthly installments
+  const [paymentChoice, setPaymentChoice] = useState<"full" | number>("full");
   const [contractAccepted, setContractAccepted] = useState(false);
   const [signatureDataUrl, setSignatureDataUrl] = useState<string | null>(null);
 
@@ -236,7 +236,14 @@ export function CheckoutFormFull({
           acceptMarketing: formData.acceptMarketing,
           contractAccepted,
           signatureDataUrl,
-          paymentPlan: offerInstallments ? paymentPlan : "full",
+          paymentPlan:
+            offerInstallments && paymentChoice !== "full"
+              ? "installments"
+              : "full",
+          installmentCount:
+            offerInstallments && paymentChoice !== "full"
+              ? paymentChoice
+              : undefined,
         }),
       });
 
@@ -534,33 +541,38 @@ export function CheckoutFormFull({
                   type="radio"
                   name="paymentPlan"
                   value="full"
-                  checked={paymentPlan === "full"}
-                  onChange={() => setPaymentPlan("full")}
+                  checked={paymentChoice === "full"}
+                  onChange={() => setPaymentChoice("full")}
                   className="accent-secondary"
                 />
                 <span className="text-primary">
                   {t("paymentPlan.full", { price: formatPrice(pricing.total) })}
                 </span>
               </label>
-              <label className="flex items-center gap-3 p-4 border border-primary/15 cursor-pointer has-[:checked]:border-secondary has-[:checked]:bg-secondary/5">
-                <input
-                  type="radio"
-                  name="paymentPlan"
-                  value="installments"
-                  checked={paymentPlan === "installments"}
-                  onChange={() => setPaymentPlan("installments")}
-                  className="accent-secondary"
-                />
-                <span className="text-primary">
-                  {t("paymentPlan.installments", {
-                    count: installmentCount,
-                    price: formatPrice(perInstallment),
-                  })}
-                </span>
-              </label>
-              {paymentPlan === "installments" && (
+              {installmentCounts.map((count) => (
+                <label
+                  key={count}
+                  className="flex items-center gap-3 p-4 border border-primary/15 cursor-pointer has-[:checked]:border-secondary has-[:checked]:bg-secondary/5"
+                >
+                  <input
+                    type="radio"
+                    name="paymentPlan"
+                    value={count}
+                    checked={paymentChoice === count}
+                    onChange={() => setPaymentChoice(count)}
+                    className="accent-secondary"
+                  />
+                  <span className="text-primary">
+                    {t("paymentPlan.installments", {
+                      count,
+                      price: formatPrice(perInstallment(count)),
+                    })}
+                  </span>
+                </label>
+              ))}
+              {paymentChoice !== "full" && (
                 <p className="text-xs text-primary/60">
-                  {t("paymentPlan.note", { count: installmentCount })}
+                  {t("paymentPlan.note", { count: paymentChoice })}
                 </p>
               )}
             </div>
@@ -584,9 +596,9 @@ export function CheckoutFormFull({
           >
             {IS_PREDRACUN
               ? t("submit.predracunButton", { price: formatPrice(pricing.total) })
-              : paymentPlan === "installments" && offerInstallments
+              : offerInstallments && paymentChoice !== "full"
                 ? t("submit.installmentsButton", {
-                    price: formatPrice(perInstallment),
+                    price: formatPrice(perInstallment(paymentChoice)),
                   })
                 : t("submit.button", { price: formatPrice(pricing.total) })}
           </Button>

@@ -43,8 +43,14 @@ export type PaymentPlan = "full" | "installments";
 export function installmentsEnabled(course: Course): boolean {
   return (
     process.env.NEXT_PUBLIC_INSTALLMENTS_ENABLED === "true" &&
-    course.installments?.enabled === true
+    course.installments?.enabled === true &&
+    (course.installments?.counts?.length ?? 0) > 0
   );
+}
+
+/** Installment counts the customer may pick for a course. */
+export function allowedInstallmentCounts(course: Course): number[] {
+  return installmentsEnabled(course) ? course.installments!.counts : [];
 }
 
 /** Amount of a single installment in cents (equal monthly charges). */
@@ -59,6 +65,7 @@ export interface CourseCheckoutParams {
   customerName: string;
   email: string;
   paymentPlan: PaymentPlan;
+  installmentCount?: number; // required when paymentPlan is "installments"
 }
 
 /**
@@ -74,8 +81,15 @@ export interface CourseCheckoutParams {
 export async function createCourseCheckoutSession(
   params: CourseCheckoutParams
 ): Promise<Stripe.Checkout.Session> {
-  const { orderNumber, course, totalCents, customerName, email, paymentPlan } =
-    params;
+  const {
+    orderNumber,
+    course,
+    totalCents,
+    customerName,
+    email,
+    paymentPlan,
+    installmentCount,
+  } = params;
 
   const stripe = getStripe();
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -95,7 +109,7 @@ export async function createCourseCheckoutSession(
   };
 
   if (paymentPlan === "installments") {
-    const count = course.installments!.count;
+    const count = installmentCount!;
     const perInstallment = installmentAmount(totalCents, count);
 
     return stripe.checkout.sessions.create({

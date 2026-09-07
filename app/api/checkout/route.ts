@@ -5,7 +5,7 @@ import { getCourse, calculatePricing } from "@/lib/constants/courses";
 import {
   generateOrderNumber,
   createCourseCheckoutSession,
-  installmentsEnabled,
+  allowedInstallmentCounts,
   installmentAmount,
   type PaymentPlan,
 } from "@/lib/stripe";
@@ -51,6 +51,7 @@ interface CheckoutRequest {
   signatureDataUrl?: string;
   // Payment plan (installments are feature-flagged; validated server-side)
   paymentPlan?: PaymentPlan;
+  installmentCount?: number;
 }
 
 export async function POST(request: NextRequest) {
@@ -76,6 +77,7 @@ export async function POST(request: NextRequest) {
       contractAccepted,
       signatureDataUrl,
       paymentPlan: requestedPlan,
+      installmentCount: requestedCount,
     } = body;
 
     // Validate required fields
@@ -159,12 +161,14 @@ export async function POST(request: NextRequest) {
     const pricing = calculatePricing(course.price);
     const customerName = `${firstName} ${lastName}`;
 
-    // Installments must be enabled globally AND per-course — never trust
-    // the client-side flag alone.
-    const paymentPlan: PaymentPlan =
-      requestedPlan === "installments" && installmentsEnabled(course)
-        ? "installments"
-        : "full";
+    // Installments must be enabled globally AND per-course, and the chosen
+    // count must be one the course offers — never trust the client alone.
+    const installmentCount =
+      requestedPlan === "installments" &&
+      allowedInstallmentCounts(course).includes(Number(requestedCount))
+        ? Number(requestedCount)
+        : null;
+    const paymentPlan: PaymentPlan = installmentCount ? "installments" : "full";
 
     // Generate unique order number
     let orderNumber = generateOrderNumber();
@@ -216,12 +220,10 @@ export async function POST(request: NextRequest) {
       status: "pending",
       // Payment plan (installment details are finalized by the webhook)
       payment_plan: paymentPlan,
-      installments_total:
-        paymentPlan === "installments" ? course.installments!.count : null,
-      installment_amount:
-        paymentPlan === "installments"
-          ? installmentAmount(pricing.total, course.installments!.count)
-          : null,
+      installments_total: installmentCount,
+      installment_amount: installmentCount
+        ? installmentAmount(pricing.total, installmentCount)
+        : null,
       // Terms
       terms_accepted: true,
       terms_accepted_at: new Date().toISOString(),
@@ -353,6 +355,7 @@ export async function POST(request: NextRequest) {
       customerName,
       email,
       paymentPlan,
+      installmentCount: installmentCount ?? undefined,
     });
 
     await supabase

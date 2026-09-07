@@ -125,6 +125,25 @@ export async function fulfillCourseOrder(
 
   console.log(`Order ${orderNumber} updated to status: paid`);
 
+  // The signed contract was archived at checkout — attach it to the
+  // confirmation email so card customers get it too (predračun customers
+  // already receive it with the predračun email). Missing PDF never blocks.
+  let contractAttachment: { filename: string; content: string } | null = null;
+  try {
+    const { data: contractFile } = await supabase.storage
+      .from("contracts")
+      .download(`${orderNumber}.pdf`);
+    if (contractFile) {
+      const buf = Buffer.from(await contractFile.arrayBuffer());
+      contractAttachment = {
+        filename: `Ugovor-${orderNumber}.pdf`,
+        content: buf.toString("base64"),
+      };
+    }
+  } catch (contractError) {
+    console.error(`Contract download failed for ${orderNumber}:`, contractError);
+  }
+
   // Create a fiscalized invoice via Fakturko (privatna → fiskalizacija,
   // pravna/company → eRačun). Failures are stored on the order and never
   // block the payment flow.
@@ -275,6 +294,9 @@ export async function fulfillCourseOrder(
                 `${platformUrl}/dashboard`,
                 invoicePdfLink
               ),
+              ...(contractAttachment
+                ? { attachments: [contractAttachment] }
+                : {}),
             });
           }
 
@@ -323,6 +345,7 @@ export async function fulfillCourseOrder(
           formatPrice(order.amount),
           invoicePdfLink
         ),
+        ...(contractAttachment ? { attachments: [contractAttachment] } : {}),
       });
 
       console.log(`Activation email sent to ${order.email}`);
