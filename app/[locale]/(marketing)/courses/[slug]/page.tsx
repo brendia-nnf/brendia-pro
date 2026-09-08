@@ -202,7 +202,8 @@ export default function CoursePage({ params }: PageProps) {
         </Container>
       </section>
 
-      {/* Curriculum */}
+      {/* Curriculum — skriveno dok tečaj nema objavljen kurikulum */}
+      {course.curriculum.length > 0 && (
       <section className="py-20 md:py-32 bg-cream">
         <Container>
           <div className="max-w-3xl mx-auto">
@@ -255,6 +256,7 @@ export default function CoursePage({ params }: PageProps) {
           </div>
         </Container>
       </section>
+      )}
 
       {/* CTA */}
       <section className="py-20 md:py-32 bg-primary text-white">

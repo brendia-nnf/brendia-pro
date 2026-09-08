@@ -485,60 +485,72 @@
       ],
       "curriculum": [
         {
-          "module": "Module 1: Introduction & Foundations",
+          "module": "Module 1: Introduction & Basics",
           "lessons": [
             "Welcome to Brendia Pro®",
-            "Understanding Weft Extensions",
-            "Hair Quality & Types",
-            "Tools & Equipment Overview",
-            "Workspace Setup"
+            "Hair quality and types",
+            "Tools and equipment overview",
+            "Setting expectations",
+            "Initial hair assessment"
           ]
         },
         {
-          "module": "Module 2: Client Consultation",
+          "module": "Module 2: Preparation & Analysis",
           "lessons": [
-            "Initial Assessment",
-            "Hair Health Evaluation",
-            "Lifestyle Considerations",
-            "Setting Expectations",
-            "Pricing Your Services"
+            "Hair sectioning",
+            "Weight distribution",
+            "Client hair analysis",
+            "Pre-installation hair preparation"
           ]
         },
         {
-          "module": "Module 3: Preparation Techniques",
+          "module": "Module 3: Wefts & Beads",
           "lessons": [
-            "Sectioning Methods",
-            "Color Matching Basics",
-            "Weft Selection & Preparation",
-            "Pre-Installation Hair Prep"
+            "Weft preparation and selection",
+            "Bead placement"
           ]
         },
         {
-          "module": "Module 4: Installation Mastery",
+          "module": "Module 4: Open Weft",
           "lessons": [
-            "Placement Strategy",
-            "Secure Attachment Methods",
-            "Blending Techniques",
-            "Creating Natural Movement",
-            "Finishing & Styling"
+            "Open weft placement method",
+            "Secure attachment methods"
           ]
         },
         {
-          "module": "Module 5: Aftercare & Maintenance",
+          "module": "Module 4.1: Sewing the Open Weft",
           "lessons": [
-            "Client Education",
-            "Maintenance Appointments",
-            "Troubleshooting Common Issues",
-            "Extension Longevity Tips"
+            "Sewing the open weft"
           ]
         },
         {
-          "module": "Module 6: Business Foundations",
+          "module": "Module 5: Closed Weft",
           "lessons": [
-            "Building Your Client Base",
-            "Social Media Basics",
-            "Creating a Portfolio",
-            "Next Steps in Your Journey"
+            "Closed weft placement",
+            "Sewing the closed weft"
+          ]
+        },
+        {
+          "module": "Module 6: Finishing & Styling",
+          "lessons": [
+            "Creating natural movement",
+            "Color blending",
+            "Cutting",
+            "Final styling"
+          ]
+        },
+        {
+          "module": "Module 7: Live Model — Hand-tied Weft",
+          "lessons": [
+            "Live model",
+            "Hand-tied weft"
+          ]
+        },
+        {
+          "module": "Module 8: Live Model — Genious Weft",
+          "lessons": [
+            "Live model",
+            "Genious weft"
           ]
         }
       ]
@@ -560,62 +572,7 @@
         "Priority community support",
         "Guest educator masterclasses"
       ],
-      "curriculum": [
-        {
-          "module": "Artist Modules",
-          "lessons": [
-            "All 8 lessons from Brendia Pro® Artist included"
-          ]
-        },
-        {
-          "module": "Advanced Module 1: Complex Color Work",
-          "lessons": [
-            "Advanced Color Theory",
-            "Multi-Dimensional Blending",
-            "Custom Color Mixing",
-            "Working with Difficult Color Combinations",
-            "Rooted & Balayage Looks"
-          ]
-        },
-        {
-          "module": "Advanced Module 2: Advanced Techniques",
-          "lessons": [
-            "Challenging Hair Types",
-            "Fine & Thin Hair Solutions",
-            "Volume Building Strategies",
-            "Advanced Layering",
-            "Seamless Transitions"
-          ]
-        },
-        {
-          "module": "Advanced Module 3: Corrective Work",
-          "lessons": [
-            "Identifying Previous Work Issues",
-            "Safe Removal Techniques",
-            "Repairing Damaged Hair",
-            "Client Communication for Corrections",
-            "Managing Expectations"
-          ]
-        },
-        {
-          "module": "Advanced Module 4: Business Mastery",
-          "lessons": [
-            "Scaling Your Services",
-            "Premium Pricing Strategies",
-            "Team Training Basics",
-            "Marketing Deep Dive",
-            "Building Authority in Your Market"
-          ]
-        },
-        {
-          "module": "Bonus: Guest Masterclasses",
-          "lessons": [
-            "Industry Expert Sessions (Updated Quarterly)",
-            "Trend Forecasting",
-            "Advanced Business Q&A"
-          ]
-        }
-      ]
+      "curriculum": []
     },
     "artist1v1": {
       "title": "Brendia Pro® Artist 1v1",
@@ -695,7 +652,6 @@
             "Advanced installation techniques",
             "Working with challenging hair types",
             "Corrective work and finishing",
-            "Business strategies and pricing",
             "Q&A session"
           ]
         },

@@ -488,57 +488,69 @@
           "module": "Modul 1: Uvod i osnove",
           "lessons": [
             "Dobrodošli u Brendia Pro®",
-            "Razumijevanje weft ekstenzija",
             "Kvaliteta i vrste kose",
             "Pregled alata i opreme",
-            "Postavljanje radnog prostora"
-          ]
-        },
-        {
-          "module": "Modul 2: Konzultacije s klijentima",
-          "lessons": [
-            "Početna procjena",
-            "Procjena zdravlja kose",
-            "Razmatranje životnog stila",
             "Postavljanje očekivanja",
-            "Određivanje cijena vaših usluga"
+            "Početna procjena kose"
           ]
         },
         {
-          "module": "Modul 3: Tehnike pripreme",
+          "module": "Modul 2: Priprema i analiza",
           "lessons": [
-            "Metode sekcija",
-            "Osnove usklađivanja boja",
-            "Odabir i priprema wefta",
+            "Sekcioniranje kose",
+            "Raspodjela težine",
+            "Analiza kose klijentice",
             "Priprema kose prije instalacije"
           ]
         },
         {
-          "module": "Modul 4: Majstorstvo instalacije",
+          "module": "Modul 3: Weft i beadovi",
           "lessons": [
-            "Strategija postavljanja",
-            "Sigurne metode pričvršćivanja",
-            "Tehnike miješanja",
+            "Priprema i odabir wefta",
+            "Postavljanje beada"
+          ]
+        },
+        {
+          "module": "Modul 4: Otvoreni weft",
+          "lessons": [
+            "Metoda postavljanja otvorenog wefta",
+            "Sigurne metode pričvršćivanja"
+          ]
+        },
+        {
+          "module": "Modul 4.1: Šivanje otvorenog wefta",
+          "lessons": [
+            "Šivanje otvorenog wefta"
+          ]
+        },
+        {
+          "module": "Modul 5: Zatvoreni weft",
+          "lessons": [
+            "Postavljanje zatvorenog wefta",
+            "Šivanje zatvorenog wefta"
+          ]
+        },
+        {
+          "module": "Modul 6: Završna obrada i styling",
+          "lessons": [
             "Stvaranje prirodnog pokreta",
-            "Završna obrada i styling"
+            "Blendanje boje",
+            "Šišanje",
+            "Finalno stiliziranje"
           ]
         },
         {
-          "module": "Modul 5: Njega i održavanje",
+          "module": "Modul 7: Live model — Hand-tied weft",
           "lessons": [
-            "Edukacija klijenata",
-            "Termini održavanja",
-            "Rješavanje uobičajenih problema",
-            "Savjeti za dugovječnost ekstenzija"
+            "Live model",
+            "Hand-tied weft"
           ]
         },
         {
-          "module": "Modul 6: Poslovne osnove",
+          "module": "Modul 8: Live model — Genious weft",
           "lessons": [
-            "Izgradnja baze klijenata",
-            "Osnove društvenih mreža",
-            "Kreiranje portfolia",
-            "Sljedeći koraci na vašem putovanju"
+            "Live model",
+            "Genious weft"
           ]
         }
       ]
@@ -560,62 +572,7 @@
         "Prioritetna podrška zajednice",
         "Masterclassovi gostujućih edukatora"
       ],
-      "curriculum": [
-        {
-          "module": "Artist moduli",
-          "lessons": [
-            "Svih 8 lekcija iz Brendia Pro® Artist tečaja uključeno"
-          ]
-        },
-        {
-          "module": "Napredni modul 1: Složeni rad s bojama",
-          "lessons": [
-            "Napredna teorija boja",
-            "Višedimenzionalno miješanje",
-            "Prilagođeno miješanje boja",
-            "Rad s teškim kombinacijama boja",
-            "Rooted i balayage izgledi"
-          ]
-        },
-        {
-          "module": "Napredni modul 2: Napredne tehnike",
-          "lessons": [
-            "Izazovni tipovi kose",
-            "Rješenja za tanku i rijetku kosu",
-            "Strategije za volumen",
-            "Napredno slojevanje",
-            "Besprijekorni prijelazi"
-          ]
-        },
-        {
-          "module": "Napredni modul 3: Korektivni rad",
-          "lessons": [
-            "Prepoznavanje problema prethodnog rada",
-            "Sigurne tehnike uklanjanja",
-            "Popravak oštećene kose",
-            "Komunikacija s klijentima za korekcije",
-            "Upravljanje očekivanjima"
-          ]
-        },
-        {
-          "module": "Napredni modul 4: Poslovno majstorstvo",
-          "lessons": [
-            "Skaliranje vaših usluga",
-            "Premium strategije cijena",
-            "Osnove obuke tima",
-            "Dubinska analiza marketinga",
-            "Izgradnja autoriteta na vašem tržištu"
-          ]
-        },
-        {
-          "module": "Bonus: Masterclassovi gostujućih edukatora",
-          "lessons": [
-            "Sesije industrijskih stručnjaka (ažurirano kvartalno)",
-            "Prognoziranje trendova",
-            "Napredna poslovna pitanja i odgovori"
-          ]
-        }
-      ]
+      "curriculum": []
     },
     "artist1v1": {
       "title": "Brendia Pro® Artist 1v1",
@@ -695,7 +652,6 @@
             "Napredne tehnike ugradnje",
             "Rad sa zahtjevnim tipovima kose",
             "Korektivni rad i finiširanje",
-            "Poslovne strategije i cijene usluga",
             "Pitanja i odgovori"
           ]
         },
