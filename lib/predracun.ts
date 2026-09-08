@@ -41,12 +41,12 @@ export function generatePredracunEmailHtml(o: PredracunOrder): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brendia Pro</title>
+  <title>Brendia Pro&reg;</title>
 </head>
 <body style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.6;color:#1A1A1A;background-color:#f5f5f5;">
   <div style="max-width:600px;margin:0 auto;background-color:#ffffff;">
     <div style="background-color:#1A1A1A;padding:30px 40px;text-align:center;">
-      <img src="https://brendiapro.hr/images/logo-white.png" alt="Brendia Pro" style="height:40px;" />
+      <img src="https://brendiapro.hr/images/logo-white.png" alt="Brendia Pro&reg;" style="height:40px;" />
     </div>
     <div style="padding:40px;">
       <h1 style="color:#1A1A1A;font-size:24px;font-weight:600;margin:0 0 20px;">Hvala na narudzbi!</h1>
@@ -71,7 +71,7 @@ export function generatePredracunEmailHtml(o: PredracunOrder): string {
       <p style="margin:0 0 16px;color:#333333;">Molimo da u opisu placanja obavezno navedete broj narudzbe <strong>${o.orderNumber}</strong> kako bismo uplatu mogli povezati s Vasom narudzbom.</p>
       <p style="margin:0 0 16px;color:#333333;">U privitku ovog emaila nalazi se Vas primjerak elektronicki sklopljenog Ugovora o edukaciji (s Prilogom 1).</p>
       <p style="margin:0 0 16px;color:#333333;">Uplate se obicno evidentiraju unutar jednog radnog dana. Ako imate bilo kakvih pitanja, javite nam se na <a href="mailto:${COMPANY.email}" style="color:#B8956A;">${COMPANY.email}</a> ili ${COMPANY.phone}.</p>
-      <p style="margin:0 0 16px;color:#333333;">Srdacan pozdrav,<br>Nikolina i Brendia Pro tim</p>
+      <p style="margin:0 0 16px;color:#333333;">Srdacan pozdrav,<br>Nikolina i Brendia Pro&reg; tim</p>
     </div>
     <div style="background-color:#FDF8F3;padding:30px 40px;text-align:center;font-size:14px;color:#666666;">
       <p style="margin:0 0 8px;"><strong>${COMPANY.name}</strong></p>

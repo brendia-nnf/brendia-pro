@@ -145,7 +145,7 @@ export async function createCourseCheckoutSession(
         price_data: {
           currency: "eur",
           unit_amount: totalCents,
-          product_data: { name: `${course.name} - Brendia Pro` },
+          product_data: { name: `${course.name} - Brendia Pro®` },
         },
         quantity: 1,
       },

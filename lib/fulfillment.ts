@@ -339,7 +339,7 @@ export async function fulfillCourseOrder(
               from: fromEmail,
               to: order.email,
               subject:
-                "Advanced Brendia Pro® Artist je otkljucan - Brendia Pro",
+                "Advanced Brendia Pro® Artist je otkljucan - Brendia Pro®",
               html: generateUpgradeEmailHtml(
                 `${order.first_name} ${order.last_name}`,
                 orderNumber,
@@ -389,7 +389,7 @@ export async function fulfillCourseOrder(
       await getResend().emails.send({
         from: fromEmail,
         to: order.email,
-        subject: `Aktivirajte pristup: ${courseName} - Brendia Pro`,
+        subject: `Aktivirajte pristup: ${courseName} - Brendia Pro®`,
         html: generateActivationEmailHtml(
           customerName,
           courseName,

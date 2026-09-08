@@ -210,7 +210,7 @@
     "tagline": "Meet Your Educator",
     "name": "Nikolina Kljaić",
     "bio1": "With over a decade of experience in the hair extension industry, Nikolina has dedicated her career to educating stylists. Her passion for education and commitment to excellence are built into every Brendia Pro® weft extension course.",
-    "quote": "My mission is to empower stylists with the knowledge and techniques they need to build thriving businesses and create stunning transformations for their clients. Every student who joins Brendia Pro becomes part of a community dedicated to excellence.",
+    "quote": "My mission is to empower stylists with the knowledge and techniques they need to build thriving businesses and create stunning transformations for their clients. Every student who joins Brendia Pro® becomes part of a community dedicated to excellence.",
     "yearsInIndustry": "Years in Industry",
     "studentsTrained": "Students Trained",
     "readFullStory": "Read Full Story",
@@ -906,7 +906,7 @@
         "and": "and",
         "privacyPolicy": "Privacy Policy",
         "digitalProduct": ". I understand that this is a digital product and that I will receive access via email after payment.",
-        "marketing": "I would like to receive updates, tips, and exclusive offers from Brendia Pro via email."
+        "marketing": "I would like to receive updates, tips, and exclusive offers from Brendia Pro® via email."
       },
       "validation": {
         "firstName": "Please enter your first name",
@@ -951,7 +951,7 @@
       }
     },
     "success": {
-      "title": "Welcome to Brendia Pro!",
+      "title": "Welcome to Brendia Pro®!",
       "description": "Your enrollment has been confirmed. We're thrilled to have you join our community of professional stylists.",
       "whatHappensNext": "What Happens Next?",
       "steps": {

@@ -106,7 +106,7 @@ const getSuccessEmailHtml = (
                     <!-- Header with logo -->
                     <tr>
                         <td align="center" style="background-color: #FDF8F3; padding: 40px 40px 30px 40px;">
-                            <img src="https://www.brendiapro.hr/images/logo.png" alt="Brendia Pro" width="140" style="display: block; width: 140px; max-width: 140px;">
+                            <img src="https://www.brendiapro.hr/images/logo.png" alt="Brendia Pro&reg;" width="140" style="display: block; width: 140px; max-width: 140px;">
                         </td>
                     </tr>
 

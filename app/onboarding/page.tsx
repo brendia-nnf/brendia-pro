@@ -250,7 +250,7 @@ export default function OnboardingPage() {
           <div className="mt-12">
             <Image
               src="/images/logo-white.png"
-              alt="Brendia Pro"
+              alt="Brendia Pro®"
               width={120}
               height={40}
               className="mx-auto opacity-60"
@@ -269,7 +269,7 @@ export default function OnboardingPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/courses/foundation.jpg"
-            alt="Brendia Pro Education"
+            alt="Brendia Pro® Education"
             fill
             className="object-cover object-center"
             priority
@@ -285,7 +285,7 @@ export default function OnboardingPage() {
           <Link href="/">
             <Image
               src="/images/logo-white.png"
-              alt="Brendia Pro"
+              alt="Brendia Pro®"
               width={160}
               height={55}
               className="mx-auto mb-8"
@@ -1146,7 +1146,7 @@ export default function OnboardingPage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <Image
               src="/images/logo-white.png"
-              alt="Brendia Pro"
+              alt="Brendia Pro®"
               width={100}
               height={35}
               className="opacity-60"

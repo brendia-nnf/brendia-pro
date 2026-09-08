@@ -95,7 +95,7 @@ export async function generateContractPdf(
   const font = await doc.embedFont(regularBytes, { subset: true });
   const bold = await doc.embedFont(boldBytes, { subset: true });
 
-  doc.setTitle(`Ugovor ${data.orderNumber} — Brendia Pro`);
+  doc.setTitle(`Ugovor ${data.orderNumber} — Brendia Pro®`);
   doc.setSubject(`Ugovor o edukaciji (verzija ${CONTRACT_VERSION})`);
   doc.setAuthor("OMEGA-NI d.o.o.");
 

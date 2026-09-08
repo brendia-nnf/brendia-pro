@@ -169,7 +169,7 @@ export async function POST(request: NextRequest) {
     await resend.emails.send({
       from: fromEmail,
       to: order.email,
-      subject: `Aktivirajte pristup: ${courseName} - Brendia Pro`,
+      subject: `Aktivirajte pristup: ${courseName} - Brendia Pro®`,
       html: generateActivationEmailHtml(
         customerName,
         courseName,

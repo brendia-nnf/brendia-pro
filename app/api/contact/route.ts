@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
       await resend.emails.send({
         from: "Brendia Pro <info@brendiapro.hr>",
         to: sanitizedData.email,
-        subject: "Primili smo vasu poruku - Brendia Pro",
+        subject: "Primili smo vasu poruku - Brendia Pro®",
         html: `
 <!DOCTYPE html>
 <html>
@@ -119,17 +119,17 @@ export async function POST(request: NextRequest) {
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://brendiapro.hr/images/logo-white.png" alt="Brendia Pro" height="40" />
+      <img src="https://brendiapro.hr/images/logo-white.png" alt="Brendia Pro&reg;" height="40" />
     </div>
     <div class="content">
       <h1>Hvala na poruci!</h1>
       <p>Postovani/a ${sanitizedData.name},</p>
       <p>Primili smo vasu poruku i odgovorit cemo vam u najkracemu mogucemu roku.</p>
       <p>Obicno odgovaramo unutar 24-48 sati radnim danima.</p>
-      <p>Srdacan pozdrav,<br>Brendia Pro tim</p>
+      <p>Srdacan pozdrav,<br>Brendia Pro&reg; tim</p>
     </div>
     <div class="footer">
-      <p>&copy; ${new Date().getFullYear()} Brendia Pro. Sva prava pridrzana.</p>
+      <p>&copy; ${new Date().getFullYear()} Brendia Pro&reg;. Sva prava pridrzana.</p>
     </div>
   </div>
 </body>

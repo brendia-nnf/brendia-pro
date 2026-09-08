@@ -318,7 +318,7 @@ export async function POST(request: NextRequest) {
           await resend.emails.send({
             from: fromEmail,
             to: email,
-            subject: `Predračun za narudžbu ${orderNumber} - Brendia Pro`,
+            subject: `Predračun za narudžbu ${orderNumber} - Brendia Pro®`,
             html: generatePredracunEmailHtml(predracunOrder),
             attachments: [contractAttachment],
           });

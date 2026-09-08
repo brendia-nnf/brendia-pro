@@ -210,7 +210,7 @@
     "tagline": "Upoznajte svoju edukatoricu",
     "name": "Nikolina Kljaić",
     "bio1": "S više od desetljeća iskustva u industriji ekstenzija kose, Nikolina je svoju karijeru posvetila edukaciji frizera. Njezina strast za edukacijom i predanost izvrsnosti ugrađene su u svaki Brendia Pro® tečaj za weft ekstenzije.",
-    "quote": "Moja misija je osnažiti frizere znanjem i tehnikama koje su im potrebne za izgradnju uspješnog poslovanja i stvaranje zadivljujućih transformacija za svoje klijente. Svaki polaznik koji se pridruži Brendia Pro postaje dio zajednice posvećene izvrsnosti.",
+    "quote": "Moja misija je osnažiti frizere znanjem i tehnikama koje su im potrebne za izgradnju uspješnog poslovanja i stvaranje zadivljujućih transformacija za svoje klijente. Svaki polaznik koji se pridruži Brendia Pro® postaje dio zajednice posvećene izvrsnosti.",
     "yearsInIndustry": "Godina u industriji",
     "studentsTrained": "Obučenih polaznika",
     "readFullStory": "Pročitajte cijelu priču",
@@ -906,7 +906,7 @@
         "and": "i",
         "privacyPolicy": "Politiku privatnosti",
         "digitalProduct": ". Razumijem da je ovo digitalni proizvod i da ću dobiti pristup putem emaila nakon plaćanja.",
-        "marketing": "Želim primati novosti, savjete i ekskluzivne ponude od Brendia Pro putem emaila."
+        "marketing": "Želim primati novosti, savjete i ekskluzivne ponude od Brendia Pro® putem emaila."
       },
       "validation": {
         "firstName": "Molimo unesite svoje ime",
@@ -951,7 +951,7 @@
       }
     },
     "success": {
-      "title": "Dobrodošli u Brendia Pro!",
+      "title": "Dobrodošli u Brendia Pro®!",
       "description": "Vaš upis je potvrđen. Oduševljeni smo što nam se pridružujete u našoj zajednici profesionalnih frizera.",
       "whatHappensNext": "Što slijedi?",
       "steps": {

@@ -31,7 +31,7 @@ function CheckoutSuccessContent() {
             <Link href="/">
               <Image
                 src="/images/logo.png"
-                alt="Brendia Pro"
+                alt="Brendia Pro®"
                 width={120}
                 height={40}
                 className="h-8 w-auto"

@@ -38,12 +38,12 @@ export function generateUpgradeEmailHtml(
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brendia Pro</title>
+  <title>Brendia Pro&reg;</title>
 </head>
 <body style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.6;color:#1A1A1A;background-color:#f5f5f5;">
   <div style="max-width:600px;margin:0 auto;background-color:#ffffff;">
     <div style="background-color:#1A1A1A;padding:30px 40px;text-align:center;">
-      <img src="https://brendiapro.hr/images/logo-white.png" alt="Brendia Pro" style="height:40px;" />
+      <img src="https://brendiapro.hr/images/logo-white.png" alt="Brendia Pro&reg;" style="height:40px;" />
     </div>
     <div style="padding:40px;">
       <h1 style="color:#1A1A1A;font-size:24px;font-weight:600;margin:0 0 20px;">Cestitamo na nadogradnji!</h1>
@@ -59,10 +59,10 @@ export function generateUpgradeEmailHtml(
       <p style="text-align:center;">
         <a href="${dashboardUrl}" style="display:inline-block;background-color:#B8956A;color:#ffffff;padding:14px 28px;text-decoration:none;border-radius:6px;font-weight:600;margin:20px 0;">Otvori platformu</a>
       </p>
-      <p style="margin:0 0 16px;color:#333333;">Srdacan pozdrav,<br>Nikolina i Brendia Pro tim</p>
+      <p style="margin:0 0 16px;color:#333333;">Srdacan pozdrav,<br>Nikolina i Brendia Pro&reg; tim</p>
     </div>
     <div style="background-color:#FDF8F3;padding:30px 40px;text-align:center;font-size:14px;color:#666666;">
-      <p style="margin:0 0 8px;"><strong>Brendia Pro</strong></p>
+      <p style="margin:0 0 8px;"><strong>Brendia Pro&reg;</strong></p>
       <p style="margin:0;">Premium Hair Extension Education</p>
     </div>
   </div>
@@ -86,7 +86,7 @@ export function generateActivationEmailHtml(
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brendia Pro</title>
+  <title>Brendia Pro&reg;</title>
   <style>
     body {
       margin: 0;
@@ -155,7 +155,7 @@ export function generateActivationEmailHtml(
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://brendiapro.hr/images/logo-white.png" alt="Brendia Pro" />
+      <img src="https://brendiapro.hr/images/logo-white.png" alt="Brendia Pro&reg;" />
     </div>
     <div class="content">
       <h1>Hvala na kupnji!</h1>
@@ -181,13 +181,13 @@ export function generateActivationEmailHtml(
       </ul>
       <p style="font-size: 12px; color: #666;">Link za aktivaciju istjece za 7 dana. Ako link istekne, kontaktirajte nas za novi.</p>
       <div class="divider"></div>
-      <p>Srdacan pozdrav,<br>Nikolina i Brendia Pro tim</p>
+      <p>Srdacan pozdrav,<br>Nikolina i Brendia Pro&reg; tim</p>
     </div>
     <div class="footer">
-      <p><strong>Brendia Pro</strong></p>
+      <p><strong>Brendia Pro&reg;</strong></p>
       <p>Premium Hair Extension Education</p>
       <p style="font-size: 12px; color: #999;">
-        &copy; ${new Date().getFullYear()} Brendia Pro. Sva prava pridrzana.
+        &copy; ${new Date().getFullYear()} Brendia Pro&reg;. Sva prava pridrzana.
       </p>
     </div>
   </div>
