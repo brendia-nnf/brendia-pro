@@ -594,6 +594,7 @@
           "module": "Priprema i teorija",
           "lessons": [
             "Upoznavanje i pregled programa",
+            "Welcome box s materijalima",
             "Konzultacije i procjena klijenta",
             "Kvaliteta i odabir kose",
             "Priprema alata i radnog mjesta"
@@ -613,7 +614,7 @@
           "lessons": [
             "Rad s klijentima i određivanje cijena",
             "Pitanja i odgovori",
-            "Dodjela certifikata i welcome box",
+            "Dodjela certifikata",
             "Aktivacija pristupa platformi"
           ]
         }
@@ -639,6 +640,7 @@
         {
           "module": "Dan 1: Temelji i tehnika ugradnje",
           "lessons": [
+            "Welcome box s materijalima",
             "Konzultacije i procjena klijenta",
             "Kvaliteta i odabir kose",
             "Demonstracija tehnike ugradnje",
@@ -658,7 +660,7 @@
         {
           "module": "Završetak i certifikacija",
           "lessons": [
-            "Dodjela certifikata i welcome box",
+            "Dodjela certifikata",
             "Aktivacija pristupa platformi"
           ]
         }

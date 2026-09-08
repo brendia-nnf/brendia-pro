@@ -594,6 +594,7 @@
           "module": "Preparation & Theory",
           "lessons": [
             "Introduction and program overview",
+            "Welcome box with materials",
             "Client consultation and assessment",
             "Hair quality and selection",
             "Tools and workstation setup"
@@ -613,7 +614,7 @@
           "lessons": [
             "Working with clients and pricing",
             "Q&A session",
-            "Certificate ceremony and welcome box",
+            "Certificate ceremony",
             "Platform access activation"
           ]
         }
@@ -639,6 +640,7 @@
         {
           "module": "Day 1: Foundations & Installation Technique",
           "lessons": [
+            "Welcome box with materials",
             "Client consultation and assessment",
             "Hair quality and selection",
             "Installation technique demonstration",
@@ -658,7 +660,7 @@
         {
           "module": "Completion & Certification",
           "lessons": [
-            "Certificate ceremony and welcome box",
+            "Certificate ceremony",
             "Platform access activation"
           ]
         }
