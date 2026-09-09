@@ -933,7 +933,9 @@
         "termsAccess": "Access to the course is activated after the first installment is successfully charged.",
         "termsDefault": "If an installment charge fails even after repeated attempts, course access is temporarily suspended until the due installment is settled.",
         "termsCertificate": "The certificate is issued after all installments have been paid.",
-        "termsConsent": "By choosing installment payment you confirm that you are aware of these installment payment terms."
+        "termsConsent": "By choosing installment payment you confirm that you are aware of these installment payment terms.",
+        "monriTitle": "💳 Installment payments",
+        "monriNote": "You choose the number of installments on Monri's secure payment page, depending on your debit/credit card and issuing bank. Installment terms are shown before you confirm the payment."
       },
       "submit": {
         "button": "Pay {price} and Enroll",

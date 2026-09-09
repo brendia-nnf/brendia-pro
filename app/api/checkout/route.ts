@@ -164,7 +164,10 @@ export async function POST(request: NextRequest) {
 
     // Installments must be enabled globally AND per-course, and the chosen
     // count must be one the course offers — never trust the client alone.
+    // U Monri modu vlastite rate ne postoje (kupac ih bira na Monri formi),
+    // pa je narudžba uvijek "full".
     const installmentCount =
+      !isMonriMode() &&
       requestedPlan === "installments" &&
       allowedInstallmentCounts(course).includes(Number(requestedCount))
         ? Number(requestedCount)
@@ -370,8 +373,8 @@ export async function POST(request: NextRequest) {
           vatNumber: vatNumber || null,
         }),
         language: "hr",
-        numberOfInstallments:
-          paymentPlan === "installments" ? installmentCount ?? undefined : undefined,
+        // Bez number_of_installments: Monri forma sama nudi dostupne rate
+        // prema merchant profilu i kartici kupca (bankovne rate).
       });
 
       return NextResponse.json({

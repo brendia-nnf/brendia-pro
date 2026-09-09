@@ -80,9 +80,11 @@ export function CheckoutFormFull({
 }: CheckoutFormFullProps) {
   const t = useTranslations("checkout.form");
 
+  // U Monri modu NE nudimo vlastite (Stripe) rate — broj rata kupac bira na
+  // Monri hosted stranici (bankovne rate, trgovac dobiva puni iznos).
   const installmentConfig = courses[courseId]?.installments;
   const installmentCounts =
-    !IS_PREDRACUN && INSTALLMENTS_ENABLED && installmentConfig?.enabled
+    !IS_PREDRACUN && !IS_MONRI && INSTALLMENTS_ENABLED && installmentConfig?.enabled
       ? installmentConfig.counts
       : [];
   const offerInstallments = installmentCounts.length > 0;
@@ -543,6 +545,18 @@ export function CheckoutFormFull({
             />
           </div>
         </div>
+
+        {/* Monri mode: rate se biraju na Monri stranici za naplatu */}
+        {IS_MONRI && (
+          <div className="p-4 border border-secondary/30 bg-secondary/5 space-y-1.5">
+            <p className="text-sm font-medium text-primary">
+              {t("paymentPlan.monriTitle")}
+            </p>
+            <p className="text-xs text-primary/70">
+              {t("paymentPlan.monriNote")}
+            </p>
+          </div>
+        )}
 
         {/* Payment Plan (installments hidden until the client enables them) */}
         {offerInstallments && (

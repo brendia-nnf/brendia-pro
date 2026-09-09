@@ -933,7 +933,9 @@
         "termsAccess": "Pristup edukaciji aktivira se nakon uspješne naplate prve rate.",
         "termsDefault": "Ako naplata rate ne uspije ni nakon ponovljenih pokušaja, pristup edukaciji privremeno se obustavlja do podmirenja dospjele rate.",
         "termsCertificate": "Certifikat se izdaje nakon plaćanja svih rata.",
-        "termsConsent": "Odabirom plaćanja na rate potvrđujete da ste upoznati s ovim uvjetima obročne otplate."
+        "termsConsent": "Odabirom plaćanja na rate potvrđujete da ste upoznati s ovim uvjetima obročne otplate.",
+        "monriTitle": "💳 Plaćanje na rate",
+        "monriNote": "Broj rata odabirete na sigurnoj Monri stranici za naplatu, ovisno o mogućnostima vaše debitne/kreditne kartice i banke izdavatelja. Uvjeti obročne otplate prikazuju se prije potvrde plaćanja."
       },
       "submit": {
         "button": "Platite {price} i upišite se",
