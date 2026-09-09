@@ -96,6 +96,9 @@ export default function CheckoutPage({ params }: PageProps) {
                     <h3 className="font-heading text-primary text-lg leading-tight">
                       {course.name}
                     </h3>
+                    <p className="text-xs text-primary/40 mt-1">
+                      {t("orderSummary.productCode", { code: course.id })}
+                    </p>
                   </div>
                 </div>
 

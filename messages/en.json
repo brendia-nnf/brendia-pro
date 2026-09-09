@@ -838,6 +838,7 @@
     "pageSubtitle": "You're one step away from transforming your career",
     "orderSummary": {
       "title": "Order Summary",
+      "productCode": "Product code: {code}",
       "whatsIncluded": "What's Included",
       "moreBenefits": "+{count} more benefits",
       "subtotal": "Subtotal (excl. VAT)",
@@ -926,12 +927,19 @@
         "title": "Payment method",
         "full": "One-time payment — {price}",
         "installments": "{count} monthly installments of {price}",
-        "note": "You pay the first installment today; the remaining ones are automatically charged to your card every month ({count} installments in total)."
+        "termsTitle": "Installment payment terms",
+        "termsTotal": "Total amount: {total} — {count} monthly installments of {price}, with no interest or additional fees.",
+        "termsFirstCharge": "The first installment is charged immediately at purchase; each subsequent installment is automatically charged every month to the same debit/credit card.",
+        "termsAccess": "Access to the course is activated after the first installment is successfully charged.",
+        "termsDefault": "If an installment charge fails even after repeated attempts, course access is temporarily suspended until the due installment is settled.",
+        "termsCertificate": "The certificate is issued after all installments have been paid.",
+        "termsConsent": "By choosing installment payment you confirm that you are aware of these installment payment terms."
       },
       "submit": {
         "button": "Pay {price} and Enroll",
         "installmentsButton": "Pay first installment {price} and Enroll",
         "redirectNote": "You will be redirected to Stripe for secure payment processing.",
+        "currencyNote": "Currency conversion statement: all payments are made in euros (EUR). If your debit/credit card is denominated in another currency, the amount is converted at your card issuer's exchange rate, so a small difference from the displayed price is possible.",
         "securityNote": "Your card details are never stored on our servers.",
         "emailNote": "After successful payment, check your email for the activation link to access the platform.",
         "predracunButton": "Order — {price} (pay by bank transfer)",

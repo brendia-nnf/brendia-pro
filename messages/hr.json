@@ -838,6 +838,7 @@
     "pageSubtitle": "Samo ste jedan korak od transformacije svoje karijere",
     "orderSummary": {
       "title": "Sažetak narudžbe",
+      "productCode": "Šifra proizvoda: {code}",
       "whatsIncluded": "Što je uključeno",
       "moreBenefits": "+{count} dodatnih pogodnosti",
       "subtotal": "Međuzbroj (bez PDV-a)",
@@ -926,12 +927,19 @@
         "title": "Način plaćanja",
         "full": "Jednokratno — {price}",
         "installments": "{count} mjesečne rate po {price}",
-        "note": "Danas plaćate prvu ratu, a preostale se automatski naplaćuju s vaše kartice svakih mjesec dana ({count} rata ukupno)."
+        "termsTitle": "Uvjeti obročne otplate",
+        "termsTotal": "Ukupan iznos: {total} — {count} mjesečne rate po {price}, bez kamata i dodatnih naknada.",
+        "termsFirstCharge": "Prva rata naplaćuje se odmah pri kupnji, a svaka sljedeća automatski se naplaćuje svakih mjesec dana na istu debitnu/kreditnu karticu.",
+        "termsAccess": "Pristup edukaciji aktivira se nakon uspješne naplate prve rate.",
+        "termsDefault": "Ako naplata rate ne uspije ni nakon ponovljenih pokušaja, pristup edukaciji privremeno se obustavlja do podmirenja dospjele rate.",
+        "termsCertificate": "Certifikat se izdaje nakon plaćanja svih rata.",
+        "termsConsent": "Odabirom plaćanja na rate potvrđujete da ste upoznati s ovim uvjetima obročne otplate."
       },
       "submit": {
         "button": "Platite {price} i upišite se",
         "installmentsButton": "Platite prvu ratu {price} i upišite se",
         "redirectNote": "Bit ćete preusmjereni na Stripe za sigurnu obradu plaćanja.",
+        "currencyNote": "Izjava o konverziji valuta: sva plaćanja izvršavaju se u eurima (EUR). Ako vaša debitna/kreditna kartica glasi na drugu valutu, iznos se preračunava prema tečaju banke izdavatelja kartice, pa je moguća mala razlika u odnosu na istaknutu cijenu.",
         "securityNote": "Podaci vaše kartice nikad se ne pohranjuju na našim serverima.",
         "emailNote": "Nakon uspješne uplate, provjerite svoj email za link za aktivaciju pristupa platformi.",
         "predracunButton": "Naruči — {price} (plaćanje predračunom)",

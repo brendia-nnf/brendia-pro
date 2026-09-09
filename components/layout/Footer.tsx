@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import { COMPANY } from "@/lib/constants/company";
+import { COMPANY, ACCEPTED_CARDS } from "@/lib/constants/company";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -146,6 +146,13 @@ export function Footer() {
             <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
               {[
                 {
+                  name: "Visa",
+                  href: "https://www.visaeurope.com",
+                  src: "/images/payments/visa.jpg",
+                  width: 50,
+                  height: 32,
+                },
+                {
                   name: "Mastercard",
                   href: "https://www.mastercard.com",
                   src: "/images/payments/mastercard.png",
@@ -153,10 +160,10 @@ export function Footer() {
                   height: 32,
                 },
                 {
-                  name: "Visa",
-                  href: "https://www.visaeurope.com",
-                  src: "/images/payments/visa.jpg",
-                  width: 50,
+                  name: "Maestro",
+                  href: "https://www.mastercard.hr/hr-hr/consumers/find-card-products/debit-cards/maestro-debit.html",
+                  src: "/images/payments/maestro.png",
+                  width: 40,
                   height: 32,
                 },
                 {
@@ -235,9 +242,8 @@ export function Footer() {
               </a>
             </div>
             <p className="text-white/50 text-xs text-center mb-8">
-              Plaćanje se vrši kreditnim i debitnim karticama Visa, Mastercard,
-              American Express, Diners i Discover. Sigurnu obradu plaćanja
-              osigurava Stripe.
+              Plaćanje se vrši debitnim/kreditnim karticama {ACCEPTED_CARDS}.
+              Sigurnu obradu plaćanja osigurava Stripe.
             </p>
           </div>
 

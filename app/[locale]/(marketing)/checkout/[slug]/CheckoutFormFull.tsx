@@ -570,10 +570,30 @@ export function CheckoutFormFull({
                   </span>
                 </label>
               ))}
+              {/* OTP pravilo: uvjeti obročne otplate prikazuju se u trenutku
+                  pristanka, odvojeno od Općih uvjeta kupnje */}
               {paymentChoice !== "full" && (
-                <p className="text-xs text-primary/60">
-                  {t("paymentPlan.note", { count: paymentChoice })}
-                </p>
+                <div className="p-4 border border-secondary/30 bg-secondary/5 space-y-2">
+                  <p className="text-sm font-medium text-primary">
+                    {t("paymentPlan.termsTitle")}
+                  </p>
+                  <ul className="text-xs text-primary/70 space-y-1.5 list-disc pl-4">
+                    <li>
+                      {t("paymentPlan.termsTotal", {
+                        total: formatPrice(pricing.total),
+                        count: paymentChoice,
+                        price: formatPrice(perInstallment(paymentChoice)),
+                      })}
+                    </li>
+                    <li>{t("paymentPlan.termsFirstCharge")}</li>
+                    <li>{t("paymentPlan.termsAccess")}</li>
+                    <li>{t("paymentPlan.termsDefault")}</li>
+                    <li>{t("paymentPlan.termsCertificate")}</li>
+                  </ul>
+                  <p className="text-xs text-primary/60">
+                    {t("paymentPlan.termsConsent")}
+                  </p>
+                </div>
               )}
             </div>
           </div>
@@ -621,6 +641,9 @@ export function CheckoutFormFull({
           {!IS_PREDRACUN && (
             <div className="mt-8 pt-6 border-t border-primary/10">
               <PaymentLogos variant="light" showSecurityLogos={true} />
+              <p className="text-[11px] text-center text-primary/40 mt-4">
+                {t("submit.currencyNote")}
+              </p>
             </div>
           )}
         </div>

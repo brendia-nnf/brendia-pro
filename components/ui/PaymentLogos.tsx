@@ -10,8 +10,16 @@ interface PaymentLogosProps {
   className?: string;
 }
 
-// Poveznice na kartične sheme (samo kartice koje Stripe Checkout prihvaća)
+// Poveznice na kartične sheme. OTP pravila: Maestro odmah iza Mastercarda,
+// bez druge kartice između; logotipovi su linkovi na stranice kartičnih kuća.
 const CARD_LOGOS = [
+  {
+    name: "Visa",
+    href: "https://www.visaeurope.com",
+    src: "/images/payments/visa.jpg",
+    width: 60,
+    height: 38,
+  },
   {
     name: "Mastercard",
     href: "https://www.mastercard.com",
@@ -20,11 +28,11 @@ const CARD_LOGOS = [
     height: 40,
   },
   {
-    name: "Visa",
-    href: "https://www.visaeurope.com",
-    src: "/images/payments/visa.jpg",
-    width: 60,
-    height: 38,
+    name: "Maestro",
+    href: "https://www.mastercard.hr/hr-hr/consumers/find-card-products/debit-cards/maestro-debit.html",
+    src: "/images/payments/maestro.png",
+    width: 50,
+    height: 40,
   },
   {
     name: "Diners",
@@ -85,7 +93,7 @@ export function PaymentLogos({
             variant === "dark" ? "text-white/60" : "text-primary/60"
           }`}
         >
-          Plaćanje se vrši kreditnim i debitnim karticama {ACCEPTED_CARDS}.
+          Plaćanje se vrši debitnim/kreditnim karticama {ACCEPTED_CARDS}.
         </p>
       )}
 

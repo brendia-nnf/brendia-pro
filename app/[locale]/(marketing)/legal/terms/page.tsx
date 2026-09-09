@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/ui";
 import { Link } from "@/i18n/routing";
+import { ACCEPTED_CARDS } from "@/lib/constants/company";
 
 export default function TermsPage() {
   return (
@@ -71,11 +72,15 @@ export default function TermsPage() {
             <p>
               Naknada se plaća jednokratno, na temelju ponude ili računa Organizatora,
               najkasnije do datuma dospijeća navedenog na ponudi ili računu.
+              Kada je na stranici za plaćanje ponuđena mogućnost obročnog
+              plaćanja (na rate), naknada se može platiti i obročno — uvjeti
+              obročne otplate prikazuju se kupcu prilikom odabira te opcije,
+              odvojeno od ovih Uvjeta.
             </p>
             <p>
-              Plaćanje se vrši kreditnim i debitnim karticama Visa, Mastercard,
-              American Express, Diners i Discover, putem Stripe sustava za
-              online naplatu. Više o sigurnosti plaćanja pročitajte na stranici{" "}
+              Plaćanje se vrši debitnim/kreditnim karticama {ACCEPTED_CARDS},
+              putem sustava za online naplatu. Više o sigurnosti plaćanja
+              pročitajte na stranici{" "}
               <Link href="/legal/payment-security">Sigurnost plaćanja</Link>.
             </p>
             <p>

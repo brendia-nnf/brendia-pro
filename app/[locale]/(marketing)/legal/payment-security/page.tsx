@@ -22,10 +22,10 @@ export default function PaymentSecurityPage() {
           <div className="max-w-3xl mx-auto prose prose-lg prose-primary">
             <h2>Načini plaćanja</h2>
             <p>
-              Plaćanje se vrši kreditnim i debitnim karticama {ACCEPTED_CARDS}.
+              Plaćanje se vrši debitnim/kreditnim karticama {ACCEPTED_CARDS}.
             </p>
 
-            <h2>Sigurnost plaćanja kreditnim karticama</h2>
+            <h2>Sigurnost plaćanja debitnim/kreditnim karticama</h2>
             <p>
               Tajnost Vaših podataka je zaštićena i osigurana korištenjem
               posljednje verzije TLS enkripcije. Stranice za naplatu putem
@@ -51,8 +51,19 @@ export default function PaymentSecurityPage() {
             <p>
               Webshop koristi 3D Secure sigurnosni protokol koji omogućuje
               dodatnu autentifikaciju korisnika prilikom online plaćanja
-              karticama, čime se osigurava viša razina zaštite i sigurnosti
-              transakcija putem sustava vaše banke.
+              debitnim/kreditnim karticama, čime se osigurava viša razina
+              zaštite i sigurnosti transakcija putem sustava vaše banke.
+            </p>
+
+            <h2>Izjava o konverziji valuta</h2>
+            <p>
+              Sva plaćanja izvršavaju se u eurima (EUR). Ako Vaša
+              debitna/kreditna kartica glasi na drugu valutu, iznos terećenja
+              preračunava se u valutu Vaše kartice prema pravilima kartičnih
+              kuća i tečaju banke izdavatelja kartice koji vrijede za plaćanja
+              u inozemstvu. Kao rezultat preračunavanja cijene moguća je mala
+              razlika iznosa u odnosu na cijenu istaknutu na našoj internetskoj
+              stranici.
             </p>
 
             <div className="not-prose mt-12 flex flex-wrap items-center gap-4">

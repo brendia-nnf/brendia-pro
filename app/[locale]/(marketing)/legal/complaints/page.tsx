@@ -60,6 +60,12 @@ export default function ComplaintsPage() {
               Po zaprimanju prigovora poslat ćemo Vam pisanu potvrdu o primitku.
               Evidenciju prigovora vodimo najmanje godinu dana od dana primitka.
             </p>
+            <p>
+              Na sve upite kupaca zaprimljene e-poštom ili telefonom odgovaramo
+              u roku od najviše <strong>dva radna dana</strong>. Rok od 15 dana
+              iz točke 1. odnosi se na formalno očitovanje o osnovanosti
+              prigovora sukladno Zakonu o zaštiti potrošača.
+            </p>
 
             <h2>3. Reklamacije na pruženu uslugu</h2>
             <p>

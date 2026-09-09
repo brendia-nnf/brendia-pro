@@ -15,6 +15,8 @@ export const COMPANY = {
   phoneHref: "tel:+385915549624",
 } as const;
 
-// Kartice koje prodajno mjesto prihvaća (Stripe Checkout)
+// Kartice koje prodajno mjesto prihvaća (Stripe jednokratno + Monri/OTP rate).
+// OTP pravila: oznaka ® uz Mastercard i Maestro, Maestro odmah iza
+// Mastercarda bez druge kartice između.
 export const ACCEPTED_CARDS =
-  "Visa, Mastercard, American Express, Diners i Discover";
+  "Visa, Mastercard®, Maestro®, American Express, Diners i Discover";
