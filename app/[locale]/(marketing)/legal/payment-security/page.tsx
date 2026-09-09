@@ -40,9 +40,10 @@ export default function PaymentSecurityPage() {
               korisnikovog računala i platnog servisa, te obratno.
             </p>
             <p>
-              Stripe je certificiran prema PCI DSS Level 1 sigurnosnom
-              standardu, najvišoj razini certifikacije propisanoj Visa i
-              Mastercard pravilima.
+              Online naplatu obrađuju Stripe (jednokratna plaćanja) i Monri
+              Payments (plaćanje na rate). Oba servisa certificirana su prema
+              PCI DSS Level 1 sigurnosnom standardu, najvišoj razini
+              certifikacije propisanoj Visa i Mastercard® pravilima.
             </p>
             <p>
               Trgovac ne pohranjuje brojeve kreditnih kartica i brojevi nisu
@@ -99,6 +100,21 @@ export default function PaymentSecurityPage() {
                 >
                   stripe
                 </span>
+              </a>
+              <a
+                href="https://monri.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-md px-3 py-2 border border-primary/10 shadow-sm hover:shadow transition-shadow"
+                aria-label="Monri"
+              >
+                <Image
+                  src="/images/payments/monri.png"
+                  alt="Monri"
+                  width={70}
+                  height={24}
+                  className="h-6 w-auto object-contain"
+                />
               </a>
             </div>
           </div>

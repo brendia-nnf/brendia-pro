@@ -939,6 +939,7 @@
         "button": "Pay {price} and Enroll",
         "installmentsButton": "Pay first installment {price} and Enroll",
         "redirectNote": "You will be redirected to Stripe for secure payment processing.",
+        "redirectNoteMonri": "You will be redirected to Monri's secure payment page.",
         "currencyNote": "Currency conversion statement: all payments are made in euros (EUR). If your debit/credit card is denominated in another currency, the amount is converted at your card issuer's exchange rate, so a small difference from the displayed price is possible.",
         "securityNote": "Your card details are never stored on our servers.",
         "emailNote": "After successful payment, check your email for the activation link to access the platform.",

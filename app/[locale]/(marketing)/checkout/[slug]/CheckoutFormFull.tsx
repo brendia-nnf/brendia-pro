@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button, Input, Select, Checkbox } from "@/components/ui";
@@ -66,6 +66,7 @@ interface FormErrors {
 // (bank-transfer) mode. Flip NEXT_PUBLIC_PAYMENT_MODE back to "card" (or
 // remove it) + redeploy to restore the Stripe card flow.
 const IS_PREDRACUN = process.env.NEXT_PUBLIC_PAYMENT_MODE === "predracun";
+const IS_MONRI = process.env.NEXT_PUBLIC_PAYMENT_MODE === "monri";
 
 // Installments stay hidden until the client approves the option — both this
 // flag and the per-course installments config must be on.
@@ -121,6 +122,13 @@ export function CheckoutFormFull({
   const [paymentChoice, setPaymentChoice] = useState<"full" | number>("full");
   const [contractAccepted, setContractAccepted] = useState(false);
   const [signatureDataUrl, setSignatureDataUrl] = useState<string | null>(null);
+  // Monri mode: /api/checkout vraća formUrl + formData koje auto-submitamo
+  // skrivenim POST formom prema Monri v2 stranici za plaćanje
+  const monriFormRef = useRef<HTMLFormElement>(null);
+  const [monriData, setMonriData] = useState<{
+    formUrl: string;
+    formData: Record<string, string>;
+  } | null>(null);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -257,6 +265,13 @@ export function CheckoutFormFull({
       // instructions by email, show the confirmation page.
       if (data.predracun) {
         window.location.href = `/checkout/success?order_number=${data.orderNumber}&predracun=1`;
+        return;
+      }
+
+      // Monri mode: auto-submit the hidden form to the Monri payment page
+      if (data.formUrl && data.formData) {
+        setMonriData({ formUrl: data.formUrl, formData: data.formData });
+        setTimeout(() => monriFormRef.current?.submit(), 100);
         return;
       }
 
@@ -627,7 +642,7 @@ export function CheckoutFormFull({
               t("submit.predracunNote")
             ) : (
               <>
-                {t("submit.redirectNote")}
+                {IS_MONRI ? t("submit.redirectNoteMonri") : t("submit.redirectNote")}
                 <br />
                 {t("submit.securityNote")}
               </>
@@ -648,6 +663,22 @@ export function CheckoutFormFull({
           )}
         </div>
       </form>
+
+      {/* Hidden Monri form — POST redirect na Monri stranicu za plaćanje */}
+      {monriData && (
+        <form
+          ref={monriFormRef}
+          method="POST"
+          action={monriData.formUrl}
+          style={{ display: "none" }}
+        >
+          {Object.entries(monriData.formData)
+            .filter(([, value]) => value !== undefined && value !== null)
+            .map(([name, value]) => (
+              <input key={name} type="hidden" name={name} value={value} />
+            ))}
+        </form>
+      )}
     </>
   );
 }

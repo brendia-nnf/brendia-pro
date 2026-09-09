@@ -939,6 +939,7 @@
         "button": "Platite {price} i upišite se",
         "installmentsButton": "Platite prvu ratu {price} i upišite se",
         "redirectNote": "Bit ćete preusmjereni na Stripe za sigurnu obradu plaćanja.",
+        "redirectNoteMonri": "Bit ćete preusmjereni na Monri sigurnu stranicu za obradu plaćanja.",
         "currencyNote": "Izjava o konverziji valuta: sva plaćanja izvršavaju se u eurima (EUR). Ako vaša debitna/kreditna kartica glasi na drugu valutu, iznos se preračunava prema tečaju banke izdavatelja kartice, pa je moguća mala razlika u odnosu na istaknutu cijenu.",
         "securityNote": "Podaci vaše kartice nikad se ne pohranjuju na našim serverima.",
         "emailNote": "Nakon uspješne uplate, provjerite svoj email za link za aktivaciju pristupa platformi.",

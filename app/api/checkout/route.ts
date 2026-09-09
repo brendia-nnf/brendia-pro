@@ -15,6 +15,7 @@ import {
   generatePredracunEmailHtml,
   generateOrderNotificationEmailHtml,
 } from "@/lib/predracun";
+import { isMonriMode, buildMonriFormData, MONRI_CONFIG } from "@/lib/monri";
 import { generateContractPdf } from "@/lib/contract/pdf";
 import { getCountryName } from "@/lib/countries";
 
@@ -345,6 +346,39 @@ export async function POST(request: NextRequest) {
       }
 
       return NextResponse.json({ predracun: true, orderNumber });
+    }
+
+    // Monri mode (preview deploy za OTP pregled): cijeli checkout ide kroz
+    // Monri v2 form redirect — jednokratno kao purchase, rate kroz
+    // number_of_installments. Klijent auto-submita vraćene form podatke.
+    if (isMonriMode()) {
+      const monriFormData = buildMonriFormData({
+        orderNumber,
+        amount: pricing.total, // Total with VAT in cents
+        currency: course.currency.toUpperCase(),
+        customerName,
+        email,
+        phone,
+        address: street,
+        city,
+        postalCode,
+        country,
+        orderInfo: `${course.name} - Brendia Pro`,
+        customData: JSON.stringify({
+          courseId: course.id,
+          companyName: companyName || null,
+          vatNumber: vatNumber || null,
+        }),
+        language: "hr",
+        numberOfInstallments:
+          paymentPlan === "installments" ? installmentCount ?? undefined : undefined,
+      });
+
+      return NextResponse.json({
+        formUrl: MONRI_CONFIG.formUrl,
+        formData: monriFormData,
+        orderNumber,
+      });
     }
 
     // Create the hosted Stripe Checkout Session and send the customer there

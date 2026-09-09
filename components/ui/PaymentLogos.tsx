@@ -10,6 +10,8 @@ interface PaymentLogosProps {
   className?: string;
 }
 
+const IS_MONRI = process.env.NEXT_PUBLIC_PAYMENT_MODE === "monri";
+
 // Poveznice na kartične sheme. OTP pravila: Maestro odmah iza Mastercarda,
 // bez druge kartice između; logotipovi su linkovi na stranice kartičnih kuća.
 const CARD_LOGOS = [
@@ -121,23 +123,42 @@ export function PaymentLogos({
         </div>
       )}
 
-      {/* Stripe Badge */}
+      {/* Processor Badge — Monri na previewu za OTP pregled, inače Stripe */}
       <div className="flex items-center justify-center">
-        <a
-          href="https://stripe.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white rounded-md px-3 py-1.5 border border-primary/10 shadow-sm hover:shadow transition-shadow inline-flex items-center gap-1.5"
-          aria-label="Stripe"
-        >
-          <span className="text-xs text-primary/50">Powered by</span>
-          <span
-            className="font-bold text-base leading-none tracking-tight"
-            style={{ color: "#635BFF" }}
+        {IS_MONRI ? (
+          <a
+            href="https://monri.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-md px-3 py-1.5 border border-primary/10 shadow-sm hover:shadow transition-shadow inline-flex items-center gap-1.5"
+            aria-label="Monri"
           >
-            stripe
-          </span>
-        </a>
+            <span className="text-xs text-primary/50">Powered by</span>
+            <Image
+              src="/images/payments/monri.png"
+              alt="Monri"
+              width={60}
+              height={20}
+              className="h-4 w-auto object-contain"
+            />
+          </a>
+        ) : (
+          <a
+            href="https://stripe.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-md px-3 py-1.5 border border-primary/10 shadow-sm hover:shadow transition-shadow inline-flex items-center gap-1.5"
+            aria-label="Stripe"
+          >
+            <span className="text-xs text-primary/50">Powered by</span>
+            <span
+              className="font-bold text-base leading-none tracking-tight"
+              style={{ color: "#635BFF" }}
+            >
+              stripe
+            </span>
+          </a>
+        )}
       </div>
 
       {/* Security Text */}
@@ -146,8 +167,8 @@ export function PaymentLogos({
           variant === "dark" ? "text-white/60" : "text-primary/50"
         }`}
       >
-        Sigurno plaćanje osigurava Stripe. Vaši podaci su zaštićeni SSL
-        enkripcijom i 3D Secure protokolom.
+        Sigurno plaćanje osigurava {IS_MONRI ? "Monri Payments" : "Stripe"}.
+        Vaši podaci su zaštićeni SSL enkripcijom i 3D Secure protokolom.
       </p>
     </div>
   );

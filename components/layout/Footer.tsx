@@ -225,25 +225,48 @@ export function Footer() {
                   className="h-5 w-auto object-contain"
                 />
               </span>
-              <a
-                href="https://stripe.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Stripe"
-                className="bg-white rounded-md px-2.5 py-1.5 shadow-sm hover:shadow-md transition-shadow inline-flex items-center gap-1"
-              >
-                <span className="text-[10px] text-black/50">Powered by</span>
-                <span
-                  className="font-bold text-sm leading-none tracking-tight"
-                  style={{ color: "#635BFF" }}
+              {process.env.NEXT_PUBLIC_PAYMENT_MODE === "monri" ? (
+                <a
+                  href="https://monri.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Monri"
+                  className="bg-white rounded-md px-2.5 py-1.5 shadow-sm hover:shadow-md transition-shadow inline-flex items-center gap-1"
                 >
-                  stripe
-                </span>
-              </a>
+                  <span className="text-[10px] text-black/50">Powered by</span>
+                  <Image
+                    src="/images/payments/monri.png"
+                    alt="Monri"
+                    width={50}
+                    height={16}
+                    className="h-3.5 w-auto object-contain"
+                  />
+                </a>
+              ) : (
+                <a
+                  href="https://stripe.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Stripe"
+                  className="bg-white rounded-md px-2.5 py-1.5 shadow-sm hover:shadow-md transition-shadow inline-flex items-center gap-1"
+                >
+                  <span className="text-[10px] text-black/50">Powered by</span>
+                  <span
+                    className="font-bold text-sm leading-none tracking-tight"
+                    style={{ color: "#635BFF" }}
+                  >
+                    stripe
+                  </span>
+                </a>
+              )}
             </div>
             <p className="text-white/50 text-xs text-center mb-8">
               Plaćanje se vrši debitnim/kreditnim karticama {ACCEPTED_CARDS}.
-              Sigurnu obradu plaćanja osigurava Stripe.
+              Sigurnu obradu plaćanja osigurava{" "}
+              {process.env.NEXT_PUBLIC_PAYMENT_MODE === "monri"
+                ? "Monri Payments"
+                : "Stripe"}
+              .
             </p>
           </div>
 
